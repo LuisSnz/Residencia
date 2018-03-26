@@ -10,6 +10,7 @@ namespace ProyectoResidencias.Clases
         public static string referencia;
         public static string desc;
         public static string prueba1;
-
+        public static string prueba2;
+        public static string pruebaA;
     }
 }
