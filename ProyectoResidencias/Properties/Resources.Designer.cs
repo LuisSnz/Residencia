@@ -65,7 +65,7 @@ namespace ProyectoResidencias.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _7da9c795_1ecb_4dd7_ba41_298ad0ca7a56 {
             get {
-                object obj = ResourceManager.GetObject("7da9c795-1ecb-4dd7-ba41-298ad0ca7a56", resourceCulture);
+                object obj = ResourceManager.GetObject("_7da9c795_1ecb_4dd7_ba41_298ad0ca7a56", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -185,7 +185,7 @@ namespace ProyectoResidencias.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap copy_icon {
             get {
-                object obj = ResourceManager.GetObject("copy-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("copy_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,7 +195,7 @@ namespace ProyectoResidencias.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap cropped_cropped_16003027_247391555693468_8043008145918188717_n {
             get {
-                object obj = ResourceManager.GetObject("cropped-cropped-16003027_247391555693468_8043008145918188717_n", resourceCulture);
+                object obj = ResourceManager.GetObject("cropped_cropped_16003027_247391555693468_8043008145918188717_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -215,7 +215,7 @@ namespace ProyectoResidencias.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap eliminar_ {
             get {
-                object obj = ResourceManager.GetObject("eliminar}", resourceCulture);
+                object obj = ResourceManager.GetObject("eliminar_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -275,7 +275,7 @@ namespace ProyectoResidencias.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap logo_pirata {
             get {
-                object obj = ResourceManager.GetObject("logo pirata", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_pirata", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -285,7 +285,7 @@ namespace ProyectoResidencias.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap modificar_ {
             get {
-                object obj = ResourceManager.GetObject("modificar}", resourceCulture);
+                object obj = ResourceManager.GetObject("modificar_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
