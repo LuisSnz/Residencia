@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FD00FFC-9992-45C5-8E98-8E9E95C8F93D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoResidencias</RootNamespace>
+    <AssemblyName>ProyectoResidencias</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Luis Saenz\Documents\Visual Studio 2017\Instaladores\1\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ProyectoResidencias.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>929C58BE1C4A3D4C0480B3E383DABEABA183B645</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProyectoResidencias_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activo\BienesDadosDeBaja\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesDadosDeBaja\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\BienesDadosDeBaja\InicioBajaBienes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesDadosDeBaja\InicioBajaBienes.Designer.cs">
+      <DependentUpon>InicioBajaBienes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\BienesDadosDeBaja\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesDadosDeBaja\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\BienesSF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\BienesSF.Designer.cs">
+      <DependentUpon>BienesSF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\CBienes\Bienes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\CBienes\Bienes.Designer.cs">
+      <DependentUpon>Bienes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\CBienes\Botones\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\CBienes\Botones\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\CBienes\Botones\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\CBienes\Botones\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\CBienes\Botones\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\CBienes\Botones\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiodeBienes\PorBienSeleccionados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiodeBienes\PorBienSeleccionados.Designer.cs">
+      <DependentUpon>PorBienSeleccionados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiodeBienes\PorEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiodeBienes\PorEmpleados.Designer.cs">
+      <DependentUpon>PorEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\ConexionBD.cs" />
+    <Compile Include="Clases\LLenadoGrids.cs" />
+    <Compile Include="Clases\Variables.cs" />
+    <Compile Include="Reportes\ConsultaPorDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ConsultaPorDepartamento.Designer.cs">
+      <DependentUpon>ConsultaPorDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ConsultaPorEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ConsultaPorEmpleado.Designer.cs">
+      <DependentUpon>ConsultaPorEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ConsultaPorFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ConsultaPorFamilia.Designer.cs">
+      <DependentUpon>ConsultaPorFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\CostoBienesResguardados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\CostoBienesResguardados.Designer.cs">
+      <DependentUpon>CostoBienesResguardados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\HistoricoDelBien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\HistoricoDelBien.Designer.cs">
+      <DependentUpon>HistoricoDelBien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\ImprimirEtiquetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\ImprimirEtiquetas.Designer.cs">
+      <DependentUpon>ImprimirEtiquetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\VerificarBienes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\VerificarBienes.Designer.cs">
+      <DependentUpon>VerificarBienes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Familias\Familia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Familias\Familia.Designer.cs">
+      <DependentUpon>Familia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Familias\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Familias\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Familias\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Familias\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Marcas\Marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Marcas\Marcas.Designer.cs">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Marcas\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Marcas\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Marcas\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Activo\Marcas\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\AreasODirecciones\Areas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\AreasODirecciones\Areas.Designer.cs">
+      <DependentUpon>Areas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\AreasODirecciones\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\AreasODirecciones\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\AreasODirecciones\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\AreasODirecciones\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\CatArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\CatArticulos.Designer.cs">
+      <DependentUpon>CatArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Departamentos\Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Departamentos\Departamentos.Designer.cs">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Departamentos\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Departamentos\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Departamentos\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Departamentos\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Subdirecciones\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Subdirecciones\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Subdirecciones\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Subdirecciones\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Subdirecciones\SubDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Subdirecciones\SubDireccion.Designer.cs">
+      <DependentUpon>SubDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Vehiculos\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Vehiculos\Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Vehiculos\Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Vehiculos\Nuevo.Designer.cs">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Vehiculos\Vehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Vehiculos\Vehiculos.Designer.cs">
+      <DependentUpon>Vehiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Activo\BienesDadosDeBaja\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesDadosDeBaja\InicioBajaBienes.resx">
+      <DependentUpon>InicioBajaBienes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesDadosDeBaja\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesSinFactura\BienesSF.resx">
+      <DependentUpon>BienesSF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesSinFactura\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesSinFactura\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesSinFactura\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\CBienes\Bienes.resx">
+      <DependentUpon>Bienes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\CBienes\Botones\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\CBienes\Botones\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\CBienes\Botones\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiodeBienes\PorBienSeleccionados.resx">
+      <DependentUpon>PorBienSeleccionados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiodeBienes\PorEmpleados.resx">
+      <DependentUpon>PorEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Empleados\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ConsultaPorDepartamento.resx">
+      <DependentUpon>ConsultaPorDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ConsultaPorEmpleado.resx">
+      <DependentUpon>ConsultaPorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ConsultaPorFamilia.resx">
+      <DependentUpon>ConsultaPorFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CostoBienesResguardados.resx">
+      <DependentUpon>CostoBienesResguardados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\HistoricoDelBien.resx">
+      <DependentUpon>HistoricoDelBien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\ImprimirEtiquetas.resx">
+      <DependentUpon>ImprimirEtiquetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\VerificarBienes.resx">
+      <DependentUpon>VerificarBienes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Activo\Familias\Familia.resx">
+      <DependentUpon>Familia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Activo\Familias\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Activo\Familias\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Activo\Marcas\Marcas.resx">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Activo\Marcas\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Activo\Marcas\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\AreasODirecciones\Areas.resx">
+      <DependentUpon>Areas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\AreasODirecciones\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\AreasODirecciones\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Cat.Articulos\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Cat.Articulos\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Cat.Articulos\CatArticulos.resx">
+      <DependentUpon>CatArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Departamentos\Departamentos.resx">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Departamentos\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Departamentos\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Empleados\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Empleados\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Empleados\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Proveedores\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Proveedores\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Proveedores\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Proveedores\Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Subdirecciones\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Subdirecciones\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Subdirecciones\SubDireccion.resx">
+      <DependentUpon>SubDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Vehiculos\Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Vehiculos\Nuevo.resx">
+      <DependentUpon>Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Vehiculos\Vehiculos.resx">
+      <DependentUpon>Vehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\ProyectoResidencias.Bienes.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoResidencias.CBienes.Nuevo.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoResidencias.Inicio.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoResidencias.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoResidencias.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ProyectoResidencias.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\ProyectoResidencias.csprojResolveAssemblyReference.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\copy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\eliminar}.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\modificar}.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProyectoResidencias_TemporaryKey.pfx" />
+    <None Include="Resources\logo pirata.png" />
+    <None Include="Resources\cropped-cropped-16003027_247391555693468_8043008145918188717_n.jpg" />
+    <None Include="Resources\7da9c795-1ecb-4dd7-ba41-298ad0ca7a56.jpg" />
+    <None Include="bin\Debug\iconos\nuevoSF.png" />
+    <None Include="bin\Debug\iconos\aprovado.png" />
+    <None Include="bin\Debug\iconos\barras.png" />
+    <None Include="bin\Debug\iconos\bienes.png" />
+    <None Include="bin\Debug\iconos\logo.png" />
+    <None Include="bin\Debug\iconos\rechazado.png" />
+    <None Include="bin\Debug\iconos\jmas.png" />
+    <None Include="bin\Debug\iconos\password.png" />
+    <None Include="bin\Debug\iconos\usuario.png" />
+    <None Include="bin\Debug\iconos\casa.png" />
+    <None Include="bin\Debug\iconos\catalogo.png" />
+    <None Include="bin\Debug\iconos\areas.png" />
+    <None Include="bin\Debug\iconos\subdirecciones.png" />
+    <None Include="bin\Debug\iconos\departamentos.png" />
+    <None Include="bin\Debug\iconos\empleados.png" />
+    <None Include="bin\Debug\iconos\vehiculo.png" />
+    <None Include="bin\Debug\iconos\proveedores.png" />
+    <None Include="bin\Debug\iconos\articulos.png" />
+    <None Include="bin\Debug\iconos\txt.png" />
+    <None Include="bin\Debug\iconos\cambiobienes.png" />
+    <None Include="bin\Debug\iconos\bienesSF.png" />
+    <Content Include="obj\Debug\ProyectoResidencias.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ProyectoResidencias.exe" />
+    <Content Include="obj\Debug\ProyectoResidencias.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
