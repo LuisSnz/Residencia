@@ -44,6 +44,8 @@
             this.GridSubD.AllowUserToOrderColumns = true;
             this.GridSubD.AllowUserToResizeColumns = false;
             this.GridSubD.AllowUserToResizeRows = false;
+            this.GridSubD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GridSubD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.GridSubD.BackgroundColor = System.Drawing.Color.White;
             this.GridSubD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridSubD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -51,6 +53,7 @@
             this.GridSubD.MultiSelect = false;
             this.GridSubD.Name = "GridSubD";
             this.GridSubD.ReadOnly = true;
+            this.GridSubD.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.GridSubD.Size = new System.Drawing.Size(900, 600);
             this.GridSubD.TabIndex = 3;
             this.GridSubD.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridSubD_CellEnter);

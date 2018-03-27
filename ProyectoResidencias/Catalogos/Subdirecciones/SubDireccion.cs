@@ -23,21 +23,14 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
         {
             Catalogos.Subdirecciones.Nuevo nuevo = new Nuevo();
             nuevo.ShowDialog();
-            if (nuevo.DialogResult == DialogResult.OK)
-            {
-                Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
-            }
-
+            Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Subdirecciones.Modificar modificar = new Modificar();
             modificar.ShowDialog();
-            if (modificar.DialogResult == DialogResult.OK)
-            {
-                Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
-            }
+            Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
         }
 
         public void SubDireccion_Load(object sender, EventArgs e)

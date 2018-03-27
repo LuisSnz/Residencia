@@ -32,7 +32,6 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
                         cmd.ExecuteNonQuery();
                         conn.Close();
                         MessageBox.Show("SubDireccion modificada correctamente.");
-                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                 }

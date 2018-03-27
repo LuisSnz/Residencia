@@ -28,24 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridFamilias = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFamilias)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridFamilias
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 600);
-            this.dataGridView1.TabIndex = 9;
+            this.GridFamilias.AllowUserToAddRows = false;
+            this.GridFamilias.AllowUserToDeleteRows = false;
+            this.GridFamilias.AllowUserToOrderColumns = true;
+            this.GridFamilias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GridFamilias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GridFamilias.BackgroundColor = System.Drawing.Color.White;
+            this.GridFamilias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridFamilias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFamilias.Location = new System.Drawing.Point(12, 50);
+            this.GridFamilias.MultiSelect = false;
+            this.GridFamilias.Name = "GridFamilias";
+            this.GridFamilias.ReadOnly = true;
+            this.GridFamilias.Size = new System.Drawing.Size(900, 600);
+            this.GridFamilias.TabIndex = 9;
+            this.GridFamilias.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridFamilias_CellEnter);
             // 
             // toolStrip1
             // 
@@ -94,6 +102,7 @@
             this.toolStripButton3.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton3.Text = "Eliminar";
             this.toolStripButton3.ToolTipText = "Eliminar";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // Familia
             // 
@@ -101,11 +110,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 606);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridFamilias);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Familia";
             this.Text = "Familia";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Familia_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridFamilias)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -114,7 +124,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridFamilias;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
