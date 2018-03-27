@@ -38,7 +38,6 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
                         cmd.ExecuteNonQuery();
                         conn.Close();
                         MessageBox.Show("SubDireccion agregada correctamente.");
-                        this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                 }

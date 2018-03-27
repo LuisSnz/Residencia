@@ -32,9 +32,9 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridAreas = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridAreas)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -84,17 +84,28 @@
             this.toolStripButton3.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton3.Text = "Eliminar";
             this.toolStripButton3.ToolTipText = "Eliminar";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // dataGridView1
+            // GridAreas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 600);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.GridAreas.AllowUserToAddRows = false;
+            this.GridAreas.AllowUserToDeleteRows = false;
+            this.GridAreas.AllowUserToOrderColumns = true;
+            this.GridAreas.AllowUserToResizeColumns = false;
+            this.GridAreas.AllowUserToResizeRows = false;
+            this.GridAreas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GridAreas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GridAreas.BackgroundColor = System.Drawing.Color.White;
+            this.GridAreas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridAreas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridAreas.Location = new System.Drawing.Point(12, 50);
+            this.GridAreas.MultiSelect = false;
+            this.GridAreas.Name = "GridAreas";
+            this.GridAreas.ReadOnly = true;
+            this.GridAreas.Size = new System.Drawing.Size(900, 600);
+            this.GridAreas.TabIndex = 1;
+            this.GridAreas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAreas_CellEnter);
+            this.GridAreas.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // Areas
             // 
@@ -102,14 +113,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(287, 240);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridAreas);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Areas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Areas";
+            this.Load += new System.EventHandler(this.Areas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridAreas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -120,6 +132,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridAreas;
     }
 }

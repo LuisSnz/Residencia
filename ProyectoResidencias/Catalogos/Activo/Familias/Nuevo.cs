@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace ProyectoResidencias.Catalogos.Activo.Familias
 {
@@ -14,6 +16,41 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
         public Nuevo()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string ConnString = Clases.stconexion.scon;
+            string SqlString = "Insert Into Familia (Descripcion) values ('" + Desccripcion.Text + "');";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Familia agragada correctamente.");
+                        this.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+            }
+        }
+
+        private void Nuevo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
