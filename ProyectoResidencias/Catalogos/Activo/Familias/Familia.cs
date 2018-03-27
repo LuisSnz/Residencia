@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace ProyectoResidencias.Catalogos.Activo.Familias
 {
@@ -20,12 +22,47 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
         {
             Catalogos.Activo.Familias.Nuevo nuevo = new Catalogos.Activo.Familias.Nuevo();
             nuevo.ShowDialog();
+            Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Activo.Familias.Modificar modificar = new Catalogos.Activo.Familias.Modificar();
             modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
+        }
+
+        private void Familia_Load(object sender, EventArgs e)
+        {
+            Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
+        }
+
+        private void GridFamilias_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var filaSeleccionada = GridFamilias.CurrentRow;
+            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            string ConnString = Clases.stconexion.scon;
+            string SqlString = "Delete from Familia where Id=" + Clases.Variables.referencia;
+            try
+            {
+                SqlConnection conn = new SqlConnection(ConnString);
+                SqlCommand cmd = new SqlCommand(SqlString, conn);
+                cmd.CommandType = CommandType.Text;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Familia eliminada correctamente.");
+                Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+            }
         }
     }
 }
