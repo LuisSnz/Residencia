@@ -15,5 +15,13 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (clave.Text.Length > 1) 
+                MessageBox.Show("funciona");
+            else
+                MessageBox.Show("no funciona");
+        }
     }
 }
