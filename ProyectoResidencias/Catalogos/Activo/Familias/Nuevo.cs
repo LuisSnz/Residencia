@@ -20,27 +20,33 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
-            string SqlString = "Insert Into Familia (Descripcion) values ('" + Desccripcion.Text + "');";
-            try
+            if (Desccripcion.Text.Length > 0)
             {
-                using (SqlConnection conn = new SqlConnection(ConnString))
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Insert Into Familia (Descripcion) values ('" + Desccripcion.Text + "');";
+                try
                 {
-                    using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                    using (SqlConnection conn = new SqlConnection(ConnString))
                     {
-                        cmd.CommandType = CommandType.Text;
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                        MessageBox.Show("Familia agragada correctamente.");
-                        this.Close();
+                        using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBox.Show("Familia agragada correctamente.");
+                            this.Close();
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
-            }
+            else
+                MessageBox.Show("El campo debe contener un valor");
+
         }
 
         private void Nuevo_Load(object sender, EventArgs e)

@@ -19,27 +19,32 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
-            string SqlString = "Update areas set Descripcion='" + Descripcion.Text + "' where Clave=" + Clases.Variables.referencia + ";";
-            try
+            if (Descripcion.Text.Length > 0)
             {
-                using (SqlConnection conn = new SqlConnection(ConnString))
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Update areas set Descripcion='" + Descripcion.Text + "' where Clave=" + Clases.Variables.referencia + ";";
+                try
                 {
-                    using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                    using (SqlConnection conn = new SqlConnection(ConnString))
                     {
-                        cmd.CommandType = CommandType.Text;
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                        MessageBox.Show("Area modificada correctamente.");
-                        this.Close();
+                        using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBox.Show("Area modificada correctamente.");
+                            this.Close();
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
-            }
+            else
+                    MessageBox.Show("El campo debe contener un valor");
         }
 
         private void button2_Click(object sender, EventArgs e)

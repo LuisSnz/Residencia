@@ -30,15 +30,15 @@
         {
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.iniciales = new System.Windows.Forms.TextBox();
+            this.nomrbe = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.clave = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -62,21 +62,21 @@
             this.comboBox1.Size = new System.Drawing.Size(206, 25);
             this.comboBox1.TabIndex = 30;
             // 
-            // textBox3
+            // iniciales
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(116, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 25);
-            this.textBox3.TabIndex = 29;
+            this.iniciales.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iniciales.Location = new System.Drawing.Point(116, 74);
+            this.iniciales.Name = "iniciales";
+            this.iniciales.Size = new System.Drawing.Size(206, 25);
+            this.iniciales.TabIndex = 29;
             // 
-            // textBox2
+            // nomrbe
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(116, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 25);
-            this.textBox2.TabIndex = 28;
+            this.nomrbe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomrbe.Location = new System.Drawing.Point(116, 44);
+            this.nomrbe.Name = "nomrbe";
+            this.nomrbe.Size = new System.Drawing.Size(206, 25);
+            this.nomrbe.TabIndex = 28;
             // 
             // label5
             // 
@@ -139,14 +139,15 @@
             this.button1.TabIndex = 22;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // clave
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(116, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 25);
-            this.textBox1.TabIndex = 21;
+            this.clave.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clave.Location = new System.Drawing.Point(116, 14);
+            this.clave.Name = "clave";
+            this.clave.Size = new System.Drawing.Size(206, 25);
+            this.clave.TabIndex = 21;
             // 
             // label1
             // 
@@ -164,13 +165,13 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.iniciales);
+            this.panel1.Controls.Add(this.nomrbe);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.clave);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
@@ -199,15 +200,15 @@
 
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox iniciales;
+        private System.Windows.Forms.TextBox nomrbe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox clave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
     }
