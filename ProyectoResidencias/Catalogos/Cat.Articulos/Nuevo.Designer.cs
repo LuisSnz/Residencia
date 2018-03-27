@@ -91,17 +91,19 @@
             this.TBCOG.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBCOG.Location = new System.Drawing.Point(274, 50);
             this.TBCOG.Name = "TBCOG";
-            this.TBCOG.Size = new System.Drawing.Size(151, 25);
+            this.TBCOG.Size = new System.Drawing.Size(158, 25);
             this.TBCOG.TabIndex = 13;
             // 
             // CBFamilia
             // 
             this.CBFamilia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBFamilia.ForeColor = System.Drawing.Color.Black;
             this.CBFamilia.FormattingEnabled = true;
-            this.CBFamilia.Location = new System.Drawing.Point(139, 18);
+            this.CBFamilia.Location = new System.Drawing.Point(146, 17);
             this.CBFamilia.Name = "CBFamilia";
             this.CBFamilia.Size = new System.Drawing.Size(286, 25);
             this.CBFamilia.TabIndex = 4;
+            this.CBFamilia.Text = "Seleccione un Valor";
             // 
             // label6
             // 
@@ -173,6 +175,7 @@
             this.CBMedida.Name = "CBMedida";
             this.CBMedida.Size = new System.Drawing.Size(282, 25);
             this.CBMedida.TabIndex = 6;
+            this.CBMedida.Text = "Seleccione un Valor";
             // 
             // label4
             // 
@@ -192,6 +195,7 @@
             this.CBArticulo.Name = "CBArticulo";
             this.CBArticulo.Size = new System.Drawing.Size(282, 25);
             this.CBArticulo.TabIndex = 4;
+            this.CBArticulo.Text = "Seleccione un Valor";
             // 
             // label3
             // 
