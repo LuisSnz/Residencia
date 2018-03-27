@@ -157,6 +157,12 @@
     <Compile Include="CambiodeBienes\PorEmpleados.Designer.cs">
       <DependentUpon>PorEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Cat.Articulos\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Empleados\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,7 @@
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ConexionBD.cs" />
+    <Compile Include="Clases\LlenadoCombos.cs" />
     <Compile Include="Clases\LLenadoGrids.cs" />
     <Compile Include="Clases\Variables.cs" />
     <Compile Include="Reportes\ConsultaPorDepartamento.cs">
@@ -430,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CambiodeBienes\PorEmpleados.resx">
       <DependentUpon>PorEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Cat.Articulos\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Empleados\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>

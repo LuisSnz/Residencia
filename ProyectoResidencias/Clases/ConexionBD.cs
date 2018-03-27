@@ -25,6 +25,7 @@ namespace ProyectoResidencias.Clases
 
         public ConexionBD()
         {
+
             try
             {
                 cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
