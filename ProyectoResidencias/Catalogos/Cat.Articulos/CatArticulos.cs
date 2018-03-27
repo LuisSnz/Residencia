@@ -27,5 +27,11 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
             Catalogos.Cat.Articulos.Botones.Modificar modificar = new Catalogos.Cat.Articulos.Botones.Modificar();
             modificar.ShowDialog();
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Catalogos.Cat.Articulos.Buscar buscar = new Catalogos.Cat.Articulos.Buscar();
+            buscar.ShowDialog();
+        }
     }
 }

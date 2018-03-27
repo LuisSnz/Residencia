@@ -31,20 +31,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.TBCOG = new System.Windows.Forms.TextBox();
+            this.CBFamilia = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CHArticuloContrato = new System.Windows.Forms.CheckBox();
+            this.CHBInventariable = new System.Windows.Forms.CheckBox();
+            this.CBMedida = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBArticulo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBArticulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -55,53 +53,57 @@
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(342, 384);
+            this.button2.Location = new System.Drawing.Point(288, 394);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 30);
             this.button2.TabIndex = 18;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(153, 384);
+            this.button1.Location = new System.Drawing.Point(70, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 30);
             this.button1.TabIndex = 17;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.comboBox6);
+            this.panel2.Controls.Add(this.TBCOG);
+            this.panel2.Controls.Add(this.CBFamilia);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(12, 270);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(589, 100);
+            this.panel2.Size = new System.Drawing.Size(460, 100);
             this.panel2.TabIndex = 16;
             // 
-            // textBox2
+            // TBCOG
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(274, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 25);
-            this.textBox2.TabIndex = 13;
+            this.TBCOG.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBCOG.Location = new System.Drawing.Point(274, 50);
+            this.TBCOG.Name = "TBCOG";
+            this.TBCOG.Size = new System.Drawing.Size(158, 25);
+            this.TBCOG.TabIndex = 13;
             // 
-            // comboBox6
+            // CBFamilia
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(139, 19);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(286, 25);
-            this.comboBox6.TabIndex = 4;
+            this.CBFamilia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBFamilia.ForeColor = System.Drawing.Color.Black;
+            this.CBFamilia.FormattingEnabled = true;
+            this.CBFamilia.Location = new System.Drawing.Point(146, 17);
+            this.CBFamilia.Name = "CBFamilia";
+            this.CBFamilia.Size = new System.Drawing.Size(286, 25);
+            this.CBFamilia.TabIndex = 4;
+            this.CBFamilia.Text = "Seleccione un Valor";
             // 
             // label6
             // 
@@ -127,110 +129,91 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.CHArticuloContrato);
+            this.panel1.Controls.Add(this.CHBInventariable);
+            this.panel1.Controls.Add(this.CBMedida);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.CBArticulo);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TBArticulo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(589, 239);
+            this.panel1.Size = new System.Drawing.Size(460, 239);
             this.panel1.TabIndex = 15;
             // 
-            // checkBox2
+            // CHArticuloContrato
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(23, 209);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(246, 21);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "Articulo solo para uso de un Contrato";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CHArticuloContrato.AutoSize = true;
+            this.CHArticuloContrato.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CHArticuloContrato.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHArticuloContrato.Location = new System.Drawing.Point(27, 211);
+            this.CHArticuloContrato.Name = "CHArticuloContrato";
+            this.CHArticuloContrato.Size = new System.Drawing.Size(246, 21);
+            this.CHArticuloContrato.TabIndex = 11;
+            this.CHArticuloContrato.Text = "Articulo solo para uso de un Contrato";
+            this.CHArticuloContrato.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // CHBInventariable
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(24, 153);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 21);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Inventariable";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CHBInventariable.AutoSize = true;
+            this.CHBInventariable.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CHBInventariable.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHBInventariable.Location = new System.Drawing.Point(26, 179);
+            this.CHBInventariable.Name = "CHBInventariable";
+            this.CHBInventariable.Size = new System.Drawing.Size(103, 21);
+            this.CHBInventariable.TabIndex = 10;
+            this.CHBInventariable.Text = "Inventariable";
+            this.CHBInventariable.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // CBMedida
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(143, 178);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(196, 25);
-            this.comboBox3.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 181);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Familia Solicitudes";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 124);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(196, 25);
-            this.comboBox2.TabIndex = 6;
+            this.CBMedida.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBMedida.FormattingEnabled = true;
+            this.CBMedida.Location = new System.Drawing.Point(143, 138);
+            this.CBMedida.Name = "CBMedida";
+            this.CBMedida.Size = new System.Drawing.Size(282, 25);
+            this.CBMedida.TabIndex = 6;
+            this.CBMedida.Text = "Seleccione un Valor";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 127);
+            this.label4.Location = new System.Drawing.Point(24, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Unidad de Medida";
             // 
-            // comboBox1
+            // CBArticulo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(143, 95);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 25);
-            this.comboBox1.TabIndex = 4;
+            this.CBArticulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBArticulo.FormattingEnabled = true;
+            this.CBArticulo.Location = new System.Drawing.Point(143, 95);
+            this.CBArticulo.Name = "CBArticulo";
+            this.CBArticulo.Size = new System.Drawing.Size(282, 25);
+            this.CBArticulo.TabIndex = 4;
+            this.CBArticulo.Text = "Seleccione un Valor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 98);
+            this.label3.Location = new System.Drawing.Point(24, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tipo de articulo";
             // 
-            // textBox1
+            // TBArticulo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(440, 25);
-            this.textBox1.TabIndex = 2;
+            this.TBArticulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBArticulo.Location = new System.Drawing.Point(26, 57);
+            this.TBArticulo.Name = "TBArticulo";
+            this.TBArticulo.Size = new System.Drawing.Size(399, 25);
+            this.TBArticulo.TabIndex = 2;
             // 
             // label2
             // 
@@ -257,14 +240,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(618, 422);
+            this.ClientSize = new System.Drawing.Size(486, 445);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nuevo";
+            this.Text = "Nuevo Articulo";
+            this.Load += new System.EventHandler(this.Nuevo_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -278,20 +262,18 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.TextBox TBCOG;
+        private System.Windows.Forms.ComboBox CBFamilia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.CheckBox CHArticuloContrato;
+        private System.Windows.Forms.CheckBox CHBInventariable;
+        private System.Windows.Forms.ComboBox CBMedida;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBArticulo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TBArticulo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
