@@ -10,7 +10,7 @@ namespace ProyectoResidencias.Clases
 {
     class LlenadoCombos
     {
-        SqlConnection cnn;
+        
         SqlCommand cmd;
         SqlDataReader dr;
 
