@@ -15,5 +15,10 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
         {
             InitializeComponent();
         }
+
+        private void Modificar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

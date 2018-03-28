@@ -56,5 +56,16 @@ namespace ProyectoResidencias.Clases
             da.Fill(ds, tabla);
             Grid.DataSource = ds.Tables[tabla];
         }
+        public static void llenarCatArticulos(DataGridView Grid, string tabla)
+        {
+            Clases.ConexionBD conexion = new Clases.ConexionBD();
+            string conexion1 = Clases.stconexion.scon;
+            string consulta = "select Descripcion,Familia,Inventariable,Medida,TipoArticulo from " + tabla + " order by Descripcion";
+            SqlConnection cnn = new SqlConnection(conexion1);
+            SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, tabla);
+            Grid.DataSource = ds.Tables[tabla];
+        }
     }
 }
