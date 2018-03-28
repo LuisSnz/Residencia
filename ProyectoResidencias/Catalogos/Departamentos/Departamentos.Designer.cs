@@ -28,25 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridDeptos = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridDeptos)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridDeptos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 600);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.GridDeptos.AllowUserToAddRows = false;
+            this.GridDeptos.AllowUserToDeleteRows = false;
+            this.GridDeptos.AllowUserToOrderColumns = true;
+            this.GridDeptos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GridDeptos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GridDeptos.BackgroundColor = System.Drawing.Color.White;
+            this.GridDeptos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridDeptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridDeptos.Location = new System.Drawing.Point(12, 50);
+            this.GridDeptos.MultiSelect = false;
+            this.GridDeptos.Name = "GridDeptos";
+            this.GridDeptos.ReadOnly = true;
+            this.GridDeptos.Size = new System.Drawing.Size(900, 600);
+            this.GridDeptos.TabIndex = 5;
+            this.GridDeptos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.GridDeptos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDeptos_CellEnter);
             // 
             // toolStrip1
             // 
@@ -95,6 +103,7 @@
             this.toolStripButton3.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton3.Text = "Eliminar";
             this.toolStripButton3.ToolTipText = "Eliminar";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // Departamentos
             // 
@@ -102,12 +111,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(579, 353);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridDeptos);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Departamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Departamentos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Departamentos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridDeptos)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -115,11 +125,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        public System.Windows.Forms.DataGridView GridDeptos;
     }
 }
