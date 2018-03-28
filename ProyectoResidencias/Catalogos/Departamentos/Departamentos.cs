@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProyectoResidencias.Catalogos.Departamentos
 {
@@ -25,12 +26,49 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             Catalogos.Departamentos.Nuevo nuevo = new Catalogos.Departamentos.Nuevo();
             nuevo.ShowDialog();
+            Clases.LLenadoGrids.llenarDepartamentos(GridDeptos, "DEPTOS");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Departamentos.Modificar modificar = new Catalogos.Departamentos.Modificar();
             modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarDepartamentos(GridDeptos, "DEPTOS");
+        }
+
+        private void Departamentos_Load(object sender, EventArgs e)
+        {
+            Clases.LLenadoGrids.llenarDepartamentos(GridDeptos,"DEPTOS");
+        }
+
+        private void GridDeptos_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var filaSeleccionada = GridDeptos.CurrentRow;
+            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.desc2 = filaSeleccionada.Cells[2].Value.ToString();
+            Clases.Variables.desc3 = filaSeleccionada.Cells[3].Value.ToString();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            string ConnString = Clases.stconexion.scon;
+            string SqlString = "Delete from DEPTOS where Clave=" + Clases.Variables.referencia;
+            try
+            {
+                SqlConnection conn = new SqlConnection(ConnString);
+                SqlCommand cmd = new SqlCommand(SqlString, conn);
+                cmd.CommandType = CommandType.Text;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Departamento eliminado correctamente.");
+                Clases.LLenadoGrids.llenarDepartamentos(GridDeptos, "DEPTOS");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+            }
         }
     }
 }

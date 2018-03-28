@@ -56,5 +56,16 @@ namespace ProyectoResidencias.Clases
             da.Fill(ds, tabla);
             Grid.DataSource = ds.Tables[tabla];
         }
+        public static void llenarDepartamentos(DataGridView Grid, string tabla)
+        {
+            Clases.ConexionBD conexion = new Clases.ConexionBD();
+            string conexion1 = Clases.stconexion.scon;
+            string consulta = "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from " + tabla;
+            SqlConnection cnn = new SqlConnection(conexion1);
+            SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, tabla);
+            Grid.DataSource = ds.Tables[tabla];
+        }
     }
 }
