@@ -22,21 +22,19 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
         {
             Catalogos.AreasODirecciones.Nuevo nuevo = new Catalogos.AreasODirecciones.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarAreas(GridAreas, "areas");
+            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.AreasODirecciones.Modificar modificar = new Catalogos.AreasODirecciones.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarAreas(GridAreas, "areas");
+            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
         }
-
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e) { }
 
         private void Areas_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarAreas(GridAreas, "areas");
+            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
         }
 
         private void GridAreas_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -59,7 +57,7 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Area eliminada correctamente.");
-                Clases.LLenadoGrids.llenarAreas(GridAreas, "areas");
+                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
             }
             catch (Exception ex)
             {

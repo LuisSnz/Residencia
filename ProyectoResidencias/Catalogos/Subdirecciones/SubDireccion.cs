@@ -23,19 +23,19 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
         {
             Catalogos.Subdirecciones.Nuevo nuevo = new Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
+            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Subdirecciones.Modificar modificar = new Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
+            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
         }
 
         public void SubDireccion_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
+            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
         }
         
 
@@ -59,7 +59,7 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
                 MessageBox.Show("El valor no se pudo eliminar. \n" + ex.ToString());
             }
 
-            Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
+            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
         }
 
         private void GridSubD_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -75,7 +75,7 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
             {
-                Clases.LLenadoGrids.llenarSubDireccion(GridSubD, "subdireccion");
+                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
             }
         }
     }

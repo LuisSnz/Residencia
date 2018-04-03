@@ -21,19 +21,19 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
         {
             Catalogos.Activo.Marcas.Nuevo nuevo = new Catalogos.Activo.Marcas.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarMarcas(GridMarcas, "marca");
+            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Activo.Marcas.Modificar modificar = new Catalogos.Activo.Marcas.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarMarcas(GridMarcas, "marca");
+            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
         }
 
         private void Marcas_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarMarcas(GridMarcas, "marca");
+            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Marca eliminada correctamente.");
-                Clases.LLenadoGrids.llenarMarcas(GridMarcas, "marca");
+                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
             }
             catch (Exception ex)
             {

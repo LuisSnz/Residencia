@@ -26,19 +26,19 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             Catalogos.Departamentos.Nuevo nuevo = new Catalogos.Departamentos.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarDepartamentos(GridDeptos, "DEPTOS");
+            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Departamentos.Modificar modificar = new Catalogos.Departamentos.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarDepartamentos(GridDeptos, "DEPTOS");
+            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
         }
 
         private void Departamentos_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarDepartamentos(GridDeptos,"DEPTOS");
+            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
         }
 
         private void GridDeptos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +63,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Departamento eliminado correctamente.");
-                Clases.LLenadoGrids.llenarDepartamentos(GridDeptos, "DEPTOS");
+                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
             }
             catch (Exception ex)
             {
