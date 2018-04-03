@@ -28,8 +28,6 @@ namespace ProyectoResidencias.CBienes.Botones
         private void button1_Click(object sender, EventArgs e)
         {
             string consulta;
-
-            Clases.ConexionBD conexion = new Clases.ConexionBD();
             Bienes bs = new Bienes();
             string conexion1 = Clases.stconexion.scon;
             consulta = "select * from bienes";

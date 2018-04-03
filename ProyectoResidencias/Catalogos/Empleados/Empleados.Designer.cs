@@ -28,25 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridEmp = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEmp)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridEmp
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 600);
-            this.dataGridView1.TabIndex = 5;
+            this.GridEmp.AllowUserToAddRows = false;
+            this.GridEmp.AllowUserToDeleteRows = false;
+            this.GridEmp.AllowUserToOrderColumns = true;
+            this.GridEmp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GridEmp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GridEmp.BackgroundColor = System.Drawing.Color.White;
+            this.GridEmp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridEmp.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.GridEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEmp.Location = new System.Drawing.Point(12, 50);
+            this.GridEmp.MultiSelect = false;
+            this.GridEmp.Name = "GridEmp";
+            this.GridEmp.ReadOnly = true;
+            this.GridEmp.Size = new System.Drawing.Size(926, 600);
+            this.GridEmp.TabIndex = 5;
+            this.GridEmp.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEmp_CellEnter);
             // 
             // toolStrip1
             // 
@@ -107,6 +116,7 @@
             this.toolStripButton3.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton3.Text = "Eliminar";
             this.toolStripButton3.ToolTipText = "Eliminar";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // Empleados
             // 
@@ -114,11 +124,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(620, 327);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridEmp);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Empleados";
             this.Text = "Empleados";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Empleados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridEmp)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -127,7 +138,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridEmp;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
