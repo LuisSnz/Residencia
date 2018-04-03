@@ -23,8 +23,6 @@ namespace ProyectoResidencias
             //    Application.Run(new Inicio());
             //}
             Application.Run(new Inicio());
-
-            //comentar la linea de arriba y descomentar todo lo demas para hacer login
         }
         
     }

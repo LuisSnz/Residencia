@@ -9,6 +9,11 @@ namespace ProyectoResidencias.Clases
     {
         public static string referencia;
         public static string desc;
+        public static string descA;
+        public static string descF;
+        public static string descM;
+        public static string CHArticuloContrato;
+        public static string CHInventariable;
         public static string desc2;
         public static string desc3;
         public static string desc4;

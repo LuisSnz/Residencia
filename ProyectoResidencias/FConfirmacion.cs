@@ -7,22 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ProyectoResidencias.Catalogos.Cat.Articulos
+namespace ProyectoResidencias
 {
-    public partial class Buscar : Form
+    public partial class FConfirmacion : Form
     {
-        public Buscar()
+        public FConfirmacion()
         {
             InitializeComponent();
         }
 
-        private void Buscar_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

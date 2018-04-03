@@ -23,25 +23,38 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //string ConnString = Clases.stconexion.scon;
-            //string SqlString = "Insert Into CatArticulos (Descripcion,idfamilia,Medida,COG) values ('" + TBArticulo.Text + ",'select DISTINCT Familia.Descripcion from Familia,CatArticulos where Familia.Id = CatArticulos.IdFamilia AND Familia.Descripcion ='" +CBFamilia.SelectedValue+"," + CBMedida.SelectedValue +","+TBCOG.Text+"');";
-            //try
-            //{
-            //    SqlConnection conn = new SqlConnection(ConnString);
-            //    SqlCommand cmd = new SqlCommand(SqlString, conn);
-            //    cmd.CommandType = CommandType.Text;
-            //    conn.Open();
-            //    cmd.ExecuteNonQuery();
-            //    conn.Close();
-            //    MessageBox.Show("Articulo agregado correctamente.");
-            //    this.DialogResult = DialogResult.OK;
-            //    this.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
-            //}
-
+            if (TBArticulo.Text.Length > 0 && CBArticulo.SelectedIndex>=0 && CBFamilia.SelectedIndex>=0 && CBMedida.SelectedIndex>=0)
+            {
+                bool con = false;
+                bool inv = false;
+                if (CHArticuloContrato.Checked==true)
+                    con=true;
+                if (CHBInventariable.Checked == true)
+                    inv = true;
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Insert Into CatArticulos (Descripcion,idfamilia,ActivoContratos,Medida,IdTipoArticulo,inventariable,IdFamiliaSolicitudes,Activo,COG) " +
+                    "values ('" + TBArticulo.Text + "',(select id from Familia where Familia.Descripcion ='" + CBFamilia.SelectedItem + "'),'" + con + "','" + CBMedida.SelectedItem + "',(select id from TipoArticulo where descripcion='" + CBArticulo.SelectedItem + "'),'" + inv + "','1','True','0')";
+                try
+                {
+                    SqlConnection conn = new SqlConnection(ConnString);
+                    SqlCommand cmd = new SqlCommand(SqlString, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Articulo agregado correctamente.");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor de llenar todos los datos");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,7 +69,6 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
             cb.CBArticulosFamilia(CBFamilia);
             cb.CBArticulosTipoArticulo(CBArticulo);
             cb.CBArticulosMedida(CBMedida);
-            
         }
     }
 }
