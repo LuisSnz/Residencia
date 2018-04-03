@@ -10,18 +10,20 @@ namespace ProyectoResidencias.Clases
 {
     class Articulos
     {
-        SqlCommand cmd;
-        SqlDataReader dr;
-        SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
+        public static SqlCommand cmd;
+        public static SqlDataReader dr;
+        public static SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
         string conexion = Clases.stconexion.scon;
 
-        public void CBArticulosFamilia(ComboBox CB)
+        public static void CBArticulosFamilia(ComboBox CB)
         {
             try
             {
                 cn.Open();
                 cmd = new SqlCommand("select Descripcion from familia", cn);
                 dr = cmd.ExecuteReader();
+                CB.Items.Clear();
+                CB.Text = "";
                 while (dr.Read())
                 {
                     CB.Items.Add(dr["Descripcion"].ToString());
@@ -35,7 +37,7 @@ namespace ProyectoResidencias.Clases
                 MessageBox.Show("Error al llenar :" + ex.ToString());
             }
         }
-        public void CBArticulosTipoArticulo(ComboBox CB)
+        public static void CBArticulosTipoArticulo(ComboBox CB)
             {
                 try
                 {
@@ -55,13 +57,33 @@ namespace ProyectoResidencias.Clases
                     MessageBox.Show("Error al llenar :" + ex.ToString());
                 }
             }
-        public void CBArticulosMedida(ComboBox CB)
+        public static void CBArticulosMedida(ComboBox CB)
         {
             try
             {
                 cn.Open();
                 cmd = new SqlCommand("select Descripcion from Medida", cn);
                 dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Descripcion"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBBuscarArticulo(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Descripcion from CatArticulos", cn);
+                dr = cmd.ExecuteReader();
+                CB.Items.Clear();
+                CB.Text = "";
                 while (dr.Read())
                 {
                     CB.Items.Add(dr["Descripcion"].ToString());

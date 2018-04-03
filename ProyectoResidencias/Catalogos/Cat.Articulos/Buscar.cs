@@ -18,12 +18,44 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
 
         private void Buscar_Load(object sender, EventArgs e)
         {
-
+            Clases.Articulos.CBBuscarArticulo(comboBox1);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (RBArticulo.Checked == true)
+                Clases.Variables.ConsultaBuscar = "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras where Descripcion LIKE '%" + comboBox1.Text + "%' order by id";
+            else if (RBFamilia.Checked == true)
+                Clases.Variables.ConsultaBuscar = "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras where Familia LIKE '%" + comboBox1.Text + "%' order by id";
+            
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void RBFamilia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBFamilia.Checked == true)
+                Clases.Articulos.CBArticulosFamilia(comboBox1);
+
+        }
+
+        private void RBArticulo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBArticulo.Checked == true)
+                Clases.Articulos.CBBuscarArticulo(comboBox1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clases.Variables.ConsultaBuscar = "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras order by id";
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        
     }
 }
