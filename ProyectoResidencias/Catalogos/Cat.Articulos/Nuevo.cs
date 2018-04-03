@@ -25,18 +25,15 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
         {
             if (TBArticulo.Text.Length > 0 && CBArticulo.SelectedIndex>=0 && CBFamilia.SelectedIndex>=0 && CBMedida.SelectedIndex>=0)
             {
-                bool con;
-                bool inv;
+                bool con = false;
+                bool inv = false;
                 if (CHArticuloContrato.Checked==true)
                     con=true;
-                else
-                    con = false;
                 if (CHBInventariable.Checked == true)
                     inv = true;
-                else
-                    inv = false;
                 string ConnString = Clases.stconexion.scon;
-                string SqlString = "Insert Into CatArticulos (Descripcion,idfamilia,ActivoContratos,Medida,IdTipoArticulo,inventariable,IdFamiliaSolicitudes,Activo,COG) values ('" + TBArticulo.Text + "',(select id from Familia where Familia.Descripcion ='" + CBFamilia.SelectedItem + "'),'" + inv + "','" + CBMedida.SelectedItem + "',(select id from TipoArticulo where descripcion='" + CBArticulo.SelectedItem + "'),'" + inv + "','1','True','0')";
+                string SqlString = "Insert Into CatArticulos (Descripcion,idfamilia,ActivoContratos,Medida,IdTipoArticulo,inventariable,IdFamiliaSolicitudes,Activo,COG) " +
+                    "values ('" + TBArticulo.Text + "',(select id from Familia where Familia.Descripcion ='" + CBFamilia.SelectedItem + "'),'" + con + "','" + CBMedida.SelectedItem + "',(select id from TipoArticulo where descripcion='" + CBArticulo.SelectedItem + "'),'" + inv + "','1','True','0')";
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -72,7 +69,6 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
             cb.CBArticulosFamilia(CBFamilia);
             cb.CBArticulosTipoArticulo(CBArticulo);
             cb.CBArticulosMedida(CBMedida);
-            
         }
     }
 }

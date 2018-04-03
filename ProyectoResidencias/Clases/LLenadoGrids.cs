@@ -60,7 +60,7 @@ namespace ProyectoResidencias.Clases
         {
             Clases.ConexionBD conexion = new Clases.ConexionBD();
             string conexion1 = Clases.stconexion.scon;
-            string consulta = "select Descripcion,Familia,Inventariable,Medida,TipoArticulo from " + tabla + " order by Descripcion";
+            string consulta = "select Id,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from " + tabla + " order by id";
             SqlConnection cnn = new SqlConnection(conexion1);
             SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
             DataSet ds = new DataSet();

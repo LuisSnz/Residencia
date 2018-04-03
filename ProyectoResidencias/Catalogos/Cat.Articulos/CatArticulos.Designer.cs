@@ -110,8 +110,9 @@
             this.GVCatArticulos.Location = new System.Drawing.Point(12, 50);
             this.GVCatArticulos.Name = "GVCatArticulos";
             this.GVCatArticulos.ReadOnly = true;
-            this.GVCatArticulos.Size = new System.Drawing.Size(669, 600);
+            this.GVCatArticulos.Size = new System.Drawing.Size(840, 600);
             this.GVCatArticulos.TabIndex = 3;
+            this.GVCatArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVCatArticulos_CellDoubleClick);
             this.GVCatArticulos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVCatArticulos_CellEnter);
             // 
             // CatArticulos

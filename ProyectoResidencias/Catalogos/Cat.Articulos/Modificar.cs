@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
 
 namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
 {
@@ -15,10 +18,68 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
         {
             InitializeComponent();
         }
-
         private void Modificar_Load(object sender, EventArgs e)
         {
+            Clases.Articulos cb = new Clases.Articulos();
+            cb.CBArticulosFamilia(CBFamilia);
+            cb.CBArticulosTipoArticulo(CBArticulo);
+            cb.CBArticulosMedida(CBMedida);
+            int index = CBArticulo.FindString(Clases.Variables.descA);
+            CBArticulo.SelectedIndex = index;
+            index = CBFamilia.FindString(Clases.Variables.descF);
+            CBFamilia.SelectedIndex = index;
+            index = CBMedida.FindString(Clases.Variables.descM);
+            CBMedida.SelectedIndex = index;
+            TBArticulo.Text = Clases.Variables.referencia;
+            if (Clases.Variables.CHArticuloContrato == "True")
+                CHArticuloContrato.Checked = true;
+            else
+                CHArticuloContrato.Checked = false;
+            if (Clases.Variables.CHInventariable == "True")
+                CHBInventariable.Checked = true;
+            else
+                CHBInventariable.Checked = false;
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (TBArticulo.Text.Length > 0 && CBArticulo.SelectedIndex>=0 && CBFamilia.SelectedIndex>=0 && CBMedida.SelectedIndex>=0)
+            {
+                bool con = false;
+                bool inv = false;
+                if (CHArticuloContrato.Checked == true)
+                    con = true;
+                if (CHBInventariable.Checked == true)
+                    inv = true;
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Update CatArticulos set Descripcion='" + TBArticulo.Text + "',idfamilia=(select id from Familia where Familia.Descripcion ='" + CBFamilia.SelectedItem + "'),ActivoContratos='" + con + "',Medida='" + CBMedida.SelectedItem + "',IdTipoArticulo=(select id from TipoArticulo where descripcion='" + CBArticulo.SelectedItem + "'),inventariable='" + inv + "',IdFamiliaSolicitudes='1',Activo='True',COG='0' where Id="+ Clases.Variables.desc+"";
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(ConnString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBox.Show("Articulo modificado correctamente.");
+                            this.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+                }
+            }
+            else
+                MessageBox.Show("Los campos deben contener algun valor");
         }
     }
 }

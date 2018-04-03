@@ -173,6 +173,12 @@
     <Compile Include="Clases\LlenadoCombos.cs" />
     <Compile Include="Clases\LLenadoGrids.cs" />
     <Compile Include="Clases\Variables.cs" />
+    <Compile Include="FConfirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConfirmacion.Designer.cs">
+      <DependentUpon>FConfirmacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ConsultaPorDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -443,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Empleados\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConfirmacion.resx">
+      <DependentUpon>FConfirmacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ConsultaPorDepartamento.resx">
       <DependentUpon>ConsultaPorDepartamento.cs</DependentUpon>
