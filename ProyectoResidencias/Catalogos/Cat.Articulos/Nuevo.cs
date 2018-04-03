@@ -65,10 +65,9 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
         
         private void Nuevo_Load(object sender, EventArgs e)
         {
-            Clases.Articulos cb = new Clases.Articulos();
-            cb.CBArticulosFamilia(CBFamilia);
-            cb.CBArticulosTipoArticulo(CBArticulo);
-            cb.CBArticulosMedida(CBMedida);
+            Clases.Articulos.CBArticulosFamilia(CBFamilia);
+            Clases.Articulos.CBArticulosTipoArticulo(CBArticulo);
+            Clases.Articulos.CBArticulosMedida(CBMedida);
         }
     }
 }

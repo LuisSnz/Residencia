@@ -20,10 +20,9 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
         }
         private void Modificar_Load(object sender, EventArgs e)
         {
-            Clases.Articulos cb = new Clases.Articulos();
-            cb.CBArticulosFamilia(CBFamilia);
-            cb.CBArticulosTipoArticulo(CBArticulo);
-            cb.CBArticulosMedida(CBMedida);
+            Clases.Articulos.CBArticulosFamilia(CBFamilia);
+            Clases.Articulos.CBArticulosTipoArticulo(CBArticulo);
+            Clases.Articulos.CBArticulosMedida(CBMedida);
             int index = CBArticulo.FindString(Clases.Variables.descA);
             CBArticulo.SelectedIndex = index;
             index = CBFamilia.FindString(Clases.Variables.descF);
