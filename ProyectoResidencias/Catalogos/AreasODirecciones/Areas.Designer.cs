@@ -105,7 +105,6 @@
             this.GridAreas.Size = new System.Drawing.Size(900, 600);
             this.GridAreas.TabIndex = 1;
             this.GridAreas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAreas_CellEnter);
-            this.GridAreas.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // Areas
             // 

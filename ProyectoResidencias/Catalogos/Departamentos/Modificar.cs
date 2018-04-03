@@ -22,7 +22,9 @@ namespace ProyectoResidencias.Catalogos.Departamentos
             if (Descripcion.Text.Length > 0 && comboArea.SelectedIndex >= 0 && comboSubD.SelectedIndex >= 0)
             {
                 string ConnString = Clases.stconexion.scon;
-                string SqlString = "Insert Into DEPTOS (CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION) values ((select (COUNT(clave))+1 from DEPTOS),'" + Descripcion.Text + "', '" + comboArea.SelectedItem.ToString() + "','" + comboSubD.SelectedItem.ToString() + "');";
+                string SqlString = "Update DEPTOS  set DESCRIPCION='" + Descripcion.Text + "', DIRECCION='"+
+                    comboArea.SelectedItem.ToString()+"',SUBDIRECCION='"+comboSubD.SelectedItem.ToString()+
+                    "' where CLAVE=" + Clases.Variables.referencia + ";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))
@@ -33,7 +35,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
                             conn.Open();
                             cmd.ExecuteNonQuery();
                             conn.Close();
-                            MessageBox.Show("Departamento agragado correctamente.");
+                            MessageBox.Show("Departamento modificado correctamente.");
                             this.Close();
                         }
                     }

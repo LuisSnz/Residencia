@@ -22,19 +22,19 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
         {
             Catalogos.Activo.Familias.Nuevo nuevo = new Catalogos.Activo.Familias.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
+            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Activo.Familias.Modificar modificar = new Catalogos.Activo.Familias.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
+            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
         }
 
         private void Familia_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
+            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
         }
 
         private void GridFamilias_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -57,7 +57,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Familia eliminada correctamente.");
-                Clases.LLenadoGrids.llenarFamilias(GridFamilias, "Familia");
+                Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
             }
             catch (Exception ex)
             {
