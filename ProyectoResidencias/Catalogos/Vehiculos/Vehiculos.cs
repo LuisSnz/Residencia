@@ -15,17 +15,16 @@ namespace ProyectoResidencias.Catalogos.Vehiculos
         {
             InitializeComponent();
         }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        
+        private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Catalogos.Vehiculos.Nuevo nuevo = new Nuevo();
-            nuevo.ShowDialog();
+            Reportes reportes = new Reportes();
+            reportes.ShowDialog();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void Vehiculos_Load(object sender, EventArgs e)
         {
-            Catalogos.Vehiculos.Modificar modificar = new Modificar();
-            modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarGrid(GVVehiculos, "select Numero,Placas,Modelo,Tipo,Subtipo,Marca,NoSerie,Familia,Resguardo,Departamento,Observacion from vVehiculos order by id", "vVehiculos");
         }
     }
 }
