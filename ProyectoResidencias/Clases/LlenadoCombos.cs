@@ -38,25 +38,25 @@ namespace ProyectoResidencias.Clases
             }
         }
         public static void CBArticulosTipoArticulo(ComboBox CB)
+        {
+            try
             {
-                try
+                cn.Open();
+                cmd = new SqlCommand("select Descripcion from tipoarticulo", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
                 {
-                    cn.Open();
-                    cmd = new SqlCommand("select Descripcion from tipoarticulo", cn);
-                    dr = cmd.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        CB.Items.Add(dr["Descripcion"].ToString());
-                    }
-                    //CB.SelectedIndex = 0;
-                    //dr.Close();
-                    cn.Close();
+                    CB.Items.Add(dr["Descripcion"].ToString());
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al llenar :" + ex.ToString());
-                }
+                //CB.SelectedIndex = 0;
+                //dr.Close();
+                cn.Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
         public static void CBArticulosMedida(ComboBox CB)
         {
             try
@@ -97,7 +97,8 @@ namespace ProyectoResidencias.Clases
         }
     }
 
-    class Departamentos {
+    class Departamentos
+    {
         public static SqlCommand cmd;
         public static SqlDataReader dr;
         public static SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
@@ -187,16 +188,16 @@ namespace ProyectoResidencias.Clases
                 MessageBox.Show("Error al llenar :" + ex.ToString());
             }
         }
-        public static void BuscarJefe(ComboBox CB,string n)
+        public static void BuscarJefe(ComboBox CB, string n)
         {
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select Nombre from Empleados where NoEmp="+n, cn);
+                cmd = new SqlCommand("select Nombre from Empleados where NoEmp=" + n, cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    int index=CB.FindString(dr["Nombre"].ToString());
+                    int index = CB.FindString(dr["Nombre"].ToString());
                     CB.SelectedIndex = index;
                 }
                 cn.Close();
@@ -215,7 +216,7 @@ namespace ProyectoResidencias.Clases
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    TB.Text=dr["Textobloqueado"].ToString();
+                    TB.Text = dr["Textobloqueado"].ToString();
                 }
                 cn.Close();
             }
@@ -236,6 +237,71 @@ namespace ProyectoResidencias.Clases
                 while (dr.Read())
                 {
                     CB.Items.Add(dr["Nombre"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+    }
+
+    class Proveedores {
+        public static SqlCommand cmd;
+        public static SqlDataReader dr;
+        public static SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
+
+        public static void Modificar (TextBox Nombre, TextBox Direccion, TextBox Fax, TextBox Ciudad, TextBox Contacto,
+            TextBox RFC, TextBox CURP, TextBox Email, TextBox Telefono, TextBox Giro, TextBox Padron,TextBox Certificacion, 
+            TextBox Accionistas,TextBox Observaciones)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select RTRIM(Nombre) as 'Nombre',RTRIM(Direccion) as 'Direccion',RTRIM(Fax) as 'Fax'," +
+                    "RTRIM(Ciudad) as 'Ciudad',RTRIM(Contacto) as 'Contacto',RTRIM(Rfc) as 'RFC',RTRIM(Curp) as 'CURP'," +
+                    "RTRIM(Email) as 'Email',RTRIM(Telefono) as 'Telefono',RTRIM(Giro) as 'Giro',RTRIM(PadronGobierno) as 'Padron'," +
+                    "RTRIM(Certificaciones) as 'Certificaciones',RTRIM(Accionistas) as 'Accionistas'," +
+                    "RTRIM(Observaciones) as 'Observaciones' from Proveedores where Id=" + Clases.Variables.referencia, cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Nombre.Text = dr["Nombre"].ToString();
+                    Direccion.Text = dr["Direccion"].ToString();
+                    Fax.Text = dr["Fax"].ToString();
+                    CURP.Text = dr["CURP"].ToString();
+                    Ciudad.Text = dr["Ciudad"].ToString();
+                    RFC.Text = dr["RFC"].ToString();
+                    Telefono.Text = dr["Telefono"].ToString();
+                    Email.Text = dr["Email"].ToString();
+                    Contacto.Text = dr["Contacto"].ToString();
+                    Giro.Text = dr["Giro"].ToString();
+                    Padron.Text = dr["Padron"].ToString();
+                    Certificacion.Text = dr["Certificaciones"].ToString();
+                    Accionistas.Text = dr["Accionistas"].ToString();
+                    Observaciones.Text = dr["Observaciones"].ToString();
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+
+        public static void CBBuscar(ComboBox CB, string Consulta,string Columna)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand(Consulta, cn);
+                dr = cmd.ExecuteReader();
+                CB.Items.Clear();
+                CB.Text = "";
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr[Columna].ToString());
                 }
                 cn.Close();
             }

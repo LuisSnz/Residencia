@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProyectoResidencias.Catalogos.Proveedores
 {
@@ -16,22 +17,53 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Modificar_Load(object sender, EventArgs e)
         {
-
+            Clases.Proveedores.Modificar(Nombre,Direccion,Fax,Ciudad,Contacto,RFC,CURP,eMail,Telefono,
+                Giro,Padron,Certificaciones,Accionistas,Observaciones);
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
+            if (Nombre.Text.Length > 0)
+            {
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Update Proveedores  set Nombre='" + Nombre.Text + "',Direccion='" + Direccion.Text + "',Rfc='" + RFC.Text +
+                    "', Fax='" + Fax.Text + "', Ciudad='" + Ciudad.Text + "',Curp='" + CURP.Text + "', Contacto='" + Contacto.Text +
+                    "',Giro='" + Giro.Text + "', PadronGobierno='" + Padron.Text + "',Telefono='" + Telefono.Text +
+                    "', Certificaciones='" + Certificaciones.Text + "',Email='" + eMail.Text + "',Accionistas='" + Accionistas.Text +
+                    "',Observaciones='" + Observaciones.Text + "' where Id=" + Clases.Variables.referencia + ";";
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(ConnString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBox.Show("Proveedor modificado correctamente.");
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+                }
+            }
+            else
+                MessageBox.Show("Al menos el campo Nombre debe contener un valor");
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
 
         }
