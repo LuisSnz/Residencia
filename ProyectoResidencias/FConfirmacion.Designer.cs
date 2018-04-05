@@ -35,18 +35,21 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 21);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 38);
+            this.label1.Size = new System.Drawing.Size(250, 60);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Esta seguro que desea eliminar\r\n    el elemento seleccionado?";
+            this.label1.Text = "¿Esta seguro que desea eliminar\r\n    el elemento seleccionado?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(44, 82);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(47, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 34);
             this.button1.TabIndex = 1;
@@ -57,7 +60,8 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(179, 82);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(157, 90);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 34);
             this.button2.TabIndex = 2;
@@ -78,7 +82,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirmacion";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

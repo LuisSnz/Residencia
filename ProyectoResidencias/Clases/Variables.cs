@@ -7,6 +7,7 @@ namespace ProyectoResidencias.Clases
 {
     class Variables
     {
+        //las variables descX toman valores del datagridview para usarlos al modificar
         public static string referencia;
         public static string desc;
         public static string descA;
@@ -19,6 +20,8 @@ namespace ProyectoResidencias.Clases
         public static string desc4;
         public static string desc5;
         public static string desc6;
+        public static string desc7;
+        public static string desc8;
         public static string ECHBaja;
         public static string ECHBloqueado;
         public static string ECHPliegos;
