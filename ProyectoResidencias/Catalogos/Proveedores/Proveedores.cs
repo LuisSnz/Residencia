@@ -23,7 +23,8 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             nuevo.ShowDialog();
             if(nuevo.DialogResult==DialogResult.OK)
                 Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores", "Proveedores");
+                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
+                "Observaciones from Proveedores", "Proveedores");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -32,7 +33,8 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
                 Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores", "Proveedores");
+                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
+                "Observaciones from Proveedores", "Proveedores");
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -46,7 +48,8 @@ namespace ProyectoResidencias.Catalogos.Proveedores
         private void Proveedores_Load(object sender, EventArgs e)
         {
             Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores", "Proveedores");
+                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
+                "Observaciones from Proveedores", "Proveedores");
         }
 
         private void GridProveedor_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -72,7 +75,8 @@ namespace ProyectoResidencias.Catalogos.Proveedores
                     conn.Close();
                     MessageBox.Show("Departamento eliminado correctamente.");
                     Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores", "Proveedores");
+                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
+                "Observaciones from Proveedores", "Proveedores");
                 }
                 catch (Exception ex)
                 {
@@ -83,7 +87,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Clases.excel.ExportarDataGridViewExcel(GridProveedor);
+            Clases.excel.GridViewExcel(GridProveedor);
         }
     }
 }
