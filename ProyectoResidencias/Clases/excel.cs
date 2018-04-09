@@ -3,36 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ProyectoResidencias.Clases
 {
     class excel
     {
-        public static void ExportarDataGridViewExcel(DataGridView grd)
+        public static void GridViewExcel(DataGridView grd)
         {
-            SaveFileDialog fichero = new SaveFileDialog();
-            fichero.Filter = "Excel (*.xls)|*.xls";
-            if (fichero.ShowDialog() == DialogResult.OK)
+            Microsoft.Office.Interop.Excel.Application aplicacion;
+            Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+            Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+            aplicacion = new Microsoft.Office.Interop.Excel.Application();
+            libros_trabajo = aplicacion.Workbooks.Add();
+            hoja_trabajo = (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+            for (int j = 0; j < grd.ColumnCount; j++)
             {
-                Microsoft.Office.Interop.Excel.Application aplicacion;
-                Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
-                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
-                aplicacion = new Microsoft.Office.Interop.Excel.Application();
-                libros_trabajo = aplicacion.Workbooks.Add();
-                hoja_trabajo =
-                    (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
-                //Recorremos el DataGridView rellenando la hoja de trabajo
-                for (int i = 0; i < grd.Rows.Count - 1; i++)
-                {
-                    for (int j = 0; j < grd.Columns.Count; j++)
-                    {
-                        hoja_trabajo.Cells[i + 1, j + 1] = grd.Rows[i].Cells[j].Value.ToString();
-                    }
-                }
-                libros_trabajo.SaveAs(fichero.FileName,
-                    Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
-                libros_trabajo.Close(true);
+                hoja_trabajo.Cells[1, j + 1] = grd.Columns[j].HeaderText;
             }
+            hoja_trabajo.Rows[1].Font.Bold = true;
+            hoja_trabajo.Rows[1].VerticalAlignment = Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter;
+            for (int i = 0; i < grd.Rows.Count; i++)
+            {
+                for (int j = 0; j < grd.Columns.Count; j++)
+                {
+                    hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            hoja_trabajo.Columns.AutoFit();
+            aplicacion.Visible = true;
         }
     }
 }
