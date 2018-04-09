@@ -145,6 +145,7 @@
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton6.Text = "Imprimir";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // Proveedores
             // 

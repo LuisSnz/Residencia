@@ -18,8 +18,7 @@ namespace ProyectoResidencias.Catalogos.Vehiculos
         
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Reportes reportes = new Reportes();
-            reportes.ShowDialog();
+
         }
 
         private void Vehiculos_Load(object sender, EventArgs e)

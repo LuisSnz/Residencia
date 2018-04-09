@@ -99,6 +99,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivoJcasDataSet.cs">
+      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ActivoJcasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Activo\BienesDadosDeBaja\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,12 +207,6 @@
     </Compile>
     <Compile Include="FConfirmacion.Designer.cs">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes.Designer.cs">
-      <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ConsultaPorDepartamento.cs">
       <SubType>Form</SubType>
@@ -469,10 +471,8 @@
     <EmbeddedResource Include="FConfirmacion.resx">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ReporteProveedores.rdlc" />
     <EmbeddedResource Include="Informes\ReporteVehiculos.rdlc" />
-    <EmbeddedResource Include="Reportes.resx">
-      <DependentUpon>Reportes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ConsultaPorDepartamento.resx">
       <DependentUpon>ConsultaPorDepartamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -594,6 +594,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ActivoJcasDataSet.xsc">
+      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ActivoJcasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ActivoJcasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ActivoJcasDataSet.xss">
+      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ProyectoResidencias.csproj.GenerateResource.Cache" />
@@ -744,6 +756,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Datos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

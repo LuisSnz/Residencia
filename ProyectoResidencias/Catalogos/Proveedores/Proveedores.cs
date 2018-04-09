@@ -89,5 +89,10 @@ namespace ProyectoResidencias.Catalogos.Proveedores
         {
             Clases.excel.GridViewExcel(GridProveedor);
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
