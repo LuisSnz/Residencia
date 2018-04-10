@@ -32,9 +32,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBuscar = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioJefe = new System.Windows.Forms.RadioButton();
             this.radioDeptos = new System.Windows.Forms.RadioButton();
             this.radioNombre = new System.Windows.Forms.RadioButton();
-            this.radioJefe = new System.Windows.Forms.RadioButton();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro :";
             // 
+            // radioJefe
+            // 
+            this.radioJefe.AutoSize = true;
+            this.radioJefe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioJefe.Location = new System.Drawing.Point(254, 24);
+            this.radioJefe.Name = "radioJefe";
+            this.radioJefe.Size = new System.Drawing.Size(51, 21);
+            this.radioJefe.TabIndex = 2;
+            this.radioJefe.Text = "Jefe";
+            this.radioJefe.UseVisualStyleBackColor = true;
+            this.radioJefe.CheckedChanged += new System.EventHandler(this.radioJefe_CheckedChanged);
+            // 
             // radioDeptos
             // 
             this.radioDeptos.AutoSize = true;
@@ -115,18 +127,6 @@
             this.radioNombre.UseVisualStyleBackColor = true;
             this.radioNombre.CheckedChanged += new System.EventHandler(this.radioNombre_CheckedChanged);
             // 
-            // radioJefe
-            // 
-            this.radioJefe.AutoSize = true;
-            this.radioJefe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioJefe.Location = new System.Drawing.Point(254, 24);
-            this.radioJefe.Name = "radioJefe";
-            this.radioJefe.Size = new System.Drawing.Size(51, 21);
-            this.radioJefe.TabIndex = 2;
-            this.radioJefe.Text = "Jefe";
-            this.radioJefe.UseVisualStyleBackColor = true;
-            this.radioJefe.CheckedChanged += new System.EventHandler(this.radioJefe_CheckedChanged);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
@@ -141,6 +141,7 @@
             // 
             // Buscar
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
