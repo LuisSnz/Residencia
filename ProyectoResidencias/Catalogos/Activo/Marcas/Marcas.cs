@@ -68,5 +68,12 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
             Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
             Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
         }
+
+        private void GridMarcas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Catalogos.Activo.Marcas.Modificar modificar = new Catalogos.Activo.Marcas.Modificar();
+            modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+        }
     }
 }

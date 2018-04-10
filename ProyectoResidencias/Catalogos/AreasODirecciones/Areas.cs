@@ -70,5 +70,12 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
                 }
             }
         }
+
+        private void GridAreas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Catalogos.AreasODirecciones.Modificar modificar = new Catalogos.AreasODirecciones.Modificar();
+            modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+        }
     }
 }

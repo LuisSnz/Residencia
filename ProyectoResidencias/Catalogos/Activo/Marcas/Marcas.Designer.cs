@@ -53,6 +53,7 @@
             this.GridMarcas.ReadOnly = true;
             this.GridMarcas.Size = new System.Drawing.Size(290, 600);
             this.GridMarcas.TabIndex = 7;
+            this.GridMarcas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridMarcas_CellContentDoubleClick);
             this.GridMarcas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridMarcas_CellEnter);
             // 
             // toolStrip1

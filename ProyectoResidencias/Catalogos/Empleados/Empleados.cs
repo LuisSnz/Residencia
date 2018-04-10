@@ -90,5 +90,13 @@ namespace ProyectoResidencias.Catalogos.Empleados
             Clases.Variables.desc5 = filaSeleccionada.Cells[8].Value.ToString();
             Clases.Variables.desc6 = filaSeleccionada.Cells[6].Value.ToString();
         }
+
+        private void GridEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Catalogos.Empleados.Modificar modificar = new Catalogos.Empleados.Modificar();
+            modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
+                            "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' from empleados", "empleados");
+        }
     }
 }

@@ -104,6 +104,7 @@
             this.GridAreas.ReadOnly = true;
             this.GridAreas.Size = new System.Drawing.Size(900, 600);
             this.GridAreas.TabIndex = 1;
+            this.GridAreas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAreas_CellContentDoubleClick);
             this.GridAreas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAreas_CellEnter);
             // 
             // Areas

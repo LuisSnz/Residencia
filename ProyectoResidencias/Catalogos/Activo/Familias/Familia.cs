@@ -69,5 +69,12 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
                 }
             }
         }
+
+        private void GridFamilias_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Catalogos.Activo.Familias.Modificar modificar = new Catalogos.Activo.Familias.Modificar();
+            modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+        }
     }
 }

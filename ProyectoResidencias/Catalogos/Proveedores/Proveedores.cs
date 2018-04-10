@@ -95,5 +95,15 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             RVProveedores viewer = new RVProveedores();
             viewer.ShowDialog();
         }
+
+        private void GridProveedor_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Catalogos.Proveedores.Modificar modificar = new Catalogos.Proveedores.Modificar();
+            modificar.ShowDialog();
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
+                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
+                "Observaciones from Proveedores", "Proveedores");
+        }
     }
 }
