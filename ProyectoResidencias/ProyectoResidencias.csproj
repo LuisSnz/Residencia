@@ -663,6 +663,8 @@
     <None Include="bin\Debug\iconos\modificar}.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Imagen1.png" />
+    <None Include="Resources\cambiodebienespersona.png" />
     <None Include="Resources\logo pirata.png" />
     <None Include="Resources\cropped-cropped-16003027_247391555693468_8043008145918188717_n.jpg" />
     <None Include="Resources\7da9c795-1ecb-4dd7-ba41-298ad0ca7a56.jpg" />

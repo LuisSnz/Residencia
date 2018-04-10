@@ -125,20 +125,6 @@ namespace ProyectoResidencias
         {
             
         }
-
-        private void porBienSeleccionadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CBienes.CambiodeBienes.PorBienSeleccionados porbienseleccionado = new CBienes.CambiodeBienes.PorBienSeleccionados();
-            porbienseleccionado.ShowDialog();
-           
-        }
-
-        private void porEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CBienes.CambiodeBienes.PorEmpleados porempleado = new CBienes.CambiodeBienes.PorEmpleados();
-            porempleado.ShowDialog();
-        }
-
         private void historicoDelBienToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CBienes.Reportes.HistoricoDelBien historicodelbien = new CBienes.Reportes.HistoricoDelBien();

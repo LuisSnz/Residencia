@@ -48,9 +48,6 @@
             this.verificarBienesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienesDadosDeBajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarActivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambioDeBienesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porBienSeleccionadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resguardoPorEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoDelBienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,11 +60,11 @@
             this.paraEntregaRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paraASECHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Base = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -77,7 +74,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.catalogosToolStripMenuItem,
             this.activoToolStripMenuItem,
-            this.cambioDeBienesToolStripMenuItem,
             this.reportesToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -220,28 +216,6 @@
             this.exportarActivosToolStripMenuItem.Name = "exportarActivosToolStripMenuItem";
             resources.ApplyResources(this.exportarActivosToolStripMenuItem, "exportarActivosToolStripMenuItem");
             // 
-            // cambioDeBienesToolStripMenuItem
-            // 
-            this.cambioDeBienesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porBienSeleccionadoToolStripMenuItem,
-            this.porEmpleadoToolStripMenuItem});
-            this.cambioDeBienesToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.cambiobienes;
-            this.cambioDeBienesToolStripMenuItem.Name = "cambioDeBienesToolStripMenuItem";
-            resources.ApplyResources(this.cambioDeBienesToolStripMenuItem, "cambioDeBienesToolStripMenuItem");
-            this.cambioDeBienesToolStripMenuItem.Click += new System.EventHandler(this.CambioDeBienesToolStripMenuItem_Click);
-            // 
-            // porBienSeleccionadoToolStripMenuItem
-            // 
-            this.porBienSeleccionadoToolStripMenuItem.Name = "porBienSeleccionadoToolStripMenuItem";
-            resources.ApplyResources(this.porBienSeleccionadoToolStripMenuItem, "porBienSeleccionadoToolStripMenuItem");
-            this.porBienSeleccionadoToolStripMenuItem.Click += new System.EventHandler(this.porBienSeleccionadoToolStripMenuItem_Click);
-            // 
-            // porEmpleadoToolStripMenuItem
-            // 
-            this.porEmpleadoToolStripMenuItem.Name = "porEmpleadoToolStripMenuItem";
-            resources.ApplyResources(this.porEmpleadoToolStripMenuItem, "porEmpleadoToolStripMenuItem");
-            this.porEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.porEmpleadoToolStripMenuItem_Click);
-            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -320,19 +294,19 @@
             resources.ApplyResources(this.Base, "Base");
             this.Base.Name = "Base";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoResidencias.Properties.Resources._7da9c795_1ecb_4dd7_ba41_298ad0ca7a56;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoResidencias.Properties.Resources.logo_pirata;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoResidencias.Properties.Resources._7da9c795_1ecb_4dd7_ba41_298ad0ca7a56;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // Inicio
             // 
@@ -350,8 +324,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,9 +362,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem paraEntregaRecepcionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paraASECHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cambioDeBienesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porBienSeleccionadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porEmpleadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bienesSinFacturaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Base;
