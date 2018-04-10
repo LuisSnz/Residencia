@@ -53,25 +53,30 @@ namespace ProyectoResidencias
             var result =buscar.ShowDialog();
             if (result == DialogResult.OK)
             {
-                BienesVi.DataSource = buscar.ds.Tables["bienes"];
+                GVBienes.DataSource = buscar.ds.Tables["bienes"];
             }
         }
 
         private void Bienes_Load(object sender, EventArgs e)
         {
-            //Clases.ConexionBD conexion = new Clases.ConexionBD();
-            //string conexion1 = "Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty";
-            //string consulta = "select * from bienes";
-            //SqlConnection cnn = new SqlConnection(conexion1);
-            //SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
-            //DataSet ds = new DataSet();
-            //da.Fill(ds, "bienes");
-            //BienesVi.DataSource = ds.Tables["bienes"];
+            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, bienes.total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            CBienes.CambiodeBienes.PorEmpleados porempleado = new CBienes.CambiodeBienes.PorEmpleados();
+            porempleado.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            CBienes.CambiodeBienes.PorBienSeleccionados porbienseleccionado = new CBienes.CambiodeBienes.PorBienSeleccionados();
+            porbienseleccionado.ShowDialog();
         }
     }
 }

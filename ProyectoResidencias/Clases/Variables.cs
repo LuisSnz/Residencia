@@ -20,8 +20,6 @@ namespace ProyectoResidencias.Clases
         public static string desc4;
         public static string desc5;
         public static string desc6;
-        public static string desc7;
-        public static string desc8;
         public static string ECHBaja;
         public static string ECHBloqueado;
         public static string ECHPliegos;
