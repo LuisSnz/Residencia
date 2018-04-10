@@ -46,22 +46,28 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
-            string SqlString = "Delete from areas where Clave=" + Clases.Variables.referencia;
-            try
+
+            FConfirmacion confirmacion = new FConfirmacion();
+            confirmacion.ShowDialog();
+            if (confirmacion.DialogResult == DialogResult.OK)
             {
-                SqlConnection conn = new SqlConnection(ConnString);
-                SqlCommand cmd = new SqlCommand(SqlString, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Area eliminada correctamente.");
-                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Delete from areas where Clave=" + Clases.Variables.referencia;
+                try
+                {
+                    SqlConnection conn = new SqlConnection(ConnString);
+                    SqlCommand cmd = new SqlCommand(SqlString, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Area eliminada correctamente.");
+                    Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                }
             }
         }
     }

@@ -30,13 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.activoJcasDataSet1 = new ProyectoResidencias.ActivoJcasDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedoresTableAdapter = new ProyectoResidencias.ActivoJcasDataSetTableAdapters.ProveedoresTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.activoJcasDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activoJcasDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // proveedoresBindingSource
+            // 
+            this.proveedoresBindingSource.DataMember = "Proveedores";
+            this.proveedoresBindingSource.DataSource = this.activoJcasDataSet1;
             // 
             // activoJcasDataSet1
             // 
@@ -56,11 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // proveedoresBindingSource
-            // 
-            this.proveedoresBindingSource.DataMember = "Proveedores";
-            this.proveedoresBindingSource.DataSource = this.activoJcasDataSet1;
-            // 
             // proveedoresTableAdapter
             // 
             this.proveedoresTableAdapter.ClearBeforeFill = true;
@@ -73,9 +73,10 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "RVProveedores";
             this.Text = "RVProveedores";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RVProveedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.activoJcasDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.activoJcasDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

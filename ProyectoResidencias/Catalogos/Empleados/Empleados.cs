@@ -49,23 +49,28 @@ namespace ProyectoResidencias.Catalogos.Empleados
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
-            string SqlString = "Delete from empleados where NoEmp=" + Clases.Variables.referencia;
-            try
+            FConfirmacion confirmacion = new FConfirmacion();
+            confirmacion.ShowDialog();
+            if (confirmacion.DialogResult == DialogResult.OK)
             {
-                SqlConnection conn = new SqlConnection(ConnString);
-                SqlCommand cmd = new SqlCommand(SqlString, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Empleado eliminado correctamente.");
-                Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
-                "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' from empleados", "empleados");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Delete from empleados where NoEmp=" + Clases.Variables.referencia;
+                try
+                {
+                    SqlConnection conn = new SqlConnection(ConnString);
+                    SqlCommand cmd = new SqlCommand(SqlString, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Empleado eliminado correctamente.");
+                    Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
+                    "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' from empleados", "empleados");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                }
             }
         }
 

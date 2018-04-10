@@ -38,22 +38,27 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
-            string SqlString = "Delete from marca where Id=" + Clases.Variables.referencia;
-            try
+            FConfirmacion confirmacion = new FConfirmacion();
+            confirmacion.ShowDialog();
+            if (confirmacion.DialogResult == DialogResult.OK)
             {
-                SqlConnection conn = new SqlConnection(ConnString);
-                SqlCommand cmd = new SqlCommand(SqlString, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Marca eliminada correctamente.");
-                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Delete from marca where Id=" + Clases.Variables.referencia;
+                try
+                {
+                    SqlConnection conn = new SqlConnection(ConnString);
+                    SqlCommand cmd = new SqlCommand(SqlString, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Marca eliminada correctamente.");
+                    Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                }
             }
         }
 
