@@ -80,5 +80,12 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
 
         }
+
+        private void GridDeptos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Catalogos.Departamentos.Modificar modificar = new Catalogos.Departamentos.Modificar();
+            modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+        }
     }
 }

@@ -81,5 +81,12 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
                 Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
             }
         }
+
+        private void GridSubD_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Catalogos.Subdirecciones.Modificar modificar = new Modificar();
+            modificar.ShowDialog();
+            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+        }
     }
 }

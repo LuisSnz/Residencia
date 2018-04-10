@@ -56,6 +56,7 @@
             this.GridSubD.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.GridSubD.Size = new System.Drawing.Size(900, 600);
             this.GridSubD.TabIndex = 3;
+            this.GridSubD.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridSubD_CellContentDoubleClick);
             this.GridSubD.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridSubD_CellEnter);
             this.GridSubD.DoubleClick += new System.EventHandler(this.GridSubD_DoubleClick);
             // 

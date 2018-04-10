@@ -137,7 +137,7 @@
             this.Controls.Add(this.Imprimir);
             this.Name = "CostoBienesResguardados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Costo Bienes Resguardados";
+            this.Text = "Costo Bienes Actual";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
