@@ -41,25 +41,28 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
-            string SqlString = "Delete from subdireccion where ID=" + Clases.Variables.referencia;
-            try
+            FConfirmacion confirmacion = new FConfirmacion();
+            confirmacion.ShowDialog();
+            if (confirmacion.DialogResult == DialogResult.OK)
             {
-                SqlConnection conn = new SqlConnection(ConnString);
-                SqlCommand cmd = new SqlCommand(SqlString, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("SubDireccion eliminada correctamente.");
-                    
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El valor no se pudo eliminar. \n" + ex.ToString());
-            }
-
-            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Delete from subdireccion where ID=" + Clases.Variables.referencia;
+                try
+                {
+                    SqlConnection conn = new SqlConnection(ConnString);
+                    SqlCommand cmd = new SqlCommand(SqlString, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("SubDireccion eliminada correctamente.");
+                    Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor no se pudo eliminar. \n" + ex.ToString());
+                }
+            }            
         }
 
         private void GridSubD_CellEnter(object sender, DataGridViewCellEventArgs e)

@@ -52,23 +52,33 @@ namespace ProyectoResidencias.Catalogos.Departamentos
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
-            string SqlString = "Delete from DEPTOS where Clave=" + Clases.Variables.referencia;
-            try
+            FConfirmacion confirmacion = new FConfirmacion();
+            confirmacion.ShowDialog();
+            if (confirmacion.DialogResult == DialogResult.OK)
             {
-                SqlConnection conn = new SqlConnection(ConnString);
-                SqlCommand cmd = new SqlCommand(SqlString, conn);
-                cmd.CommandType = CommandType.Text;
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Departamento eliminado correctamente.");
-                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+                string ConnString = Clases.stconexion.scon;
+                string SqlString = "Delete from DEPTOS where Clave=" + Clases.Variables.referencia;
+                try
+                {
+                    SqlConnection conn = new SqlConnection(ConnString);
+                    SqlCommand cmd = new SqlCommand(SqlString, conn);
+                    cmd.CommandType = CommandType.Text;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Departamento eliminado correctamente.");
+                    Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
-            }
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
