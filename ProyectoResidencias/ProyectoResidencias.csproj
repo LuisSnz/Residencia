@@ -197,6 +197,12 @@
     <Compile Include="Catalogos\Empleados\Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Vehiculos\ReporteVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Vehiculos\ReporteVehiculos.Designer.cs">
+      <DependentUpon>ReporteVehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\ConexionBD.cs" />
     <Compile Include="Clases\excel.cs" />
     <Compile Include="Clases\LlenadoCombos.cs" />
@@ -422,7 +428,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Activo\BienesDadosDeBaja\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -467,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Empleados\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Vehiculos\ReporteVehiculos.resx">
+      <DependentUpon>ReporteVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FConfirmacion.resx">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
@@ -646,19 +654,6 @@
     <None Include="bin\Debug\iconos\modificar}.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\logo pirata.png" />
     <None Include="Resources\cropped-cropped-16003027_247391555693468_8043008145918188717_n.jpg" />
     <None Include="Resources\7da9c795-1ecb-4dd7-ba41-298ad0ca7a56.jpg" />
@@ -757,9 +752,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Datos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
