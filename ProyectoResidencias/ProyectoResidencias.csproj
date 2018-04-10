@@ -197,6 +197,12 @@
     <Compile Include="Catalogos\Empleados\Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Proveedores\RVProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Proveedores\RVProveedores.Designer.cs">
+      <DependentUpon>RVProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\ConexionBD.cs" />
     <Compile Include="Clases\excel.cs" />
     <Compile Include="Clases\LlenadoCombos.cs" />
@@ -467,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Empleados\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Proveedores\RVProveedores.resx">
+      <DependentUpon>RVProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FConfirmacion.resx">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
