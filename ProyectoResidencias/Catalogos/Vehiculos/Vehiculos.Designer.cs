@@ -69,14 +69,23 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton5.Text = "Exportar a Excel";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // GVVehiculos
             // 
+            this.GVVehiculos.AllowUserToAddRows = false;
+            this.GVVehiculos.AllowUserToDeleteRows = false;
+            this.GVVehiculos.AllowUserToOrderColumns = true;
+            this.GVVehiculos.AllowUserToResizeColumns = false;
+            this.GVVehiculos.AllowUserToResizeRows = false;
+            this.GVVehiculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GVVehiculos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.GVVehiculos.BackgroundColor = System.Drawing.Color.White;
             this.GVVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GVVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVVehiculos.Location = new System.Drawing.Point(12, 50);
             this.GVVehiculos.Name = "GVVehiculos";
+            this.GVVehiculos.ReadOnly = true;
             this.GVVehiculos.Size = new System.Drawing.Size(900, 600);
             this.GVVehiculos.TabIndex = 1;
             // 
