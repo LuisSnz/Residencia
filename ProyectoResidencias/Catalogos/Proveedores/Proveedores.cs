@@ -92,7 +92,8 @@ namespace ProyectoResidencias.Catalogos.Proveedores
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-
+            RVProveedores viewer = new RVProveedores();
+            viewer.ShowDialog();
         }
     }
 }
