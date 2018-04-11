@@ -77,6 +77,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
                             conn.Close();
                             MessageBox.Show("Empleado modificado correctamente.");
                             this.Close();
+                            this.DialogResult = DialogResult.OK;
                         }
                     }
                 }

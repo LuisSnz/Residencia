@@ -37,6 +37,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
                             conn.Close();
                             MessageBox.Show("Departamento modificado correctamente.");
                             this.Close();
+                            this.DialogResult = DialogResult.OK;
                         }
                     }
                 }

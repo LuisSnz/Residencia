@@ -39,6 +39,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
                             cmd.ExecuteNonQuery();
                             conn.Close();
                             MessageBox.Show("Marca modificada correctamente.");
+                            this.DialogResult = DialogResult.OK;
                             this.Close();
                         }
                     }

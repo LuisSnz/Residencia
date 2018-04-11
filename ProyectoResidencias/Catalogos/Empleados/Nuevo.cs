@@ -57,6 +57,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
                     conn.Close();
                     MessageBox.Show("Departamento agragado correctamente.");
                     this.Close();
+                    this.DialogResult = DialogResult.OK;
                 }
                 catch (Exception ex)
                 {

@@ -35,6 +35,7 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
                             conn.Close();
                             MessageBox.Show("SubDireccion modificada correctamente.");
                             this.Close();
+                            this.DialogResult = DialogResult.OK;
                         }
                     }
                 }

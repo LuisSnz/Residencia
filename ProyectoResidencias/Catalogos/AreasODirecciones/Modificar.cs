@@ -35,6 +35,7 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
                             conn.Close();
                             MessageBox.Show("Area modificada correctamente.");
                             this.Close();
+                            this.DialogResult = DialogResult.OK;
                         }
                     }
                 }

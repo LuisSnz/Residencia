@@ -31,15 +31,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.CBNombreNuevo = new System.Windows.Forms.ComboBox();
+            this.GridNuevo = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CBNombreActual = new System.Windows.Forms.ComboBox();
+            this.GridActual = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridNuevo)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridActual)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -65,8 +65,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Controls.Add(this.CBNombreNuevo);
+            this.groupBox2.Controls.Add(this.GridNuevo);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(329, 12);
             this.groupBox2.Name = "groupBox2";
@@ -75,28 +75,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resguardo del Empleado Nuevo";
             // 
-            // comboBox2
+            // CBNombreNuevo
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 19);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(288, 25);
-            this.comboBox2.TabIndex = 2;
+            this.CBNombreNuevo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CBNombreNuevo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CBNombreNuevo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBNombreNuevo.FormattingEnabled = true;
+            this.CBNombreNuevo.Location = new System.Drawing.Point(6, 19);
+            this.CBNombreNuevo.Name = "CBNombreNuevo";
+            this.CBNombreNuevo.Size = new System.Drawing.Size(288, 25);
+            this.CBNombreNuevo.TabIndex = 2;
             // 
-            // dataGridView2
+            // GridNuevo
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 46);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(288, 203);
-            this.dataGridView2.TabIndex = 2;
+            this.GridNuevo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridNuevo.Location = new System.Drawing.Point(6, 46);
+            this.GridNuevo.Name = "GridNuevo";
+            this.GridNuevo.Size = new System.Drawing.Size(288, 203);
+            this.GridNuevo.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.CBNombreActual);
+            this.groupBox1.Controls.Add(this.GridActual);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -105,22 +107,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resguardo del Empleado Actual";
             // 
-            // comboBox1
+            // CBNombreActual
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(288, 25);
-            this.comboBox1.TabIndex = 1;
+            this.CBNombreActual.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CBNombreActual.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CBNombreActual.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBNombreActual.FormattingEnabled = true;
+            this.CBNombreActual.Location = new System.Drawing.Point(6, 19);
+            this.CBNombreActual.Name = "CBNombreActual";
+            this.CBNombreActual.Size = new System.Drawing.Size(288, 25);
+            this.CBNombreActual.TabIndex = 1;
+            this.CBNombreActual.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // GridActual
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(288, 203);
-            this.dataGridView1.TabIndex = 0;
+            this.GridActual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridActual.Location = new System.Drawing.Point(6, 46);
+            this.GridActual.Name = "GridActual";
+            this.GridActual.Size = new System.Drawing.Size(288, 203);
+            this.GridActual.TabIndex = 0;
             // 
             // PorEmpleados
             // 
@@ -135,10 +140,11 @@
             this.Name = "PorEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambio de Bienes por Empleados";
+            this.Load += new System.EventHandler(this.PorEmpleados_Load);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridNuevo)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridActual)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,10 +154,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox CBNombreNuevo;
+        private System.Windows.Forms.DataGridView GridNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox CBNombreActual;
+        private System.Windows.Forms.DataGridView GridActual;
     }
 }

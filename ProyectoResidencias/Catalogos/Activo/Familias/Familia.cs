@@ -22,14 +22,16 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
         {
             Catalogos.Activo.Familias.Nuevo nuevo = new Catalogos.Activo.Familias.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+            if (nuevo.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Activo.Familias.Modificar modificar = new Catalogos.Activo.Familias.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
         }
 
         private void Familia_Load(object sender, EventArgs e)
@@ -72,9 +74,14 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
 
         private void GridFamilias_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void GridFamilias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Catalogos.Activo.Familias.Modificar modificar = new Catalogos.Activo.Familias.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
         }
     }
 }

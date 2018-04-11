@@ -21,7 +21,8 @@ namespace ProyectoResidencias.Catalogos.Empleados
         {
             Catalogos.Empleados.Nuevo nuevo = new Catalogos.Empleados.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
+            if (nuevo.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
                             "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' from empleados", "empleados");
         }
 
@@ -29,7 +30,8 @@ namespace ProyectoResidencias.Catalogos.Empleados
         {
             Catalogos.Empleados.Modificar modificar = new Catalogos.Empleados.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
                             "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' from empleados", "empleados");
         }
 
@@ -93,9 +95,15 @@ namespace ProyectoResidencias.Catalogos.Empleados
 
         private void GridEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void GridEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Catalogos.Empleados.Modificar modificar = new Catalogos.Empleados.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridEmp, "select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
                             "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' from empleados", "empleados");
         }
     }

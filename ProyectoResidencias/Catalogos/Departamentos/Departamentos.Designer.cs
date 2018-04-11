@@ -55,6 +55,7 @@
             this.GridDeptos.TabIndex = 5;
             this.GridDeptos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.GridDeptos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDeptos_CellContentDoubleClick);
+            this.GridDeptos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDeptos_CellDoubleClick);
             this.GridDeptos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDeptos_CellEnter);
             // 
             // toolStrip1

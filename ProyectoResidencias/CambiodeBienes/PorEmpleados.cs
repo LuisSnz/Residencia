@@ -15,5 +15,16 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
         {
             InitializeComponent();
         }
+
+        private void PorEmpleados_Load(object sender, EventArgs e)
+        {
+            Clases.Empleados.CBNombre(CBNombreActual);
+            Clases.Empleados.CBNombre(CBNombreNuevo);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("f");
+        }
     }
 }

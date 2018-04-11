@@ -54,6 +54,7 @@
             this.GridFamilias.Size = new System.Drawing.Size(900, 600);
             this.GridFamilias.TabIndex = 9;
             this.GridFamilias.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridFamilias_CellContentDoubleClick);
+            this.GridFamilias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridFamilias_CellDoubleClick);
             this.GridFamilias.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridFamilias_CellEnter);
             // 
             // toolStrip1
