@@ -26,14 +26,16 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             Catalogos.Departamentos.Nuevo nuevo = new Catalogos.Departamentos.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+            if (nuevo.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Departamentos.Modificar modificar = new Catalogos.Departamentos.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
         }
 
         private void Departamentos_Load(object sender, EventArgs e)
@@ -83,9 +85,15 @@ namespace ProyectoResidencias.Catalogos.Departamentos
 
         private void GridDeptos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void GridDeptos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Catalogos.Departamentos.Modificar modificar = new Catalogos.Departamentos.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
         }
     }
 }

@@ -21,14 +21,16 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
         {
             Catalogos.Activo.Marcas.Nuevo nuevo = new Catalogos.Activo.Marcas.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+            if (nuevo.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Activo.Marcas.Modificar modificar = new Catalogos.Activo.Marcas.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
         }
 
         private void Marcas_Load(object sender, EventArgs e)
@@ -71,9 +73,15 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
 
         private void GridMarcas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void GridMarcas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Catalogos.Activo.Marcas.Modificar modificar = new Catalogos.Activo.Marcas.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
         }
     }
 }

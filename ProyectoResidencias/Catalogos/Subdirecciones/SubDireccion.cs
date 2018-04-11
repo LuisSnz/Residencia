@@ -23,14 +23,16 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
         {
             Catalogos.Subdirecciones.Nuevo nuevo = new Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+            if (nuevo.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Subdirecciones.Modificar modificar = new Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
         }
 
         public void SubDireccion_Load(object sender, EventArgs e)
@@ -84,9 +86,15 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
 
         private void GridSubD_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void GridSubD_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Catalogos.Subdirecciones.Modificar modificar = new Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
         }
     }
 }

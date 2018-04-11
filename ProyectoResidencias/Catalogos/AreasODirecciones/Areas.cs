@@ -22,14 +22,16 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
         {
             Catalogos.AreasODirecciones.Nuevo nuevo = new Catalogos.AreasODirecciones.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+            if (nuevo.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.AreasODirecciones.Modificar modificar = new Catalogos.AreasODirecciones.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
         }
 
         private void Areas_Load(object sender, EventArgs e)
@@ -73,9 +75,15 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
 
         private void GridAreas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void GridAreas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Catalogos.AreasODirecciones.Modificar modificar = new Catalogos.AreasODirecciones.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
         }
     }
 }

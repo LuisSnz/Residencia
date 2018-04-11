@@ -36,6 +36,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
                             conn.Close();
                             MessageBox.Show("Familia modificada correctamente.");
                             this.Close();
+                            this.DialogResult = DialogResult.OK;
                         }
                     }
                 }

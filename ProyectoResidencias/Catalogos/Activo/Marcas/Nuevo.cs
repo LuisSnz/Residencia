@@ -35,6 +35,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
                             conn.Close();
                             MessageBox.Show("Marca agragada correctamente.");
                             this.Close();
+                            this.DialogResult = DialogResult.OK;
                         }
                     }
                 }

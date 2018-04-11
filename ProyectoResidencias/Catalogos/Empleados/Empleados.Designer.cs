@@ -56,6 +56,7 @@
             this.GridEmp.Size = new System.Drawing.Size(926, 600);
             this.GridEmp.TabIndex = 5;
             this.GridEmp.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEmp_CellContentDoubleClick);
+            this.GridEmp.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEmp_CellDoubleClick);
             this.GridEmp.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEmp_CellEnter);
             // 
             // toolStrip1

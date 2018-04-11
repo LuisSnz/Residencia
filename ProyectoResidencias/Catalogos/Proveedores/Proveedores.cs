@@ -98,6 +98,11 @@ namespace ProyectoResidencias.Catalogos.Proveedores
 
         private void GridProveedor_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void GridProveedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Catalogos.Proveedores.Modificar modificar = new Catalogos.Proveedores.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
