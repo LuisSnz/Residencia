@@ -19,6 +19,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
 
         private void Nuevo_Load(object sender, EventArgs e)
         {
+            FechaVencimiento.Value = DateTime.Now;
             Clases.Empleados.CBJefe(comboJefe);
             Clases.Empleados.CBDeptos(comboDepto);
         }
