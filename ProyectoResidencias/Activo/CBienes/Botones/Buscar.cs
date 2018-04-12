@@ -26,16 +26,16 @@ namespace ProyectoResidencias.CBienes.Botones
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string consulta;
-            Bienes bs = new Bienes();
-            string conexion1 = Clases.stconexion.scon;
-            consulta = "select * from bienes";
-            SqlConnection cnn = new SqlConnection(conexion1);
-            SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
-            this.ds = new DataSet();
-            da.Fill(ds, "bienes");
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            //string consulta;
+            //Bienes bs = new Bienes();
+            //string conexion1 = Clases.stconexion.scon;
+            //consulta = "select * from bienes";
+            //SqlConnection cnn = new SqlConnection(conexion1);
+            //SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
+            //this.ds = new DataSet();
+            //da.Fill(ds, "bienes");
+            //this.DialogResult = DialogResult.OK;
+            //this.Close();
         }
     }
     }

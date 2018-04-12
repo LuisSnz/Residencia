@@ -26,5 +26,11 @@ namespace ProyectoResidencias.Clases
         public static string ECHNoPliegos;
         public static string ECHJefe;
         public static string ConsultaBuscar;
+        public static string lbOrdenCompra;
+        public static string lbFactura;
+        public static string tbArticulo;
+        public static string tbObservacion;
+        public static string tbResguardoA;
+        public static string tbDepartamentoA;
     }
 }

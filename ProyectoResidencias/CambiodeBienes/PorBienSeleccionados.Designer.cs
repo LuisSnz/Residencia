@@ -33,22 +33,23 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CBNuevoResguardo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TBNuevoResguardo = new System.Windows.Forms.TextBox();
+            this.TBDepartamentoA = new System.Windows.Forms.TextBox();
+            this.TBResguardoA = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBObservaciones = new System.Windows.Forms.TextBox();
+            this.TBArticulo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LBFactura = new System.Windows.Forms.Label();
+            this.LBOrdenCompra = new System.Windows.Forms.Label();
+            this.LBEtiqueta = new System.Windows.Forms.Label();
+            this.LBId = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,6 +70,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Cerrar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -82,9 +84,19 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(19, 31);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(614, 115);
             this.dataGridView1.TabIndex = 16;
             // 
@@ -102,11 +114,12 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.CBNuevoResguardo);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.TBNuevoResguardo);
+            this.panel2.Controls.Add(this.TBDepartamentoA);
+            this.panel2.Controls.Add(this.TBResguardoA);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,13 +128,27 @@
             this.panel2.Size = new System.Drawing.Size(653, 143);
             this.panel2.TabIndex = 17;
             // 
-            // comboBox1
+            // label12
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(349, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 25);
-            this.comboBox1.TabIndex = 15;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(309, 53);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(36, 19);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "==>";
+            // 
+            // CBNuevoResguardo
+            // 
+            this.CBNuevoResguardo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CBNuevoResguardo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CBNuevoResguardo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBNuevoResguardo.FormattingEnabled = true;
+            this.CBNuevoResguardo.Location = new System.Drawing.Point(349, 36);
+            this.CBNuevoResguardo.Name = "CBNuevoResguardo";
+            this.CBNuevoResguardo.Size = new System.Drawing.Size(282, 23);
+            this.CBNuevoResguardo.TabIndex = 15;
+            this.CBNuevoResguardo.SelectedIndexChanged += new System.EventHandler(this.CBNuevoResguardo_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -132,30 +159,37 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Cambiar Resguardo";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // TBNuevoResguardo
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(349, 67);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(282, 25);
-            this.textBox6.TabIndex = 13;
+            this.TBNuevoResguardo.Enabled = false;
+            this.TBNuevoResguardo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBNuevoResguardo.Location = new System.Drawing.Point(349, 67);
+            this.TBNuevoResguardo.Name = "TBNuevoResguardo";
+            this.TBNuevoResguardo.ReadOnly = true;
+            this.TBNuevoResguardo.Size = new System.Drawing.Size(282, 22);
+            this.TBNuevoResguardo.TabIndex = 13;
             // 
-            // textBox5
+            // TBDepartamentoA
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(20, 67);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(288, 25);
-            this.textBox5.TabIndex = 12;
+            this.TBDepartamentoA.Enabled = false;
+            this.TBDepartamentoA.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBDepartamentoA.Location = new System.Drawing.Point(20, 67);
+            this.TBDepartamentoA.Name = "TBDepartamentoA";
+            this.TBDepartamentoA.ReadOnly = true;
+            this.TBDepartamentoA.Size = new System.Drawing.Size(288, 22);
+            this.TBDepartamentoA.TabIndex = 12;
             // 
-            // textBox4
+            // TBResguardoA
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(20, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(288, 25);
-            this.textBox4.TabIndex = 10;
+            this.TBResguardoA.Enabled = false;
+            this.TBResguardoA.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBResguardoA.Location = new System.Drawing.Point(20, 36);
+            this.TBResguardoA.Name = "TBResguardoA";
+            this.TBResguardoA.ReadOnly = true;
+            this.TBResguardoA.Size = new System.Drawing.Size(288, 22);
+            this.TBResguardoA.TabIndex = 10;
             // 
             // label15
             // 
@@ -181,14 +215,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TBObservaciones);
+            this.panel1.Controls.Add(this.TBArticulo);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.LBFactura);
+            this.panel1.Controls.Add(this.LBOrdenCompra);
+            this.panel1.Controls.Add(this.LBEtiqueta);
+            this.panel1.Controls.Add(this.LBId);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -199,19 +233,23 @@
             this.panel1.Size = new System.Drawing.Size(653, 117);
             this.panel1.TabIndex = 16;
             // 
-            // textBox2
+            // TBObservaciones
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(464, 25);
-            this.textBox2.TabIndex = 11;
+            this.TBObservaciones.Enabled = false;
+            this.TBObservaciones.Location = new System.Drawing.Point(117, 77);
+            this.TBObservaciones.Name = "TBObservaciones";
+            this.TBObservaciones.ReadOnly = true;
+            this.TBObservaciones.Size = new System.Drawing.Size(464, 25);
+            this.TBObservaciones.TabIndex = 11;
             // 
-            // textBox1
+            // TBArticulo
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(523, 25);
-            this.textBox1.TabIndex = 10;
+            this.TBArticulo.Enabled = false;
+            this.TBArticulo.Location = new System.Drawing.Point(58, 42);
+            this.TBArticulo.Name = "TBArticulo";
+            this.TBArticulo.ReadOnly = true;
+            this.TBArticulo.Size = new System.Drawing.Size(523, 25);
+            this.TBArticulo.TabIndex = 10;
             // 
             // label10
             // 
@@ -231,45 +269,45 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Bien:";
             // 
-            // label8
+            // LBFactura
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(541, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "xxxx";
+            this.LBFactura.AutoSize = true;
+            this.LBFactura.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBFactura.Location = new System.Drawing.Point(541, 12);
+            this.LBFactura.Name = "LBFactura";
+            this.LBFactura.Size = new System.Drawing.Size(40, 17);
+            this.LBFactura.TabIndex = 7;
+            this.LBFactura.Text = "xxxx";
             // 
-            // label7
+            // LBOrdenCompra
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(389, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "xxxx";
+            this.LBOrdenCompra.AutoSize = true;
+            this.LBOrdenCompra.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBOrdenCompra.Location = new System.Drawing.Point(389, 12);
+            this.LBOrdenCompra.Name = "LBOrdenCompra";
+            this.LBOrdenCompra.Size = new System.Drawing.Size(40, 17);
+            this.LBOrdenCompra.TabIndex = 6;
+            this.LBOrdenCompra.Text = "xxxx";
             // 
-            // label6
+            // LBEtiqueta
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(179, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "xxxx";
+            this.LBEtiqueta.AutoSize = true;
+            this.LBEtiqueta.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBEtiqueta.Location = new System.Drawing.Point(179, 12);
+            this.LBEtiqueta.Name = "LBEtiqueta";
+            this.LBEtiqueta.Size = new System.Drawing.Size(40, 17);
+            this.LBEtiqueta.TabIndex = 5;
+            this.LBEtiqueta.Text = "xxxx";
             // 
-            // label5
+            // LBId
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "xxxx";
+            this.LBId.AutoSize = true;
+            this.LBId.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBId.Location = new System.Drawing.Point(47, 11);
+            this.LBId.Name = "LBId";
+            this.LBId.Size = new System.Drawing.Size(40, 17);
+            this.LBId.TabIndex = 4;
+            this.LBId.Text = "xxxx";
             // 
             // label4
             // 
@@ -317,9 +355,11 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "PorBienSeleccionados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambio de Bienes por Bien Seleccionados";
+            this.Load += new System.EventHandler(this.PorBienSeleccionados_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -338,25 +378,26 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBNuevoResguardo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TBNuevoResguardo;
+        private System.Windows.Forms.TextBox TBDepartamentoA;
+        private System.Windows.Forms.TextBox TBResguardoA;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TBObservaciones;
+        private System.Windows.Forms.TextBox TBArticulo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LBFactura;
+        private System.Windows.Forms.Label LBOrdenCompra;
+        private System.Windows.Forms.Label LBEtiqueta;
+        private System.Windows.Forms.Label LBId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
     }
 }
