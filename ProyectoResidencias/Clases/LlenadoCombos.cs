@@ -102,30 +102,12 @@ namespace ProyectoResidencias.Clases
         public static SqlDataReader dr;
         public static SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
 
-        public static void CBEmpleado(ComboBox CB)
-        {
-            try
-            {
-                cn.Open();
-                cmd = new SqlCommand("select nombre from empleados order by NoEmp", cn);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    CB.Items.Add(dr["nombre"].ToString());
-                }
-                cn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al llenar :" + ex.ToString());
-            }
-        }
         public static void CBCambio(ComboBox CB)
         {
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select nombre from empleados where Baja=0", cn);
+                cmd = new SqlCommand("select nombre from empleados where Baja=0 order by Nombre", cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
