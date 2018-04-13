@@ -30,7 +30,6 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
             TBResguardoA.Text = Clases.Variables.tbResguardoA;
             TBDepartamentoA.Text = Clases.Variables.tbDepartamentoA;
             Clases.Bienes.CBEmpleado(CBNuevoResguardo);
-            Clases.LLenadoGrids.llenarGrid(dataGridView1, "select * from vHistoricoBien where etiqueta = "+LBEtiqueta.Text, "vHistoricoBien");
        
  }
 

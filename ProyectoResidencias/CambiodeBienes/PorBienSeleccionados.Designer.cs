@@ -59,11 +59,11 @@
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(265, 304);
+            this.button2.Location = new System.Drawing.Point(265, 302);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 28);
             this.button2.TabIndex = 19;
-            this.button2.Text = "Cerrar";
+            this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

@@ -120,6 +120,24 @@ namespace ProyectoResidencias.Clases
                 MessageBox.Show("Error al llenar :" + ex.ToString());
             }
         }
+        public static void CBCambio(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select nombre from empleados where Baja=0", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["nombre"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
     }
     class Departamentos
     {

@@ -59,7 +59,12 @@ namespace ProyectoResidencias
 
         private void Bienes_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre,empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes.Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
+            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre," +
+                "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -77,7 +82,12 @@ namespace ProyectoResidencias
         {
             CBienes.CambiodeBienes.PorBienSeleccionados porbienseleccionado = new CBienes.CambiodeBienes.PorBienSeleccionados();
             porbienseleccionado.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre,empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes.Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
+            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre," +
+                "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
         }
 
         private void GVBienes_CellEnter(object sender, DataGridViewCellEventArgs e)
