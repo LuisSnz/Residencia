@@ -663,6 +663,10 @@
     <None Include="bin\Debug\iconos\modificar}.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pasartodo2.png" />
+    <None Include="Resources\pasartodo.png" />
+    <None Include="Resources\pasar.png" />
+    <None Include="Resources\pasar2.png" />
     <None Include="Resources\Imagen1.png" />
     <None Include="Resources\cambiodebienespersona.png" />
     <None Include="Resources\logo pirata.png" />
