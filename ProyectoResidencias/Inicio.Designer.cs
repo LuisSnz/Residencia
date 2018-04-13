@@ -45,7 +45,6 @@
             this.bienesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienesSinFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirEtiquetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verificarBienesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienesDadosDeBajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarActivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -168,7 +167,6 @@
             this.bienesToolStripMenuItem,
             this.bienesSinFacturaToolStripMenuItem,
             this.imprimirEtiquetasToolStripMenuItem,
-            this.verificarBienesToolStripMenuItem,
             this.bienesDadosDeBajaToolStripMenuItem,
             this.exportarActivosToolStripMenuItem});
             this.activoToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.casa;
@@ -195,13 +193,6 @@
             this.imprimirEtiquetasToolStripMenuItem.Name = "imprimirEtiquetasToolStripMenuItem";
             resources.ApplyResources(this.imprimirEtiquetasToolStripMenuItem, "imprimirEtiquetasToolStripMenuItem");
             this.imprimirEtiquetasToolStripMenuItem.Click += new System.EventHandler(this.imprimirEtiquetasToolStripMenuItem_Click);
-            // 
-            // verificarBienesToolStripMenuItem
-            // 
-            this.verificarBienesToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.aprovado;
-            this.verificarBienesToolStripMenuItem.Name = "verificarBienesToolStripMenuItem";
-            resources.ApplyResources(this.verificarBienesToolStripMenuItem, "verificarBienesToolStripMenuItem");
-            this.verificarBienesToolStripMenuItem.Click += new System.EventHandler(this.verificarBienesToolStripMenuItem_Click);
             // 
             // bienesDadosDeBajaToolStripMenuItem
             // 
@@ -345,7 +336,6 @@
         private System.Windows.Forms.ToolStripMenuItem activoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bienesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirEtiquetasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verificarBienesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bienesDadosDeBajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportarActivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activoToolStripMenuItem1;

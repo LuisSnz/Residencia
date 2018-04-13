@@ -208,12 +208,6 @@
   <data name="imprimirEtiquetasToolStripMenuItem.Text" xml:space="preserve">
     <value>Imprimir Etiquetas</value>
   </data>
-  <data name="verificarBienesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 22</value>
-  </data>
-  <data name="verificarBienesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Verificar Bienes</value>
-  </data>
   <data name="bienesDadosDeBajaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 22</value>
   </data>
@@ -502,12 +496,6 @@
     <value>imprimirEtiquetasToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;imprimirEtiquetasToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;verificarBienesToolStripMenuItem.Name" xml:space="preserve">
-    <value>verificarBienesToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;verificarBienesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;bienesDadosDeBajaToolStripMenuItem.Name" xml:space="preserve">

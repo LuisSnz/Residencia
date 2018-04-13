@@ -101,11 +101,6 @@ namespace ProyectoResidencias
             imprimir.ShowDialog();
         }
 
-        private void verificarBienesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            formularios(new Activo.VerificarBienes());
-            this.Text = "Sistema de activo Fijo - Verificar Bienes";
-        }
 
         private void bienesDadosDeBajaToolStripMenuItem_Click(object sender, EventArgs e)
         {

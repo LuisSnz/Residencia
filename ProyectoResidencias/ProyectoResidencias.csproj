@@ -256,12 +256,6 @@
     <Compile Include="Activo\ImprimirEtiquetas.Designer.cs">
       <DependentUpon>ImprimirEtiquetas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activo\VerificarBienes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Activo\VerificarBienes.Designer.cs">
-      <DependentUpon>VerificarBienes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Catalogos\Activo\Familias\Familia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -507,9 +501,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activo\ImprimirEtiquetas.resx">
       <DependentUpon>ImprimirEtiquetas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Activo\VerificarBienes.resx">
-      <DependentUpon>VerificarBienes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Activo\Familias\Familia.resx">
       <DependentUpon>Familia.cs</DependentUpon>
