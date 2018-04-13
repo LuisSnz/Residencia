@@ -67,7 +67,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 DateTime hoy = DateTime.Today;
                 string ConnString = Clases.stconexion.scon;
                 string SqlString = "update bienes set NoEmpleado=(select NoEmp from empleados where nombre='"+ CBNuevoResguardo.SelectedItem +"') where NoEmpleado=(select NoEmp from empleados where nombre='"+TBResguardoA.Text + "')  and id=" + LBId.Text+ "";
-                string SqlString1 = "insert into HistoricoBienes (Etiqueta,NoEmpleado,FechaCambio) values ("+LBEtiqueta.Text+",(select NoEmp from empleados where nombre='" + TBResguardoA.Text + "'),(convert(datetime,'" + hoy.ToShortDateString() + "')))";
+                string SqlString1 = "insert into HistoricoBienes (Etiqueta,NoEmpleado,FechaCambio) values ("+LBEtiqueta.Text+",(select NoEmp from empleados where nombre='" + CBNuevoResguardo.SelectedItem + "'),(convert(datetime,'" + hoy.ToShortDateString() + "')))";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))
