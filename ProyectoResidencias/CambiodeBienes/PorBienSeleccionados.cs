@@ -29,7 +29,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
             TBObservaciones.Text = Clases.Variables.tbObservacion;
             TBResguardoA.Text = Clases.Variables.tbResguardoA;
             TBDepartamentoA.Text = Clases.Variables.tbDepartamentoA;
-            Clases.Bienes.CBEmpleado(CBNuevoResguardo);
+            Clases.Bienes.CBCambio(CBNuevoResguardo);
        
  }
 
