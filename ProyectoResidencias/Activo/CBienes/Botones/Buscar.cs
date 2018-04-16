@@ -21,21 +21,105 @@ namespace ProyectoResidencias.CBienes.Botones
 
         private void Buscar_Load(object sender, EventArgs e)
         {
-
+            Clases.Bienes.CBEtiqueta(CBBuscar);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //string consulta;
-            //Bienes bs = new Bienes();
-            //string conexion1 = Clases.stconexion.scon;
-            //consulta = "select * from bienes";
-            //SqlConnection cnn = new SqlConnection(conexion1);
-            //SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
-            //this.ds = new DataSet();
-            //da.Fill(ds, "bienes");
-            //this.DialogResult = DialogResult.OK;
-            //this.Close();
+            if (CBBuscar.SelectedIndex >= 0)
+            {
+                if (Etiqueta.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                    "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
+                    "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                    "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                    "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                    "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id " +
+                    "where bienes.Etiqueta=" + CBBuscar.SelectedItem.ToString();
+                else if (Articulo.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                    "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
+                    "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                    "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                    "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                    "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id " +
+                    "where CatArticulos.Descripcion='" + CBBuscar.SelectedItem.ToString() + "'";
+                else if (Empleado.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                    "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
+                    "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                    "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                    "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                    "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id " +
+                    "where empleados.Nombre='" + CBBuscar.SelectedItem.ToString() + "'";
+                else if (Factura.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                    "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
+                    "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                    "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                    "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                    "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id " +
+                    "where bienes.NoFactura='" + CBBuscar.SelectedItem.ToString() + "'";
+                else if (Proveedor.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                    "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
+                    "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                    "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                    "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                    "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id " +
+                    "where RTRIM(Proveedores.Nombre)='" + CBBuscar.SelectedItem.ToString() + "'";
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+                MessageBox.Show("Seleccione un valor a buscar");
+        }
+
+        private void Etiqueta_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Etiqueta.Checked == true)
+                Clases.Bienes.CBEtiqueta(CBBuscar);
+        }
+
+        private void Articulo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Articulo.Checked == true)
+                Clases.Articulos.CBBuscarArticulo(CBBuscar);
+        }
+
+        private void Proveedor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Proveedor.Checked == true)
+                Clases.Bienes.CBProveedor(CBBuscar);
+        }
+
+        private void Factura_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Factura.Checked == true)
+                Clases.Bienes.CBFactura(CBBuscar);
+        }
+
+        private void Empleado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Empleado.Checked == true)
+                Clases.Empleados.CBNombre(CBBuscar);
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Todo_Click(object sender, EventArgs e)
+        {
+            Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
+                "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id";
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
     }
