@@ -68,28 +68,10 @@ namespace ProyectoResidencias
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            FConfirmacion confirmacion = new FConfirmacion();
-            confirmacion.ShowDialog();
-            if (confirmacion.DialogResult == DialogResult.OK)
-            {
-                string ConnString = Clases.stconexion.scon;
-                string SqlString = "Delete from bienes where Id=" + GVBienes.CurrentRow.Cells[0].Value.ToString();
-                try
-                {
-                    SqlConnection conn = new SqlConnection(ConnString);
-                    SqlCommand cmd = new SqlCommand(SqlString, conn);
-                    cmd.CommandType = CommandType.Text;
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Bien eliminado correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
-                }
-            }
+            Activo.CBienes.Botones.Baja baja = new Activo.CBienes.Botones.Baja();
+            baja.ShowDialog();
+            if (baja.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -117,6 +99,7 @@ namespace ProyectoResidencias
             Clases.Variables.tbResguardoA = filaSeleccionada.Cells[7].Value.ToString();
             Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[8].Value.ToString();
             Clases.Variables.desc2 = filaSeleccionada.Cells[9].Value.ToString();
+            Clases.Variables.desc3 = filaSeleccionada.Cells[4].Value.ToString();
         }
 
         private void Excel_Click(object sender, EventArgs e)

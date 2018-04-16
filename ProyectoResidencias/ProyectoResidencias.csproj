@@ -155,6 +155,12 @@
     <Compile Include="Activo\CBienes\Bienes.Designer.cs">
       <DependentUpon>Bienes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activo\CBienes\Botones\Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\CBienes\Botones\Baja.Designer.cs">
+      <DependentUpon>Baja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activo\CBienes\Botones\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,12 @@
     </Compile>
     <Compile Include="CambiodeBienes\PorEmpleados.Designer.cs">
       <DependentUpon>PorEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargando.Designer.cs">
+      <DependentUpon>Cargando.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Cat.Articulos\Buscar.cs">
       <SubType>Form</SubType>
@@ -452,6 +464,9 @@
     <EmbeddedResource Include="Activo\CBienes\Bienes.resx">
       <DependentUpon>Bienes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Activo\CBienes\Botones\Baja.resx">
+      <DependentUpon>Baja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Activo\CBienes\Botones\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -466,6 +481,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CambiodeBienes\PorEmpleados.resx">
       <DependentUpon>PorEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cargando.resx">
+      <DependentUpon>Cargando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Cat.Articulos\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>

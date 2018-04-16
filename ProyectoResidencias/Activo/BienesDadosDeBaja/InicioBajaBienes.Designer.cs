@@ -33,9 +33,9 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGBaja = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGBaja)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -93,13 +93,13 @@
             this.toolStripButton1.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton1.ToolTipText = "Imprimir";
             // 
-            // dataGridView1
+            // DGBaja
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(875, 600);
-            this.dataGridView1.TabIndex = 1;
+            this.DGBaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGBaja.Location = new System.Drawing.Point(12, 48);
+            this.DGBaja.Name = "DGBaja";
+            this.DGBaja.Size = new System.Drawing.Size(875, 600);
+            this.DGBaja.TabIndex = 1;
             // 
             // InicioBajaBienes
             // 
@@ -107,13 +107,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(710, 399);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGBaja);
             this.Controls.Add(this.toolStrip1);
             this.Name = "InicioBajaBienes";
             this.Text = "Bienes dados de Baja";
+            this.Load += new System.EventHandler(this.InicioBajaBienes_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGBaja)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,6 +126,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGBaja;
     }
 }

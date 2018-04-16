@@ -242,6 +242,28 @@ namespace ProyectoResidencias.Clases
                 MessageBox.Show("Error al llenar :" + ex.ToString());
             }
         }
+        public static void BajaLabels(Label modelo,Label precio,Label serie,Label marca)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("SELECT bienes.Id,bienes.Modelo,bienes.Precio,bienes.Serie,marca.Descripcion as marca " +
+                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.referencia, cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    modelo.Text = dr["Modelo"].ToString();
+                    serie.Text = dr["Serie"].ToString();
+                    precio.Text = dr["Precio"].ToString();
+                    marca.Text = dr["marca"].ToString();
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
     }
     class Departamentos
     {
