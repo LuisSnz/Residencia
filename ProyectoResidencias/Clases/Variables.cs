@@ -32,5 +32,7 @@ namespace ProyectoResidencias.Clases
         public static string tbObservacion;
         public static string tbResguardoA;
         public static string tbDepartamentoA;
+        public static string MotivoBaja;
+        public static string Usuario="x";
     }
 }

@@ -27,5 +27,10 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
             Activo.BienesDadosDeBaja.Buscar buscar = new Activo.BienesDadosDeBaja.Buscar();
             buscar.ShowDialog();
         }
+
+        private void InicioBajaBienes_Load(object sender, EventArgs e)
+        {
+            Clases.LLenadoGrids.llenarGrid(DGBaja, "Select * from BajaBienes", "BajaBienes");
+        }
     }
 }
