@@ -32,7 +32,12 @@ namespace ProyectoResidencias
         {
             CBienes.Nuevo Nuevo = new CBienes.Nuevo();
             Nuevo.ShowDialog();
-            
+            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre," +
+                "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
         }
 
         private void consultaPorEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -98,9 +103,15 @@ namespace ProyectoResidencias
             Clases.Variables.lbOrdenCompra = filaSeleccionada.Cells[2].Value.ToString();
             Clases.Variables.lbFactura = filaSeleccionada.Cells[3].Value.ToString();
             Clases.Variables.tbArticulo = filaSeleccionada.Cells[6].Value.ToString();
-            Clases.Variables.tbObservacion = filaSeleccionada.Cells[10].Value.ToString();
+            Clases.Variables.tbObservacion = filaSeleccionada.Cells[11].Value.ToString();
             Clases.Variables.tbResguardoA = filaSeleccionada.Cells[7].Value.ToString();
             Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[8].Value.ToString();
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            Activo.CBienes.ReporteBienes reporteBienes = new Activo.CBienes.ReporteBienes();
+            reporteBienes.ShowDialog();
         }
     }
 }

@@ -80,7 +80,7 @@ namespace ProyectoResidencias.Clases
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select Descripcion from CatArticulos", cn);
+                cmd = new SqlCommand("select Descripcion from CatArticulos order by descripcion", cn);
                 dr = cmd.ExecuteReader();
                 CB.Items.Clear();
                 CB.Text = "";
@@ -112,6 +112,42 @@ namespace ProyectoResidencias.Clases
                 while (dr.Read())
                 {
                     CB.Items.Add(dr["nombre"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBMarca(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Descripcion from marca order by Descripcion", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Descripcion"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBProveedor(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select RTRIM(Nombre) as Nombre from Proveedores order by Nombre", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Nombre"].ToString());
                 }
                 cn.Close();
             }
@@ -164,7 +200,6 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
-
     class Empleados
     {
         public static SqlCommand cmd;
@@ -254,7 +289,7 @@ namespace ProyectoResidencias.Clases
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select Nombre from empleados", cn);
+                cmd = new SqlCommand("select Nombre from empleados order by nombre", cn);
                 dr = cmd.ExecuteReader();
                 CB.Items.Clear();
                 CB.Text = "";
@@ -270,7 +305,6 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
-
     class Proveedores {
         public static SqlCommand cmd;
         public static SqlDataReader dr;

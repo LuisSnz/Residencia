@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.GVBienes = new System.Windows.Forms.DataGridView();
             this.Nuevo = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.GVBienes = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVBienes)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,43 @@
             this.toolStrip1.Size = new System.Drawing.Size(834, 45);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 45);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 45);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 45);
+            // 
+            // GVBienes
+            // 
+            this.GVBienes.AllowUserToAddRows = false;
+            this.GVBienes.AllowUserToDeleteRows = false;
+            this.GVBienes.AllowUserToOrderColumns = true;
+            this.GVBienes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GVBienes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GVBienes.BackgroundColor = System.Drawing.Color.White;
+            this.GVBienes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GVBienes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.GVBienes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVBienes.EnableHeadersVisualStyles = false;
+            this.GVBienes.Location = new System.Drawing.Point(12, 48);
+            this.GVBienes.MultiSelect = false;
+            this.GVBienes.Name = "GVBienes";
+            this.GVBienes.ReadOnly = true;
+            this.GVBienes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.GVBienes.Size = new System.Drawing.Size(875, 600);
+            this.GVBienes.TabIndex = 1;
+            this.GVBienes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.GVBienes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVBienes_CellEnter);
             // 
             // Nuevo
             // 
@@ -102,11 +139,6 @@
             this.toolStripButton4.ToolTipText = "Dar de baja";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 45);
-            // 
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -117,11 +149,6 @@
             this.toolStripButton5.Text = "toolStripButton5";
             this.toolStripButton5.ToolTipText = "Buscar";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 45);
             // 
             // toolStripButton6
             // 
@@ -142,11 +169,7 @@
             this.toolStripButton8.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton8.Text = "toolStripButton8";
             this.toolStripButton8.ToolTipText = "Imprimir";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 45);
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // toolStripButton1
             // 
@@ -167,28 +190,6 @@
             this.toolStripButton2.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton2.Text = "Cambio por Bien Seleccionado";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // GVBienes
-            // 
-            this.GVBienes.AllowUserToAddRows = false;
-            this.GVBienes.AllowUserToDeleteRows = false;
-            this.GVBienes.AllowUserToOrderColumns = true;
-            this.GVBienes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.GVBienes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.GVBienes.BackgroundColor = System.Drawing.Color.White;
-            this.GVBienes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GVBienes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.GVBienes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GVBienes.EnableHeadersVisualStyles = false;
-            this.GVBienes.Location = new System.Drawing.Point(12, 48);
-            this.GVBienes.MultiSelect = false;
-            this.GVBienes.Name = "GVBienes";
-            this.GVBienes.ReadOnly = true;
-            this.GVBienes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.GVBienes.Size = new System.Drawing.Size(875, 600);
-            this.GVBienes.TabIndex = 1;
-            this.GVBienes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.GVBienes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVBienes_CellEnter);
             // 
             // Bienes
             // 
