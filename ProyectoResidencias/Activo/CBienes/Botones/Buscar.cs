@@ -72,7 +72,9 @@ namespace ProyectoResidencias.CBienes.Botones
                 this.Close();
             }
             else
+            {
                 MessageBox.Show("Seleccione un valor a buscar");
+            }
         }
 
         private void Etiqueta_CheckedChanged(object sender, EventArgs e)

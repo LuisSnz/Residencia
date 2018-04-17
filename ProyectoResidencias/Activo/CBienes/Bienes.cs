@@ -48,8 +48,9 @@ namespace ProyectoResidencias
         {
             CBienes.Botones.Buscar buscar = new CBienes.Botones.Buscar();
 
-            var result =buscar.ShowDialog();
-            if (result == DialogResult.OK)
+            buscar.ShowDialog();
+
+            if (buscar.DialogResult== DialogResult.OK)
             {
                 Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
             }
@@ -100,6 +101,7 @@ namespace ProyectoResidencias
             Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[8].Value.ToString();
             Clases.Variables.desc2 = filaSeleccionada.Cells[9].Value.ToString();
             Clases.Variables.desc3 = filaSeleccionada.Cells[4].Value.ToString();
+            Clases.Variables.Familia = filaSeleccionada.Cells[5].Value.ToString();
         }
 
         private void Excel_Click(object sender, EventArgs e)
@@ -116,6 +118,12 @@ namespace ProyectoResidencias
         }
 
         private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            Activo.CBienes.ReporteBienes reporteBienes = new Activo.CBienes.ReporteBienes();
+            reporteBienes.ShowDialog();
+        }
+
+        private void Imprimir_Click(object sender, EventArgs e)
         {
             Activo.CBienes.ReporteBienes reporteBienes = new Activo.CBienes.ReporteBienes();
             reporteBienes.ShowDialog();
