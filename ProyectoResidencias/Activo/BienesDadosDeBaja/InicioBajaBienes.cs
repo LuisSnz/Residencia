@@ -19,6 +19,7 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Activo.BienesDadosDeBaja.Modificar modificar = new Activo.BienesDadosDeBaja.Modificar();
+
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
                 Clases.LLenadoGrids.llenarGrid(DGBaja, Clases.Variables.ConsultaBuscar, "BajaBienes");
