@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.GVBienes = new System.Windows.Forms.DataGridView();
             this.Nuevo = new System.Windows.Forms.ToolStripButton();
             this.Modificar = new System.Windows.Forms.ToolStripButton();
             this.Eliminar = new System.Windows.Forms.ToolStripButton();
@@ -68,6 +72,43 @@
             this.toolStrip1.Size = new System.Drawing.Size(834, 45);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 45);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 45);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 45);
+            // 
+            // GVBienes
+            // 
+            this.GVBienes.AllowUserToAddRows = false;
+            this.GVBienes.AllowUserToDeleteRows = false;
+            this.GVBienes.AllowUserToOrderColumns = true;
+            this.GVBienes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GVBienes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GVBienes.BackgroundColor = System.Drawing.Color.White;
+            this.GVBienes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GVBienes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.GVBienes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVBienes.EnableHeadersVisualStyles = false;
+            this.GVBienes.Location = new System.Drawing.Point(12, 48);
+            this.GVBienes.MultiSelect = false;
+            this.GVBienes.Name = "GVBienes";
+            this.GVBienes.ReadOnly = true;
+            this.GVBienes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.GVBienes.Size = new System.Drawing.Size(875, 600);
+            this.GVBienes.TabIndex = 1;
+            this.GVBienes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.GVBienes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVBienes_CellEnter);
             // 
             // Nuevo
             // 

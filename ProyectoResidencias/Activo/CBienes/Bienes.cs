@@ -95,7 +95,7 @@ namespace ProyectoResidencias
             Clases.Variables.lbOrdenCompra = filaSeleccionada.Cells[2].Value.ToString();
             Clases.Variables.lbFactura = filaSeleccionada.Cells[3].Value.ToString();
             Clases.Variables.tbArticulo = filaSeleccionada.Cells[6].Value.ToString();
-            Clases.Variables.tbObservacion = filaSeleccionada.Cells[10].Value.ToString();
+            Clases.Variables.tbObservacion = filaSeleccionada.Cells[11].Value.ToString();
             Clases.Variables.tbResguardoA = filaSeleccionada.Cells[7].Value.ToString();
             Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[8].Value.ToString();
             Clases.Variables.desc2 = filaSeleccionada.Cells[9].Value.ToString();
@@ -113,6 +113,12 @@ namespace ProyectoResidencias
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
                 Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            Activo.CBienes.ReporteBienes reporteBienes = new Activo.CBienes.ReporteBienes();
+            reporteBienes.ShowDialog();
         }
     }
 }
