@@ -125,12 +125,6 @@
     <Compile Include="Activo\BienesDadosDeBaja\Modificar.Designer.cs">
       <DependentUpon>Modificar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activo\BienesDadosDeBaja\RVBienesBaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Activo\BienesDadosDeBaja\RVBienesBaja.Designer.cs">
-      <DependentUpon>RVBienesBaja.cs</DependentUpon>
-    </Compile>
     <Compile Include="Activo\BienesSinFactura\BienesSF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +178,12 @@
     </Compile>
     <Compile Include="Activo\CBienes\Botones\Nuevo.Designer.cs">
       <DependentUpon>Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activo\CBienes\ReporteBienes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\CBienes\ReporteBienes.Designer.cs">
+      <DependentUpon>ReporteBienes.cs</DependentUpon>
     </Compile>
     <Compile Include="CambiodeBienes\PorBienSeleccionados.cs">
       <SubType>Form</SubType>
@@ -455,9 +455,6 @@
     <EmbeddedResource Include="Activo\BienesDadosDeBaja\Modificar.resx">
       <DependentUpon>Modificar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activo\BienesDadosDeBaja\RVBienesBaja.resx">
-      <DependentUpon>RVBienesBaja.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Activo\BienesSinFactura\BienesSF.resx">
       <DependentUpon>BienesSF.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,6 +482,9 @@
     <EmbeddedResource Include="Activo\CBienes\Botones\Nuevo.resx">
       <DependentUpon>Nuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Activo\CBienes\ReporteBienes.resx">
+      <DependentUpon>ReporteBienes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CambiodeBienes\PorBienSeleccionados.resx">
       <DependentUpon>PorBienSeleccionados.cs</DependentUpon>
     </EmbeddedResource>
@@ -509,7 +509,7 @@
     <EmbeddedResource Include="FConfirmacion.resx">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informes\ReporteBaja.rdlc" />
+    <EmbeddedResource Include="Informes\ReporteBienes.rdlc" />
     <EmbeddedResource Include="Informes\ReporteProveedores.rdlc" />
     <EmbeddedResource Include="Informes\ReporteVehiculos.rdlc" />
     <EmbeddedResource Include="Reportes\ConsultaPorDepartamento.resx">

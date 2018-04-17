@@ -80,7 +80,7 @@ namespace ProyectoResidencias.Clases
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select Descripcion from CatArticulos order by Descripcion", cn);
+                cmd = new SqlCommand("select Descripcion from CatArticulos order by descripcion", cn);
                 dr = cmd.ExecuteReader();
                 CB.Items.Clear();
                 CB.Text = "";
@@ -416,7 +416,6 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
-
     class Empleados
     {
         public static SqlCommand cmd;
@@ -506,7 +505,7 @@ namespace ProyectoResidencias.Clases
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select Nombre from empleados order by Nombre", cn);
+                cmd = new SqlCommand("select Nombre from empleados order by nombre", cn);
                 dr = cmd.ExecuteReader();
                 CB.Items.Clear();
                 CB.Text = "";
@@ -522,7 +521,6 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
-
     class Proveedores {
         public static SqlCommand cmd;
         public static SqlDataReader dr;

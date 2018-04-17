@@ -22,14 +22,14 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
         {
             Catalogos.Cat.Articulos.Botones.Nuevo nuevo = new Catalogos.Cat.Articulos.Botones.Nuevo();
             nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GVCatArticulos, "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras order by id", "vArticulosCompras");
+            Clases.LLenadoGrids.llenarGrid(GVCatArticulos, Clases.Variables.ConsultaBuscar, "vArticulosCompras");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Catalogos.Cat.Articulos.Botones.Modificar modificar = new Catalogos.Cat.Articulos.Botones.Modificar();
             modificar.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GVCatArticulos, "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras order by id", "vArticulosCompras");
+            Clases.LLenadoGrids.llenarGrid(GVCatArticulos, Clases.Variables.ConsultaBuscar, "vArticulosCompras");
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -42,7 +42,8 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
 
         private void CatArticulos_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GVCatArticulos, "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras order by id", "vArticulosCompras");
+            Clases.Variables.ConsultaBuscar = "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras order by id";
+            Clases.LLenadoGrids.llenarGrid(GVCatArticulos,Clases.Variables.ConsultaBuscar , "vArticulosCompras");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Articulo eliminado correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GVCatArticulos, "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras order by id", "vArticulosCompras");
+                    Clases.LLenadoGrids.llenarGrid(GVCatArticulos, Clases.Variables.ConsultaBuscar, "vArticulosCompras");
                 }
                 catch (Exception ex)
                 {

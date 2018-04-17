@@ -143,6 +143,7 @@
             this.Imprimir.Size = new System.Drawing.Size(44, 42);
             this.Imprimir.Text = "toolStripButton8";
             this.Imprimir.ToolTipText = "Imprimir";
+            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
             // 
             // toolStripSeparator3
             // 
