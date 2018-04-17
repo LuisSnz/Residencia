@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace ProyectoResidencias.Activo.BienesDadosDeBaja
 {
-    public partial class RVBienesBaja : Form
+    public partial class RVBaja : Form
     {
-        public RVBienesBaja()
+        public RVBaja()
         {
             InitializeComponent();
         }
 
-        private void RVBienesBaja_Load(object sender, EventArgs e)
+        private void RVBaja_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'activoJcasDataSet.BajaBienes' Puede moverla o quitarla según sea necesario.
             this.bajaBienesTableAdapter.Fill(this.activoJcasDataSet.BajaBienes);
