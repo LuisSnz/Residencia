@@ -23,21 +23,12 @@ namespace ProyectoResidencias
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Nuevo_Click(object sender, EventArgs e)
         {
             CBienes.Nuevo Nuevo = new CBienes.Nuevo();
             Nuevo.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
-                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre," +
-                "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
-                "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
-                "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
-                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
+            if (Nuevo.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
         }
 
         private void consultaPorEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +40,8 @@ namespace ProyectoResidencias
         {
             CBienes.Botones.Modificar modificar = new CBienes.Botones.Modificar();
             modificar.ShowDialog();
+            if (modificar.DialogResult==DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -58,23 +51,27 @@ namespace ProyectoResidencias
             var result =buscar.ShowDialog();
             if (result == DialogResult.OK)
             {
-                GVBienes.DataSource = buscar.ds.Tables["bienes"];
+                Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
             }
         }
 
         private void Bienes_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
-                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre," +
+            Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
                 "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
                 "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
                 "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
-                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
+                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id";
+            Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            
+            Activo.CBienes.Botones.Baja baja = new Activo.CBienes.Botones.Baja();
+            baja.ShowDialog();
+            if (baja.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -87,12 +84,7 @@ namespace ProyectoResidencias
         {
             CBienes.CambiodeBienes.PorBienSeleccionados porbienseleccionado = new CBienes.CambiodeBienes.PorBienSeleccionados();
             porbienseleccionado.ShowDialog();
-            Clases.LLenadoGrids.llenarGrid(GVBienes, "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
-                "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre," +
-                "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
-                "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
-                "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
-                "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id  ", "bienes");
+            Clases.LLenadoGrids.llenarGrid(GVBienes,Clases.Variables.ConsultaBuscar, "bienes");
         }
 
         private void GVBienes_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -106,6 +98,21 @@ namespace ProyectoResidencias
             Clases.Variables.tbObservacion = filaSeleccionada.Cells[11].Value.ToString();
             Clases.Variables.tbResguardoA = filaSeleccionada.Cells[7].Value.ToString();
             Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[8].Value.ToString();
+            Clases.Variables.desc2 = filaSeleccionada.Cells[9].Value.ToString();
+            Clases.Variables.desc3 = filaSeleccionada.Cells[4].Value.ToString();
+        }
+
+        private void Excel_Click(object sender, EventArgs e)
+        {
+            Clases.excel.GridViewExcel(GVBienes);
+        }
+
+        private void GVBienes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CBienes.Botones.Modificar modificar = new CBienes.Botones.Modificar();
+            modificar.ShowDialog();
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GVBienes, Clases.Variables.ConsultaBuscar, "bienes");
         }
 
         private void toolStripButton8_Click(object sender, EventArgs e)

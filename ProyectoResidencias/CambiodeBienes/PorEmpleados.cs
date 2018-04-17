@@ -29,8 +29,10 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBIzquierdo.SelectedItem.ToString() + "')", "bienes");
 
-            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0)
+            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0 && CBIzquierdo.SelectedIndex != CBDerecho.SelectedIndex)
                 toolStrip1.Enabled=true;
+            else
+                toolStrip1.Enabled = false;
         }
 
         private void CBNombreNuevo_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,8 +41,10 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBDerecho.SelectedItem.ToString() + "')", "bienes");
 
-            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0)
+            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0 && CBIzquierdo.SelectedIndex != CBDerecho.SelectedIndex)
                 toolStrip1.Enabled = true;
+            else
+                toolStrip1.Enabled = false;
         }
 
         private void Cancelar_Click(object sender, EventArgs e)

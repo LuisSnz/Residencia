@@ -51,6 +51,10 @@ namespace ProyectoResidencias.Clases
             fichero.Filter = "Excel (*.xls)|*.xls";
             if (fichero.ShowDialog() == DialogResult.OK)
             {
+                Cargando cargando = new Cargando();
+                cargando.Show();
+                cargando.progressBar1.Maximum = grd.Rows.Count;
+                cargando.progressBar1.Value = 0;
                 Microsoft.Office.Interop.Excel.Application aplicacion;
                 Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
                 Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
@@ -69,6 +73,7 @@ namespace ProyectoResidencias.Clases
                     {
                         hoja_trabajo.Cells[i + 2, j + 1] = grd.Rows[i].Cells[j].Value.ToString();
                     }
+                    cargando.progressBar1.Value = cargando.progressBar1.Value + 1;
                 }
                 hoja_trabajo.Columns.AutoFit();
                 libros_trabajo.SaveAs(fichero.FileName,
@@ -76,6 +81,7 @@ namespace ProyectoResidencias.Clases
                 libros_trabajo.Close();
                 aplicacion.Quit();
                 ruta ="\"" +fichero.FileName+ "\"";
+                cargando.Close();
             }
         }
         public static void openExcel()

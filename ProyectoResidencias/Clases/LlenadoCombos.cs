@@ -138,6 +138,46 @@ namespace ProyectoResidencias.Clases
                 MessageBox.Show("Error al llenar :" + ex.ToString());
             }
         }
+        public static void CBEtiqueta(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Etiqueta from bienes", cn);
+                dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Etiqueta"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBFactura(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select NoFactura from bienes order by NoFactura", cn);
+                dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["NoFactura"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
         public static void CBProveedor(ComboBox CB)
         {
             try
@@ -145,9 +185,77 @@ namespace ProyectoResidencias.Clases
                 cn.Open();
                 cmd = new SqlCommand("select RTRIM(Nombre) as Nombre from Proveedores order by Nombre", cn);
                 dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
                 while (dr.Read())
                 {
                     CB.Items.Add(dr["Nombre"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void Modificar(TextBox orden, DateTimePicker fecha, TextBox factura,ComboBox articulo,
+            Label familia, ComboBox marca,TextBox serie,ComboBox conservacion,TextBox modelo, TextBox color,ComboBox proveedor,
+            Label domicilio,Label rfc,TextBox observaciones)
+        {
+            try
+            {
+                int index;
+                cn.Open();
+                cmd = new SqlCommand("SELECT bienes.Id, bienes.NoOrden,bienes.FechaCompra, bienes.NoFactura," +
+                    "bienes.Modelo,Bienes.Color,Familia.Descripcion as Familia, dbo.CatArticulos.Descripcion AS Articulo," +
+                    "RTRIM(Proveedores.Nombre) AS Proveedor,bienes.Estado,RTRIM(Proveedores.Direccion) AS Direccion," +
+                    "RTRIM(Proveedores.Rfc) AS RFC,bienes.Observacion,marca.Descripcion as marca,bienes.Serie " +
+                    "FROM bienes INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia " +
+                    "ON CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id" +
+                    " LEFT OUTER JOIN marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.referencia, cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    orden.Text = dr["NoOrden"].ToString();
+                    fecha.Value = Convert.ToDateTime( dr["FechaCompra"].ToString());
+                    factura.Text = dr["NoFactura"].ToString();
+                    index = articulo.FindString(dr["Articulo"].ToString());
+                    articulo.SelectedIndex = index;
+                    familia.Text = dr["Familia"].ToString();
+                    index = marca.FindString(dr["marca"].ToString());
+                    marca.SelectedIndex = index;
+                    serie.Text = dr["Serie"].ToString();
+                    index = conservacion.FindString(dr["Estado"].ToString());
+                    conservacion.SelectedIndex = index;
+                    modelo.Text = dr["Modelo"].ToString();
+                    color.Text = dr["Color"].ToString();
+                    index = proveedor.FindString(dr["Proveedor"].ToString());
+                    proveedor.SelectedIndex = index;
+                    domicilio.Text = dr["Direccion"].ToString();
+                    rfc.Text = dr["RFC"].ToString();
+                    observaciones.Text = dr["Observacion"].ToString();
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void BajaLabels(Label modelo,Label precio,Label serie,Label marca)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("SELECT bienes.Id,bienes.Modelo,bienes.Precio,bienes.Serie,marca.Descripcion as marca " +
+                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.referencia, cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    modelo.Text = dr["Modelo"].ToString();
+                    serie.Text = dr["Serie"].ToString();
+                    precio.Text = dr["Precio"].ToString();
+                    marca.Text = dr["marca"].ToString();
                 }
                 cn.Close();
             }
