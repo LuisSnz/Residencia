@@ -140,7 +140,7 @@
             this.Aceptar.TabIndex = 4;
             this.Aceptar.Text = "Buscar";
             this.Aceptar.UseVisualStyleBackColor = false;
-            this.Aceptar.Click += new System.EventHandler(this.button1_Click);
+            this.Aceptar.Click += new System.EventHandler(this.Aceptar_Click);
             // 
             // Cancelar
             // 

@@ -265,6 +265,114 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
+
+    class BienesBaja
+    {
+        public static SqlCommand cmd;
+        public static SqlDataReader dr;
+        public static SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
+        public static void CBEtiqueta(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Etiqueta from BajaBienes order by Etiqueta", cn);
+                dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Etiqueta"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBArticulo(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Distinct RTRIM(Articulo) AS Articulo from BajaBienes order by Articulo", cn);
+                dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Articulo"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBEmleado(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Distinct RTRIM(Empleado) AS Empleado from BajaBienes order by Empleado", cn);
+                dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Empleado"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBFactura(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Distinct RTRIM(NoFactura) AS Factura from BajaBienes", cn);
+                dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Factura"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBMotivo(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Distinct RTRIM(MotivoBaja) AS Motivo from BajaBienes", cn);
+                dr = cmd.ExecuteReader();
+                CB.Text = "";
+                CB.Items.Clear();
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Motivo"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+    }
+
     class Departamentos
     {
         public static SqlCommand cmd;
