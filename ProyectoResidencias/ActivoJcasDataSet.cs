@@ -7,3 +7,10 @@
     }
 }
 
+
+namespace ProyectoResidencias.ActivoJcasDataSetTableAdapters {
+    
+    
+    public partial class BajaBienesTableAdapter {
+    }
+}

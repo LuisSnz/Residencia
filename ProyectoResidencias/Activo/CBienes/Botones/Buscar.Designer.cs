@@ -133,7 +133,6 @@
             // Aceptar
             // 
             this.Aceptar.BackColor = System.Drawing.Color.White;
-            this.Aceptar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Aceptar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aceptar.Location = new System.Drawing.Point(19, 214);
             this.Aceptar.Name = "Aceptar";
@@ -141,12 +140,11 @@
             this.Aceptar.TabIndex = 4;
             this.Aceptar.Text = "Buscar";
             this.Aceptar.UseVisualStyleBackColor = false;
-            this.Aceptar.Click += new System.EventHandler(this.button1_Click);
+            this.Aceptar.Click += new System.EventHandler(this.Aceptar_Click);
             // 
             // Cancelar
             // 
             this.Cancelar.BackColor = System.Drawing.Color.White;
-            this.Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancelar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelar.Location = new System.Drawing.Point(235, 214);
             this.Cancelar.Name = "Cancelar";
@@ -159,7 +157,6 @@
             // Todo
             // 
             this.Todo.BackColor = System.Drawing.Color.White;
-            this.Todo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Todo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Todo.Location = new System.Drawing.Point(126, 214);
             this.Todo.Name = "Todo";
