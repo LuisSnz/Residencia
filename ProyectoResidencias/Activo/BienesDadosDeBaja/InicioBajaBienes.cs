@@ -66,7 +66,7 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            BienesDadosDeBaja.RVBienesBaja reporte = new RVBienesBaja();
+            RVBaja reporte = new RVBaja();
             reporte.ShowDialog();
         }
     }
