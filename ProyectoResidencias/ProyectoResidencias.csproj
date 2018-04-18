@@ -155,6 +155,12 @@
     <Compile Include="Activo\BienesSinFactura\Nuevo.Designer.cs">
       <DependentUpon>Nuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activo\BienesSinFactura\ReporteBienesSF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\ReporteBienesSF.Designer.cs">
+      <DependentUpon>ReporteBienesSF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activo\CBienes\Bienes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -476,6 +482,9 @@
     <EmbeddedResource Include="Activo\BienesSinFactura\Nuevo.resx">
       <DependentUpon>Nuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesSinFactura\ReporteBienesSF.resx">
+      <DependentUpon>ReporteBienesSF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Activo\CBienes\Bienes.resx">
       <DependentUpon>Bienes.cs</DependentUpon>
     </EmbeddedResource>
@@ -519,6 +528,7 @@
       <DependentUpon>FConfirmacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\ReporteBaja.rdlc" />
+    <EmbeddedResource Include="Informes\ReporteBienesSF.rdlc" />
     <EmbeddedResource Include="Informes\ReporteBienes.rdlc" />
     <EmbeddedResource Include="Informes\ReporteProveedores.rdlc" />
     <EmbeddedResource Include="Informes\ReporteVehiculos.rdlc" />
