@@ -42,7 +42,7 @@ namespace ProyectoResidencias.CBienes.Botones
                     "IdArticulo=(Select Id from CatArticulos where Descripcion='"+Articulo.SelectedItem.ToString()+
                     "'),Observacion='"+Observaciones.Text+"',IdProveedor=(Select Id from Proveedores where Nombre='"+
                     Proveedor.SelectedItem.ToString()+ "'),FechaCompra=(convert(datetime,'" + Fecha.Text + "'))," +
-                    "IdMarca=(Select Id from marca where Descripcion='"+Marca.SelectedItem.ToString()+"')," +
+                    "IdMarca=(Select TOP 1 Id from marca where Descripcion='" + Marca.SelectedItem.ToString()+"')," +
                     "Serie='"+Serie.Text+"',Modelo='"+Modelo.Text+"',Color='"+Modelo.Text+"',Consumible="+TFConsumible+
                     ",Estado='"+Conservacion.SelectedItem.ToString()+"' where Id=" + Clases.Variables.referencia+";";
                 try
