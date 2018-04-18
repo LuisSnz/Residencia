@@ -33,7 +33,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
             int TFConsumible = 0;
             if (Consumible.Checked == true)
                 TFConsumible = 1;
-            if (Orden.Text.Length > 0 && Orden.Text.Length > 0 && Articulo.SelectedIndex >= 0 &&
+            if (Orden.Text.Length > 0 && Articulo.SelectedIndex >= 0 &&
                 Marca.SelectedIndex >= 0 && Conservacion.SelectedIndex >= 0 && Proveedor.SelectedIndex >= 0)
             {
                 string ConnString = Clases.stconexion.scon;
@@ -41,7 +41,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
                     "IdArticulo=(Select Id from CatArticulos where Descripcion='" + Articulo.SelectedItem.ToString() +
                     "'),Observacion='" + Observaciones.Text + "',IdProveedor=(Select Id from Proveedores where Nombre='" +
                     Proveedor.SelectedItem.ToString() + "'),FechaCompra=(convert(datetime,'" + Fecha.Text + "'))," +
-                    "IdMarca=(Select Id from marca where Descripcion='" + Marca.SelectedItem.ToString() + "')," +
+                    "IdMarca=(Select TOP 1 Id from marca where Descripcion='" + Marca.SelectedItem.ToString() + "')," +
                     "Serie='" + Serie.Text + "',Modelo='" + Modelo.Text + "',Color='" + Modelo.Text + "',Consumible=" + TFConsumible +
                     ",Estado='" + Conservacion.SelectedItem.ToString() + "' where Id=" + Clases.Variables.referencia + ";";
                 try

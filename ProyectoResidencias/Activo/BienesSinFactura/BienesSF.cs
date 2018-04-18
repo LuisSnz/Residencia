@@ -88,5 +88,20 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
             Activo.BienesSinFactura.ReporteBienesSF reporteBienesSF = new ReporteBienesSF();
             reporteBienesSF.ShowDialog();
         }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var filaSeleccionada = dataGridView1.CurrentRow;
+            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.lbOrdenCompra = filaSeleccionada.Cells[2].Value.ToString();
+            Clases.Variables.tbArticulo = filaSeleccionada.Cells[5].Value.ToString();
+            Clases.Variables.tbObservacion = filaSeleccionada.Cells[10].Value.ToString();
+            Clases.Variables.tbResguardoA = filaSeleccionada.Cells[6].Value.ToString();
+            Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[7].Value.ToString();
+            Clases.Variables.desc2 = filaSeleccionada.Cells[8].Value.ToString();
+            Clases.Variables.desc3 = filaSeleccionada.Cells[3].Value.ToString();
+            Clases.Variables.Familia = filaSeleccionada.Cells[4].Value.ToString();
+        }
     }
 }
