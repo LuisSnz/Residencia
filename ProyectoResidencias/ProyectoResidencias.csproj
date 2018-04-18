@@ -250,18 +250,6 @@
     <Compile Include="FConfirmacion.Designer.cs">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\ConsultaPorDepartamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ConsultaPorDepartamento.Designer.cs">
-      <DependentUpon>ConsultaPorDepartamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ConsultaPorEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\ConsultaPorEmpleado.Designer.cs">
-      <DependentUpon>ConsultaPorEmpleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reportes\ConsultaPorFamilia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -532,12 +520,6 @@
     <EmbeddedResource Include="Informes\ReporteBienes.rdlc" />
     <EmbeddedResource Include="Informes\ReporteProveedores.rdlc" />
     <EmbeddedResource Include="Informes\ReporteVehiculos.rdlc" />
-    <EmbeddedResource Include="Reportes\ConsultaPorDepartamento.resx">
-      <DependentUpon>ConsultaPorDepartamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ConsultaPorEmpleado.resx">
-      <DependentUpon>ConsultaPorEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ConsultaPorFamilia.resx">
       <DependentUpon>ConsultaPorFamilia.cs</DependentUpon>
     </EmbeddedResource>

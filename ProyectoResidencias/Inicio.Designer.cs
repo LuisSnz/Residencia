@@ -48,9 +48,7 @@
             this.bienesDadosDeBajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarActivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resguardoPorEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoDelBienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resguardoPorDptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.costoBienesActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -210,9 +208,7 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resguardoPorEmpleadoToolStripMenuItem,
             this.historicoDelBienToolStripMenuItem,
-            this.resguardoPorDptoToolStripMenuItem,
             this.valorToolStripMenuItem,
             this.costoBienesActualToolStripMenuItem,
             this.toolStripSeparator1,
@@ -224,23 +220,11 @@
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
             // 
-            // resguardoPorEmpleadoToolStripMenuItem
-            // 
-            this.resguardoPorEmpleadoToolStripMenuItem.Name = "resguardoPorEmpleadoToolStripMenuItem";
-            resources.ApplyResources(this.resguardoPorEmpleadoToolStripMenuItem, "resguardoPorEmpleadoToolStripMenuItem");
-            this.resguardoPorEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.ResguardoPorEmpleadoToolStripMenuItem_Click);
-            // 
             // historicoDelBienToolStripMenuItem
             // 
             this.historicoDelBienToolStripMenuItem.Name = "historicoDelBienToolStripMenuItem";
             resources.ApplyResources(this.historicoDelBienToolStripMenuItem, "historicoDelBienToolStripMenuItem");
             this.historicoDelBienToolStripMenuItem.Click += new System.EventHandler(this.historicoDelBienToolStripMenuItem_Click);
-            // 
-            // resguardoPorDptoToolStripMenuItem
-            // 
-            this.resguardoPorDptoToolStripMenuItem.Name = "resguardoPorDptoToolStripMenuItem";
-            resources.ApplyResources(this.resguardoPorDptoToolStripMenuItem, "resguardoPorDptoToolStripMenuItem");
-            this.resguardoPorDptoToolStripMenuItem.Click += new System.EventHandler(this.resguardoPorDptoToolStripMenuItem_Click);
             // 
             // valorToolStripMenuItem
             // 
@@ -342,9 +326,7 @@
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem familiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resguardoPorEmpleadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoDelBienToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resguardoPorDptoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem valorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem costoBienesActualToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

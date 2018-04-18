@@ -264,6 +264,26 @@ namespace ProyectoResidencias.Clases
                 MessageBox.Show("Error al llenar :" + ex.ToString());
             }
         }
+        public static void CBDeptos(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Distinct Departamento from empleados", cn);
+                dr = cmd.ExecuteReader();
+                CB.Items.Clear();
+                CB.Text = "";
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Departamento"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
     }
 
     class BienesBaja

@@ -226,56 +226,44 @@
   <data name="activoToolStripMenuItem.Text" xml:space="preserve">
     <value>Activo</value>
   </data>
-  <data name="resguardoPorEmpleadoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
-  </data>
-  <data name="resguardoPorEmpleadoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Resguardo por Empleado</value>
-  </data>
   <data name="historicoDelBienToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="historicoDelBienToolStripMenuItem.Text" xml:space="preserve">
     <value>Historico del Bien</value>
   </data>
-  <data name="resguardoPorDptoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
-  </data>
-  <data name="resguardoPorDptoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Resguardo por Depto.</value>
-  </data>
   <data name="valorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="valorToolStripMenuItem.Text" xml:space="preserve">
     <value>Valor Actual por Familia</value>
   </data>
   <data name="costoBienesActualToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="costoBienesActualToolStripMenuItem.Text" xml:space="preserve">
     <value>Costo Bienes Actual</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>217, 6</value>
   </data>
   <data name="imprimirCierreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="imprimirCierreToolStripMenuItem.Text" xml:space="preserve">
     <value>Imprimir Cierre</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>217, 6</value>
   </data>
   <data name="paraEntregaRecepcionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="paraEntregaRecepcionToolStripMenuItem.Text" xml:space="preserve">
     <value>Para Entrega Recepcion</value>
   </data>
   <data name="paraASECHToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
+    <value>220, 22</value>
   </data>
   <data name="paraASECHToolStripMenuItem.Text" xml:space="preserve">
     <value>Para ASECH</value>
@@ -516,22 +504,10 @@
   <data name="&gt;&gt;reportesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;resguardoPorEmpleadoToolStripMenuItem.Name" xml:space="preserve">
-    <value>resguardoPorEmpleadoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;resguardoPorEmpleadoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;historicoDelBienToolStripMenuItem.Name" xml:space="preserve">
     <value>historicoDelBienToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;historicoDelBienToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;resguardoPorDptoToolStripMenuItem.Name" xml:space="preserve">
-    <value>resguardoPorDptoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;resguardoPorDptoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;valorToolStripMenuItem.Name" xml:space="preserve">
