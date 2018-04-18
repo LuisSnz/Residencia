@@ -31,11 +31,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBBuscar = new System.Windows.Forms.ComboBox();
+            this.Empleado = new System.Windows.Forms.RadioButton();
+            this.Proveedor = new System.Windows.Forms.RadioButton();
+            this.Articulo = new System.Windows.Forms.RadioButton();
+            this.Etiqueta = new System.Windows.Forms.RadioButton();
+            this.Todo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,32 +44,34 @@
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(241, 171);
+            this.button2.Location = new System.Drawing.Point(299, 171);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 31);
             this.button2.TabIndex = 10;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(79, 171);
+            this.button1.Location = new System.Drawing.Point(32, 171);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 31);
             this.button1.TabIndex = 9;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.CBBuscar);
+            this.groupBox1.Controls.Add(this.Empleado);
+            this.groupBox1.Controls.Add(this.Proveedor);
+            this.groupBox1.Controls.Add(this.Articulo);
+            this.groupBox1.Controls.Add(this.Etiqueta);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(25, 12);
             this.groupBox1.Name = "groupBox1";
@@ -77,59 +80,75 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione una opcion";
             // 
-            // radioButton5
+            // CBBuscar
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(219, 62);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(84, 21);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.Text = "Empleado";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.CBBuscar.FormattingEnabled = true;
+            this.CBBuscar.Location = new System.Drawing.Point(7, 102);
+            this.CBBuscar.Name = "CBBuscar";
+            this.CBBuscar.Size = new System.Drawing.Size(346, 25);
+            this.CBBuscar.TabIndex = 5;
             // 
-            // radioButton4
+            // Empleado
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(7, 62);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(73, 21);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.Text = "Articulo";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Empleado.AutoSize = true;
+            this.Empleado.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Empleado.Location = new System.Drawing.Point(219, 62);
+            this.Empleado.Name = "Empleado";
+            this.Empleado.Size = new System.Drawing.Size(84, 21);
+            this.Empleado.TabIndex = 4;
+            this.Empleado.Text = "Empleado";
+            this.Empleado.UseVisualStyleBackColor = true;
+            this.Empleado.CheckedChanged += new System.EventHandler(this.Empleado_CheckedChanged);
             // 
-            // radioButton3
+            // Proveedor
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(219, 24);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(96, 21);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.Text = "Descripcion";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.Proveedor.AutoSize = true;
+            this.Proveedor.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Proveedor.Location = new System.Drawing.Point(219, 24);
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.Size = new System.Drawing.Size(87, 21);
+            this.Proveedor.TabIndex = 3;
+            this.Proveedor.Text = "Proveedor";
+            this.Proveedor.UseVisualStyleBackColor = true;
+            this.Proveedor.CheckedChanged += new System.EventHandler(this.Proveedor_CheckedChanged);
             // 
-            // radioButton1
+            // Articulo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(74, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Etiqueta";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Articulo.AutoSize = true;
+            this.Articulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Articulo.Location = new System.Drawing.Point(6, 62);
+            this.Articulo.Name = "Articulo";
+            this.Articulo.Size = new System.Drawing.Size(73, 21);
+            this.Articulo.TabIndex = 2;
+            this.Articulo.Text = "Articulo";
+            this.Articulo.UseVisualStyleBackColor = true;
+            this.Articulo.CheckedChanged += new System.EventHandler(this.Articulo_CheckedChanged);
             // 
-            // comboBox1
+            // Etiqueta
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 102);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(346, 25);
-            this.comboBox1.TabIndex = 5;
+            this.Etiqueta.AutoSize = true;
+            this.Etiqueta.Checked = true;
+            this.Etiqueta.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Etiqueta.Location = new System.Drawing.Point(6, 24);
+            this.Etiqueta.Name = "Etiqueta";
+            this.Etiqueta.Size = new System.Drawing.Size(74, 21);
+            this.Etiqueta.TabIndex = 0;
+            this.Etiqueta.TabStop = true;
+            this.Etiqueta.Text = "Etiqueta";
+            this.Etiqueta.UseVisualStyleBackColor = true;
+            this.Etiqueta.CheckedChanged += new System.EventHandler(this.Etiqueta_CheckedChanged);
+            // 
+            // Todo
+            // 
+            this.Todo.BackColor = System.Drawing.Color.White;
+            this.Todo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Todo.Location = new System.Drawing.Point(155, 169);
+            this.Todo.Name = "Todo";
+            this.Todo.Size = new System.Drawing.Size(97, 35);
+            this.Todo.TabIndex = 11;
+            this.Todo.Text = "Mostrar Todo";
+            this.Todo.UseVisualStyleBackColor = false;
+            this.Todo.Click += new System.EventHandler(this.Todo_Click);
             // 
             // Buscar
             // 
@@ -137,12 +156,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(407, 215);
+            this.Controls.Add(this.Todo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Buscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar";
+            this.Load += new System.EventHandler(this.Buscar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -154,10 +175,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton Empleado;
+        private System.Windows.Forms.RadioButton Proveedor;
+        private System.Windows.Forms.RadioButton Articulo;
+        private System.Windows.Forms.RadioButton Etiqueta;
+        private System.Windows.Forms.ComboBox CBBuscar;
+        private System.Windows.Forms.Button Todo;
     }
 }

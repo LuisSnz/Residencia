@@ -43,11 +43,9 @@
             this.TBArticulo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.LBFactura = new System.Windows.Forms.Label();
             this.LBOrdenCompra = new System.Windows.Forms.Label();
             this.LBEtiqueta = new System.Windows.Forms.Label();
             this.LBId = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -176,11 +174,9 @@
             this.panel1.Controls.Add(this.TBArticulo);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.LBFactura);
             this.panel1.Controls.Add(this.LBOrdenCompra);
             this.panel1.Controls.Add(this.LBEtiqueta);
             this.panel1.Controls.Add(this.LBId);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -226,16 +222,6 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Bien:";
             // 
-            // LBFactura
-            // 
-            this.LBFactura.AutoSize = true;
-            this.LBFactura.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBFactura.Location = new System.Drawing.Point(541, 12);
-            this.LBFactura.Name = "LBFactura";
-            this.LBFactura.Size = new System.Drawing.Size(40, 17);
-            this.LBFactura.TabIndex = 7;
-            this.LBFactura.Text = "xxxx";
-            // 
             // LBOrdenCompra
             // 
             this.LBOrdenCompra.AutoSize = true;
@@ -265,15 +251,6 @@
             this.LBId.Size = new System.Drawing.Size(40, 17);
             this.LBId.TabIndex = 4;
             this.LBId.Text = "xxxx";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(479, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Factura:";
             // 
             // label3
             // 
@@ -340,11 +317,9 @@
         private System.Windows.Forms.TextBox TBArticulo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label LBFactura;
         private System.Windows.Forms.Label LBOrdenCompra;
         private System.Windows.Forms.Label LBEtiqueta;
         private System.Windows.Forms.Label LBId;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
