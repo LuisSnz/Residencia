@@ -24,7 +24,6 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
             LBId.Text = Clases.Variables.referencia;
             LBEtiqueta.Text = Clases.Variables.desc;
             LBOrdenCompra.Text = Clases.Variables.lbOrdenCompra;
-            LBFactura.Text = Clases.Variables.lbFactura;
             TBArticulo.Text = Clases.Variables.tbArticulo;
             TBObservaciones.Text = Clases.Variables.tbObservacion;
             TBResguardoA.Text = Clases.Variables.tbResguardoA;
