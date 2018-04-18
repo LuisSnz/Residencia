@@ -99,6 +99,14 @@ namespace ProyectoResidencias.CBienes.Botones
                     "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
                     "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id where NoFactura <>''" +
                     "and empleados.Nombre='" + CBBuscar.SelectedItem.ToString() + "'";
+                else if (Departamento.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
+                    "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
+                    "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
+                    "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+                    "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
+                    "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id where NoFactura <>''" +
+                    "and empleados.Departamento='" + CBBuscar.SelectedItem.ToString() + "'";
                 else if (Factura.Checked == true)
                     Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
                     "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
@@ -122,6 +130,12 @@ namespace ProyectoResidencias.CBienes.Botones
             {
                 MessageBox.Show("Seleccione un valor a buscar");
             }
+        }
+
+        private void Departamento_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Departamento.Checked == true)
+                Clases.Bienes.CBDeptos(CBBuscar);
         }
     }
     }

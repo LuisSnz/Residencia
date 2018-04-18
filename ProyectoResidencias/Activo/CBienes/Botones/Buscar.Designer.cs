@@ -38,6 +38,7 @@
             this.Aceptar = new System.Windows.Forms.Button();
             this.Cancelar = new System.Windows.Forms.Button();
             this.Todo = new System.Windows.Forms.Button();
+            this.Departamento = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.Departamento);
             this.groupBox1.Controls.Add(this.CBBuscar);
             this.groupBox1.Controls.Add(this.Empleado);
             this.groupBox1.Controls.Add(this.Articulo);
@@ -145,6 +147,7 @@
             // Cancelar
             // 
             this.Cancelar.BackColor = System.Drawing.Color.White;
+            this.Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancelar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelar.Location = new System.Drawing.Point(235, 214);
             this.Cancelar.Name = "Cancelar";
@@ -165,6 +168,18 @@
             this.Todo.Text = "Mostrar Todo";
             this.Todo.UseVisualStyleBackColor = false;
             this.Todo.Click += new System.EventHandler(this.Todo_Click);
+            // 
+            // Departamento
+            // 
+            this.Departamento.AutoSize = true;
+            this.Departamento.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Departamento.Location = new System.Drawing.Point(178, 105);
+            this.Departamento.Name = "Departamento";
+            this.Departamento.Size = new System.Drawing.Size(110, 21);
+            this.Departamento.TabIndex = 6;
+            this.Departamento.Text = "Departamento";
+            this.Departamento.UseVisualStyleBackColor = true;
+            this.Departamento.CheckedChanged += new System.EventHandler(this.Departamento_CheckedChanged);
             // 
             // Buscar
             // 
@@ -202,5 +217,6 @@
         private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.ComboBox CBBuscar;
         private System.Windows.Forms.Button Todo;
+        private System.Windows.Forms.RadioButton Departamento;
     }
 }

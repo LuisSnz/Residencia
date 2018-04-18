@@ -106,15 +106,7 @@ namespace ProyectoResidencias
         {
             this.Text = "Sistema de activo Fijo - Bienes dadoes de Baja";
             formularios(new Activo.BienesDadosDeBaja.InicioBajaBienes());
-        }
-
-        private void ResguardoPorEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CBienes.Reportes.ConsultaPorEmpleado consultaporempleado = new CBienes.Reportes.ConsultaPorEmpleado();
-            consultaporempleado.ShowDialog();
-        }
-
-        
+        }        
 
         private void CambioDeBienesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -124,12 +116,6 @@ namespace ProyectoResidencias
         {
             CBienes.Reportes.HistoricoDelBien historicodelbien = new CBienes.Reportes.HistoricoDelBien();
             historicodelbien.ShowDialog();
-        }
-
-        private void resguardoPorDptoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CBienes.Reportes.ConsultaPorDepartamento consultapordepartamento = new CBienes.Reportes.ConsultaPorDepartamento();
-            consultapordepartamento.ShowDialog();
         }
 
         private void valorToolStripMenuItem_Click(object sender, EventArgs e)
