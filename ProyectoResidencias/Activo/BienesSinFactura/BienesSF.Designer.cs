@@ -135,6 +135,7 @@
             this.toolStripButton8.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton8.Text = "toolStripButton8";
             this.toolStripButton8.ToolTipText = "Imprimir";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // dataGridView1
             // 
@@ -165,6 +166,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "BienesSF";
             this.Text = "BienesSF";
+            this.Load += new System.EventHandler(this.BienesSF_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
