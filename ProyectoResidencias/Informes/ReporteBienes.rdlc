@@ -492,6 +492,7 @@
                     <Value>RECIBI DE CONFORMIDAD</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -642,7 +643,7 @@
             </Paragraphs>
             <rd:DefaultName>Familia</rd:DefaultName>
             <Top>2.39931cm</Top>
-            <Left>7.55209cm</Left>
+            <Left>7.80717cm</Left>
             <Height>0.6cm</Height>
             <Width>4.88598cm</Width>
             <ZIndex>23</ZIndex>
@@ -868,7 +869,7 @@
             <rd:DefaultName>observaciones</rd:DefaultName>
             <Top>6.44635cm</Top>
             <Left>4.352cm</Left>
-            <Height>0.99521cm</Height>
+            <Height>0.52063cm</Height>
             <Width>10.14416cm</Width>
             <ZIndex>30</ZIndex>
             <Style>
@@ -1140,6 +1141,7 @@
                     <Value>ETIQUETA: </Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1172,6 +1174,7 @@
                     <Value>No ORDEN: </Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1204,6 +1207,7 @@
                     <Value>FACTURA:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1236,6 +1240,7 @@
                     <Value>DEPARTAMENTO:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1268,6 +1273,7 @@
                     <Value>ARTICULO:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1300,6 +1306,7 @@
                     <Value>OBSERVACIONES:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1332,6 +1339,7 @@
                     <Value>RECIBI DE CONFORMIDAD</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1376,6 +1384,7 @@
                     <Value>FECHA DE ENTREGA:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1481,7 +1490,7 @@
             </Paragraphs>
             <rd:DefaultName>Familia</rd:DefaultName>
             <Top>13.98613cm</Top>
-            <Left>7.55209cm</Left>
+            <Left>7.80717cm</Left>
             <Height>0.6cm</Height>
             <Width>4.88598cm</Width>
             <ZIndex>51</ZIndex>
@@ -1505,6 +1514,7 @@
                     <Value>ID: </Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1706,7 +1716,7 @@
             <rd:DefaultName>observaciones</rd:DefaultName>
             <Top>18.03317cm</Top>
             <Left>3.94631cm</Left>
-            <Height>0.99521cm</Height>
+            <Height>0.52063cm</Height>
             <Width>10.14416cm</Width>
             <ZIndex>58</ZIndex>
             <Style>
