@@ -338,7 +338,7 @@
             <Top>5.03468cm</Top>
             <Left>1.49381cm</Left>
             <Height>0.42361cm</Height>
-            <Width>1.77199cm</Width>
+            <Width>1.87782cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -459,6 +459,7 @@
                     <Value>RECIBI DE CONFORMIDAD</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -609,7 +610,7 @@
             </Paragraphs>
             <rd:DefaultName>Familia</rd:DefaultName>
             <Top>2.39931cm</Top>
-            <Left>7.55209cm</Left>
+            <Left>7.60501cm</Left>
             <Height>0.6cm</Height>
             <Width>4.88598cm</Width>
             <ZIndex>22</ZIndex>
@@ -705,8 +706,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>NoOrden</rd:DefaultName>
-            <Top>4.9994cm</Top>
-            <Left>3.14981cm</Left>
+            <Top>5.03468cm</Top>
+            <Left>3.37163cm</Left>
             <Height>0.47848cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>25</ZIndex>
@@ -803,7 +804,7 @@
             <rd:DefaultName>observaciones</rd:DefaultName>
             <Top>6.44635cm</Top>
             <Left>4.352cm</Left>
-            <Height>0.99521cm</Height>
+            <Height>0.52063cm</Height>
             <Width>10.14416cm</Width>
             <ZIndex>28</ZIndex>
             <Style>
@@ -1075,6 +1076,7 @@
                     <Value>ETIQUETA: </Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1107,6 +1109,7 @@
                     <Value>No ORDEN: </Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1117,7 +1120,7 @@
             <Top>16.6215cm</Top>
             <Left>1.49381cm</Left>
             <Height>0.42361cm</Height>
-            <Width>1.77199cm</Width>
+            <Width>1.87782cm</Width>
             <ZIndex>39</ZIndex>
             <Style>
               <Border>
@@ -1139,6 +1142,7 @@
                     <Value>DEPARTAMENTO:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1171,6 +1175,7 @@
                     <Value>ARTICULO:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1203,6 +1208,7 @@
                     <Value>OBSERVACIONES:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1235,6 +1241,7 @@
                     <Value>RECIBI DE CONFORMIDAD</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1279,6 +1286,7 @@
                     <Value>FECHA DE ENTREGA:</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1384,7 +1392,7 @@
             </Paragraphs>
             <rd:DefaultName>Familia</rd:DefaultName>
             <Top>13.98613cm</Top>
-            <Left>7.55209cm</Left>
+            <Left>7.60501cm</Left>
             <Height>0.6cm</Height>
             <Width>4.88598cm</Width>
             <ZIndex>48</ZIndex>
@@ -1408,6 +1416,7 @@
                     <Value>ID: </Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1479,8 +1488,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>NoOrden</rd:DefaultName>
-            <Top>16.58622cm</Top>
-            <Left>3.14981cm</Left>
+            <Top>16.6215cm</Top>
+            <Left>3.46731cm</Left>
             <Height>0.47848cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>51</ZIndex>
@@ -1576,8 +1585,8 @@
             </Paragraphs>
             <rd:DefaultName>observaciones</rd:DefaultName>
             <Top>18.03317cm</Top>
-            <Left>3.94631cm</Left>
-            <Height>0.99521cm</Height>
+            <Left>4.38728cm</Left>
+            <Height>0.52063cm</Height>
             <Width>10.14416cm</Width>
             <ZIndex>54</ZIndex>
             <Style>
