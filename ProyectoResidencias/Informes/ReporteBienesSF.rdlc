@@ -463,14 +463,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
             <Top>7.44156cm</Top>
-            <Left>6.91709cm</Left>
+            <Left>4.3938cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.62208cm</Width>
+            <Width>9.69667cm</Width>
             <ZIndex>17</ZIndex>
             <Style>
               <Border>
@@ -579,7 +581,7 @@
             <Top>4.61107cm</Top>
             <Left>3.46731cm</Left>
             <Height>0.42361cm</Height>
-            <Width>2.24289cm</Width>
+            <Width>8.66114cm</Width>
             <ZIndex>21</ZIndex>
             <Style>
               <Border>
@@ -677,7 +679,7 @@
             <Top>4.15218cm</Top>
             <Left>2.13556cm</Left>
             <Height>0.49417cm</Height>
-            <Width>1.13024cm</Width>
+            <Width>2.47221cm</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
@@ -709,7 +711,7 @@
             <Top>5.03468cm</Top>
             <Left>3.37163cm</Left>
             <Height>0.47848cm</Height>
-            <Width>2.5cm</Width>
+            <Width>8.75682cm</Width>
             <ZIndex>25</ZIndex>
             <Style>
               <Border>
@@ -741,7 +743,7 @@
             <Top>5.45801cm</Top>
             <Left>4.3938cm</Left>
             <Height>0.4743cm</Height>
-            <Width>2.5cm</Width>
+            <Width>7.73465cm</Width>
             <ZIndex>26</ZIndex>
             <Style>
               <Border>
@@ -773,7 +775,7 @@
             <Top>5.93231cm</Top>
             <Left>3.46731cm</Left>
             <Height>0.51404cm</Height>
-            <Width>3.42649cm</Width>
+            <Width>8.66114cm</Width>
             <ZIndex>27</ZIndex>
             <Style>
               <Border>
@@ -828,14 +830,16 @@
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>nombre</rd:DefaultName>
-            <Top>9.02794cm</Top>
-            <Left>6.32526cm</Left>
+            <Top>9.0544cm</Top>
+            <Left>4.3938cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.56633cm</Width>
+            <Width>9.69667cm</Width>
             <ZIndex>29</ZIndex>
             <Style>
               <Border>
@@ -902,18 +906,20 @@
                   <TextRun>
                     <Value>=Parameters!total.Value</Value>
                     <Style>
-                      <Format>'$'#,0.00;('$'#,0.00)</Format>
+                      <Format>'$'#,0,.000;('$'#,0,.000);'-'</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>total</rd:DefaultName>
-            <Top>4.6819cm</Top>
-            <Left>13.47808cm</Left>
+            <Top>4.70836cm</Top>
+            <Left>12.26957cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.18136cm</Width>
             <ZIndex>32</ZIndex>
             <Style>
               <Border>
@@ -1245,14 +1251,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
             <Top>19.02838cm</Top>
-            <Left>6.91709cm</Left>
+            <Left>4.3938cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.62208cm</Width>
+            <Width>9.69667cm</Width>
             <ZIndex>43</ZIndex>
             <Style>
               <Border>
@@ -1361,7 +1369,7 @@
             <Top>16.19789cm</Top>
             <Left>3.46731cm</Left>
             <Height>0.42361cm</Height>
-            <Width>2.24289cm</Width>
+            <Width>8.7317cm</Width>
             <ZIndex>47</ZIndex>
             <Style>
               <Border>
@@ -1459,7 +1467,7 @@
             <Top>15.739cm</Top>
             <Left>2.13556cm</Left>
             <Height>0.49417cm</Height>
-            <Width>1.13024cm</Width>
+            <Width>2.47221cm</Width>
             <ZIndex>50</ZIndex>
             <Style>
               <Border>
@@ -1491,7 +1499,7 @@
             <Top>16.6215cm</Top>
             <Left>3.46731cm</Left>
             <Height>0.47848cm</Height>
-            <Width>2.5cm</Width>
+            <Width>8.7317cm</Width>
             <ZIndex>51</ZIndex>
             <Style>
               <Border>
@@ -1523,7 +1531,7 @@
             <Top>17.04483cm</Top>
             <Left>4.3938cm</Left>
             <Height>0.4743cm</Height>
-            <Width>2.5cm</Width>
+            <Width>7.80521cm</Width>
             <ZIndex>52</ZIndex>
             <Style>
               <Border>
@@ -1555,7 +1563,7 @@
             <Top>17.51913cm</Top>
             <Left>3.46731cm</Left>
             <Height>0.51404cm</Height>
-            <Width>3.42649cm</Width>
+            <Width>8.7317cm</Width>
             <ZIndex>53</ZIndex>
             <Style>
               <Border>
@@ -1610,14 +1618,16 @@
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>nombre</rd:DefaultName>
-            <Top>20.61476cm</Top>
-            <Left>6.32526cm</Left>
+            <Top>20.64122cm</Top>
+            <Left>4.3938cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.56633cm</Width>
+            <Width>9.69667cm</Width>
             <ZIndex>55</ZIndex>
             <Style>
               <Border>
@@ -1684,18 +1694,20 @@
                   <TextRun>
                     <Value>=Parameters!total.Value</Value>
                     <Style>
-                      <Format>'$'#,0.00;('$'#,0.00)</Format>
+                      <Format>n2</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>total</rd:DefaultName>
-            <Top>16.26872cm</Top>
-            <Left>13.47808cm</Left>
+            <Top>16.29518cm</Top>
+            <Left>12.19901cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.27271cm</Width>
             <ZIndex>58</ZIndex>
             <Style>
               <Border>
@@ -1705,7 +1717,6 @@
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
-              <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
             </Style>
           </Textbox>
           <Textbox Name="Textbox26">

@@ -28,7 +28,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
             reporte[5] = new ReportParameter("observaciones", Clases.Variables.tbObservacion);
             reporte[6] = new ReportParameter("nombre", Clases.Variables.tbResguardoA);
             reporte[7] = new ReportParameter("total", "$" + Clases.Variables.desc3);
-            reporte[8] = new ReportParameter("Familia", Clases.Variables.Familia);
+            reporte[8] = new ReportParameter("Familia",Clases.Variables.Familia);
             reportViewer1.LocalReport.SetParameters(reporte);
             reportViewer1.Refresh();
         }
