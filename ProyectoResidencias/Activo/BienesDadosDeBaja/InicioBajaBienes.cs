@@ -35,11 +35,11 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
 
         private void InicioBajaBienes_Load(object sender, EventArgs e)
         {
-            Clases.Variables.ConsultaBuscar = "SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura,Total," +
-                " RTRIM(Articulo) AS Articulo, RTRIM(Observacion) AS Observaciones,RTRIM( Departamento) AS Departamento, " +
-                "RTRIM(Empleado) AS Empleado, FechaCompra, RTRIM(Marca) AS Marca, RTRIM(Serie) AS Serie, RTRIM(Modelo) " +
-                "AS Modelo, RTRIM(MotivoBaja) AS Motivo, FechaBaja, RTRIM(ObservacionBaja) as ObservacionesBaja, " +
-                "RTRIM(RutaFoto) as Foto, ValorActual, Consumible, Borro FROM dbo.BajaBienes";
+            Clases.Variables.ConsultaBuscar = "SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, " +
+                "RTRIM(Articulo) as Articulo, RTRIM(Observacion) as Observacion, Departamento, RTRIM(Empleado) as Empleado," +
+                " FechaCompra, Marca, Serie, Modelo, RTRIM(MotivoBaja) as MotivoBaja, EstatusBaja," +
+                "(convert(varchar, FechaBaja,101))  as FechaBaja,RTRIM( ObservacionBaja) as ObservacionBaja," +
+                " RTRIM(ValorActual) as ValorActual, Consumible, Borro FROM dbo.BajaBienes";
             Clases.LLenadoGrids.llenarGrid(DGBaja, Clases.Variables.ConsultaBuscar, "BajaBienes");
         }
 

@@ -51,7 +51,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
             FConfirmacion fConfirmacion = new FConfirmacion();
             fConfirmacion.ShowDialog();
             if (fConfirmacion.DialogResult==DialogResult.OK) {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Delete from CatArticulos where Descripcion='" + Clases.Variables.referencia + "'";
                 try
                 {

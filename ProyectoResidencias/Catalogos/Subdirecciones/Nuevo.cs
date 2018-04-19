@@ -27,7 +27,7 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
         {
             if (nombre.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into subdireccion (Descripcion) values ('" + nombre.Text + "');";
                 try
                 {

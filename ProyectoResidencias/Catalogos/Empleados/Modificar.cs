@@ -58,7 +58,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
             if (Nombre.Text.Length > 0 && NombreM.Text.Length > 0 && comboDepto.SelectedIndex >= 0
                && NumLicencia.Text.Length > 0 && comboJefe.SelectedIndex >= 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Update empleados set Nombre='"+Nombre.Text+"',NombrePliegos='"+NombreM.Text+
                     "',Departamento='"+comboDepto.SelectedItem.ToString()+"',NoLicencia='"+NumLicencia.Text+
                     "',FechaVencimiento=(convert(datetime,'"+Fecha.Text+"')),NoEmpleadoJefe=(select NoEmp from empleados" +

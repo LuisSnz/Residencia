@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
 
 namespace ProyectoResidencias.Clases
 {
@@ -15,7 +16,8 @@ namespace ProyectoResidencias.Clases
         {
             try
             {
-                string conexion1 = Clases.stconexion.scon;
+                
+                string conexion1 = Clases.Variables.scon;
                 SqlConnection cnn = new SqlConnection(conexion1);
                 SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
                 DataSet ds = new DataSet();
@@ -24,6 +26,15 @@ namespace ProyectoResidencias.Clases
             }
             catch (Exception e)
             { MessageBox.Show("Error al llenar la base de datos. /n"+e.ToString()); }
+        }
+        public static DataSet GenerarDataSet(string consulta, string tabla)
+        {
+            string conexion1 = Clases.Variables.scon;
+            SqlConnection cnn = new SqlConnection(conexion1);
+            SqlDataAdapter da = new SqlDataAdapter(consulta, cnn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, tabla);
+            return ds;
         }
     }
 }

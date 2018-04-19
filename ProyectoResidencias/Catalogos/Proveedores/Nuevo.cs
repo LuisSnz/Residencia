@@ -21,7 +21,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
         {
             if (Nombre.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into Proveedores (Nombre,Direccion,Rfc, Fax, Ciudad,Contacto,Giro,PadronGobierno," +
                     "Certificaciones,Email,Observaciones,Telefono,Accionistas,Curp) values ('" + Nombre.Text + "','" + Direccion.Text +
                     "','" + RFC.Text + "','" + Fax.Text + "','" + Ciudad.Text + "','" + Contacto.Text + "','" + Giro.Text + "','" + Padron.Text +

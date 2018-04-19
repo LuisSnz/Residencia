@@ -27,7 +27,7 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
+            string ConnString = Clases.Variables.scon;
             string SqlString = "Update BajaBienes set MotivoBaja='"+Motivo.SelectedItem.ToString()+"',ObservacionBaja='"+
                 Observaciones.Text+"',ValorActual="+Valor.Text+" where id=" + Clases.Variables.referencia + ";";
             try

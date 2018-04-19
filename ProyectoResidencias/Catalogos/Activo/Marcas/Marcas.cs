@@ -44,7 +44,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
             confirmacion.ShowDialog();
             if (confirmacion.DialogResult == DialogResult.OK)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Delete from marca where Id=" + Clases.Variables.referencia;
                 try
                 {

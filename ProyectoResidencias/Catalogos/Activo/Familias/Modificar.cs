@@ -22,7 +22,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
         {
             if (Descripcion.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Update Familia set Descripcion='" + Descripcion.Text + "' where Id=" + Clases.Variables.referencia + ";";
                 try
                 {

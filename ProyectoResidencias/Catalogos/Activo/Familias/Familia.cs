@@ -52,7 +52,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
             confirmacion.ShowDialog();
             if (confirmacion.DialogResult == DialogResult.OK)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Delete from Familia where Id=" + Clases.Variables.referencia;
                 try
                 {

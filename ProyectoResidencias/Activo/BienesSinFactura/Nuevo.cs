@@ -22,7 +22,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            SqlConnection cn = new SqlConnection(Clases.stconexion.scon);
+            SqlConnection cn = new SqlConnection(Clases.Variables.scon);
             try
             {
                 cn.Open();
@@ -48,7 +48,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
                 if (CHConsumible.Checked == true)
                     con = 1;
                 var creador = "DANIEL";
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into bienes (Etiqueta,NoOrden,Mes,AOrden,NoFactura,Precio,iva,total,TipoIva," +
                     "IdArticulo,Observacion,NoEmpleado,IdProveedor,FechaCompra,Baja,IdMarca,Serie,Modelo,Color,Bloqueado," +
                     "Consumible,Estado,Creador) values (" + TBEtiqueta.Text + "," + TBNoOrden.Text + ",9,2013,''," +
@@ -124,7 +124,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            SqlConnection cn = new SqlConnection(Clases.stconexion.scon);
+            SqlConnection cn = new SqlConnection(Clases.Variables.scon);
             try
             {
                 cn.Open();
@@ -147,7 +147,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            SqlConnection cn = new SqlConnection(Clases.stconexion.scon);
+            SqlConnection cn = new SqlConnection(Clases.Variables.scon);
             try
             {
                 cn.Open();
@@ -169,7 +169,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            SqlConnection cn = new SqlConnection(Clases.stconexion.scon);
+            SqlConnection cn = new SqlConnection(Clases.Variables.scon);
             try
             {
                 cn.Open();

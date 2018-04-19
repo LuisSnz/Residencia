@@ -41,7 +41,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
             if ( Nombre.Text.Length > 0 && NombreM.Text.Length > 0 && comboDepto.SelectedIndex >= 0
                 && NumLicencia.Text.Length>0 && comboJefe.SelectedIndex>=0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into empleados (NoEmp,Nombre,Departamento,JefeDepto,NombrePliegos,NoLicencia," +
                     "FechaVencimiento,Bloqueado,Textobloqueado,Baja,NoEmpleadoJefe,ActivoPliegos,NoVerifica) values " +
                     "((select (Max(NoEmp))+1 from empleados),'"+Nombre.Text+"','"+comboDepto.SelectedItem.ToString()+"',"+

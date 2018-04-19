@@ -99,14 +99,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivoJcasDataSet.cs">
-      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ActivoJcasDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Activo\BienesDadosDeBaja\Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,11 +231,18 @@
     <Compile Include="Catalogos\Proveedores\RVProveedores.Designer.cs">
       <DependentUpon>RVProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\ConexionBD.cs" />
     <Compile Include="Clases\excel.cs" />
     <Compile Include="Clases\LlenadoCombos.cs" />
     <Compile Include="Clases\LLenadoGrids.cs" />
     <Compile Include="Clases\Variables.cs" />
+    <Compile Include="Datos.cs">
+      <DependentUpon>Datos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FConfirmacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -446,6 +445,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\RVCostoBienes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\RVCostoBienes.Designer.cs">
+      <DependentUpon>RVCostoBienes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Activo\BienesDadosDeBaja\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -632,18 +637,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ActivoJcasDataSet.xsc">
-      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ActivoJcasDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ActivoJcasDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ActivoJcasDataSet.xss">
-      <DependentUpon>ActivoJcasDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Reportes\RVCostoBienes.resx">
+      <DependentUpon>RVCostoBienes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Datos.xsc">
+      <DependentUpon>Datos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos.xss">
+      <DependentUpon>Datos.xsd</DependentUpon>
+    </None>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ProyectoResidencias.csproj.GenerateResource.Cache" />

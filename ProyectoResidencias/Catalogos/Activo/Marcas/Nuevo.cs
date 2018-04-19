@@ -21,7 +21,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
         {
             if (Descripcion.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into marca (Descripcion) values ('" + Descripcion.Text + "');";
                 try
                 {

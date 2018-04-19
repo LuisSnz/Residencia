@@ -21,7 +21,7 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
         {
             if (Descripcion.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into areas (Descripcion) values ('" + Descripcion.Text + "');";
                 try
                 {

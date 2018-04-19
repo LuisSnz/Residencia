@@ -22,7 +22,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
         {
             if (Desccripcion.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into Familia (Descripcion) values ('" + Desccripcion.Text + "');";
                 try
                 {

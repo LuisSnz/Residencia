@@ -41,7 +41,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            SqlConnection cn = new SqlConnection(Clases.stconexion.scon);
+            SqlConnection cn = new SqlConnection(Clases.Variables.scon);
             try
             {
                 cn.Open();
@@ -64,7 +64,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
             if (CBNuevoResguardo.SelectedIndex >= 0)
             {
                 DateTime hoy = DateTime.Today;
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "update bienes set NoEmpleado=(select NoEmp from empleados where nombre='"+ CBNuevoResguardo.SelectedItem +"') where NoEmpleado=(select NoEmp from empleados where nombre='"+TBResguardoA.Text + "')  and id=" + LBId.Text+ "";
                 string SqlString1 = "insert into HistoricoBienes (Etiqueta,NoEmpleado,FechaCambio) values ("+LBEtiqueta.Text+",(select NoEmp from empleados where nombre='" + CBNuevoResguardo.SelectedItem + "'),(convert(datetime,'" + hoy.ToShortDateString() + "')))";
                 try

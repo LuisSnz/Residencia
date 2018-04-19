@@ -97,7 +97,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -270,6 +269,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1543,7 +1543,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0e7a99ca-3115-4021-96cb-f8dfaca4f404</rd:DataSourceID>
+      <rd:DataSourceID>3f8bdc0d-0d4f-4658-a30b-1279ff7f7505</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1555,7 +1555,7 @@
       <Fields>
         <Field Name="Id">
           <DataField>Id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Nombre">
           <DataField>Nombre</DataField>
@@ -1563,6 +1563,10 @@
         </Field>
         <Field Name="Direccion">
           <DataField>Direccion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rfc">
+          <DataField>Rfc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Fax">
@@ -1605,18 +1609,54 @@
           <DataField>Accionistas</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="FechaActa">
+          <DataField>FechaActa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CaptialSocial">
+          <DataField>CaptialSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CapitalContable">
+          <DataField>CapitalContable</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Curp">
           <DataField>Curp</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Indirectos">
+          <DataField>Indirectos</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SaldoInicial">
+          <DataField>SaldoInicial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Entradas">
+          <DataField>Entradas</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Salidas">
+          <DataField>Salidas</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Existencia">
+          <DataField>Existencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SalidasMO">
+          <DataField>SalidasMO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ActivoJcasDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Luis Saenz\Documents\Visual Studio 2017\Proyects\ProyectoResidencias\ActivoJcasDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>Datos</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Luis Saenz\Documents\Visual Studio 2017\Proyects\ProyectoResidencias\Datos.xsd</rd:SchemaPath>
         <rd:TableName>Proveedores</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ProveedoresTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

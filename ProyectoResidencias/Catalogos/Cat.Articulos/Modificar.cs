@@ -55,7 +55,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
                     con = true;
                 if (CHBInventariable.Checked == true)
                     inv = true;
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Update CatArticulos set Descripcion='" + TBArticulo.Text + "',idfamilia=(select id from Familia where Familia.Descripcion ='" + CBFamilia.SelectedItem + "'),ActivoContratos='" + con + "',Medida='" + CBMedida.SelectedItem + "',IdTipoArticulo=(select id from TipoArticulo where descripcion='" + CBArticulo.SelectedItem + "'),inventariable='" + inv + "',IdFamiliaSolicitudes='1',Activo='True',COG='0' where Id="+ Clases.Variables.desc+"";
                 try
                 {
