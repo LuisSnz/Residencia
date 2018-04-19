@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.activoJcasDataSet = new ProyectoResidencias.ActivoJcasDataSet();
             this.vVehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vVehiculosTableAdapter = new ProyectoResidencias.ActivoJcasDataSetTableAdapters.vVehiculosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.activoJcasDataSet)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.vVehiculosBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // vVehiculosBindingSource
+            // 
+            this.vVehiculosBindingSource.DataMember = "vVehiculos";
+            // 
+            // activoJcasDataSet
+            // 
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.vVehiculosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoResidencias.Informes.ReporteVehiculos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -51,19 +51,8 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // activoJcasDataSet
-            // 
-            this.activoJcasDataSet.DataSetName = "ActivoJcasDataSet";
-            this.activoJcasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vVehiculosBindingSource
-            // 
-            this.vVehiculosBindingSource.DataMember = "vVehiculos";
-            this.vVehiculosBindingSource.DataSource = this.activoJcasDataSet;
-            // 
             // vVehiculosTableAdapter
             // 
-            this.vVehiculosTableAdapter.ClearBeforeFill = true;
             // 
             // ReporteVehiculos
             // 
@@ -76,7 +65,6 @@
             this.Text = "ReporteVehiculos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReporteVehiculos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.activoJcasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vVehiculosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -85,8 +73,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private ActivoJcasDataSet activoJcasDataSet;
         private System.Windows.Forms.BindingSource vVehiculosBindingSource;
-        private ActivoJcasDataSetTableAdapters.vVehiculosTableAdapter vVehiculosTableAdapter;
     }
 }

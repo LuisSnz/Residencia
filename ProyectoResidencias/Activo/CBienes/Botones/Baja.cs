@@ -54,7 +54,7 @@ namespace ProyectoResidencias.Activo.CBienes.Botones
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
+            string ConnString = Clases.Variables.scon;
             string SqlString;
             if (Clases.Variables.MotivoBaja != "ERROR")
             {

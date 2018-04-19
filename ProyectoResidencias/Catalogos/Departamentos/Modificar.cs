@@ -21,7 +21,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             if (Descripcion.Text.Length > 0 && comboArea.SelectedIndex >= 0 && comboSubD.SelectedIndex >= 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Update DEPTOS  set DESCRIPCION='" + Descripcion.Text + "', DIRECCION='"+
                     comboArea.SelectedItem.ToString()+"',SUBDIRECCION='"+comboSubD.SelectedItem.ToString()+
                     "' where CLAVE=" + Clases.Variables.referencia + ";";

@@ -26,7 +26,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
         {
             if (Descripcion.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Update marca set Descripcion='" + Descripcion.Text + "' where Id=" + Clases.Variables.referencia + ";";
                 try
                 {

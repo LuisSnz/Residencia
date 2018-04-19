@@ -13,7 +13,7 @@ namespace ProyectoResidencias.Clases
         public static SqlCommand cmd;
         public static SqlDataReader dr;
         public static SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
-        string conexion = Clases.stconexion.scon;
+        string conexion = Clases.Variables.scon;
 
         public static void CBArticulosFamilia(ComboBox CB)
         {

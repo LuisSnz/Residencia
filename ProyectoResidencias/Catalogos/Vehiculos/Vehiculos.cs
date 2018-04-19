@@ -24,7 +24,9 @@ namespace ProyectoResidencias.Catalogos.Vehiculos
 
         private void Vehiculos_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GVVehiculos, "select Numero,Placas,Modelo,Tipo,Subtipo,Marca,NoSerie,Familia,Resguardo,Departamento,Observacion from vVehiculos order by id", "vVehiculos");
+            Clases.Variables.ConsultaBuscar = "select Numero,Placas,Modelo,Tipo,Subtipo,Marca,NoSerie,Familia,Resguardo," +
+                "Departamento,Observacion from vVehiculos order by id";
+            Clases.LLenadoGrids.llenarGrid(GVVehiculos,Clases.Variables.ConsultaBuscar, "vVehiculos");
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)

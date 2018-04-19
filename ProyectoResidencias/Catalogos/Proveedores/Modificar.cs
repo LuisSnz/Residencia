@@ -27,7 +27,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
         {
             if (Nombre.Text.Length > 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Update Proveedores  set Nombre='" + Nombre.Text + "',Direccion='" + Direccion.Text + "',Rfc='" + RFC.Text +
                     "', Fax='" + Fax.Text + "', Ciudad='" + Ciudad.Text + "',Curp='" + CURP.Text + "', Contacto='" + Contacto.Text +
                     "',Giro='" + Giro.Text + "', PadronGobierno='" + Padron.Text + "',Telefono='" + Telefono.Text +

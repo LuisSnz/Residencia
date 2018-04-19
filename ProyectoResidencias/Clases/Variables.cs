@@ -8,6 +8,7 @@ namespace ProyectoResidencias.Clases
     class Variables
     {
         //las variables descX toman valores del datagridview para usarlos al modificar
+        public static string scon = ("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
         public static string referencia;
         public static string desc;
         public static string descA;

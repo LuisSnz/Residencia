@@ -22,9 +22,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             Catalogos.Proveedores.Nuevo nuevo = new Catalogos.Proveedores.Nuevo();
             nuevo.ShowDialog();
             if(nuevo.DialogResult==DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
-                "Observaciones from Proveedores", "Proveedores");
+                Clases.LLenadoGrids.llenarGrid(GridProveedor, Clases.Variables.ConsultaBuscar, "Proveedores");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -32,9 +30,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             Catalogos.Proveedores.Modificar modificar = new Catalogos.Proveedores.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
-                "Observaciones from Proveedores", "Proveedores");
+                Clases.LLenadoGrids.llenarGrid(GridProveedor, Clases.Variables.ConsultaBuscar, "Proveedores");
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -47,9 +43,10 @@ namespace ProyectoResidencias.Catalogos.Proveedores
 
         private void Proveedores_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
-                "Observaciones from Proveedores", "Proveedores");
+            Clases.Variables.ConsultaBuscar = "SELECT Id, RTRIM(Nombre) AS 'Nombre', RTRIM(Direccion) AS 'Direccion'," +
+                " Fax, RTRIM(Ciudad) AS 'Ciudad', Contacto, Giro, PadronGobierno, Certificaciones, Email, Observaciones," +
+                " Telefono, Accionistas, Curp FROM Proveedores";
+            Clases.LLenadoGrids.llenarGrid(GridProveedor, Clases.Variables.ConsultaBuscar, "Proveedores");
         }
 
         private void GridProveedor_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +60,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             FConfirmacion confirmacion = new FConfirmacion();
             confirmacion.ShowDialog();
             if (confirmacion.DialogResult == DialogResult.OK) {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Delete from Proveedores where Id=" + Clases.Variables.referencia;
                 try
                 {
@@ -74,9 +71,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Departamento eliminado correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GridProveedor, "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp,Contacto,Giro,PadronGobierno,Accionistas," +
-                "Observaciones from Proveedores", "Proveedores");
+                    Clases.LLenadoGrids.llenarGrid(GridProveedor, Clases.Variables.ConsultaBuscar, "Proveedores");
                 }
                 catch (Exception ex)
                 {

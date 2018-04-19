@@ -7,20 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
-namespace ProyectoResidencias.Catalogos.Vehiculos
+
+namespace ProyectoResidencias.Reportes
 {
-    public partial class ReporteVehiculos : Form
+    public partial class RVCostoBienes : Form
     {
-        public ReporteVehiculos()
+        public RVCostoBienes()
         {
             InitializeComponent();
         }
 
-        private void ReporteVehiculos_Load(object sender, EventArgs e)
+        private void RVCostoBienes_Load(object sender, EventArgs e)
         {
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "DataSet1";
-            rds.Value = Clases.LLenadoGrids.GenerarDataSet(Clases.Variables.ConsultaBuscar, "vVehiculos").Tables[0];
+            rds.Value = Clases.LLenadoGrids.GenerarDataSet(Clases.Variables.ConsultaBuscar,"bienes").Tables[0];
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.RefreshReport();

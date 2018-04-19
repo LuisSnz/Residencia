@@ -1630,15 +1630,13 @@ namespace ProyectoResidencias {
             
             private global::System.Data.DataColumn columnObservacionBaja;
             
-            private global::System.Data.DataColumn columnRutaFoto;
-            
             private global::System.Data.DataColumn columnConsumible;
             
             private global::System.Data.DataColumn columnBorro;
             
-            private global::System.Data.DataColumn columnColumn1;
-            
             private global::System.Data.DataColumn columnValorActual;
+            
+            private global::System.Data.DataColumn columnFechaBaja;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1803,14 +1801,6 @@ namespace ProyectoResidencias {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RutaFotoColumn {
-                get {
-                    return this.columnRutaFoto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn ConsumibleColumn {
                 get {
                     return this.columnConsumible;
@@ -1827,17 +1817,17 @@ namespace ProyectoResidencias {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Column1Column {
+            public global::System.Data.DataColumn ValorActualColumn {
                 get {
-                    return this.columnColumn1;
+                    return this.columnValorActual;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ValorActualColumn {
+            public global::System.Data.DataColumn FechaBajaColumn {
                 get {
-                    return this.columnValorActual;
+                    return this.columnFechaBaja;
                 }
             }
             
@@ -1894,11 +1884,10 @@ namespace ProyectoResidencias {
                         string MotivoBaja, 
                         string EstatusBaja, 
                         string ObservacionBaja, 
-                        string RutaFoto, 
                         bool Consumible, 
                         string Borro, 
-                        string Column1, 
-                        string ValorActual) {
+                        string ValorActual, 
+                        string FechaBaja) {
                 BajaBienesRow rowBajaBienesRow = ((BajaBienesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1917,11 +1906,10 @@ namespace ProyectoResidencias {
                         MotivoBaja,
                         EstatusBaja,
                         ObservacionBaja,
-                        RutaFoto,
                         Consumible,
                         Borro,
-                        Column1,
-                        ValorActual};
+                        ValorActual,
+                        FechaBaja};
                 rowBajaBienesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBajaBienesRow);
                 return rowBajaBienesRow;
@@ -1967,11 +1955,10 @@ namespace ProyectoResidencias {
                 this.columnMotivoBaja = base.Columns["MotivoBaja"];
                 this.columnEstatusBaja = base.Columns["EstatusBaja"];
                 this.columnObservacionBaja = base.Columns["ObservacionBaja"];
-                this.columnRutaFoto = base.Columns["RutaFoto"];
                 this.columnConsumible = base.Columns["Consumible"];
                 this.columnBorro = base.Columns["Borro"];
-                this.columnColumn1 = base.Columns["Column1"];
                 this.columnValorActual = base.Columns["ValorActual"];
+                this.columnFechaBaja = base.Columns["FechaBaja"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2009,16 +1996,14 @@ namespace ProyectoResidencias {
                 base.Columns.Add(this.columnEstatusBaja);
                 this.columnObservacionBaja = new global::System.Data.DataColumn("ObservacionBaja", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObservacionBaja);
-                this.columnRutaFoto = new global::System.Data.DataColumn("RutaFoto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRutaFoto);
                 this.columnConsumible = new global::System.Data.DataColumn("Consumible", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnConsumible);
                 this.columnBorro = new global::System.Data.DataColumn("Borro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBorro);
-                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnColumn1);
                 this.columnValorActual = new global::System.Data.DataColumn("ValorActual", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValorActual);
+                this.columnFechaBaja = new global::System.Data.DataColumn("FechaBaja", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaBaja);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -2038,12 +2023,11 @@ namespace ProyectoResidencias {
                 this.columnMotivoBaja.MaxLength = 20;
                 this.columnEstatusBaja.MaxLength = 20;
                 this.columnObservacionBaja.MaxLength = 255;
-                this.columnRutaFoto.MaxLength = 250;
                 this.columnBorro.MaxLength = 10;
-                this.columnColumn1.ReadOnly = true;
-                this.columnColumn1.MaxLength = 30;
                 this.columnValorActual.ReadOnly = true;
                 this.columnValorActual.MaxLength = 23;
+                this.columnFechaBaja.ReadOnly = true;
+                this.columnFechaBaja.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3400,22 +3384,6 @@ namespace ProyectoResidencias {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string RutaFoto {
-                get {
-                    try {
-                        return ((string)(this[this.tableBajaBienes.RutaFotoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RutaFoto\' de la tabla \'BajaBienes\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBajaBienes.RutaFotoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Consumible {
                 get {
                     try {
@@ -3448,22 +3416,6 @@ namespace ProyectoResidencias {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Column1 {
-                get {
-                    try {
-                        return ((string)(this[this.tableBajaBienes.Column1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Column1\' de la tabla \'BajaBienes\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBajaBienes.Column1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ValorActual {
                 get {
                     try {
@@ -3475,6 +3427,22 @@ namespace ProyectoResidencias {
                 }
                 set {
                     this[this.tableBajaBienes.ValorActualColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FechaBaja {
+                get {
+                    try {
+                        return ((string)(this[this.tableBajaBienes.FechaBajaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaBaja\' de la tabla \'BajaBienes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBajaBienes.FechaBajaColumn] = value;
                 }
             }
             
@@ -3660,18 +3628,6 @@ namespace ProyectoResidencias {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRutaFotoNull() {
-                return this.IsNull(this.tableBajaBienes.RutaFotoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRutaFotoNull() {
-                this[this.tableBajaBienes.RutaFotoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsConsumibleNull() {
                 return this.IsNull(this.tableBajaBienes.ConsumibleColumn);
             }
@@ -3696,18 +3652,6 @@ namespace ProyectoResidencias {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsColumn1Null() {
-                return this.IsNull(this.tableBajaBienes.Column1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetColumn1Null() {
-                this[this.tableBajaBienes.Column1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsValorActualNull() {
                 return this.IsNull(this.tableBajaBienes.ValorActualColumn);
             }
@@ -3716,6 +3660,18 @@ namespace ProyectoResidencias {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetValorActualNull() {
                 this[this.tableBajaBienes.ValorActualColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFechaBajaNull() {
+                return this.IsNull(this.tableBajaBienes.FechaBajaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFechaBajaNull() {
+                this[this.tableBajaBienes.FechaBajaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5035,15 +4991,14 @@ SELECT Id, RTRIM(Nombre) AS 'Nombre', RTRIM(Direccion) AS 'Direccion', Fax, RTRI
             tableMapping.ColumnMappings.Add("MotivoBaja", "MotivoBaja");
             tableMapping.ColumnMappings.Add("EstatusBaja", "EstatusBaja");
             tableMapping.ColumnMappings.Add("ObservacionBaja", "ObservacionBaja");
-            tableMapping.ColumnMappings.Add("RutaFoto", "RutaFoto");
             tableMapping.ColumnMappings.Add("Consumible", "Consumible");
             tableMapping.ColumnMappings.Add("Borro", "Borro");
-            tableMapping.ColumnMappings.Add("Column1", "Column1");
             tableMapping.ColumnMappings.Add("ValorActual", "ValorActual");
+            tableMapping.ColumnMappings.Add("FechaBaja", "FechaBaja");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[BajaBienes] WHERE (([id] = @Original_id) AND ((@IsNull_Etiqueta = 1 AND [Etiqueta] IS NULL) OR ([Etiqueta] = @Original_Etiqueta)) AND ((@IsNull_NoOrden = 1 AND [NoOrden] IS NULL) OR ([NoOrden] = @Original_NoOrden)) AND ((@IsNull_Total = 1 AND [Total] IS NULL) OR ([Total] = @Original_Total)) AND ((@IsNull_Departamento = 1 AND [Departamento] IS NULL) OR ([Departamento] = @Original_Departamento)) AND ((@IsNull_FechaCompra = 1 AND [FechaCompra] IS NULL) OR ([FechaCompra] = @Original_FechaCompra)) AND ((@IsNull_Marca = 1 AND [Marca] IS NULL) OR ([Marca] = @Original_Marca)) AND ((@IsNull_Serie = 1 AND [Serie] IS NULL) OR ([Serie] = @Original_Serie)) AND ((@IsNull_Modelo = 1 AND [Modelo] IS NULL) OR ([Modelo] = @Original_Modelo)) AND ((@IsNull_EstatusBaja = 1 AND [EstatusBaja] IS NULL) OR ([EstatusBaja] = @Original_EstatusBaja)) AND ((@IsNull_RutaFoto = 1 AND [RutaFoto] IS NULL) OR ([RutaFoto] = @Original_RutaFoto)) AND ((@IsNull_Consumible = 1 AND [Consumible] IS NULL) OR ([Consumible] = @Original_Consumible)) AND ((@IsNull_Borro = 1 AND [Borro] IS NULL) OR ([Borro] = @Original_Borro)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[BajaBienes] WHERE (([id] = @Original_id) AND ((@IsNull_Etiqueta = 1 AND [Etiqueta] IS NULL) OR ([Etiqueta] = @Original_Etiqueta)) AND ((@IsNull_NoOrden = 1 AND [NoOrden] IS NULL) OR ([NoOrden] = @Original_NoOrden)) AND ((@IsNull_Total = 1 AND [Total] IS NULL) OR ([Total] = @Original_Total)) AND ((@IsNull_Departamento = 1 AND [Departamento] IS NULL) OR ([Departamento] = @Original_Departamento)) AND ((@IsNull_FechaCompra = 1 AND [FechaCompra] IS NULL) OR ([FechaCompra] = @Original_FechaCompra)) AND ((@IsNull_Marca = 1 AND [Marca] IS NULL) OR ([Marca] = @Original_Marca)) AND ((@IsNull_Serie = 1 AND [Serie] IS NULL) OR ([Serie] = @Original_Serie)) AND ((@IsNull_Modelo = 1 AND [Modelo] IS NULL) OR ([Modelo] = @Original_Modelo)) AND ((@IsNull_EstatusBaja = 1 AND [EstatusBaja] IS NULL) OR ([EstatusBaja] = @Original_EstatusBaja)) AND ((@IsNull_Consumible = 1 AND [Consumible] IS NULL) OR ([Consumible] = @Original_Consumible)) AND ((@IsNull_Borro = 1 AND [Borro] IS NULL) OR ([Borro] = @Original_Borro)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Etiqueta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Etiqueta", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5064,16 +5019,14 @@ SELECT Id, RTRIM(Nombre) AS 'Nombre', RTRIM(Direccion) AS 'Direccion', Fax, RTRI
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EstatusBaja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstatusBaja", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EstatusBaja", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstatusBaja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RutaFoto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RutaFoto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RutaFoto", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RutaFoto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Consumible", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consumible", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Consumible", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consumible", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Borro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borro", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Borro", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[BajaBienes] ([Etiqueta], [NoOrden], [Total], [Departamento], [FechaCompra], [Marca], [Serie], [Modelo], [EstatusBaja], [RutaFoto], [Consumible], [Borro]) VALUES (@Etiqueta, @NoOrden, @Total, @Departamento, @FechaCompra, @Marca, @Serie, @Modelo, @EstatusBaja, @RutaFoto, @Consumible, @Borro);
-SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articulo) AS Articulo, RTRIM(Observacion) AS Observacion, Departamento, RTRIM(Empleado) AS Empleado, FechaCompra, Marca, Serie, Modelo, RTRIM(MotivoBaja) AS MotivoBaja, EstatusBaja, CONVERT (varchar, FechaBaja, 101) AS Expr1, RTRIM(ObservacionBaja) AS ObservacionBaja, RutaFoto, RTRIM(ValorActual) AS ValorActual, Consumible, Borro FROM BajaBienes WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[BajaBienes] ([Etiqueta], [NoOrden], [Total], [Departamento], [FechaCompra], [Marca], [Serie], [Modelo], [EstatusBaja], [Consumible], [Borro]) VALUES (@Etiqueta, @NoOrden, @Total, @Departamento, @FechaCompra, @Marca, @Serie, @Modelo, @EstatusBaja, @Consumible, @Borro);
+SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articulo) AS Articulo, RTRIM(Observacion) AS Observacion, Departamento, RTRIM(Empleado) AS Empleado, FechaCompra, Marca, Serie, Modelo, RTRIM(MotivoBaja) AS MotivoBaja, EstatusBaja, CONVERT (varchar, FechaBaja, 101) AS FechaBaja, RTRIM(ObservacionBaja) AS ObservacionBaja, RTRIM(ValorActual) AS ValorActual, Consumible, Borro FROM BajaBienes WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Etiqueta", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Etiqueta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoOrden", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoOrden", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5084,7 +5037,6 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Serie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EstatusBaja", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstatusBaja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RutaFoto", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RutaFoto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Consumible", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consumible", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Borro", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -5092,26 +5044,25 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[BajaBienes] SET [Etiqueta] = @Etiqueta, [NoOrden] = @NoOrden, [Tota" +
                 "l] = @Total, [Departamento] = @Departamento, [FechaCompra] = @FechaCompra, [Marc" +
                 "a] = @Marca, [Serie] = @Serie, [Modelo] = @Modelo, [EstatusBaja] = @EstatusBaja," +
-                " [RutaFoto] = @RutaFoto, [Consumible] = @Consumible, [Borro] = @Borro WHERE (([i" +
-                "d] = @Original_id) AND ((@IsNull_Etiqueta = 1 AND [Etiqueta] IS NULL) OR ([Etiqu" +
-                "eta] = @Original_Etiqueta)) AND ((@IsNull_NoOrden = 1 AND [NoOrden] IS NULL) OR " +
-                "([NoOrden] = @Original_NoOrden)) AND ((@IsNull_Total = 1 AND [Total] IS NULL) OR" +
-                " ([Total] = @Original_Total)) AND ((@IsNull_Departamento = 1 AND [Departamento] " +
-                "IS NULL) OR ([Departamento] = @Original_Departamento)) AND ((@IsNull_FechaCompra" +
-                " = 1 AND [FechaCompra] IS NULL) OR ([FechaCompra] = @Original_FechaCompra)) AND " +
-                "((@IsNull_Marca = 1 AND [Marca] IS NULL) OR ([Marca] = @Original_Marca)) AND ((@" +
-                "IsNull_Serie = 1 AND [Serie] IS NULL) OR ([Serie] = @Original_Serie)) AND ((@IsN" +
-                "ull_Modelo = 1 AND [Modelo] IS NULL) OR ([Modelo] = @Original_Modelo)) AND ((@Is" +
-                "Null_EstatusBaja = 1 AND [EstatusBaja] IS NULL) OR ([EstatusBaja] = @Original_Es" +
-                "tatusBaja)) AND ((@IsNull_RutaFoto = 1 AND [RutaFoto] IS NULL) OR ([RutaFoto] = " +
-                "@Original_RutaFoto)) AND ((@IsNull_Consumible = 1 AND [Consumible] IS NULL) OR (" +
-                "[Consumible] = @Original_Consumible)) AND ((@IsNull_Borro = 1 AND [Borro] IS NUL" +
-                "L) OR ([Borro] = @Original_Borro)));\r\nSELECT id, Etiqueta, NoOrden, RTRIM(NoFact" +
-                "ura) AS NoFactura, Total, RTRIM(Articulo) AS Articulo, RTRIM(Observacion) AS Obs" +
-                "ervacion, Departamento, RTRIM(Empleado) AS Empleado, FechaCompra, Marca, Serie, " +
-                "Modelo, RTRIM(MotivoBaja) AS MotivoBaja, EstatusBaja, CONVERT (varchar, FechaBaj" +
-                "a, 101) AS Expr1, RTRIM(ObservacionBaja) AS ObservacionBaja, RutaFoto, RTRIM(Val" +
-                "orActual) AS ValorActual, Consumible, Borro FROM BajaBienes WHERE (id = @id)";
+                " [Consumible] = @Consumible, [Borro] = @Borro WHERE (([id] = @Original_id) AND (" +
+                "(@IsNull_Etiqueta = 1 AND [Etiqueta] IS NULL) OR ([Etiqueta] = @Original_Etiquet" +
+                "a)) AND ((@IsNull_NoOrden = 1 AND [NoOrden] IS NULL) OR ([NoOrden] = @Original_N" +
+                "oOrden)) AND ((@IsNull_Total = 1 AND [Total] IS NULL) OR ([Total] = @Original_To" +
+                "tal)) AND ((@IsNull_Departamento = 1 AND [Departamento] IS NULL) OR ([Departamen" +
+                "to] = @Original_Departamento)) AND ((@IsNull_FechaCompra = 1 AND [FechaCompra] I" +
+                "S NULL) OR ([FechaCompra] = @Original_FechaCompra)) AND ((@IsNull_Marca = 1 AND " +
+                "[Marca] IS NULL) OR ([Marca] = @Original_Marca)) AND ((@IsNull_Serie = 1 AND [Se" +
+                "rie] IS NULL) OR ([Serie] = @Original_Serie)) AND ((@IsNull_Modelo = 1 AND [Mode" +
+                "lo] IS NULL) OR ([Modelo] = @Original_Modelo)) AND ((@IsNull_EstatusBaja = 1 AND" +
+                " [EstatusBaja] IS NULL) OR ([EstatusBaja] = @Original_EstatusBaja)) AND ((@IsNul" +
+                "l_Consumible = 1 AND [Consumible] IS NULL) OR ([Consumible] = @Original_Consumib" +
+                "le)) AND ((@IsNull_Borro = 1 AND [Borro] IS NULL) OR ([Borro] = @Original_Borro)" +
+                "));\r\nSELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(A" +
+                "rticulo) AS Articulo, RTRIM(Observacion) AS Observacion, Departamento, RTRIM(Emp" +
+                "leado) AS Empleado, FechaCompra, Marca, Serie, Modelo, RTRIM(MotivoBaja) AS Moti" +
+                "voBaja, EstatusBaja, CONVERT (varchar, FechaBaja, 101) AS FechaBaja, RTRIM(Obser" +
+                "vacionBaja) AS ObservacionBaja, RTRIM(ValorActual) AS ValorActual, Consumible, B" +
+                "orro FROM BajaBienes WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Etiqueta", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Etiqueta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoOrden", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoOrden", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5122,7 +5073,6 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Serie", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EstatusBaja", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstatusBaja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RutaFoto", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RutaFoto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Consumible", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consumible", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Borro", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5144,8 +5094,6 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EstatusBaja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstatusBaja", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EstatusBaja", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstatusBaja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RutaFoto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RutaFoto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RutaFoto", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RutaFoto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Consumible", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consumible", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Consumible", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consumible", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Borro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borro", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5166,7 +5114,7 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articulo) as Articulo, RTRIM(Observacion) as Observacion, Departamento, RTRIM(Empleado) as Empleado, FechaCompra, Marca, Serie, Modelo, RTRIM(MotivoBaja) as MotivoBaja, EstatusBaja,(convert(varchar, FechaBaja,101)),RTRIM( ObservacionBaja) as ObservacionBaja, RutaFoto, RTRIM(ValorActual) as ValorActual, Consumible, Borro FROM dbo.BajaBienes";
+            this._commandCollection[0].CommandText = @"SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articulo) as Articulo, RTRIM(Observacion) as Observacion, Departamento, RTRIM(Empleado) as Empleado, FechaCompra, Marca, Serie, Modelo, RTRIM(MotivoBaja) as MotivoBaja, EstatusBaja,(convert(varchar, FechaBaja,101))  as FechaBaja,RTRIM( ObservacionBaja) as ObservacionBaja, RTRIM(ValorActual) as ValorActual, Consumible, Borro FROM dbo.BajaBienes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5227,7 +5175,7 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, global::System.Nullable<double> Original_Etiqueta, global::System.Nullable<double> Original_NoOrden, global::System.Nullable<double> Original_Total, string Original_Departamento, global::System.Nullable<global::System.DateTime> Original_FechaCompra, string Original_Marca, string Original_Serie, string Original_Modelo, string Original_EstatusBaja, string Original_RutaFoto, global::System.Nullable<bool> Original_Consumible, string Original_Borro) {
+        public virtual int Delete(int Original_id, global::System.Nullable<double> Original_Etiqueta, global::System.Nullable<double> Original_NoOrden, global::System.Nullable<double> Original_Total, string Original_Departamento, global::System.Nullable<global::System.DateTime> Original_FechaCompra, string Original_Marca, string Original_Serie, string Original_Modelo, string Original_EstatusBaja, global::System.Nullable<bool> Original_Consumible, string Original_Borro) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_Etiqueta.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -5301,29 +5249,21 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_EstatusBaja));
             }
-            if ((Original_RutaFoto == null)) {
+            if ((Original_Consumible.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Consumible.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_RutaFoto));
-            }
-            if ((Original_Consumible.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_Consumible.Value));
-            }
-            else {
+            if ((Original_Borro == null)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_Borro == null)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_Borro));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_Borro));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5345,7 +5285,7 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<double> Etiqueta, global::System.Nullable<double> NoOrden, global::System.Nullable<double> Total, string Departamento, global::System.Nullable<global::System.DateTime> FechaCompra, string Marca, string Serie, string Modelo, string EstatusBaja, string RutaFoto, global::System.Nullable<bool> Consumible, string Borro) {
+        public virtual int Insert(global::System.Nullable<double> Etiqueta, global::System.Nullable<double> NoOrden, global::System.Nullable<double> Total, string Departamento, global::System.Nullable<global::System.DateTime> FechaCompra, string Marca, string Serie, string Modelo, string EstatusBaja, global::System.Nullable<bool> Consumible, string Borro) {
             if ((Etiqueta.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((double)(Etiqueta.Value));
             }
@@ -5400,23 +5340,17 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(EstatusBaja));
             }
-            if ((RutaFoto == null)) {
+            if ((Consumible.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(Consumible.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(RutaFoto));
-            }
-            if ((Consumible.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(Consumible.Value));
-            }
-            else {
+            if ((Borro == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Borro == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Borro));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Borro));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5448,7 +5382,6 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
                     string Serie, 
                     string Modelo, 
                     string EstatusBaja, 
-                    string RutaFoto, 
                     global::System.Nullable<bool> Consumible, 
                     string Borro, 
                     int Original_id, 
@@ -5461,7 +5394,6 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
                     string Original_Serie, 
                     string Original_Modelo, 
                     string Original_EstatusBaja, 
-                    string Original_RutaFoto, 
                     global::System.Nullable<bool> Original_Consumible, 
                     string Original_Borro, 
                     int id) {
@@ -5519,122 +5451,108 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(EstatusBaja));
             }
-            if ((RutaFoto == null)) {
+            if ((Consumible.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(Consumible.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(RutaFoto));
-            }
-            if ((Consumible.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Consumible.Value));
-            }
-            else {
+            if ((Borro == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Borro == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Borro));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Borro));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id));
             if ((Original_Etiqueta.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Etiqueta.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(Original_Etiqueta.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             if ((Original_NoOrden.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((double)(Original_NoOrden.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_NoOrden.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_Total.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((double)(Original_Total.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((double)(Original_Total.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             if ((Original_Departamento == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Departamento));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Departamento));
             }
             if ((Original_FechaCompra.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_FechaCompra.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_FechaCompra.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             if ((Original_Marca == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Marca));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Marca));
             }
             if ((Original_Serie == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_Serie));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_Serie));
             }
             if ((Original_Modelo == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Modelo));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Modelo));
             }
             if ((Original_EstatusBaja == null)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_EstatusBaja));
-            }
-            if ((Original_RutaFoto == null)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_RutaFoto));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_EstatusBaja));
             }
             if ((Original_Consumible.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((bool)(Original_Consumible.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Consumible.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_Borro == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Borro));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Borro));
             }
-            this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5665,7 +5583,6 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
                     string Serie, 
                     string Modelo, 
                     string EstatusBaja, 
-                    string RutaFoto, 
                     global::System.Nullable<bool> Consumible, 
                     string Borro, 
                     int Original_id, 
@@ -5678,10 +5595,9 @@ SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, RTRIM(Articu
                     string Original_Serie, 
                     string Original_Modelo, 
                     string Original_EstatusBaja, 
-                    string Original_RutaFoto, 
                     global::System.Nullable<bool> Original_Consumible, 
                     string Original_Borro) {
-            return this.Update(Etiqueta, NoOrden, Total, Departamento, FechaCompra, Marca, Serie, Modelo, EstatusBaja, RutaFoto, Consumible, Borro, Original_id, Original_Etiqueta, Original_NoOrden, Original_Total, Original_Departamento, Original_FechaCompra, Original_Marca, Original_Serie, Original_Modelo, Original_EstatusBaja, Original_RutaFoto, Original_Consumible, Original_Borro, Original_id);
+            return this.Update(Etiqueta, NoOrden, Total, Departamento, FechaCompra, Marca, Serie, Modelo, EstatusBaja, Consumible, Borro, Original_id, Original_Etiqueta, Original_NoOrden, Original_Total, Original_Departamento, Original_FechaCompra, Original_Marca, Original_Serie, Original_Modelo, Original_EstatusBaja, Original_Consumible, Original_Borro, Original_id);
         }
     }
     

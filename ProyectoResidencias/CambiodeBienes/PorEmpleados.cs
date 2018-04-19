@@ -54,7 +54,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
 
         private void PasarIzquierda_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
+            string ConnString = Clases.Variables.scon;
             string SqlString = "Update bienes set NoEmpleado=(select NoEmp from empleados where Nombre='" +
                 CBDerecho.SelectedItem.ToString() + "') where NoEmpleado=(select NoEmp from empleados where Nombre='" +
                 CBIzquierdo.SelectedItem.ToString() + "') and Etiqueta="+GridIzquierdo.CurrentRow.Cells[0].Value.ToString()+";";
@@ -99,7 +99,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
 
         private void PasarDerecha_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
+            string ConnString = Clases.Variables.scon;
             string SqlString = "Update bienes set NoEmpleado=(select NoEmp from empleados where Nombre='" +
                 CBIzquierdo.SelectedItem.ToString() + "') where NoEmpleado=(select NoEmp from empleados where Nombre='" +
                 CBDerecho.SelectedItem.ToString() + "') and Etiqueta=" + GridDerecho.CurrentRow.Cells[0].Value.ToString() + ";";
@@ -144,7 +144,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
 
         private void TodoIzquierda_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
+            string ConnString = Clases.Variables.scon;
             try
             {
                 for (int i=0;i<GridIzquierdo.RowCount;i++)
@@ -191,7 +191,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
 
         private void TodoDerecha_Click(object sender, EventArgs e)
         {
-            string ConnString = Clases.stconexion.scon;
+            string ConnString = Clases.Variables.scon;
             try
             {
                 for (int i = 0; i < GridDerecho.RowCount; i++)

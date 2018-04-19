@@ -2,40 +2,40 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ActivoJcasDataSet">
+    <DataSource Name="Datos">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e28faa63-4029-48f8-859f-77b8debb3877</rd:DataSourceID>
+      <rd:DataSourceID>b2ba549d-ec62-4854-a6c1-eb4fb0b7b736</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>ActivoJcasDataSet</DataSourceName>
+        <DataSourceName>Datos</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="Id">
           <DataField>Id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Etiqueta">
           <DataField>Etiqueta</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="NoOrden">
           <DataField>NoOrden</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Mes">
           <DataField>Mes</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="AOrden">
           <DataField>AOrden</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="NoFactura">
           <DataField>NoFactura</DataField>
@@ -43,7 +43,7 @@
         </Field>
         <Field Name="total">
           <DataField>total</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Descripcion">
           <DataField>Descripcion</DataField>
@@ -59,24 +59,24 @@
         </Field>
         <Field Name="idFamilia">
           <DataField>idFamilia</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Consumible">
           <DataField>Consumible</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="IdProveedor">
           <DataField>IdProveedor</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ActivoJcasDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Eduardo\Documents\Residencias\ProyectoResidencias\ActivoJcasDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>vBienes</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>vBienesTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>Datos</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Luis Saenz\Documents\Visual Studio 2017\Proyects\ProyectoResidencias\Datos.xsd</rd:SchemaPath>
+        <rd:TableName>vBenes</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -496,14 +496,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
             <Top>7.44156cm</Top>
-            <Left>6.91709cm</Left>
+            <Left>4.3938cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.62208cm</Width>
+            <Width>9.69667cm</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -577,8 +579,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>10.44001cm</Top>
-            <Left>14.88762cm</Left>
+            <Top>10.12251cm</Top>
+            <Left>14.57012cm</Left>
             <Height>0.6cm</Height>
             <Width>1.87924cm</Width>
             <ZIndex>21</ZIndex>
@@ -893,14 +895,16 @@
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>nombre</rd:DefaultName>
             <Top>9.02794cm</Top>
-            <Left>6.32526cm</Left>
+            <Left>4.3938cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.56633cm</Width>
+            <Width>9.69667cm</Width>
             <ZIndex>31</ZIndex>
             <Style>
               <Border>
@@ -971,14 +975,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>total</rd:DefaultName>
             <Top>4.6819cm</Top>
-            <Left>13.47808cm</Left>
+            <Left>12.19901cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.18136cm</Width>
             <ZIndex>34</ZIndex>
             <Style>
               <Border>
@@ -1343,14 +1349,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
             <Top>19.02838cm</Top>
-            <Left>6.91709cm</Left>
+            <Left>4.37709cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.62208cm</Width>
+            <Width>9.62575cm</Width>
             <ZIndex>46</ZIndex>
             <Style>
               <Border>
@@ -1424,8 +1432,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>22.24735cm</Top>
-            <Left>15.27411cm</Left>
+            <Top>21.92985cm</Top>
+            <Left>14.95661cm</Left>
             <Height>0.6cm</Height>
             <Width>1.49275cm</Width>
             <ZIndex>49</ZIndex>
@@ -1740,14 +1748,16 @@
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>nombre</rd:DefaultName>
-            <Top>20.61476cm</Top>
-            <Left>6.32526cm</Left>
+            <Top>20.54421cm</Top>
+            <Left>4.3938cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.56633cm</Width>
+            <Width>9.60904cm</Width>
             <ZIndex>59</ZIndex>
             <Style>
               <Border>
@@ -1818,14 +1828,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>total</rd:DefaultName>
-            <Top>16.26872cm</Top>
-            <Left>13.47808cm</Left>
+            <Top>16.23344cm</Top>
+            <Left>12.19901cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.25035cm</Width>
             <ZIndex>62</ZIndex>
             <Style>
               <Border>

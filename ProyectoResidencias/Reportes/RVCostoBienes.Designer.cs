@@ -1,6 +1,6 @@
-﻿namespace ProyectoResidencias.Activo.BienesDadosDeBaja
+﻿namespace ProyectoResidencias.Reportes
 {
-    partial class RVBaja
+    partial class RVCostoBienes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bajaBienesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.bajaBienesBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bajaBienesBindingSource
-            // 
-            this.bajaBienesBindingSource.DataMember = "BajaBienes";
-            // 
-            // activoJcasDataSet
-            // 
             // 
             // reportViewer1
             // 
@@ -51,20 +41,16 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // bajaBienesTableAdapter
-            // 
-            // 
-            // RVBaja
+            // RVCostoBienes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "RVBaja";
-            this.Text = "RVBaja";
+            this.Name = "RVCostoBienes";
+            this.Text = "RVCostoBienes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.RVBaja_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bajaBienesBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.RVCostoBienes_Load);
             this.ResumeLayout(false);
 
         }
@@ -72,6 +58,5 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource bajaBienesBindingSource;
     }
 }

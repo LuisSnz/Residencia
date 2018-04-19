@@ -55,7 +55,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
             confirmacion.ShowDialog();
             if (confirmacion.DialogResult == DialogResult.OK)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Delete from empleados where NoEmp=" + Clases.Variables.referencia;
                 try
                 {

@@ -27,7 +27,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             if (Descripcion.Text.Length > 0 && comboArea.SelectedIndex>=0 && comboSubd.SelectedIndex>=0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Insert Into DEPTOS (CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION) " +
                     "values ((select (COUNT(clave))+1 from DEPTOS),'" + Descripcion.Text + "', '"+
                     comboArea.SelectedItem.ToString()+"','"+comboSubd.SelectedItem.ToString()+"');";

@@ -36,7 +36,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
             if (Orden.Text.Length > 0 && Articulo.SelectedIndex >= 0 &&
                 Marca.SelectedIndex >= 0 && Conservacion.SelectedIndex >= 0 && Proveedor.SelectedIndex >= 0)
             {
-                string ConnString = Clases.stconexion.scon;
+                string ConnString = Clases.Variables.scon;
                 string SqlString = "Update bienes set NoOrden=" + Orden.Text + "," +
                     "IdArticulo=(Select Id from CatArticulos where Descripcion='" + Articulo.SelectedItem.ToString() +
                     "'),Observacion='" + Observaciones.Text + "',IdProveedor=(Select Id from Proveedores where Nombre='" +
