@@ -32,7 +32,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
                     "', Fax='" + Fax.Text + "', Ciudad='" + Ciudad.Text + "',Curp='" + CURP.Text + "', Contacto='" + Contacto.Text +
                     "',Giro='" + Giro.Text + "', PadronGobierno='" + Padron.Text + "',Telefono='" + Telefono.Text +
                     "', Certificaciones='" + Certificaciones.Text + "',Email='" + eMail.Text + "',Accionistas='" + Accionistas.Text +
-                    "',Observaciones='" + Observaciones.Text + "' where Id=" + Clases.Variables.referencia + ";";
+                    "',Observaciones='" + Observaciones.Text + "' where Id=" + Clases.Variables.IdProveedores + ";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))

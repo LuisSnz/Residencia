@@ -19,17 +19,17 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-            int index = Motivo.FindString(Clases.Variables.desc);
+            int index = Motivo.FindString(Clases.Variables.BienesBMotivoBaja);
             Motivo.SelectedIndex = index;
-            Valor.Text = Clases.Variables.desc3;
-            Observaciones.Text = Clases.Variables.desc2;
+            Valor.Text = Clases.Variables.BienesBValor;
+            Observaciones.Text = Clases.Variables.BienesBObservacion;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string ConnString = Clases.Variables.scon;
             string SqlString = "Update BajaBienes set MotivoBaja='"+Motivo.SelectedItem.ToString()+"',ObservacionBaja='"+
-                Observaciones.Text+"',ValorActual="+Valor.Text+" where id=" + Clases.Variables.referencia + ";";
+                Observaciones.Text+"',ValorActual="+Valor.Text+" where id=" + Clases.Variables.IdBienesB + ";";
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnString))

@@ -22,7 +22,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
         private void PorBienSeleccionados_Load(object sender, EventArgs e)
         {
             LBId.Text = Clases.Variables.referencia;
-            LBEtiqueta.Text = Clases.Variables.desc;
+            LBEtiqueta.Text = Clases.Variables.GridCelda1;
             LBOrdenCompra.Text = Clases.Variables.lbOrdenCompra;
             TBArticulo.Text = Clases.Variables.tbArticulo;
             TBObservaciones.Text = Clases.Variables.tbObservacion;

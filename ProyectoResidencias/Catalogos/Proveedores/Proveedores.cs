@@ -51,8 +51,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
 
         private void GridProveedor_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            var filaSeleccionada = GridProveedor.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.IdProveedores = GridProveedor.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -61,7 +60,7 @@ namespace ProyectoResidencias.Catalogos.Proveedores
             confirmacion.ShowDialog();
             if (confirmacion.DialogResult == DialogResult.OK) {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from Proveedores where Id=" + Clases.Variables.referencia;
+                string SqlString = "Delete from Proveedores where Id=" + Clases.Variables.IdProveedores;
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -89,11 +88,6 @@ namespace ProyectoResidencias.Catalogos.Proveedores
         {
             RVProveedores viewer = new RVProveedores();
             viewer.ShowDialog();
-        }
-
-        private void GridProveedor_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void GridProveedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

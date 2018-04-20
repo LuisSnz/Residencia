@@ -24,7 +24,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
                 string ConnString = Clases.Variables.scon;
                 string SqlString = "Update DEPTOS  set DESCRIPCION='" + Descripcion.Text + "', DIRECCION='"+
                     comboArea.SelectedItem.ToString()+"',SUBDIRECCION='"+comboSubD.SelectedItem.ToString()+
-                    "' where CLAVE=" + Clases.Variables.referencia + ";";
+                    "' where CLAVE=" + Clases.Variables.IdDeptos + ";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))
@@ -54,11 +54,11 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             Clases.Departamentos.CBSubdireccion(comboSubD);
             Clases.Departamentos.CBAreas(comboArea);
-            int index = comboArea.FindString(Clases.Variables.desc2);
+            int index = comboArea.FindString(Clases.Variables.DireccionDeptos);
             comboArea.SelectedIndex = index;
-            index = comboSubD.FindString(Clases.Variables.desc3);
+            index = comboSubD.FindString(Clases.Variables.SubDeptos);
             comboSubD.SelectedIndex = index;
-            Descripcion.Text = Clases.Variables.desc;
+            Descripcion.Text = Clases.Variables.DescripcionDeptos;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
             Catalogos.Departamentos.Nuevo nuevo = new Catalogos.Departamentos.Nuevo();
             nuevo.ShowDialog();
             if (nuevo.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+                Clases.LLenadoGrids.llenarGrid(GridDeptos, Clases.Variables.ConsultaBuscar, "DEPTOS");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -35,21 +35,22 @@ namespace ProyectoResidencias.Catalogos.Departamentos
             Catalogos.Departamentos.Modificar modificar = new Catalogos.Departamentos.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+                Clases.LLenadoGrids.llenarGrid(GridDeptos, Clases.Variables.ConsultaBuscar, "DEPTOS");
         }
 
         private void Departamentos_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+            Clases.Variables.ConsultaBuscar = "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS";
+            Clases.LLenadoGrids.llenarGrid(GridDeptos, Clases.Variables.ConsultaBuscar, "DEPTOS");
         }
 
         private void GridDeptos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             var filaSeleccionada = GridDeptos.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
-            Clases.Variables.desc2 = filaSeleccionada.Cells[2].Value.ToString();
-            Clases.Variables.desc3 = filaSeleccionada.Cells[3].Value.ToString();
+            Clases.Variables.IdDeptos = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.DescripcionDeptos = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.DireccionDeptos = filaSeleccionada.Cells[2].Value.ToString();
+            Clases.Variables.SubDeptos = filaSeleccionada.Cells[3].Value.ToString();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
             if (confirmacion.DialogResult == DialogResult.OK)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from DEPTOS where Clave=" + Clases.Variables.referencia;
+                string SqlString = "Delete from DEPTOS where Clave=" + Clases.Variables.IdDeptos;
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -69,7 +70,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Departamento eliminado correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+                    Clases.LLenadoGrids.llenarGrid(GridDeptos, Clases.Variables.ConsultaBuscar, "DEPTOS");
                 }
                 catch (Exception ex)
                 {
@@ -93,7 +94,7 @@ namespace ProyectoResidencias.Catalogos.Departamentos
             Catalogos.Departamentos.Modificar modificar = new Catalogos.Departamentos.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridDeptos, "select CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION from DEPTOS", "DEPTOS");
+                Clases.LLenadoGrids.llenarGrid(GridDeptos, Clases.Variables.ConsultaBuscar, "DEPTOS");
         }
     }
 }

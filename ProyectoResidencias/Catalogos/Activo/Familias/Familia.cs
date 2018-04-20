@@ -23,7 +23,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
             Catalogos.Activo.Familias.Nuevo nuevo = new Catalogos.Activo.Familias.Nuevo();
             nuevo.ShowDialog();
             if (nuevo.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+                Clases.LLenadoGrids.llenarGrid(GridFamilias, Clases.Variables.ConsultaBuscar, "Familia");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -31,19 +31,20 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
             Catalogos.Activo.Familias.Modificar modificar = new Catalogos.Activo.Familias.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+                Clases.LLenadoGrids.llenarGrid(GridFamilias, Clases.Variables.ConsultaBuscar, "Familia");
         }
 
         private void Familia_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+            Clases.Variables.ConsultaBuscar = "select Id, Descripcion from Familia";
+            Clases.LLenadoGrids.llenarGrid(GridFamilias, Clases.Variables.ConsultaBuscar, "Familia");
         }
 
         private void GridFamilias_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             var filaSeleccionada = GridFamilias.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.IDFamilia = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.DescripcionFamilia = filaSeleccionada.Cells[1].Value.ToString();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
             if (confirmacion.DialogResult == DialogResult.OK)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from Familia where Id=" + Clases.Variables.referencia;
+                string SqlString = "Delete from Familia where Id=" + Clases.Variables.IDFamilia;
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -63,7 +64,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Familia eliminada correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+                    Clases.LLenadoGrids.llenarGrid(GridFamilias, Clases.Variables.ConsultaBuscar, "Familia");
                 }
                 catch (Exception ex)
                 {
@@ -72,16 +73,12 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
             }
         }
 
-        private void GridFamilias_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void GridFamilias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Catalogos.Activo.Familias.Modificar modificar = new Catalogos.Activo.Familias.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridFamilias, "select Id, Descripcion from Familia", "Familia");
+                Clases.LLenadoGrids.llenarGrid(GridFamilias, Clases.Variables.ConsultaBuscar, "Familia");
         }
     }
 }

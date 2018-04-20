@@ -17,8 +17,8 @@ namespace ProyectoResidencias
         }
 
         private void formularios(object hijo) {
-            if (this.Base.Controls.Count > 0) {
-                this.Base.Controls.RemoveAt(0);}
+            if (this.Base.Controls.Count > 0) 
+                this.Base.Controls.RemoveAt(0);
             Form hi = hijo as Form;
             hi.TopLevel = false;
             hi.FormBorderStyle = FormBorderStyle.None;
