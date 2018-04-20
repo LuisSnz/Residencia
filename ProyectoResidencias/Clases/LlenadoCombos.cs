@@ -213,7 +213,7 @@ namespace ProyectoResidencias.Clases
                     "RTRIM(Proveedores.Rfc) AS RFC,bienes.Observacion,marca.Descripcion as marca,bienes.Serie " +
                     "FROM bienes INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia " +
                     "ON CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id" +
-                    " LEFT OUTER JOIN marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.referencia, cn);
+                    " LEFT OUTER JOIN marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.IdBienes, cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -249,7 +249,7 @@ namespace ProyectoResidencias.Clases
             {
                 cn.Open();
                 cmd = new SqlCommand("SELECT bienes.Id,bienes.Modelo,bienes.Precio,bienes.Serie,marca.Descripcion as marca " +
-                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.referencia, cn);
+                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.IdBienes, cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -671,7 +671,7 @@ namespace ProyectoResidencias.Clases
                     "RTRIM(Proveedores.Rfc) AS RFC,bienes.Observacion,marca.Descripcion as marca,bienes.Serie " +
                     "FROM bienes INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia " +
                     "ON CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id" +
-                    " LEFT OUTER JOIN marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.referencia, cn);
+                    " LEFT OUTER JOIN marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.IdBienesSF, cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -706,7 +706,7 @@ namespace ProyectoResidencias.Clases
             {
                 cn.Open();
                 cmd = new SqlCommand("SELECT bienes.Id,bienes.Modelo,bienes.Precio,bienes.Serie,marca.Descripcion as marca " +
-                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.referencia, cn);
+                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.IdBienesSF, cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {

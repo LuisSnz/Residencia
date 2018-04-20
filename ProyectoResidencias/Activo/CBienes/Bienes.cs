@@ -90,18 +90,17 @@ namespace ProyectoResidencias
 
         private void GVBienes_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            var filaSeleccionada = GVBienes.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.GridCelda1 = filaSeleccionada.Cells[1].Value.ToString();
-            Clases.Variables.lbOrdenCompra = filaSeleccionada.Cells[2].Value.ToString();
-            Clases.Variables.lbFactura = filaSeleccionada.Cells[3].Value.ToString();
-            Clases.Variables.tbArticulo = filaSeleccionada.Cells[6].Value.ToString();
-            Clases.Variables.tbObservacion = filaSeleccionada.Cells[11].Value.ToString();
-            Clases.Variables.tbResguardoA = filaSeleccionada.Cells[7].Value.ToString();
-            Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[8].Value.ToString();
-            Clases.Variables.GridCelda2 = filaSeleccionada.Cells[9].Value.ToString();
-            Clases.Variables.GridCelda3 = filaSeleccionada.Cells[4].Value.ToString();
-            Clases.Variables.Familia = filaSeleccionada.Cells[5].Value.ToString();
+            Clases.Variables.IdBienes = GVBienes.CurrentRow.Cells[0].Value.ToString();
+            Clases.Variables.BienesEtiqueta = GVBienes.CurrentRow.Cells[1].Value.ToString();
+            Clases.Variables.BienesOrdenCompra = GVBienes.CurrentRow.Cells[2].Value.ToString();
+            Clases.Variables.BienesFactura = GVBienes.CurrentRow.Cells[3].Value.ToString();
+            Clases.Variables.BienesTotal = GVBienes.CurrentRow.Cells[4].Value.ToString();
+            Clases.Variables.BienesFamilia = GVBienes.CurrentRow.Cells[5].Value.ToString();
+            Clases.Variables.BienesDescripcionArticulo = GVBienes.CurrentRow.Cells[6].Value.ToString();
+            Clases.Variables.BienesEmpleado = GVBienes.CurrentRow.Cells[7].Value.ToString();
+            Clases.Variables.BienesDepartamento = GVBienes.CurrentRow.Cells[8].Value.ToString();
+            Clases.Variables.BienesConsumible = GVBienes.CurrentRow.Cells[9].Value.ToString();
+            Clases.Variables.BienesObservacion = GVBienes.CurrentRow.Cells[11].Value.ToString();
         }
 
         private void Excel_Click(object sender, EventArgs e)

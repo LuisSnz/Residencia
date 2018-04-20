@@ -21,13 +21,13 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
         
         private void PorBienSeleccionados_Load(object sender, EventArgs e)
         {
-            LBId.Text = Clases.Variables.referencia;
-            LBEtiqueta.Text = Clases.Variables.GridCelda1;
-            LBOrdenCompra.Text = Clases.Variables.lbOrdenCompra;
-            TBArticulo.Text = Clases.Variables.tbArticulo;
-            TBObservaciones.Text = Clases.Variables.tbObservacion;
-            TBResguardoA.Text = Clases.Variables.tbResguardoA;
-            TBDepartamentoA.Text = Clases.Variables.tbDepartamentoA;
+            LBId.Text = Clases.Variables.IdBienes;
+            LBEtiqueta.Text = Clases.Variables.BienesEtiqueta;
+            LBOrdenCompra.Text = Clases.Variables.BienesOrdenCompra;
+            TBArticulo.Text = Clases.Variables.BienesDescripcionArticulo;
+            TBObservaciones.Text = Clases.Variables.BienesObservacion;
+            TBResguardoA.Text = Clases.Variables.BienesEmpleado;
+            TBDepartamentoA.Text = Clases.Variables.BienesDepartamento;
             Clases.Bienes.CBCambio(CBNuevoResguardo);
        
  }

@@ -105,10 +105,10 @@ namespace ProyectoResidencias.Activo.CBienes.Botones
 
         private void Baja_Load(object sender, EventArgs e)
         {
-            Etiqueta.Text = Clases.Variables.GridCelda1;
-            Empleado.Text = Clases.Variables.tbResguardoA;
-            Articulo.Text = Clases.Variables.tbArticulo;
-            Precio.Text = Clases.Variables.GridCelda3;
+            Etiqueta.Text = Clases.Variables.BienesEtiqueta;
+            Empleado.Text = Clases.Variables.BienesEmpleado;
+            Articulo.Text = Clases.Variables.BienesDescripcionArticulo;
+            Precio.Text = Clases.Variables.BienesTotal;
             Clases.Bienes.BajaLabels(Modelo, Precio, Serie, Marca);
             Clases.Variables.MotivoBaja = "NO FUNCIONA";
         }

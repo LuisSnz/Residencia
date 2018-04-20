@@ -23,18 +23,18 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
             Clases.Articulos.CBArticulosFamilia(CBFamilia);
             Clases.Articulos.CBArticulosTipoArticulo(CBArticulo);
             Clases.Articulos.CBArticulosMedida(CBMedida);
-            int index = CBArticulo.FindString(Clases.Variables.descA);
+            int index = CBArticulo.FindString(Clases.Variables.ArticuloTipo);
             CBArticulo.SelectedIndex = index;
-            index = CBFamilia.FindString(Clases.Variables.descF);
+            index = CBFamilia.FindString(Clases.Variables.ArticuloFamilia);
             CBFamilia.SelectedIndex = index;
-            index = CBMedida.FindString(Clases.Variables.descM);
+            index = CBMedida.FindString(Clases.Variables.ArticuloMedida);
             CBMedida.SelectedIndex = index;
-            TBArticulo.Text = Clases.Variables.referencia;
-            if (Clases.Variables.CHArticuloContrato == "True")
+            TBArticulo.Text = Clases.Variables.ArticuloDescripcion;
+            if (Clases.Variables.ArticuloContrato == "True")
                 CHArticuloContrato.Checked = true;
             else
                 CHArticuloContrato.Checked = false;
-            if (Clases.Variables.CHInventariable == "True")
+            if (Clases.Variables.ArticuloInventariable == "True")
                 CHBInventariable.Checked = true;
             else
                 CHBInventariable.Checked = false;
@@ -56,7 +56,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
                 if (CHBInventariable.Checked == true)
                     inv = true;
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Update CatArticulos set Descripcion='" + TBArticulo.Text + "',idfamilia=(select id from Familia where Familia.Descripcion ='" + CBFamilia.SelectedItem + "'),ActivoContratos='" + con + "',Medida='" + CBMedida.SelectedItem + "',IdTipoArticulo=(select id from TipoArticulo where descripcion='" + CBArticulo.SelectedItem + "'),inventariable='" + inv + "',IdFamiliaSolicitudes='1',Activo='True',COG='0' where Id="+ Clases.Variables.GridCelda1+"";
+                string SqlString = "Update CatArticulos set Descripcion='" + TBArticulo.Text + "',idfamilia=(select id from Familia where Familia.Descripcion ='" + CBFamilia.SelectedItem + "'),ActivoContratos='" + con + "',Medida='" + CBMedida.SelectedItem + "',IdTipoArticulo=(select id from TipoArticulo where descripcion='" + CBArticulo.SelectedItem + "'),inventariable='" + inv + "',IdFamiliaSolicitudes='1',Activo='True',COG='0' where Id="+ Clases.Variables.IdArticulo+"";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))

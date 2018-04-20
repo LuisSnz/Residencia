@@ -41,7 +41,7 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(199, 81);
+            this.button2.Location = new System.Drawing.Point(265, 81);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 28);
             this.button2.TabIndex = 15;
@@ -53,7 +53,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(72, 81);
+            this.button1.Location = new System.Drawing.Point(90, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 28);
             this.button1.TabIndex = 14;
@@ -66,7 +66,7 @@
             this.Descripcion.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion.Location = new System.Drawing.Point(112, 12);
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(206, 25);
+            this.Descripcion.Size = new System.Drawing.Size(292, 25);
             this.Descripcion.TabIndex = 13;
             // 
             // label1
@@ -87,7 +87,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(334, 50);
+            this.panel1.Size = new System.Drawing.Size(424, 50);
             this.panel1.TabIndex = 16;
             // 
             // Modificar
@@ -97,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(372, 121);
+            this.ClientSize = new System.Drawing.Size(448, 121);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
