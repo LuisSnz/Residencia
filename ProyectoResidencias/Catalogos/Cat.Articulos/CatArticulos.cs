@@ -22,6 +22,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
         {
             Catalogos.Cat.Articulos.Botones.Nuevo nuevo = new Catalogos.Cat.Articulos.Botones.Nuevo();
             nuevo.ShowDialog();
+            if(nuevo.DialogResult==DialogResult.OK)
             Clases.LLenadoGrids.llenarGrid(GVCatArticulos, Clases.Variables.ConsultaBuscar, "vArticulosCompras");
         }
 
@@ -29,6 +30,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
         {
             Catalogos.Cat.Articulos.Botones.Modificar modificar = new Catalogos.Cat.Articulos.Botones.Modificar();
             modificar.ShowDialog();
+            if (modificar.DialogResult==DialogResult.OK)
             Clases.LLenadoGrids.llenarGrid(GVCatArticulos, Clases.Variables.ConsultaBuscar, "vArticulosCompras");
         }
 
@@ -52,7 +54,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
             fConfirmacion.ShowDialog();
             if (fConfirmacion.DialogResult==DialogResult.OK) {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from CatArticulos where Descripcion='" + Clases.Variables.referencia + "'";
+                string SqlString = "Delete from CatArticulos where Descripcion='" + Clases.Variables.ArticuloDescripcion + "'";
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -73,20 +75,22 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
 
         private void GVCatArticulos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            var filaSeleccionada = GVCatArticulos.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[1].Value.ToString();
-            Clases.Variables.GridCelda1 = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.descA = filaSeleccionada.Cells[5].Value.ToString();
-            Clases.Variables.descF = filaSeleccionada.Cells[2].Value.ToString();
-            Clases.Variables.descM = filaSeleccionada.Cells[4].Value.ToString();
-            Clases.Variables.CHArticuloContrato = filaSeleccionada.Cells[6].Value.ToString();
-            Clases.Variables.CHInventariable=filaSeleccionada.Cells[3].Value.ToString();
+            Clases.Variables.IdArticulo = GVCatArticulos.CurrentRow.Cells[0].Value.ToString();
+            Clases.Variables.ArticuloDescripcion = GVCatArticulos.CurrentRow.Cells[1].Value.ToString();
+            Clases.Variables.ArticuloFamilia = GVCatArticulos.CurrentRow.Cells[2].Value.ToString();
+            Clases.Variables.ArticuloInventariable= GVCatArticulos.CurrentRow.Cells[3].Value.ToString();
+            Clases.Variables.ArticuloMedida = GVCatArticulos.CurrentRow.Cells[4].Value.ToString();
+            Clases.Variables.ArticuloTipo = GVCatArticulos.CurrentRow.Cells[5].Value.ToString();
+            Clases.Variables.ArticuloContrato = GVCatArticulos.CurrentRow.Cells[6].Value.ToString();
         }
         
         private void GVCatArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Catalogos.Cat.Articulos.Botones.Modificar modificar = new Botones.Modificar();
-               modificar.ShowDialog();
+            modificar.ShowDialog();
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GVCatArticulos, Clases.Variables.ConsultaBuscar, "vArticulosCompras");
+
         }
     }
 }

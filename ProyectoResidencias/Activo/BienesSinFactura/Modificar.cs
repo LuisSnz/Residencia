@@ -19,7 +19,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-            if (Clases.Variables.GridCelda2 == "True")
+            if (Clases.Variables.BienesSFConsumible == "True")
                 Consumible.Checked = true;
             Clases.Articulos.CBBuscarArticulo(Articulo);
             Clases.Bienes.CBProveedor(Proveedor);
@@ -43,7 +43,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
                     Proveedor.SelectedItem.ToString() + "'),FechaCompra=(convert(datetime,'" + Fecha.Text + "'))," +
                     "IdMarca=(Select TOP 1 Id from marca where Descripcion='" + Marca.SelectedItem.ToString() + "')," +
                     "Serie='" + Serie.Text + "',Modelo='" + Modelo.Text + "',Color='" + Modelo.Text + "',Consumible=" + TFConsumible +
-                    ",Estado='" + Conservacion.SelectedItem.ToString() + "' where Id=" + Clases.Variables.referencia + ";";
+                    ",Estado='" + Conservacion.SelectedItem.ToString() + "' where Id=" + Clases.Variables.IdBienesSF + ";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))

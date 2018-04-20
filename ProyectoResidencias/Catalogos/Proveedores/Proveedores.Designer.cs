@@ -57,7 +57,6 @@
             this.GridProveedor.ReadOnly = true;
             this.GridProveedor.Size = new System.Drawing.Size(900, 600);
             this.GridProveedor.TabIndex = 5;
-            this.GridProveedor.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProveedor_CellContentDoubleClick);
             this.GridProveedor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProveedor_CellDoubleClick);
             this.GridProveedor.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProveedor_CellEnter);
             // 

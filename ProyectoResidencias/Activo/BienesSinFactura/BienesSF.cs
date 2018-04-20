@@ -92,16 +92,24 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             var filaSeleccionada = dataGridView1.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.GridCelda1 = filaSeleccionada.Cells[1].Value.ToString();
-            Clases.Variables.lbOrdenCompra = filaSeleccionada.Cells[2].Value.ToString();
-            Clases.Variables.tbArticulo = filaSeleccionada.Cells[5].Value.ToString();
-            Clases.Variables.tbObservacion = filaSeleccionada.Cells[10].Value.ToString();
-            Clases.Variables.tbResguardoA = filaSeleccionada.Cells[6].Value.ToString();
-            Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[7].Value.ToString();
-            Clases.Variables.GridCelda2 = filaSeleccionada.Cells[8].Value.ToString();
-            Clases.Variables.GridCelda3 = filaSeleccionada.Cells[3].Value.ToString();
-            Clases.Variables.Familia = filaSeleccionada.Cells[4].Value.ToString();
+            Clases.Variables.IdBienesSF = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.BienesSFEtiqueta = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.BienesSFOrdenCompra = filaSeleccionada.Cells[2].Value.ToString();
+            Clases.Variables.BienesSFTotal = filaSeleccionada.Cells[3].Value.ToString();
+            Clases.Variables.BienesSFFamilia = filaSeleccionada.Cells[4].Value.ToString();
+            Clases.Variables.BienesSFDescripcionArticulo = filaSeleccionada.Cells[5].Value.ToString();
+            Clases.Variables.BienesSFEmpleado = filaSeleccionada.Cells[6].Value.ToString();
+            Clases.Variables.BienesSFDepartamento = filaSeleccionada.Cells[7].Value.ToString();
+            Clases.Variables.BienesSFConsumible = filaSeleccionada.Cells[8].Value.ToString();
+            Clases.Variables.BienesSFObservacion = filaSeleccionada.Cells[10].Value.ToString();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Activo.BienesSinFactura.Modificar modificar = new Modificar();
+            modificar.ShowDialog();
+            if (modificar.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(dataGridView1, Clases.Variables.ConsultaBuscar, "bienes");
         }
     }
 }
