@@ -22,7 +22,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
             Catalogos.Activo.Marcas.Nuevo nuevo = new Catalogos.Activo.Marcas.Nuevo();
             nuevo.ShowDialog();
             if (nuevo.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+                Clases.LLenadoGrids.llenarGrid(GridMarcas, Clases.Variables.ConsultaBuscar, "marca");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -30,12 +30,13 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
             Catalogos.Activo.Marcas.Modificar modificar = new Catalogos.Activo.Marcas.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+                Clases.LLenadoGrids.llenarGrid(GridMarcas, Clases.Variables.ConsultaBuscar, "marca");
         }
 
         private void Marcas_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+            Clases.Variables.ConsultaBuscar = "select * from marca order by Descripcion";
+            Clases.LLenadoGrids.llenarGrid(GridMarcas, Clases.Variables.ConsultaBuscar, "marca");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
             if (confirmacion.DialogResult == DialogResult.OK)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from marca where Id=" + Clases.Variables.referencia;
+                string SqlString = "Delete from marca where Id=" + Clases.Variables.IDMarcas;
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -55,7 +56,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Marca eliminada correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+                    Clases.LLenadoGrids.llenarGrid(GridMarcas, Clases.Variables.ConsultaBuscar, "marca");
                 }
                 catch (Exception ex)
                 {
@@ -67,8 +68,8 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
         private void GridMarcas_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             var filaSeleccionada = GridMarcas.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.IDMarcas = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.DescripcionMarcas = filaSeleccionada.Cells[1].Value.ToString();
         }
 
         private void GridMarcas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -81,7 +82,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
             Catalogos.Activo.Marcas.Modificar modificar = new Catalogos.Activo.Marcas.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridMarcas, "select * from marca order by Descripcion", "marca");
+                Clases.LLenadoGrids.llenarGrid(GridMarcas, Clases.Variables.ConsultaBuscar, "marca");
         }
     }
 }

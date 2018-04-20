@@ -19,26 +19,26 @@ namespace ProyectoResidencias.Catalogos.Empleados
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-            if (Clases.Variables.ECHBaja == "True")
+            if (Clases.Variables.EmpleadosBaja == "True")
                 checkBaja.Checked = true;
-            if (Clases.Variables.ECHBloqueado == "True")
+            if (Clases.Variables.EmpleadosBloqueado == "True")
                 checkBloqueado.Checked = true;
-            if (Clases.Variables.ECHJefe == "True")
+            if (Clases.Variables.EmpleadosJefe == "True")
                 checkJefe.Checked = true;
-            if (Clases.Variables.ECHPliegos == "True")
+            if (Clases.Variables.EmpleadosPliegos == "True")
                 checkPliegos.Checked = true;
-            if (Clases.Variables.ECHNoPliegos == "True")
+            if (Clases.Variables.EmpleadosNoPliegos == "True")
                 checkSinPliegos.Checked = true;
             Clases.Empleados.CBJefe(comboJefe);
             Clases.Empleados.CBDeptos(comboDepto);
-            Nombre.Text = Clases.Variables.desc;
-            NombreM.Text = Clases.Variables.desc5;
-            Fecha.Value = Convert.ToDateTime(Clases.Variables.desc4);
-            Clases.Empleados.BuscarJefe(comboJefe, Clases.Variables.desc6);
-            Clases.Empleados.BuscarMotivo(Motivo,Clases.Variables.referencia);
-            int index = comboDepto.FindString(Clases.Variables.desc2);
+            Nombre.Text = Clases.Variables.EmpleadosNombre;
+            NombreM.Text = Clases.Variables.EmpleadosNombreP;
+            Fecha.Value = Convert.ToDateTime(Clases.Variables.EmpleadosFecha);
+            Clases.Empleados.BuscarJefe(comboJefe, Clases.Variables.EmpleadosNumJefe);
+            Clases.Empleados.BuscarMotivo(Motivo,Clases.Variables.IdEmpleados);
+            int index = comboDepto.FindString(Clases.Variables.EmpleadosDepto);
             comboDepto.SelectedIndex = index;
-            NumLicencia.Text = Clases.Variables.desc3;
+            NumLicencia.Text = Clases.Variables.EmpleadosLicencia;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
                     "',FechaVencimiento=(convert(datetime,'"+Fecha.Text+"')),NoEmpleadoJefe=(select NoEmp from empleados" +
                     " where Nombre='"+comboDepto.SelectedItem.ToString()+"'),ActivoPliegos="+pliegos+",JefeDepto="+Jefe
                     +",Baja="+Baja+",NoVerifica="+SinPliego+",Bloqueado="+Bloqueado+",Textobloqueado='"+Motivo.Text+"'" +
-                    "where NoEmp="+Clases.Variables.referencia+";";
+                    "where NoEmp="+Clases.Variables.IdEmpleados+";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))

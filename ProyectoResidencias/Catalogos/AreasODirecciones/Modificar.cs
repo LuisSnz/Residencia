@@ -22,7 +22,7 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
             if (Descripcion.Text.Length > 0)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Update areas set Descripcion='" + Descripcion.Text + "' where Clave=" + Clases.Variables.referencia + ";";
+                string SqlString = "Update areas set Descripcion='" + Descripcion.Text + "' where Clave=" + Clases.Variables.IdAreas + ";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))
@@ -55,7 +55,7 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-            Descripcion.Text = Clases.Variables.desc;
+            Descripcion.Text = Clases.Variables.DescripcionAreas;
         }
     }
 }

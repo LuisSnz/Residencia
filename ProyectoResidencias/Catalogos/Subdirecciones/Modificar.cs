@@ -19,10 +19,10 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dato.Text.Length > 0)
+            if (Descripcion.Text.Length > 0)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Update subdireccion set Descripcion='" + dato.Text + "' where ID=" + Clases.Variables.referencia + ";";
+                string SqlString = "Update subdireccion set Descripcion='" + Descripcion.Text + "' where ID=" + Clases.Variables.IdSubD + ";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))
@@ -51,7 +51,12 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-            dato.Text = Clases.Variables.desc;
+            Descripcion.Text = Clases.Variables.DescripcionSubD;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

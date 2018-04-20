@@ -96,6 +96,7 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
+
     class Bienes
     {
         public static SqlCommand cmd;
@@ -436,6 +437,7 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
+
     class Empleados
     {
         public static SqlCommand cmd;
@@ -541,7 +543,9 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
-    class Proveedores {
+
+    class Proveedores
+    {
         public static SqlCommand cmd;
         public static SqlDataReader dr;
         public static SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
@@ -557,7 +561,7 @@ namespace ProyectoResidencias.Clases
                     "RTRIM(Ciudad) as 'Ciudad',RTRIM(Contacto) as 'Contacto',RTRIM(Rfc) as 'RFC',RTRIM(Curp) as 'CURP'," +
                     "RTRIM(Email) as 'Email',RTRIM(Telefono) as 'Telefono',RTRIM(Giro) as 'Giro',RTRIM(PadronGobierno) as 'Padron'," +
                     "RTRIM(Certificaciones) as 'Certificaciones',RTRIM(Accionistas) as 'Accionistas'," +
-                    "RTRIM(Observaciones) as 'Observaciones' from Proveedores where Id=" + Clases.Variables.referencia, cn);
+                    "RTRIM(Observaciones) as 'Observaciones' from Proveedores where Id=" + Clases.Variables.IdProveedores, cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -719,4 +723,5 @@ namespace ProyectoResidencias.Clases
             }
         }
     }
+
 }

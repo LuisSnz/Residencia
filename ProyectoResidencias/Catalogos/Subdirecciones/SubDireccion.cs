@@ -24,20 +24,21 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
             Catalogos.Subdirecciones.Nuevo nuevo = new Nuevo();
             nuevo.ShowDialog();
             if (nuevo.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+                Clases.LLenadoGrids.llenarGrid(GridSubD, Clases.Variables.ConsultaBuscar, "subdireccion");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Catalogos.Subdirecciones.Modificar modificar = new Modificar();
-            modificar.ShowDialog();
-            if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+            Catalogos.Subdirecciones.Modificar modificarSD = new Modificar();
+            modificarSD.ShowDialog();
+            if (modificarSD.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridSubD, Clases.Variables.ConsultaBuscar, "subdireccion");
         }
 
         public void SubDireccion_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+            Clases.Variables.ConsultaBuscar = "select ID, Descripcion from subdireccion";
+            Clases.LLenadoGrids.llenarGrid(GridSubD,Clases.Variables.ConsultaBuscar, "subdireccion");
         }
         
 
@@ -48,7 +49,7 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
             if (confirmacion.DialogResult == DialogResult.OK)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from subdireccion where ID=" + Clases.Variables.referencia;
+                string SqlString = "Delete from subdireccion where ID=" + Clases.Variables.IdSubD;
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -58,7 +59,7 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("SubDireccion eliminada correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+                    Clases.LLenadoGrids.llenarGrid(GridSubD, Clases.Variables.ConsultaBuscar, "subdireccion");
                 }
                 catch (Exception ex)
                 {
@@ -69,32 +70,15 @@ namespace ProyectoResidencias.Catalogos.Subdirecciones
 
         private void GridSubD_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            var filaSeleccionada = GridSubD.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.IdSubD = GridSubD.CurrentRow.Cells[0].Value.ToString();
+            Clases.Variables.DescripcionSubD= GridSubD.CurrentRow.Cells[1].Value.ToString();
         }
-
-        private void GridSubD_DoubleClick(object sender, EventArgs e)
-        {
-            Catalogos.Subdirecciones.Modificar modificar = new Modificar();
-            modificar.ShowDialog();
-            if (modificar.DialogResult == DialogResult.OK)
-            {
-                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
-            }
-        }
-
-        private void GridSubD_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void GridSubD_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Catalogos.Subdirecciones.Modificar modificar = new Modificar();
-            modificar.ShowDialog();
-            if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridSubD, "select ID, Descripcion from subdireccion", "subdireccion");
+            Catalogos.Subdirecciones.Modificar modificarSD = new Modificar();
+            modificarSD.ShowDialog();
+            if (modificarSD.DialogResult == DialogResult.OK)
+                Clases.LLenadoGrids.llenarGrid(GridSubD, Clases.Variables.ConsultaBuscar, "subdireccion");
         }
     }
 }

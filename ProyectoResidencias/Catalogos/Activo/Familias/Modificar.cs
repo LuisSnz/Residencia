@@ -23,7 +23,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
             if (Descripcion.Text.Length > 0)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Update Familia set Descripcion='" + Descripcion.Text + "' where Id=" + Clases.Variables.referencia + ";";
+                string SqlString = "Update Familia set Descripcion='" + Descripcion.Text + "' where Id=" + Clases.Variables.IDFamilia + ";";
                 try
                 {
                     using (SqlConnection conn = new SqlConnection(ConnString))
@@ -51,7 +51,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Familias
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-            Descripcion.Text = Clases.Variables.desc;
+            Descripcion.Text = Clases.Variables.DescripcionFamilia;
         }
 
         private void button2_Click(object sender, EventArgs e)

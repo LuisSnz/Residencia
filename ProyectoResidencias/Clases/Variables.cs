@@ -6,26 +6,53 @@ using System.Text;
 namespace ProyectoResidencias.Clases
 {
     class Variables
-    {
-        //las variables descX toman valores del datagridview para usarlos al modificar
+    { 
+        //String de conexion a la base de datos
         public static string scon = ("Data Source=.;Initial Catalog=ActivoJcas;User ID=JMAS;Password=qwerty");
-        public static string referencia;
-        public static string desc;
-        public static string descA;
-        public static string descF;
-        public static string descM;
+        //familias
+        public static string IDFamilia;
+        public static string DescripcionFamilia;
+        //marcas
+        public static string IDMarcas;
+        public static string DescripcionMarcas;
+        //areas
+        public static string IdAreas;
+        public static string DescripcionAreas;
+        //Articulos
+
+        //Departamentos
+        public static string IdDeptos;
+        public static string DescripcionDeptos;
+        public static string DireccionDeptos;
+        public static string SubDeptos;
+        //Empleados
+        public static string IdEmpleados;
+        public static string EmpleadosBaja;
+        public static string EmpleadosBloqueado;
+        public static string EmpleadosPliegos;
+        public static string EmpleadosNoPliegos;
+        public static string EmpleadosJefe;
+        public static string EmpleadosNombre;
+        public static string EmpleadosDepto;
+        public static string EmpleadosLicencia;
+        public static string EmpleadosFecha;
+        public static string EmpleadosNombreP;
+        public static string EmpleadosNumJefe;
+        //proveedores
+        public static string IdProveedores;
+        //SubDireccion
+        public static string IdSubD;
+        public static string DescripcionSubD;
+        //Vehiculos
+
+        //Bienes Dados de Baja
+        public static string IdBienesB;
+        public static string BienesBMotivoBaja;
+        public static string BienesBObservacion;
+        public static string BienesBValor;
+
         public static string CHArticuloContrato;
         public static string CHInventariable;
-        public static string desc2;
-        public static string desc3;
-        public static string desc4;
-        public static string desc5;
-        public static string desc6;
-        public static string ECHBaja;
-        public static string ECHBloqueado;
-        public static string ECHPliegos;
-        public static string ECHNoPliegos;
-        public static string ECHJefe;
         public static string ConsultaBuscar;
         public static string lbOrdenCompra;
         public static string lbFactura;

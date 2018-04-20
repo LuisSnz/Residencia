@@ -19,7 +19,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-            if (Clases.Variables.desc2 == "True")
+            if (Clases.Variables.GridCelda2 == "True")
                 Consumible.Checked = true;
             Clases.Articulos.CBBuscarArticulo(Articulo);
             Clases.Bienes.CBProveedor(Proveedor);

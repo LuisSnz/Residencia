@@ -75,7 +75,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
         {
             var filaSeleccionada = GVCatArticulos.CurrentRow;
             Clases.Variables.referencia = filaSeleccionada.Cells[1].Value.ToString();
-            Clases.Variables.desc = filaSeleccionada.Cells[0].Value.ToString();
+            Clases.Variables.GridCelda1 = filaSeleccionada.Cells[0].Value.ToString();
             Clases.Variables.descA = filaSeleccionada.Cells[5].Value.ToString();
             Clases.Variables.descF = filaSeleccionada.Cells[2].Value.ToString();
             Clases.Variables.descM = filaSeleccionada.Cells[4].Value.ToString();

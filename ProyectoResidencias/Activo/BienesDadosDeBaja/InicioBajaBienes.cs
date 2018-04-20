@@ -50,10 +50,10 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
 
         private void DGBaja_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            Clases.Variables.referencia = DGBaja.CurrentRow.Cells[0].Value.ToString();
-            Clases.Variables.desc = DGBaja.CurrentRow.Cells[13].Value.ToString();
-            Clases.Variables.desc2 = DGBaja.CurrentRow.Cells[15].Value.ToString();
-            Clases.Variables.desc3 = DGBaja.CurrentRow.Cells[17].Value.ToString();
+            Clases.Variables.IdBienesB = DGBaja.CurrentRow.Cells[0].Value.ToString();
+            Clases.Variables.BienesBMotivoBaja = DGBaja.CurrentRow.Cells[13].Value.ToString();
+            Clases.Variables.BienesBObservacion = DGBaja.CurrentRow.Cells[16].Value.ToString();
+            Clases.Variables.BienesBValor = DGBaja.CurrentRow.Cells[17].Value.ToString();
         }
 
         private void DGBaja_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

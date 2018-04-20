@@ -92,15 +92,15 @@ namespace ProyectoResidencias
         {
             var filaSeleccionada = GVBienes.CurrentRow;
             Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.GridCelda1 = filaSeleccionada.Cells[1].Value.ToString();
             Clases.Variables.lbOrdenCompra = filaSeleccionada.Cells[2].Value.ToString();
             Clases.Variables.lbFactura = filaSeleccionada.Cells[3].Value.ToString();
             Clases.Variables.tbArticulo = filaSeleccionada.Cells[6].Value.ToString();
             Clases.Variables.tbObservacion = filaSeleccionada.Cells[11].Value.ToString();
             Clases.Variables.tbResguardoA = filaSeleccionada.Cells[7].Value.ToString();
             Clases.Variables.tbDepartamentoA = filaSeleccionada.Cells[8].Value.ToString();
-            Clases.Variables.desc2 = filaSeleccionada.Cells[9].Value.ToString();
-            Clases.Variables.desc3 = filaSeleccionada.Cells[4].Value.ToString();
+            Clases.Variables.GridCelda2 = filaSeleccionada.Cells[9].Value.ToString();
+            Clases.Variables.GridCelda3 = filaSeleccionada.Cells[4].Value.ToString();
             Clases.Variables.Familia = filaSeleccionada.Cells[5].Value.ToString();
         }
 

@@ -16,14 +16,13 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
         {
             InitializeComponent();
         }
-        //public static string referencia;
-        //public static string desc;
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Catalogos.AreasODirecciones.Nuevo nuevo = new Catalogos.AreasODirecciones.Nuevo();
             nuevo.ShowDialog();
             if (nuevo.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+                Clases.LLenadoGrids.llenarGrid(GridAreas, Clases.Variables.ConsultaBuscar, "areas");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -31,19 +30,19 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
             Catalogos.AreasODirecciones.Modificar modificar = new Catalogos.AreasODirecciones.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+                Clases.LLenadoGrids.llenarGrid(GridAreas, Clases.Variables.ConsultaBuscar, "areas");
         }
 
         private void Areas_Load(object sender, EventArgs e)
         {
-            Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+            Clases.Variables.ConsultaBuscar = "select Clave, Descripcion from areas";
+            Clases.LLenadoGrids.llenarGrid(GridAreas, Clases.Variables.ConsultaBuscar, "areas");
         }
 
         private void GridAreas_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            var filaSeleccionada = GridAreas.CurrentRow;
-            Clases.Variables.referencia = filaSeleccionada.Cells[0].Value.ToString();
-            Clases.Variables.desc = filaSeleccionada.Cells[1].Value.ToString();
+            Clases.Variables.IdAreas = GridAreas.CurrentRow.Cells[0].Value.ToString();
+            Clases.Variables.DescripcionAreas = GridAreas.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -54,7 +53,7 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
             if (confirmacion.DialogResult == DialogResult.OK)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from areas where Clave=" + Clases.Variables.referencia;
+                string SqlString = "Delete from areas where Clave=" + Clases.Variables.IdAreas;
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -64,7 +63,7 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Area eliminada correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+                    Clases.LLenadoGrids.llenarGrid(GridAreas,Clases.Variables.ConsultaBuscar, "areas");
                 }
                 catch (Exception ex)
                 {
@@ -73,17 +72,12 @@ namespace ProyectoResidencias.Catalogos.AreasODirecciones
             }
         }
 
-        private void GridAreas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void GridAreas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Catalogos.AreasODirecciones.Modificar modificar = new Catalogos.AreasODirecciones.Modificar();
             modificar.ShowDialog();
             if (modificar.DialogResult == DialogResult.OK)
-                Clases.LLenadoGrids.llenarGrid(GridAreas, "select Clave, Descripcion from areas", "areas");
+                Clases.LLenadoGrids.llenarGrid(GridAreas, Clases.Variables.ConsultaBuscar, "areas");
         }
     }
 }
