@@ -285,6 +285,25 @@ namespace ProyectoResidencias.Clases
                 MessageBox.Show("Error al llenar :" + ex.ToString());
             }
         }
+        public static void Suma(Label Total)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select SUM(total) as Total from bienes", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    float x = float.Parse(dr["Total"].ToString());
+                    Total.Text = x.ToString("C");
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
     }
 
     class BienesBaja

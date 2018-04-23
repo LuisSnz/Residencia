@@ -28,107 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Imprimir = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.GridCosto = new System.Windows.Forms.DataGridView();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.Buscar = new System.Windows.Forms.ToolStripButton();
+            this.Excel = new System.Windows.Forms.ToolStripButton();
+            this.Total = new System.Windows.Forms.Label();
+            this.Imprimir = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCosto)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(542, 251);
-            this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 335);
+            this.label1.Location = new System.Drawing.Point(12, 659);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 19);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Total en bienes :";
             // 
-            // button2
+            // GridCosto
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(373, 381);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 29);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Cerrar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.GridCosto.AllowUserToAddRows = false;
+            this.GridCosto.AllowUserToDeleteRows = false;
+            this.GridCosto.AllowUserToOrderColumns = true;
+            this.GridCosto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.GridCosto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GridCosto.BackgroundColor = System.Drawing.Color.White;
+            this.GridCosto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridCosto.Location = new System.Drawing.Point(12, 48);
+            this.GridCosto.Name = "GridCosto";
+            this.GridCosto.ReadOnly = true;
+            this.GridCosto.Size = new System.Drawing.Size(810, 594);
+            this.GridCosto.TabIndex = 2;
             // 
-            // button1
+            // toolStrip1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(258, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "A Excel";
-            this.button1.UseVisualStyleBackColor = false;
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Buscar,
+            this.Excel,
+            this.Imprimir});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip1.Size = new System.Drawing.Size(590, 45);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // Buscar
+            // 
+            this.Buscar.AutoSize = false;
+            this.Buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Buscar.Image = global::ProyectoResidencias.Properties.Resources.buscar;
+            this.Buscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(50, 50);
+            this.Buscar.Text = "toolStripButton1";
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            // 
+            // Excel
+            // 
+            this.Excel.AutoSize = false;
+            this.Excel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Excel.Image = global::ProyectoResidencias.Properties.Resources.excel;
+            this.Excel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Excel.Name = "Excel";
+            this.Excel.Size = new System.Drawing.Size(50, 50);
+            this.Excel.Text = "toolStripButton2";
+            this.Excel.Click += new System.EventHandler(this.Excel_Click);
+            // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total.Location = new System.Drawing.Point(137, 660);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(0, 17);
+            this.Total.TabIndex = 5;
             // 
             // Imprimir
             // 
-            this.Imprimir.BackColor = System.Drawing.Color.White;
-            this.Imprimir.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Imprimir.Location = new System.Drawing.Point(138, 381);
+            this.Imprimir.AutoSize = false;
+            this.Imprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Imprimir.Image = global::ProyectoResidencias.Properties.Resources.impresora;
+            this.Imprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Imprimir.Name = "Imprimir";
-            this.Imprimir.Size = new System.Drawing.Size(95, 29);
-            this.Imprimir.TabIndex = 6;
-            this.Imprimir.Text = "Imprimir";
-            this.Imprimir.UseVisualStyleBackColor = false;
-            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 363);
-            this.panel1.TabIndex = 10;
+            this.Imprimir.Size = new System.Drawing.Size(50, 50);
+            this.Imprimir.Text = "toolStripButton3";
             // 
             // CostoBienesResguardados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(709, 465);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Imprimir);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(590, 687);
+            this.Controls.Add(this.Total);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.GridCosto);
             this.Name = "CostoBienesResguardados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Costo Bienes Actual";
             this.Load += new System.EventHandler(this.CostoBienesResguardados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCosto)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button Imprimir;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView GridCosto;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton Buscar;
+        private System.Windows.Forms.ToolStripButton Excel;
+        private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.ToolStripButton Imprimir;
     }
 }

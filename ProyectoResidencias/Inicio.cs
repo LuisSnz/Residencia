@@ -126,8 +126,8 @@ namespace ProyectoResidencias
 
         private void costoBienesActualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CBienes.Reportes.CostoBienesResguardados costobienesresguardos = new CBienes.Reportes.CostoBienesResguardados();
-            costobienesresguardos.ShowDialog();
+            formularios(new CBienes.Reportes.CostoBienesResguardados());
+            this.Text = "Sistema de activo Fijo - Costo en Bienes";
         }
 
         private void bienesSinFacturaToolStripMenuItem_Click(object sender, EventArgs e)
