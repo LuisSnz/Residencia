@@ -1,6 +1,6 @@
-﻿namespace ProyectoResidencias.Activo.CBienes.Botones
+﻿namespace ProyectoResidencias.Activo.BienesSinFactura
 {
-    partial class Baja
+    partial class BajaSF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Precio = new System.Windows.Forms.Label();
+            this.Modelo = new System.Windows.Forms.Label();
+            this.Marca = new System.Windows.Forms.Label();
+            this.Serie = new System.Windows.Forms.Label();
+            this.Articulo = new System.Windows.Forms.Label();
+            this.Empleado = new System.Windows.Forms.Label();
+            this.Etiqueta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Observaciones = new System.Windows.Forms.TextBox();
@@ -44,21 +54,135 @@
             this.Extravio = new System.Windows.Forms.RadioButton();
             this.Donacion = new System.Windows.Forms.RadioButton();
             this.Error = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Precio = new System.Windows.Forms.Label();
-            this.Modelo = new System.Windows.Forms.Label();
-            this.Marca = new System.Windows.Forms.Label();
-            this.Serie = new System.Windows.Forms.Label();
-            this.Articulo = new System.Windows.Forms.Label();
-            this.Empleado = new System.Windows.Forms.Label();
-            this.Etiqueta = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(295, 353);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 34);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(130, 353);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 34);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Aceptar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.Precio);
+            this.panel2.Controls.Add(this.Modelo);
+            this.panel2.Controls.Add(this.Marca);
+            this.panel2.Controls.Add(this.Serie);
+            this.panel2.Controls.Add(this.Articulo);
+            this.panel2.Controls.Add(this.Empleado);
+            this.panel2.Controls.Add(this.Etiqueta);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(492, 149);
+            this.panel2.TabIndex = 10;
+            // 
+            // Precio
+            // 
+            this.Precio.AutoSize = true;
+            this.Precio.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Precio.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Precio.Location = new System.Drawing.Point(352, 119);
+            this.Precio.Name = "Precio";
+            this.Precio.Size = new System.Drawing.Size(47, 17);
+            this.Precio.TabIndex = 16;
+            this.Precio.Text = "label8";
+            // 
+            // Modelo
+            // 
+            this.Modelo.AutoSize = true;
+            this.Modelo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Modelo.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Modelo.Location = new System.Drawing.Point(352, 90);
+            this.Modelo.Name = "Modelo";
+            this.Modelo.Size = new System.Drawing.Size(47, 17);
+            this.Modelo.TabIndex = 15;
+            this.Modelo.Text = "label8";
+            // 
+            // Marca
+            // 
+            this.Marca.AutoSize = true;
+            this.Marca.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Marca.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Marca.Location = new System.Drawing.Point(81, 119);
+            this.Marca.Name = "Marca";
+            this.Marca.Size = new System.Drawing.Size(47, 17);
+            this.Marca.TabIndex = 14;
+            this.Marca.Text = "label8";
+            // 
+            // Serie
+            // 
+            this.Serie.AutoSize = true;
+            this.Serie.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Serie.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Serie.Location = new System.Drawing.Point(81, 94);
+            this.Serie.Name = "Serie";
+            this.Serie.Size = new System.Drawing.Size(47, 17);
+            this.Serie.TabIndex = 13;
+            this.Serie.Text = "label8";
+            // 
+            // Articulo
+            // 
+            this.Articulo.AutoSize = true;
+            this.Articulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Articulo.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Articulo.Location = new System.Drawing.Point(81, 68);
+            this.Articulo.Name = "Articulo";
+            this.Articulo.Size = new System.Drawing.Size(47, 17);
+            this.Articulo.TabIndex = 12;
+            this.Articulo.Text = "label8";
+            // 
+            // Empleado
+            // 
+            this.Empleado.AutoSize = true;
+            this.Empleado.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Empleado.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Empleado.Location = new System.Drawing.Point(81, 40);
+            this.Empleado.Name = "Empleado";
+            this.Empleado.Size = new System.Drawing.Size(47, 17);
+            this.Empleado.TabIndex = 11;
+            this.Empleado.Text = "label8";
+            // 
+            // Etiqueta
+            // 
+            this.Etiqueta.AutoSize = true;
+            this.Etiqueta.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Etiqueta.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Etiqueta.Location = new System.Drawing.Point(81, 12);
+            this.Etiqueta.Name = "Etiqueta";
+            this.Etiqueta.Size = new System.Drawing.Size(47, 17);
+            this.Etiqueta.TabIndex = 10;
+            this.Etiqueta.Text = "label8";
             // 
             // label1
             // 
@@ -80,6 +204,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Empleado:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(297, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Precio:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -89,6 +223,16 @@
             this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Articulo:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Marca:";
             // 
             // label4
             // 
@@ -110,26 +254,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Modelo:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 119);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Marca:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(297, 119);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Precio:";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -138,7 +262,7 @@
             this.panel1.Location = new System.Drawing.Point(12, 167);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(492, 171);
-            this.panel1.TabIndex = 7;
+            this.panel1.TabIndex = 11;
             // 
             // groupBox2
             // 
@@ -230,167 +354,50 @@
             this.Error.UseVisualStyleBackColor = true;
             this.Error.CheckedChanged += new System.EventHandler(this.Error_CheckedChanged);
             // 
-            // panel2
+            // BajaSF
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.Precio);
-            this.panel2.Controls.Add(this.Modelo);
-            this.panel2.Controls.Add(this.Marca);
-            this.panel2.Controls.Add(this.Serie);
-            this.panel2.Controls.Add(this.Articulo);
-            this.panel2.Controls.Add(this.Empleado);
-            this.panel2.Controls.Add(this.Etiqueta);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(492, 149);
-            this.panel2.TabIndex = 0;
-            // 
-            // Precio
-            // 
-            this.Precio.AutoSize = true;
-            this.Precio.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Precio.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Precio.Location = new System.Drawing.Point(352, 119);
-            this.Precio.Name = "Precio";
-            this.Precio.Size = new System.Drawing.Size(47, 17);
-            this.Precio.TabIndex = 16;
-            this.Precio.Text = "label8";
-            // 
-            // Modelo
-            // 
-            this.Modelo.AutoSize = true;
-            this.Modelo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Modelo.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Modelo.Location = new System.Drawing.Point(352, 90);
-            this.Modelo.Name = "Modelo";
-            this.Modelo.Size = new System.Drawing.Size(47, 17);
-            this.Modelo.TabIndex = 15;
-            this.Modelo.Text = "label8";
-            // 
-            // Marca
-            // 
-            this.Marca.AutoSize = true;
-            this.Marca.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Marca.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Marca.Location = new System.Drawing.Point(81, 119);
-            this.Marca.Name = "Marca";
-            this.Marca.Size = new System.Drawing.Size(47, 17);
-            this.Marca.TabIndex = 14;
-            this.Marca.Text = "label8";
-            // 
-            // Serie
-            // 
-            this.Serie.AutoSize = true;
-            this.Serie.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Serie.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Serie.Location = new System.Drawing.Point(81, 94);
-            this.Serie.Name = "Serie";
-            this.Serie.Size = new System.Drawing.Size(47, 17);
-            this.Serie.TabIndex = 13;
-            this.Serie.Text = "label8";
-            // 
-            // Articulo
-            // 
-            this.Articulo.AutoSize = true;
-            this.Articulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Articulo.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Articulo.Location = new System.Drawing.Point(81, 68);
-            this.Articulo.Name = "Articulo";
-            this.Articulo.Size = new System.Drawing.Size(47, 17);
-            this.Articulo.TabIndex = 12;
-            this.Articulo.Text = "label8";
-            // 
-            // Empleado
-            // 
-            this.Empleado.AutoSize = true;
-            this.Empleado.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empleado.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Empleado.Location = new System.Drawing.Point(81, 40);
-            this.Empleado.Name = "Empleado";
-            this.Empleado.Size = new System.Drawing.Size(47, 17);
-            this.Empleado.TabIndex = 11;
-            this.Empleado.Text = "label8";
-            // 
-            // Etiqueta
-            // 
-            this.Etiqueta.AutoSize = true;
-            this.Etiqueta.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Etiqueta.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Etiqueta.Location = new System.Drawing.Point(81, 12);
-            this.Etiqueta.Name = "Etiqueta";
-            this.Etiqueta.Size = new System.Drawing.Size(47, 17);
-            this.Etiqueta.TabIndex = 10;
-            this.Etiqueta.Text = "label8";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(130, 353);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 34);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(295, 353);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 34);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Baja
-            // 
-            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(517, 399);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Baja";
+            this.Name = "BajaSF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Baja ";
-            this.Load += new System.EventHandler(this.Baja_Load);
+            this.Text = "BajaSF";
+            this.Load += new System.EventHandler(this.BajaSF_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label Precio;
+        private System.Windows.Forms.Label Modelo;
+        private System.Windows.Forms.Label Marca;
+        private System.Windows.Forms.Label Serie;
+        private System.Windows.Forms.Label Articulo;
+        private System.Windows.Forms.Label Empleado;
+        private System.Windows.Forms.Label Etiqueta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox Observaciones;
@@ -400,15 +407,5 @@
         private System.Windows.Forms.RadioButton Extravio;
         private System.Windows.Forms.RadioButton Donacion;
         private System.Windows.Forms.RadioButton Error;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label Precio;
-        private System.Windows.Forms.Label Modelo;
-        private System.Windows.Forms.Label Marca;
-        private System.Windows.Forms.Label Serie;
-        private System.Windows.Forms.Label Articulo;
-        private System.Windows.Forms.Label Empleado;
-        private System.Windows.Forms.Label Etiqueta;
     }
 }

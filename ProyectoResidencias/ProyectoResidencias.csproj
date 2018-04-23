@@ -123,6 +123,12 @@
     <Compile Include="Activo\BienesDadosDeBaja\RVBaja.Designer.cs">
       <DependentUpon>RVBaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activo\BienesSinFactura\BajaSF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activo\BienesSinFactura\BajaSF.Designer.cs">
+      <DependentUpon>BajaSF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activo\BienesSinFactura\BienesSF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -462,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activo\BienesDadosDeBaja\RVBaja.resx">
       <DependentUpon>RVBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activo\BienesSinFactura\BajaSF.resx">
+      <DependentUpon>BajaSF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Activo\BienesSinFactura\BienesSF.resx">
       <DependentUpon>BienesSF.cs</DependentUpon>
