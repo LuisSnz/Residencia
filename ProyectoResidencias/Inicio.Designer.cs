@@ -245,8 +245,8 @@
             // 
             // imprimirCierreToolStripMenuItem
             // 
-            this.imprimirCierreToolStripMenuItem.Name = "imprimirCierreToolStripMenuItem";
             resources.ApplyResources(this.imprimirCierreToolStripMenuItem, "imprimirCierreToolStripMenuItem");
+            this.imprimirCierreToolStripMenuItem.Name = "imprimirCierreToolStripMenuItem";
             // 
             // toolStripSeparator2
             // 
