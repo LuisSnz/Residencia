@@ -24,12 +24,34 @@ namespace ProyectoResidencias.CBienes.Reportes
 
         private void CostoBienesResguardados_Load(object sender, EventArgs e)
         {
-            Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
-               "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
-               "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +
-               "Observacion AS Observacion FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
+            Clases.Variables.ConsultaBuscar = "SELECT bienes.Etiqueta, dbo.CatArticulos.Descripcion AS Articulo," +
+               "Familia.Descripcion as Familia, empleados.Nombre AS Empleado,bienes.Total " +
+               "FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
                "INNER JOIN CatArticulos ON bienes.IdArticulo = CatArticulos.Id LEFT OUTER JOIN Familia ON " +
-               "CatArticulos.IdFamilia = Familia.Id LEFT OUTER JOIN Proveedores on bienes.IdProveedor=Proveedores.Id where NoFactura <>''";
+               "CatArticulos.IdFamilia = Familia.Id";
+            Clases.LLenadoGrids.llenarGrid(GridCosto, Clases.Variables.ConsultaBuscar, "bienes");
+            Clases.Bienes.Suma(Total);
+        }
+
+        private void Excel_Click(object sender, EventArgs e)
+        {
+            Clases.excel.GridViewExcel(GridCosto);
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            ProyectoResidencias.Reportes.BuscarPorBienes buscar = new ProyectoResidencias.Reportes.BuscarPorBienes();
+            buscar.ShowDialog();
+            if (buscar.DialogResult == DialogResult.OK)
+            {
+                Clases.LLenadoGrids.llenarGrid(GridCosto, Clases.Variables.ConsultaBuscar, "bienes");
+                float x=0;
+                foreach (DataGridViewRow row in GridCosto.Rows)
+                {
+                    x = x + float.Parse(row.Cells[4].Value.ToString());
+                }
+                Total.Text = x.ToString("C");
+            }
         }
     }
 }
