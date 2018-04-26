@@ -15,5 +15,10 @@ namespace ProyectoResidencias.Activo
         {
             InitializeComponent();
         }
+
+        private void ImprimirEtiquetas_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

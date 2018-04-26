@@ -118,12 +118,6 @@ namespace ProyectoResidencias
             historicodelbien.ShowDialog();
         }
 
-        private void valorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CBienes.Reportes.ConsultaPorFamilia consultaporfamilia = new CBienes.Reportes.ConsultaPorFamilia();
-            consultaporfamilia.ShowDialog();
-        }
-
         private void costoBienesActualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             formularios(new CBienes.Reportes.CostoBienesResguardados());
@@ -134,6 +128,12 @@ namespace ProyectoResidencias
         {
             formularios(new Activo.BienesSinFactura.BienesSF());
             this.Text = "Sistema de activo Fijo - Bienes sin Factura";
+        }
+
+        private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pruebimprimir form = new pruebimprimir();
+            form.ShowDialog();
         }
     }
 }

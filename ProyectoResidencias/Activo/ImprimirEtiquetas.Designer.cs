@@ -204,6 +204,7 @@
             this.Name = "ImprimirEtiquetas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imprimir Etiquetas";
+            this.Load += new System.EventHandler(this.ImprimirEtiquetas_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
