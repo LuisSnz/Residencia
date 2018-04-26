@@ -49,7 +49,6 @@
             this.exportarActivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoDelBienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.valorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.costoBienesActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.imprimirCierreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +58,7 @@
             this.Base = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -209,13 +209,13 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.historicoDelBienToolStripMenuItem,
-            this.valorToolStripMenuItem,
             this.costoBienesActualToolStripMenuItem,
             this.toolStripSeparator1,
             this.imprimirCierreToolStripMenuItem,
             this.toolStripSeparator2,
             this.paraEntregaRecepcionToolStripMenuItem,
-            this.paraASECHToolStripMenuItem});
+            this.paraASECHToolStripMenuItem,
+            this.pruebaToolStripMenuItem});
             this.reportesToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.catalogo;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
@@ -225,12 +225,6 @@
             this.historicoDelBienToolStripMenuItem.Name = "historicoDelBienToolStripMenuItem";
             resources.ApplyResources(this.historicoDelBienToolStripMenuItem, "historicoDelBienToolStripMenuItem");
             this.historicoDelBienToolStripMenuItem.Click += new System.EventHandler(this.historicoDelBienToolStripMenuItem_Click);
-            // 
-            // valorToolStripMenuItem
-            // 
-            this.valorToolStripMenuItem.Name = "valorToolStripMenuItem";
-            resources.ApplyResources(this.valorToolStripMenuItem, "valorToolStripMenuItem");
-            this.valorToolStripMenuItem.Click += new System.EventHandler(this.valorToolStripMenuItem_Click);
             // 
             // costoBienesActualToolStripMenuItem
             // 
@@ -245,8 +239,8 @@
             // 
             // imprimirCierreToolStripMenuItem
             // 
-            resources.ApplyResources(this.imprimirCierreToolStripMenuItem, "imprimirCierreToolStripMenuItem");
             this.imprimirCierreToolStripMenuItem.Name = "imprimirCierreToolStripMenuItem";
+            resources.ApplyResources(this.imprimirCierreToolStripMenuItem, "imprimirCierreToolStripMenuItem");
             // 
             // toolStripSeparator2
             // 
@@ -282,6 +276,12 @@
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            // 
+            // pruebaToolStripMenuItem
+            // 
+            this.pruebaToolStripMenuItem.Name = "pruebaToolStripMenuItem";
+            resources.ApplyResources(this.pruebaToolStripMenuItem, "pruebaToolStripMenuItem");
+            this.pruebaToolStripMenuItem.Click += new System.EventHandler(this.pruebaToolStripMenuItem_Click);
             // 
             // Inicio
             // 
@@ -327,7 +327,6 @@
         private System.Windows.Forms.ToolStripMenuItem familiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoDelBienToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem valorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem costoBienesActualToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem imprimirCierreToolStripMenuItem;
@@ -338,6 +337,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Base;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem pruebaToolStripMenuItem;
     }
 }
 
