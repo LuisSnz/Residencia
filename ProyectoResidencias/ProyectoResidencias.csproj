@@ -705,6 +705,10 @@
     <None Include="bin\Debug\iconos\modificar}.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\h.png" />
+    <None Include="Resources\Dinero.png" />
+    <None Include="Resources\historico.png" />
+    <None Include="Resources\codigobarras.png" />
     <None Include="Resources\pasartodo2.png" />
     <None Include="Resources\pasartodo.png" />
     <None Include="Resources\pasar.png" />

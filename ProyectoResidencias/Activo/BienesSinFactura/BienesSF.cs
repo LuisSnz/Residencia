@@ -111,5 +111,11 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
             if (modificar.DialogResult == DialogResult.OK)
                 Clases.LLenadoGrids.llenarGrid(dataGridView1, Clases.Variables.ConsultaBuscar, "bienes");
         }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            Clases.Variables.IEtiqueta = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            Clases.Etiquetas.ImprimirEtiquetas(printDialog1, Clases.Variables.IEtiqueta, Clases.Variables.IEtiqueta);
+        }
     }
 }

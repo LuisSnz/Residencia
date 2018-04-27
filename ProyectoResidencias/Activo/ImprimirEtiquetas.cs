@@ -25,5 +25,10 @@ namespace ProyectoResidencias.Activo
         {
             Clases.Etiquetas.ImprimirEtiquetas(printDialog1, minimo.Value.ToString(), maximo.Value.ToString());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

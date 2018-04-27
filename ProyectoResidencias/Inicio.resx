@@ -214,12 +214,6 @@
   <data name="bienesDadosDeBajaToolStripMenuItem.Text" xml:space="preserve">
     <value>Bienes dados de baja</value>
   </data>
-  <data name="exportarActivosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 22</value>
-  </data>
-  <data name="exportarActivosToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exportar Activos</value>
-  </data>
   <data name="activoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 21</value>
   </data>
@@ -227,40 +221,16 @@
     <value>Activo</value>
   </data>
   <data name="historicoDelBienToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>181, 22</value>
   </data>
   <data name="historicoDelBienToolStripMenuItem.Text" xml:space="preserve">
     <value>Historico del Bien</value>
   </data>
   <data name="costoBienesActualToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>181, 22</value>
   </data>
   <data name="costoBienesActualToolStripMenuItem.Text" xml:space="preserve">
     <value>Valor en Bienes</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 6</value>
-  </data>
-  <data name="imprimirCierreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="imprimirCierreToolStripMenuItem.Text" xml:space="preserve">
-    <value>Imprimir Cierre</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 6</value>
-  </data>
-  <data name="paraEntregaRecepcionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="paraEntregaRecepcionToolStripMenuItem.Text" xml:space="preserve">
-    <value>Para Entrega Recepcion</value>
-  </data>
-  <data name="paraASECHToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="paraASECHToolStripMenuItem.Text" xml:space="preserve">
-    <value>Para ASECH</value>
   </data>
   <data name="reportesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 21</value>
@@ -384,6 +354,9 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1362, 721</value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
@@ -486,12 +459,6 @@
   <data name="&gt;&gt;bienesDadosDeBajaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;exportarActivosToolStripMenuItem.Name" xml:space="preserve">
-    <value>exportarActivosToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;exportarActivosToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
     <value>reportesToolStripMenuItem</value>
   </data>
@@ -508,36 +475,6 @@
     <value>costoBienesActualToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;costoBienesActualToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imprimirCierreToolStripMenuItem.Name" xml:space="preserve">
-    <value>imprimirCierreToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;imprimirCierreToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;paraEntregaRecepcionToolStripMenuItem.Name" xml:space="preserve">
-    <value>paraEntregaRecepcionToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;paraEntregaRecepcionToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;paraASECHToolStripMenuItem.Name" xml:space="preserve">
-    <value>paraASECHToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;paraASECHToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

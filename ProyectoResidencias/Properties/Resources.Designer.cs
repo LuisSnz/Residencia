@@ -193,6 +193,16 @@ namespace ProyectoResidencias.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap codigobarras {
+            get {
+                object obj = ResourceManager.GetObject("codigobarras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copy_icon {
             get {
                 object obj = ResourceManager.GetObject("copy_icon", resourceCulture);
@@ -223,6 +233,16 @@ namespace ProyectoResidencias.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dinero {
+            get {
+                object obj = ResourceManager.GetObject("Dinero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eliminar_ {
             get {
                 object obj = ResourceManager.GetObject("eliminar_", resourceCulture);
@@ -246,6 +266,26 @@ namespace ProyectoResidencias.Properties {
         internal static System.Drawing.Bitmap excel {
             get {
                 object obj = ResourceManager.GetObject("excel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap h {
+            get {
+                object obj = ResourceManager.GetObject("h", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap historico {
+            get {
+                object obj = ResourceManager.GetObject("historico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
