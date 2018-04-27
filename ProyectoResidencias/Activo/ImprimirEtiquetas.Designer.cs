@@ -32,8 +32,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.minimo = new System.Windows.Forms.NumericUpDown();
+            this.maximo = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,11 +42,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximo)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,8 +85,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.numericUpDown1);
-            this.groupBox2.Controls.Add(this.numericUpDown2);
+            this.groupBox2.Controls.Add(this.minimo);
+            this.groupBox2.Controls.Add(this.maximo);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(127, 6);
             this.groupBox2.Name = "groupBox2";
@@ -94,19 +95,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Rango";
             // 
-            // numericUpDown1
+            // minimo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(18, 45);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.minimo.Location = new System.Drawing.Point(18, 45);
+            this.minimo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.minimo.Name = "minimo";
+            this.minimo.Size = new System.Drawing.Size(80, 20);
+            this.minimo.TabIndex = 3;
             // 
-            // numericUpDown2
+            // maximo
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(138, 45);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown2.TabIndex = 5;
+            this.maximo.Location = new System.Drawing.Point(138, 45);
+            this.maximo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.maximo.Name = "maximo";
+            this.maximo.Size = new System.Drawing.Size(80, 20);
+            this.maximo.TabIndex = 5;
             // 
             // label3
             // 
@@ -179,6 +190,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "IMPRIMIR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -189,6 +201,10 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // ImprimirEtiquetas
             // 
@@ -209,8 +225,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -222,9 +238,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown maximo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown minimo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
@@ -235,5 +251,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

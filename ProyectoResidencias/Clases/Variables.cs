@@ -80,6 +80,9 @@ namespace ProyectoResidencias.Clases
         public static string BienesSFDepartamento;
         public static string BienesSFConsumible;
         public static string BienesSFObservacion;
+        //Imrimir Etiquetas
+        public static string IEtiqueta;
+        public static string IArticulo;
         //Login
         public static string Usuario="x";
         

@@ -127,5 +127,11 @@ namespace ProyectoResidencias
             Activo.CBienes.ReporteBienes reporteBienes = new Activo.CBienes.ReporteBienes();
             reporteBienes.ShowDialog();
         }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            Clases.Variables.IEtiqueta = GVBienes.CurrentRow.Cells[1].Value.ToString();
+            Clases.Etiquetas.ImprimirEtiquetas(printDialog1, Clases.Variables.IEtiqueta, Clases.Variables.IEtiqueta);
+        }
     }
 }
