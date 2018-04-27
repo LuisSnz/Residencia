@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.minimo = new System.Windows.Forms.NumericUpDown();
             this.maximo = new System.Windows.Forms.NumericUpDown();
@@ -43,8 +41,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximo)).BeginInit();
@@ -56,48 +56,29 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 113);
+            this.panel1.Size = new System.Drawing.Size(271, 113);
             this.panel1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(113, 100);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Individual";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(15, 43);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 20);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "BUSCAR";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.minimo);
             this.groupBox2.Controls.Add(this.maximo);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(127, 6);
+            this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(232, 100);
+            this.groupBox2.Size = new System.Drawing.Size(258, 100);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Rango";
+            this.groupBox2.Text = "Rango de Etiqueta";
             // 
             // minimo
             // 
-            this.minimo.Location = new System.Drawing.Point(18, 45);
+            this.minimo.Location = new System.Drawing.Point(23, 53);
             this.minimo.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -109,7 +90,7 @@
             // 
             // maximo
             // 
-            this.maximo.Location = new System.Drawing.Point(138, 45);
+            this.maximo.Location = new System.Drawing.Point(143, 53);
             this.maximo.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -123,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(104, 45);
+            this.label3.Location = new System.Drawing.Point(109, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 17);
             this.label3.TabIndex = 4;
@@ -143,19 +124,20 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(12, 165);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(365, 116);
+            this.panel2.Size = new System.Drawing.Size(271, 116);
             this.panel2.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(142, 73);
+            this.label6.Location = new System.Drawing.Point(98, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 10;
@@ -164,7 +146,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoResidencias.Properties.Resources.barras;
-            this.pictureBox1.Location = new System.Drawing.Point(97, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(58, 51);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(155, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,7 +157,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(112, 13);
+            this.label5.Location = new System.Drawing.Point(72, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 17);
             this.label5.TabIndex = 8;
@@ -184,7 +166,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(81, 297);
+            this.button1.Location = new System.Drawing.Point(27, 297);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 32);
             this.button1.TabIndex = 8;
@@ -195,23 +177,54 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(234, 297);
+            this.button2.Location = new System.Drawing.Point(180, 297);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 32);
             this.button2.TabIndex = 9;
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(98, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 15);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "ARCHIVERO";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 15);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "INICIAL";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(140, 31);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 15);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "FINAL";
             // 
             // ImprimirEtiquetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(390, 350);
+            this.ClientSize = new System.Drawing.Size(298, 350);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -222,7 +235,6 @@
             this.Text = "Imprimir Etiquetas";
             this.Load += new System.EventHandler(this.ImprimirEtiquetas_Load);
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimo)).EndInit();
@@ -248,9 +260,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -82,6 +82,8 @@
             // 
             // CBBuscar
             // 
+            this.CBBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CBBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CBBuscar.FormattingEnabled = true;
             this.CBBuscar.Location = new System.Drawing.Point(7, 102);
             this.CBBuscar.Name = "CBBuscar";

@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Base = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.areasODireccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subDireccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,18 +49,9 @@
             this.bienesSinFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirEtiquetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienesDadosDeBajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportarActivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoDelBienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.costoBienesActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.imprimirCierreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.paraEntregaRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paraASECHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Base = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +66,26 @@
             this.activoToolStripMenuItem,
             this.reportesToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
+            // 
+            // Base
+            // 
+            this.Base.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.Base, "Base");
+            this.Base.Name = "Base";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoResidencias.Properties.Resources.logo_pirata;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoResidencias.Properties.Resources._7da9c795_1ecb_4dd7_ba41_298ad0ca7a56;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // catalogosToolStripMenuItem
             // 
@@ -164,8 +178,7 @@
             this.bienesToolStripMenuItem,
             this.bienesSinFacturaToolStripMenuItem,
             this.imprimirEtiquetasToolStripMenuItem,
-            this.bienesDadosDeBajaToolStripMenuItem,
-            this.exportarActivosToolStripMenuItem});
+            this.bienesDadosDeBajaToolStripMenuItem});
             this.activoToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.casa;
             this.activoToolStripMenuItem.Name = "activoToolStripMenuItem";
             resources.ApplyResources(this.activoToolStripMenuItem, "activoToolStripMenuItem");
@@ -186,7 +199,7 @@
             // 
             // imprimirEtiquetasToolStripMenuItem
             // 
-            this.imprimirEtiquetasToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.barras;
+            this.imprimirEtiquetasToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.codigobarras;
             this.imprimirEtiquetasToolStripMenuItem.Name = "imprimirEtiquetasToolStripMenuItem";
             resources.ApplyResources(this.imprimirEtiquetasToolStripMenuItem, "imprimirEtiquetasToolStripMenuItem");
             this.imprimirEtiquetasToolStripMenuItem.Click += new System.EventHandler(this.imprimirEtiquetasToolStripMenuItem_Click);
@@ -198,82 +211,28 @@
             resources.ApplyResources(this.bienesDadosDeBajaToolStripMenuItem, "bienesDadosDeBajaToolStripMenuItem");
             this.bienesDadosDeBajaToolStripMenuItem.Click += new System.EventHandler(this.bienesDadosDeBajaToolStripMenuItem_Click);
             // 
-            // exportarActivosToolStripMenuItem
-            // 
-            this.exportarActivosToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.txt;
-            this.exportarActivosToolStripMenuItem.Name = "exportarActivosToolStripMenuItem";
-            resources.ApplyResources(this.exportarActivosToolStripMenuItem, "exportarActivosToolStripMenuItem");
-            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.historicoDelBienToolStripMenuItem,
-            this.costoBienesActualToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.imprimirCierreToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.paraEntregaRecepcionToolStripMenuItem,
-            this.paraASECHToolStripMenuItem});
+            this.costoBienesActualToolStripMenuItem});
             this.reportesToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.catalogo;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
             // 
             // historicoDelBienToolStripMenuItem
             // 
+            this.historicoDelBienToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.h;
             this.historicoDelBienToolStripMenuItem.Name = "historicoDelBienToolStripMenuItem";
             resources.ApplyResources(this.historicoDelBienToolStripMenuItem, "historicoDelBienToolStripMenuItem");
             this.historicoDelBienToolStripMenuItem.Click += new System.EventHandler(this.historicoDelBienToolStripMenuItem_Click);
             // 
             // costoBienesActualToolStripMenuItem
             // 
+            this.costoBienesActualToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.Dinero;
             this.costoBienesActualToolStripMenuItem.Name = "costoBienesActualToolStripMenuItem";
             resources.ApplyResources(this.costoBienesActualToolStripMenuItem, "costoBienesActualToolStripMenuItem");
             this.costoBienesActualToolStripMenuItem.Click += new System.EventHandler(this.costoBienesActualToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
-            // imprimirCierreToolStripMenuItem
-            // 
-            this.imprimirCierreToolStripMenuItem.Name = "imprimirCierreToolStripMenuItem";
-            resources.ApplyResources(this.imprimirCierreToolStripMenuItem, "imprimirCierreToolStripMenuItem");
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // paraEntregaRecepcionToolStripMenuItem
-            // 
-            this.paraEntregaRecepcionToolStripMenuItem.Name = "paraEntregaRecepcionToolStripMenuItem";
-            resources.ApplyResources(this.paraEntregaRecepcionToolStripMenuItem, "paraEntregaRecepcionToolStripMenuItem");
-            // 
-            // paraASECHToolStripMenuItem
-            // 
-            this.paraASECHToolStripMenuItem.Name = "paraASECHToolStripMenuItem";
-            resources.ApplyResources(this.paraASECHToolStripMenuItem, "paraASECHToolStripMenuItem");
-            // 
-            // Base
-            // 
-            this.Base.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.Base, "Base");
-            this.Base.Name = "Base";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoResidencias.Properties.Resources.logo_pirata;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoResidencias.Properties.Resources._7da9c795_1ecb_4dd7_ba41_298ad0ca7a56;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // Inicio
             // 
@@ -313,18 +272,12 @@
         private System.Windows.Forms.ToolStripMenuItem bienesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirEtiquetasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bienesDadosDeBajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportarActivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem familiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoDelBienToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem costoBienesActualToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem imprimirCierreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem paraEntregaRecepcionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem paraASECHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bienesSinFacturaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Base;
