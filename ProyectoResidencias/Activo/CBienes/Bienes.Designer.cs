@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bienes));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Nuevo = new System.Windows.Forms.ToolStripButton();
             this.Modificar = new System.Windows.Forms.ToolStripButton();
@@ -41,6 +42,8 @@
             this.CambioEmpleado = new System.Windows.Forms.ToolStripButton();
             this.CambioBien = new System.Windows.Forms.ToolStripButton();
             this.GVBienes = new System.Windows.Forms.DataGridView();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVBienes)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +62,7 @@
             this.Buscar,
             this.toolStripSeparator2,
             this.Excel,
+            this.toolStripButton1,
             this.Imprimir,
             this.toolStripSeparator3,
             this.CambioEmpleado,
@@ -192,6 +196,21 @@
             this.GVBienes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVBienes_CellDoubleClick);
             this.GVBienes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVBienes_CellEnter);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(44, 42);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "Imprimir Etiqueta";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // Bienes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,5 +243,7 @@
         public System.Windows.Forms.DataGridView GVBienes;
         private System.Windows.Forms.ToolStripButton CambioEmpleado;
         private System.Windows.Forms.ToolStripButton CambioBien;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

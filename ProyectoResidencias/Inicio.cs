@@ -129,11 +129,5 @@ namespace ProyectoResidencias
             formularios(new Activo.BienesSinFactura.BienesSF());
             this.Text = "Sistema de activo Fijo - Bienes sin Factura";
         }
-
-        private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pruebimprimir form = new pruebimprimir();
-            form.ShowDialog();
-        }
     }
 }

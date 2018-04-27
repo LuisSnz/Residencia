@@ -259,12 +259,6 @@
     <Compile Include="FConfirmacion.Designer.cs">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="pruebimprimir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pruebimprimir.Designer.cs">
-      <DependentUpon>pruebimprimir.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reportes\BuscarPorBienes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -544,9 +538,6 @@
     <EmbeddedResource Include="Informes\ReporteBienes.rdlc" />
     <EmbeddedResource Include="Informes\ReporteProveedores.rdlc" />
     <EmbeddedResource Include="Informes\ReporteVehiculos.rdlc" />
-    <EmbeddedResource Include="pruebimprimir.resx">
-      <DependentUpon>pruebimprimir.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\BuscarPorBienes.resx">
       <DependentUpon>BuscarPorBienes.cs</DependentUpon>
     </EmbeddedResource>

@@ -58,7 +58,6 @@
             this.Base = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -214,8 +213,7 @@
             this.imprimirCierreToolStripMenuItem,
             this.toolStripSeparator2,
             this.paraEntregaRecepcionToolStripMenuItem,
-            this.paraASECHToolStripMenuItem,
-            this.pruebaToolStripMenuItem});
+            this.paraASECHToolStripMenuItem});
             this.reportesToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.catalogo;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
@@ -277,12 +275,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // pruebaToolStripMenuItem
-            // 
-            this.pruebaToolStripMenuItem.Name = "pruebaToolStripMenuItem";
-            resources.ApplyResources(this.pruebaToolStripMenuItem, "pruebaToolStripMenuItem");
-            this.pruebaToolStripMenuItem.Click += new System.EventHandler(this.pruebaToolStripMenuItem_Click);
-            // 
             // Inicio
             // 
             resources.ApplyResources(this, "$this");
@@ -337,7 +329,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Base;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ToolStripMenuItem pruebaToolStripMenuItem;
     }
 }
 

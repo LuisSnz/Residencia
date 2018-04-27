@@ -262,12 +262,6 @@
   <data name="paraASECHToolStripMenuItem.Text" xml:space="preserve">
     <value>Para ASECH</value>
   </data>
-  <data name="pruebaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="pruebaToolStripMenuItem.Text" xml:space="preserve">
-    <value>prueba</value>
-  </data>
   <data name="reportesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 21</value>
   </data>
@@ -544,12 +538,6 @@
     <value>paraASECHToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;paraASECHToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pruebaToolStripMenuItem.Name" xml:space="preserve">
-    <value>pruebaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;pruebaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
