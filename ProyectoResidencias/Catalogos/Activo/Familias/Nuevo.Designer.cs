@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Desccripcion = new System.Windows.Forms.TextBox();
@@ -65,6 +66,7 @@
             // 
             this.Desccripcion.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desccripcion.Location = new System.Drawing.Point(110, 14);
+            this.Desccripcion.MaxLength = 50;
             this.Desccripcion.Name = "Desccripcion";
             this.Desccripcion.Size = new System.Drawing.Size(206, 25);
             this.Desccripcion.TabIndex = 13;
@@ -101,6 +103,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";

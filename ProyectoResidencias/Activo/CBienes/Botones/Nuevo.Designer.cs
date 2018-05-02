@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CHConsumible = new System.Windows.Forms.CheckBox();
             this.TBPrecio = new System.Windows.Forms.TextBox();
             this.TBFactura = new System.Windows.Forms.TextBox();
             this.TimeFecha = new System.Windows.Forms.DateTimePicker();
@@ -70,7 +72,6 @@
             this.TBObservaciones = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.CHConsumible = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -98,10 +99,23 @@
             this.panel1.Size = new System.Drawing.Size(580, 106);
             this.panel1.TabIndex = 0;
             // 
+            // CHConsumible
+            // 
+            this.CHConsumible.AutoSize = true;
+            this.CHConsumible.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CHConsumible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHConsumible.Location = new System.Drawing.Point(273, 7);
+            this.CHConsumible.Name = "CHConsumible";
+            this.CHConsumible.Size = new System.Drawing.Size(106, 23);
+            this.CHConsumible.TabIndex = 14;
+            this.CHConsumible.Text = "Consumible";
+            this.CHConsumible.UseVisualStyleBackColor = true;
+            // 
             // TBPrecio
             // 
             this.TBPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBPrecio.Location = new System.Drawing.Point(365, 71);
+            this.TBPrecio.MaxLength = 21;
             this.TBPrecio.Name = "TBPrecio";
             this.TBPrecio.Size = new System.Drawing.Size(127, 24);
             this.TBPrecio.TabIndex = 13;
@@ -112,6 +126,7 @@
             // 
             this.TBFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBFactura.Location = new System.Drawing.Point(365, 38);
+            this.TBFactura.MaxLength = 30;
             this.TBFactura.Name = "TBFactura";
             this.TBFactura.Size = new System.Drawing.Size(127, 24);
             this.TBFactura.TabIndex = 12;
@@ -129,6 +144,7 @@
             // 
             this.TBNoOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBNoOrden.Location = new System.Drawing.Point(113, 36);
+            this.TBNoOrden.MaxLength = 50;
             this.TBNoOrden.Name = "TBNoOrden";
             this.TBNoOrden.Size = new System.Drawing.Size(127, 24);
             this.TBNoOrden.TabIndex = 9;
@@ -276,6 +292,7 @@
             // 
             this.TBColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBColor.Location = new System.Drawing.Point(407, 99);
+            this.TBColor.MaxLength = 20;
             this.TBColor.Name = "TBColor";
             this.TBColor.Size = new System.Drawing.Size(126, 24);
             this.TBColor.TabIndex = 20;
@@ -284,6 +301,7 @@
             // 
             this.TBModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBModelo.Location = new System.Drawing.Point(407, 62);
+            this.TBModelo.MaxLength = 30;
             this.TBModelo.Name = "TBModelo";
             this.TBModelo.Size = new System.Drawing.Size(127, 24);
             this.TBModelo.TabIndex = 19;
@@ -307,6 +325,7 @@
             // 
             this.TBSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBSerie.Location = new System.Drawing.Point(120, 102);
+            this.TBSerie.MaxLength = 30;
             this.TBSerie.Name = "TBSerie";
             this.TBSerie.Size = new System.Drawing.Size(202, 24);
             this.TBSerie.TabIndex = 17;
@@ -512,6 +531,7 @@
             // 
             this.TBObservaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBObservaciones.Location = new System.Drawing.Point(18, 27);
+            this.TBObservaciones.MaxLength = 250;
             this.TBObservaciones.Name = "TBObservaciones";
             this.TBObservaciones.Size = new System.Drawing.Size(546, 25);
             this.TBObservaciones.TabIndex = 0;
@@ -540,18 +560,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // CHConsumible
-            // 
-            this.CHConsumible.AutoSize = true;
-            this.CHConsumible.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CHConsumible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHConsumible.Location = new System.Drawing.Point(273, 7);
-            this.CHConsumible.Name = "CHConsumible";
-            this.CHConsumible.Size = new System.Drawing.Size(106, 23);
-            this.CHConsumible.TabIndex = 14;
-            this.CHConsumible.Text = "Consumible";
-            this.CHConsumible.UseVisualStyleBackColor = true;
-            // 
             // Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,6 +575,7 @@
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";

@@ -18,6 +18,7 @@ namespace ProyectoResidencias.Clases
             {
                 PrintDocument pd = new PrintDocument();
                 VImpresion.Document = pd;
+                
                 DialogResult resultado = VImpresion.ShowDialog();
                 if (resultado == DialogResult.OK)
                 {

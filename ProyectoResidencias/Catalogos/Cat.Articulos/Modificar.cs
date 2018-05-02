@@ -69,6 +69,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos.Botones
                             conn.Close();
                             MessageBox.Show("Articulo modificado correctamente.");
                             this.Close();
+                            this.DialogResult = DialogResult.OK;
                         }
                     }
                 }

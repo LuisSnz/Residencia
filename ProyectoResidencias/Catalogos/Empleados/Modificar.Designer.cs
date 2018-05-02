@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modificar));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Motivo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -76,6 +77,7 @@
             // 
             this.Motivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Motivo.Location = new System.Drawing.Point(67, 52);
+            this.Motivo.MaxLength = 100;
             this.Motivo.Name = "Motivo";
             this.Motivo.Size = new System.Drawing.Size(436, 25);
             this.Motivo.TabIndex = 26;
@@ -159,6 +161,7 @@
             // 
             this.NumLicencia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumLicencia.Location = new System.Drawing.Point(146, 97);
+            this.NumLicencia.MaxLength = 10;
             this.NumLicencia.Name = "NumLicencia";
             this.NumLicencia.Size = new System.Drawing.Size(380, 25);
             this.NumLicencia.TabIndex = 38;
@@ -177,6 +180,7 @@
             // 
             this.NombreM.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreM.Location = new System.Drawing.Point(146, 39);
+            this.NombreM.MaxLength = 70;
             this.NombreM.Name = "NombreM";
             this.NombreM.Size = new System.Drawing.Size(380, 25);
             this.NombreM.TabIndex = 36;
@@ -185,6 +189,7 @@
             // 
             this.Nombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(146, 10);
+            this.Nombre.MaxLength = 100;
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(380, 25);
             this.Nombre.TabIndex = 35;
@@ -328,6 +333,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";

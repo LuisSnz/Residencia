@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboSubd = new System.Windows.Forms.ComboBox();
             this.comboArea = new System.Windows.Forms.ComboBox();
@@ -79,6 +80,7 @@
             // 
             this.Descripcion.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion.Location = new System.Drawing.Point(116, 12);
+            this.Descripcion.MaxLength = 50;
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Size = new System.Drawing.Size(206, 25);
             this.Descripcion.TabIndex = 28;
@@ -149,6 +151,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";

@@ -27,29 +27,36 @@ namespace ProyectoResidencias.Catalogos.Departamentos
         {
             if (Descripcion.Text.Length > 0 && comboArea.SelectedIndex>=0 && comboSubd.SelectedIndex>=0)
             {
-                string ConnString = Clases.Variables.scon;
-                string SqlString = "Insert Into DEPTOS (CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION) " +
-                    "values ((select (COUNT(clave))+1 from DEPTOS),'" + Descripcion.Text + "', '"+
-                    comboArea.SelectedItem.ToString()+"','"+comboSubd.SelectedItem.ToString()+"');";
-                try
+                if (Descripcion.Text.Length < 50)
                 {
-                    using (SqlConnection conn = new SqlConnection(ConnString))
+                    string ConnString = Clases.Variables.scon;
+                    string SqlString = "Insert Into DEPTOS (CLAVE, DESCRIPCION, DIRECCION, SUBDIRECCION) " +
+                        "values ((select (COUNT(clave))+1 from DEPTOS),'" + Descripcion.Text + "', '" +
+                        comboArea.SelectedItem.ToString() + "','" + comboSubd.SelectedItem.ToString() + "');";
+                    try
                     {
-                        using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                        using (SqlConnection conn = new SqlConnection(ConnString))
                         {
-                            cmd.CommandType = CommandType.Text;
-                            conn.Open();
-                            cmd.ExecuteNonQuery();
-                            conn.Close();
-                            MessageBox.Show("Departamento agragado correctamente.");
-                            this.Close();
-                            this.DialogResult = DialogResult.OK;
+                            using (SqlCommand cmd = new SqlCommand(SqlString, conn))
+                            {
+                                cmd.CommandType = CommandType.Text;
+                                conn.Open();
+                                cmd.ExecuteNonQuery();
+                                conn.Close();
+                                MessageBox.Show("Departamento agragado correctamente.");
+                                this.Close();
+                                this.DialogResult = DialogResult.OK;
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("El valor insertado no es valido. \n" + ex.ToString());
+                    MessageBox.Show("El nombre del departamento debe tener menos de 50 caracteres");
                 }
             }
             else

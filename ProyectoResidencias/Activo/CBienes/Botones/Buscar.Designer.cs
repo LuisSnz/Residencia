@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscar));
             this.Etiqueta = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Departamento = new System.Windows.Forms.RadioButton();
             this.CBBuscar = new System.Windows.Forms.ComboBox();
             this.Empleado = new System.Windows.Forms.RadioButton();
             this.Articulo = new System.Windows.Forms.RadioButton();
@@ -38,7 +40,6 @@
             this.Aceptar = new System.Windows.Forms.Button();
             this.Cancelar = new System.Windows.Forms.Button();
             this.Todo = new System.Windows.Forms.Button();
-            this.Departamento = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +74,18 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione una opcion";
+            // 
+            // Departamento
+            // 
+            this.Departamento.AutoSize = true;
+            this.Departamento.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Departamento.Location = new System.Drawing.Point(178, 105);
+            this.Departamento.Name = "Departamento";
+            this.Departamento.Size = new System.Drawing.Size(110, 21);
+            this.Departamento.TabIndex = 6;
+            this.Departamento.Text = "Departamento";
+            this.Departamento.UseVisualStyleBackColor = true;
+            this.Departamento.CheckedChanged += new System.EventHandler(this.Departamento_CheckedChanged);
             // 
             // CBBuscar
             // 
@@ -169,18 +182,6 @@
             this.Todo.UseVisualStyleBackColor = false;
             this.Todo.Click += new System.EventHandler(this.Todo_Click);
             // 
-            // Departamento
-            // 
-            this.Departamento.AutoSize = true;
-            this.Departamento.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Departamento.Location = new System.Drawing.Point(178, 105);
-            this.Departamento.Name = "Departamento";
-            this.Departamento.Size = new System.Drawing.Size(110, 21);
-            this.Departamento.TabIndex = 6;
-            this.Departamento.Text = "Departamento";
-            this.Departamento.UseVisualStyleBackColor = true;
-            this.Departamento.CheckedChanged += new System.EventHandler(this.Departamento_CheckedChanged);
-            // 
             // Buscar
             // 
             this.AcceptButton = this.Aceptar;
@@ -193,6 +194,7 @@
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.Aceptar);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Buscar";

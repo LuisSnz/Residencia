@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo));
             this.panel2 = new System.Windows.Forms.Panel();
             this.FechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.comboJefe = new System.Windows.Forms.ComboBox();
@@ -102,6 +103,7 @@
             // 
             this.NumLicencia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumLicencia.Location = new System.Drawing.Point(146, 96);
+            this.NumLicencia.MaxLength = 10;
             this.NumLicencia.Name = "NumLicencia";
             this.NumLicencia.Size = new System.Drawing.Size(380, 25);
             this.NumLicencia.TabIndex = 38;
@@ -120,6 +122,7 @@
             // 
             this.NombreM.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreM.Location = new System.Drawing.Point(146, 38);
+            this.NombreM.MaxLength = 70;
             this.NombreM.Name = "NombreM";
             this.NombreM.Size = new System.Drawing.Size(380, 25);
             this.NombreM.TabIndex = 36;
@@ -128,6 +131,7 @@
             // 
             this.Nombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(146, 9);
+            this.Nombre.MaxLength = 150;
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(380, 25);
             this.Nombre.TabIndex = 35;
@@ -268,6 +272,7 @@
             // 
             this.Motivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Motivo.Location = new System.Drawing.Point(67, 52);
+            this.Motivo.MaxLength = 100;
             this.Motivo.Name = "Motivo";
             this.Motivo.Size = new System.Drawing.Size(461, 25);
             this.Motivo.TabIndex = 26;
@@ -329,6 +334,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";

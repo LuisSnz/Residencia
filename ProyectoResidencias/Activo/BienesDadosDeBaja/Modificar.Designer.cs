@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modificar));
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Motivo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Observaciones = new System.Windows.Forms.TextBox();
             this.Valor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.Motivo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,21 @@
             this.panel1.Size = new System.Drawing.Size(424, 118);
             this.panel1.TabIndex = 15;
             // 
+            // Motivo
+            // 
+            this.Motivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Motivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Motivo.FormattingEnabled = true;
+            this.Motivo.Items.AddRange(new object[] {
+            "NO FUNCIONA",
+            "ROBO",
+            "EXTRAVIO",
+            "DONACION"});
+            this.Motivo.Location = new System.Drawing.Point(93, 13);
+            this.Motivo.Name = "Motivo";
+            this.Motivo.Size = new System.Drawing.Size(209, 25);
+            this.Motivo.TabIndex = 10;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -92,6 +108,7 @@
             // 
             this.Observaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Observaciones.Location = new System.Drawing.Point(124, 75);
+            this.Observaciones.MaxLength = 250;
             this.Observaciones.Name = "Observaciones";
             this.Observaciones.Size = new System.Drawing.Size(280, 25);
             this.Observaciones.TabIndex = 5;
@@ -100,6 +117,7 @@
             // 
             this.Valor.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Valor.Location = new System.Drawing.Point(93, 45);
+            this.Valor.MaxLength = 50;
             this.Valor.Name = "Valor";
             this.Valor.Size = new System.Drawing.Size(209, 25);
             this.Valor.TabIndex = 1;
@@ -126,21 +144,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Motivo
-            // 
-            this.Motivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Motivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Motivo.FormattingEnabled = true;
-            this.Motivo.Items.AddRange(new object[] {
-            "NO FUNCIONA",
-            "ROBO",
-            "EXTRAVIO",
-            "DONACION"});
-            this.Motivo.Location = new System.Drawing.Point(93, 13);
-            this.Motivo.Name = "Motivo";
-            this.Motivo.Size = new System.Drawing.Size(209, 25);
-            this.Motivo.TabIndex = 10;
-            // 
             // Modificar
             // 
             this.AcceptButton = this.button1;
@@ -152,6 +155,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
