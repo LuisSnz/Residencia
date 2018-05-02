@@ -57,7 +57,8 @@
             // 
             // comboSubd
             // 
-            this.comboSubd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSubd.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboSubd.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboSubd.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboSubd.FormattingEnabled = true;
             this.comboSubd.Location = new System.Drawing.Point(116, 71);
@@ -67,7 +68,8 @@
             // 
             // comboArea
             // 
-            this.comboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboArea.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboArea.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboArea.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboArea.FormattingEnabled = true;
             this.comboArea.Location = new System.Drawing.Point(116, 41);
@@ -149,6 +151,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";

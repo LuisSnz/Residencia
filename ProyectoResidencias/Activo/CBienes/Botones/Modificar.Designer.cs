@@ -417,6 +417,7 @@
             // Aceptar
             // 
             this.Aceptar.BackColor = System.Drawing.Color.White;
+            this.Aceptar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Aceptar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aceptar.Location = new System.Drawing.Point(114, 520);
             this.Aceptar.Name = "Aceptar";
@@ -452,6 +453,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";

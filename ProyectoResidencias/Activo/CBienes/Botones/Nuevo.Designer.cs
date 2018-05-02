@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CHConsumible = new System.Windows.Forms.CheckBox();
             this.TBPrecio = new System.Windows.Forms.TextBox();
             this.TBFactura = new System.Windows.Forms.TextBox();
             this.TimeFecha = new System.Windows.Forms.DateTimePicker();
@@ -70,7 +71,6 @@
             this.TBObservaciones = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.CHConsumible = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -97,6 +97,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(580, 106);
             this.panel1.TabIndex = 0;
+            // 
+            // CHConsumible
+            // 
+            this.CHConsumible.AutoSize = true;
+            this.CHConsumible.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CHConsumible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHConsumible.Location = new System.Drawing.Point(273, 7);
+            this.CHConsumible.Name = "CHConsumible";
+            this.CHConsumible.Size = new System.Drawing.Size(106, 23);
+            this.CHConsumible.TabIndex = 14;
+            this.CHConsumible.Text = "Consumible";
+            this.CHConsumible.UseVisualStyleBackColor = true;
             // 
             // TBPrecio
             // 
@@ -540,18 +552,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // CHConsumible
-            // 
-            this.CHConsumible.AutoSize = true;
-            this.CHConsumible.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CHConsumible.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHConsumible.Location = new System.Drawing.Point(273, 7);
-            this.CHConsumible.Name = "CHConsumible";
-            this.CHConsumible.Size = new System.Drawing.Size(106, 23);
-            this.CHConsumible.TabIndex = 14;
-            this.CHConsumible.Text = "Consumible";
-            this.CHConsumible.UseVisualStyleBackColor = true;
-            // 
             // Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,6 +567,7 @@
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";

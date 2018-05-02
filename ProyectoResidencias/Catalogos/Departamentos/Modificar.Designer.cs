@@ -42,7 +42,8 @@
             // 
             // comboSubD
             // 
-            this.comboSubD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSubD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboSubD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboSubD.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboSubD.FormattingEnabled = true;
             this.comboSubD.Location = new System.Drawing.Point(116, 72);
@@ -52,7 +53,8 @@
             // 
             // comboArea
             // 
-            this.comboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboArea.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboArea.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboArea.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboArea.FormattingEnabled = true;
             this.comboArea.Location = new System.Drawing.Point(116, 42);
@@ -148,6 +150,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";

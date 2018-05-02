@@ -75,19 +75,19 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
         private void Articulo_CheckedChanged(object sender, EventArgs e)
         {
             if (Articulo.Checked == true)
-                Clases.Articulos.CBBuscarArticulo(CBBuscar);
+                Clases.BienesSinFactura.CBBuscarArticulo(CBBuscar);
         }
 
         private void Proveedor_CheckedChanged(object sender, EventArgs e)
         {
             if (Proveedor.Checked == true)
-                Clases.Bienes.CBProveedor(CBBuscar);
+                Clases.BienesSinFactura.CBProveedor(CBBuscar);
         }
 
         private void Empleado_CheckedChanged(object sender, EventArgs e)
         {
             if (Empleado.Checked == true)
-                Clases.Empleados.CBNombre(CBBuscar);
+                Clases.BienesSinFactura.CBNombre(CBBuscar);
         }
 
         private void Todo_Click(object sender, EventArgs e)
