@@ -43,14 +43,19 @@ namespace ProyectoResidencias.Catalogos.Proveedores
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioNombre.Checked == true)
-                Clases.Variables.ConsultaBuscar = "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores where Nombre LIKE '%"+comboBuscar.Text+"%'";
-            if (radioRFC.Checked == true) 
-                Clases.Variables.ConsultaBuscar = "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
-                "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores where RFC LIKE '%" + comboBuscar.Text + "%'";
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (comboBuscar.SelectedIndex >= 0)
+            {
+                if (radioNombre.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
+                    "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores where Nombre LIKE '%" + comboBuscar.Text + "%'";
+                if (radioRFC.Checked == true)
+                    Clases.Variables.ConsultaBuscar = "Select Id,RTRIM(Nombre) as 'Nombre',RTRIM(Direccion)as 'Direccion'," +
+                    "Rfc as 'RFC',Fax,Ciudad,RTRIM(Email) as 'eMail',Telefono,Curp from Proveedores where RFC LIKE '%" + comboBuscar.Text + "%'";
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+                MessageBox.Show("Debe seleccionar un valor a buscar valido");
         }
 
         private void button2_Click(object sender, EventArgs e)

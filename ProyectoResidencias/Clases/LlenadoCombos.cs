@@ -249,7 +249,7 @@ namespace ProyectoResidencias.Clases
             {
                 cn.Open();
                 cmd = new SqlCommand("SELECT bienes.Id,bienes.Modelo,bienes.Precio,bienes.Serie,marca.Descripcion as marca " +
-                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.IdBienes, cn);
+                    "from bienes inner join marca on bienes.IdMarca=marca.Id where bienes.Id=" + Clases.Variables.IdBienesSF, cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -661,7 +661,8 @@ namespace ProyectoResidencias.Clases
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select RTRIM(Nombre) as Nombre from Proveedores order by Nombre", cn);
+                cmd = new SqlCommand("select RTRIM(Proveedores.Nombre) as Nombre from Proveedores inner join bienes on " +
+                    "bienes.IdProveedor=Proveedores.Id where bienes.noFactura='' order by Nombre", cn);
                 dr = cmd.ExecuteReader();
                 CB.Text = "";
                 CB.Items.Clear();
@@ -733,6 +734,48 @@ namespace ProyectoResidencias.Clases
                     serie.Text = dr["Serie"].ToString();
                     precio.Text = dr["Precio"].ToString();
                     marca.Text = dr["marca"].ToString();
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBBuscarArticulo(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Descripcion from CatArticulos inner join bienes on" +
+                    " CatArticulos.Id=bienes.IdArticulo where bienes.noFactura='' order by descripcion", cn);
+                dr = cmd.ExecuteReader();
+                CB.Items.Clear();
+                CB.Text = "";
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Descripcion"].ToString());
+                }
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar :" + ex.ToString());
+            }
+        }
+        public static void CBNombre(ComboBox CB)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select Nombre from empleados inner join bienes on empleados.NoEmp=bienes.NoEmpleado" +
+                    " where bienes.NoFactura='' order by nombre", cn);
+                dr = cmd.ExecuteReader();
+                CB.Items.Clear();
+                CB.Text = "";
+                while (dr.Read())
+                {
+                    CB.Items.Add(dr["Nombre"].ToString());
                 }
                 cn.Close();
             }

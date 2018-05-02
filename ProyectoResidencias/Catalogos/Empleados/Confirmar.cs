@@ -7,23 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ProyectoResidencias.Activo
+namespace ProyectoResidencias.Catalogos.Empleados
 {
-    public partial class ImprimirEtiquetas : Form
+    public partial class Confirmar : Form
     {
-        public ImprimirEtiquetas()
+        public Confirmar()
         {
             InitializeComponent();
         }
 
-        private void ImprimirEtiquetas_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Clases.Etiquetas.ImprimirEtiquetas(/*printDialog1, */minimo.Value.ToString(), maximo.Value.ToString());
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -163,6 +163,8 @@
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.Aceptar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "BuscarPorBienes";
             this.Text = "BuscarPorBienes";
             this.Load += new System.EventHandler(this.BuscarPorBienes_Load);

@@ -44,6 +44,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 144);
@@ -68,7 +69,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 62);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(299, 23);
+            this.comboBox1.Size = new System.Drawing.Size(299, 25);
             this.comboBox1.TabIndex = 14;
             // 
             // RBArticulo
@@ -77,7 +78,7 @@
             this.RBArticulo.Checked = true;
             this.RBArticulo.Location = new System.Drawing.Point(64, 25);
             this.RBArticulo.Name = "RBArticulo";
-            this.RBArticulo.Size = new System.Drawing.Size(69, 19);
+            this.RBArticulo.Size = new System.Drawing.Size(73, 21);
             this.RBArticulo.TabIndex = 12;
             this.RBArticulo.TabStop = true;
             this.RBArticulo.Text = "Articulo";
@@ -89,7 +90,7 @@
             this.RBFamilia.AutoSize = true;
             this.RBFamilia.Location = new System.Drawing.Point(186, 25);
             this.RBFamilia.Name = "RBFamilia";
-            this.RBFamilia.Size = new System.Drawing.Size(62, 19);
+            this.RBFamilia.Size = new System.Drawing.Size(68, 21);
             this.RBFamilia.TabIndex = 13;
             this.RBFamilia.TabStop = true;
             this.RBFamilia.Text = "Familia";
@@ -99,6 +100,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(12, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 34);
@@ -110,6 +112,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(268, 176);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 34);
@@ -121,9 +124,10 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(141, 176);
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(139, 176);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 34);
+            this.button3.Size = new System.Drawing.Size(102, 34);
             this.button3.TabIndex = 16;
             this.button3.Text = "Mostrar Todo";
             this.button3.UseVisualStyleBackColor = false;
@@ -141,6 +145,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Buscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Articulo";
