@@ -50,12 +50,12 @@ namespace ProyectoResidencias.Catalogos.Empleados
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            FConfirmacion confirmacion = new FConfirmacion();
+            Confirmar confirmacion = new Confirmar();
             confirmacion.ShowDialog();
             if (confirmacion.DialogResult == DialogResult.OK)
             {
                 string ConnString = Clases.Variables.scon;
-                string SqlString = "Delete from empleados where NoEmp=" + Clases.Variables.IdEmpleados;
+                string SqlString = "Update empleados set Baja=1 where NoEmp=" + Clases.Variables.IdEmpleados;
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -64,7 +64,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    MessageBox.Show("Empleado eliminado correctamente.");
+                    MessageBox.Show("Empleado dado de baja correctamente.");
                     Clases.LLenadoGrids.llenarGrid(GridEmp, Clases.Variables.ConsultaBuscar, "empleados");
                 }
                 catch (Exception ex)

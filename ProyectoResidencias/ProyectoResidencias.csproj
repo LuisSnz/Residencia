@@ -228,6 +228,12 @@
     <Compile Include="Catalogos\Empleados\Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Empleados\Confirmar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Empleados\Confirmar.Designer.cs">
+      <DependentUpon>Confirmar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Vehiculos\ReporteVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -523,6 +529,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Empleados\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Empleados\Confirmar.resx">
+      <DependentUpon>Confirmar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Vehiculos\ReporteVehiculos.resx">
       <DependentUpon>ReporteVehiculos.cs</DependentUpon>

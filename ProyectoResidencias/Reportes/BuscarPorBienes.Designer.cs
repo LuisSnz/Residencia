@@ -164,6 +164,8 @@
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.Aceptar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BuscarPorBienes";
             this.Text = "BuscarPorBienes";

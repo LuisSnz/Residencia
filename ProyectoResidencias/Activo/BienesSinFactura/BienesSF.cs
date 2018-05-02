@@ -50,7 +50,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            CBienes.Botones.Baja baja = new CBienes.Botones.Baja();
+            BienesSinFactura.BajaSF baja = new BajaSF();
             baja.ShowDialog();
             if (baja.DialogResult == DialogResult.OK)
                 Clases.LLenadoGrids.llenarGrid(dataGridView1, Clases.Variables.ConsultaBuscar, "bienes");
@@ -115,7 +115,7 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             Clases.Variables.IEtiqueta = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            Clases.Etiquetas.ImprimirEtiquetas(printDialog1, Clases.Variables.IEtiqueta, Clases.Variables.IEtiqueta);
+            Clases.Etiquetas.ImprimirEtiquetas(/*printDialog1,*/ Clases.Variables.IEtiqueta, Clases.Variables.IEtiqueta);
         }
     }
 }

@@ -62,7 +62,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
                 string SqlString = "Update empleados set Nombre='"+Nombre.Text+"',NombrePliegos='"+NombreM.Text+
                     "',Departamento='"+comboDepto.SelectedItem.ToString()+"',NoLicencia='"+NumLicencia.Text+
                     "',FechaVencimiento=(convert(datetime,'"+Fecha.Text+"')),NoEmpleadoJefe=(select NoEmp from empleados" +
-                    " where Nombre='"+comboDepto.SelectedItem.ToString()+"'),ActivoPliegos="+pliegos+",JefeDepto="+Jefe
+                    " where Nombre='"+comboJefe.SelectedItem.ToString()+"'),ActivoPliegos="+pliegos+",JefeDepto="+Jefe
                     +",Baja="+Baja+",NoVerifica="+SinPliego+",Bloqueado="+Bloqueado+",Textobloqueado='"+Motivo.Text+"'" +
                     "where NoEmp="+Clases.Variables.IdEmpleados+";";
                 try

@@ -91,7 +91,8 @@
             // 
             // comboJefe
             // 
-            this.comboJefe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboJefe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboJefe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboJefe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJefe.FormattingEnabled = true;
             this.comboJefe.Location = new System.Drawing.Point(146, 154);
@@ -110,7 +111,8 @@
             // 
             // comboDepto
             // 
-            this.comboDepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboDepto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboDepto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboDepto.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboDepto.FormattingEnabled = true;
             this.comboDepto.Location = new System.Drawing.Point(146, 67);
@@ -334,6 +336,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -45,6 +45,7 @@
             this.ClientSize = new System.Drawing.Size(376, 56);
             this.ControlBox = false;
             this.Controls.Add(this.progressBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Cargando";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargando archivo...";
