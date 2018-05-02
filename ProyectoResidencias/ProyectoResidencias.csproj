@@ -714,6 +714,8 @@
     <None Include="bin\Debug\iconos\modificar}.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1234.png" />
+    <None Include="Resources\123.png" />
     <None Include="Resources\h.png" />
     <None Include="Resources\Dinero.png" />
     <None Include="Resources\historico.png" />

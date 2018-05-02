@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modificar));
             this.Cancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Articulo = new System.Windows.Forms.ComboBox();
@@ -116,6 +117,7 @@
             // 
             this.Color.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Color.Location = new System.Drawing.Point(421, 105);
+            this.Color.MaxLength = 20;
             this.Color.Name = "Color";
             this.Color.Size = new System.Drawing.Size(150, 25);
             this.Color.TabIndex = 20;
@@ -174,6 +176,7 @@
             // 
             this.Modelo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modelo.Location = new System.Drawing.Point(421, 74);
+            this.Modelo.MaxLength = 30;
             this.Modelo.Name = "Modelo";
             this.Modelo.Size = new System.Drawing.Size(150, 25);
             this.Modelo.TabIndex = 19;
@@ -239,6 +242,7 @@
             // 
             this.Serie.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Serie.Location = new System.Drawing.Point(73, 105);
+            this.Serie.MaxLength = 30;
             this.Serie.Name = "Serie";
             this.Serie.Size = new System.Drawing.Size(271, 25);
             this.Serie.TabIndex = 17;
@@ -271,6 +275,7 @@
             // 
             this.Observaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Observaciones.Location = new System.Drawing.Point(6, 24);
+            this.Observaciones.MaxLength = 250;
             this.Observaciones.Name = "Observaciones";
             this.Observaciones.Size = new System.Drawing.Size(568, 25);
             this.Observaciones.TabIndex = 16;
@@ -430,6 +435,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
