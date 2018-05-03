@@ -54,23 +54,31 @@ namespace ProyectoResidencias.Catalogos.Empleados
             confirmacion.ShowDialog();
             if (confirmacion.DialogResult == DialogResult.OK)
             {
-                string ConnString = Clases.Variables.scon;
-                string SqlString = "Update empleados set Baja=1 where NoEmp=" + Clases.Variables.IdEmpleados;
-                try
+                if (Clases.Variables.EmpleadosBaja=="False")
                 {
-                    SqlConnection conn = new SqlConnection(ConnString);
-                    SqlCommand cmd = new SqlCommand(SqlString, conn);
-                    cmd.CommandType = CommandType.Text;
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show("Empleado dado de baja correctamente.");
-                    Clases.LLenadoGrids.llenarGrid(GridEmp, Clases.Variables.ConsultaBuscar, "empleados");
+                    string ConnString = Clases.Variables.scon;
+                    string SqlString = "Update empleados set Baja=1 where NoEmp=" + Clases.Variables.IdEmpleados;
+                    try
+                    {
+                        SqlConnection conn = new SqlConnection(ConnString);
+                        SqlCommand cmd = new SqlCommand(SqlString, conn);
+                        cmd.CommandType = CommandType.Text;
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Empleado dado de baja correctamente.");
+                        Clases.LLenadoGrids.llenarGrid(GridEmp, Clases.Variables.ConsultaBuscar, "empleados");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("El valor seleccionado no es valido. \n" + ex.ToString());
+                    MessageBox.Show("El Empleado ya esta dado de baja");    
                 }
+                
             }
         }
 

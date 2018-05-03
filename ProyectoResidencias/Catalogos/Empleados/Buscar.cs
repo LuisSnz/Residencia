@@ -41,25 +41,38 @@ namespace ProyectoResidencias.Catalogos.Empleados
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBuscar.SelectedIndex >= 0)
+
+            if (radioNombre.Checked == true)
             {
-                if (radioNombre.Checked == true)
+                if (comboBuscar.SelectedIndex >= 0)
+                {
                     Clases.Variables.ConsultaBuscar = "select NoEmp, Nombre, Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
                                 "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' " +
                                 "from empleados where Nombre LIKE '%" + comboBuscar.Text + "%'";
-                else if (radioDeptos.Checked == true)
-                    Clases.Variables.ConsultaBuscar = "select NoEmp, Nombre, Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
-                                "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' " +
-                                "from empleados where Departamento='" + comboBuscar.Text + "'";
-                else if (radioJefe.Checked == true)
-                    Clases.Variables.ConsultaBuscar = "select NoEmp, Nombre, Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
-                                "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' " +
-                                "from empleados where NoEmpleadoJefe=(select NoEmp from empleados where Nombre='" + comboBuscar.Text + "')";
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Seleccione un valor a buscar");
+            }
+            else if (radioDeptos.Checked == true)
+            {
+                Clases.Variables.ConsultaBuscar = "select NoEmp, Nombre, Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
+                            "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' " +
+                            "from empleados where Departamento='" + comboBuscar.Text + "'";
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            else
-                MessageBox.Show("Seleccione un valor a buscar");
+            else if (radioJefe.Checked == true)
+            {
+                Clases.Variables.ConsultaBuscar = "select NoEmp, Nombre, Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
+                            "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' " +
+                            "from empleados where NoEmpleadoJefe=(select NoEmp from empleados where Nombre='" + comboBuscar.Text + "')";
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+                
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
