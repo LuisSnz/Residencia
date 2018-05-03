@@ -22,9 +22,12 @@ namespace ProyectoResidencias.Catalogos.Empleados
             FechaVencimiento.Value = DateTime.Now;
             Clases.Empleados.CBJefe(comboJefe);
             Clases.Empleados.CBDeptos(comboDepto);
+            Nombre.CharacterCasing = CharacterCasing.Upper;
+            Paterno.CharacterCasing = CharacterCasing.Upper;
+            Materno.CharacterCasing = CharacterCasing.Upper;
+            NombreM.CharacterCasing = CharacterCasing.Upper;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             int pliegos = 0, Jefe = 0, Baja = 0, SinPliego = 0, Bloqueado = 0;
             if (checkPliegos.Checked == true)
@@ -32,22 +35,26 @@ namespace ProyectoResidencias.Catalogos.Empleados
             if (checkJefe.Checked == true)
                 Jefe = 1;
             if (checkSinPliegos.Checked == true)
-                SinPliego= 1;
+                SinPliego = 1;
             if (checkBloqueado.Checked == true)
                 Bloqueado = 1;
             if (checkBaja.Checked == true)
                 Baja = 1;
 
-            if ( Nombre.Text.Length > 0 && NombreM.Text.Length > 0 && comboDepto.SelectedIndex >= 0
-                && NumLicencia.Text.Length>0 && comboJefe.SelectedIndex>=0)
+            if (Nombre.Text.Length > 0 && NombreM.Text.Length > 0 && comboDepto.SelectedIndex >= 0
+                && NumLicencia.Text.Length > 0 && comboJefe.SelectedIndex >= 0)
             {
                 string ConnString = Clases.Variables.scon;
+                string nombres = Nombre.Text;
+                string paterno = Paterno.Text;
+                string materno = Materno.Text;
+                string NombreEmpleado = nombres+" "+paterno + " "+materno;
                 string SqlString = "Insert Into empleados (NoEmp,Nombre,Departamento,JefeDepto,NombrePliegos,NoLicencia," +
                     "FechaVencimiento,Bloqueado,Textobloqueado,Baja,NoEmpleadoJefe,ActivoPliegos,NoVerifica) values " +
-                    "((select (Max(NoEmp))+1 from empleados),'"+Nombre.Text+"','"+comboDepto.SelectedItem.ToString()+"',"+
-                    Jefe+",'"+NombreM.Text+"','"+NumLicencia.Text+"',(convert(datetime,'"+FechaVencimiento.Text+"'))," +
-                    Bloqueado+",'"+Motivo.Text+"',"+Baja+",(select NoEmp from empleados where Nombre='"+
-                    comboJefe.SelectedItem.ToString()+"'),"+pliegos+","+SinPliego+");";
+                    "((select (Max(NoEmp))+1 from empleados),'" + NombreEmpleado + "','" + comboDepto.SelectedItem.ToString() + "'," +
+                    Jefe + ",'" + NombreM.Text + "','" + NumLicencia.Text + "',(convert(datetime,'" + FechaVencimiento.Text + "'))," +
+                    Bloqueado + ",'" + Motivo.Text + "'," + Baja + ",(select NoEmp from empleados where Nombre='" +
+                    comboJefe.SelectedItem.ToString() + "')," + pliegos + "," + SinPliego + ");";
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConnString);
@@ -66,10 +73,10 @@ namespace ProyectoResidencias.Catalogos.Empleados
                 }
             }
             else
-                MessageBox.Show("Todos los campos deben contener un valor");
+                MessageBox.Show("Todos los campos deben contener un valor valido");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

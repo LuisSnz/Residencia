@@ -87,7 +87,7 @@ namespace ProyectoResidencias.Catalogos.Empleados
                 }
             }
             else
-                MessageBox.Show("Todos los campos deben contener un valor");
+                MessageBox.Show("Todos los campos deben contener un valor valido");
         }
 
         private void button2_Click(object sender, EventArgs e)

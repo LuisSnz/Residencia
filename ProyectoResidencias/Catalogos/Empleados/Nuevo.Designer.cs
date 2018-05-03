@@ -30,12 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevo));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.FechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.comboJefe = new System.Windows.Forms.ComboBox();
+            this.FechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.NumLicencia = new System.Windows.Forms.TextBox();
             this.comboDepto = new System.Windows.Forms.ComboBox();
             this.NombreM = new System.Windows.Forms.TextBox();
+            this.Materno = new System.Windows.Forms.TextBox();
+            this.Paterno = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,10 +53,10 @@
             this.checkPliegos = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Motivo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.checkBloqueado = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,12 +66,16 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.FechaVencimiento);
             this.panel2.Controls.Add(this.comboJefe);
+            this.panel2.Controls.Add(this.FechaVencimiento);
             this.panel2.Controls.Add(this.NumLicencia);
             this.panel2.Controls.Add(this.comboDepto);
             this.panel2.Controls.Add(this.NombreM);
+            this.panel2.Controls.Add(this.Materno);
+            this.panel2.Controls.Add(this.Paterno);
             this.panel2.Controls.Add(this.Nombre);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -76,18 +84,8 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(15, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(547, 193);
-            this.panel2.TabIndex = 52;
-            // 
-            // FechaVencimiento
-            // 
-            this.FechaVencimiento.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaVencimiento.Location = new System.Drawing.Point(146, 125);
-            this.FechaVencimiento.Name = "FechaVencimiento";
-            this.FechaVencimiento.Size = new System.Drawing.Size(380, 25);
-            this.FechaVencimiento.TabIndex = 41;
-            this.FechaVencimiento.Value = new System.DateTime(2018, 4, 2, 0, 0, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(547, 278);
+            this.panel2.TabIndex = 1;
             // 
             // comboJefe
             // 
@@ -95,19 +93,29 @@
             this.comboJefe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboJefe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJefe.FormattingEnabled = true;
-            this.comboJefe.Location = new System.Drawing.Point(146, 154);
+            this.comboJefe.Location = new System.Drawing.Point(145, 232);
             this.comboJefe.Name = "comboJefe";
             this.comboJefe.Size = new System.Drawing.Size(380, 25);
-            this.comboJefe.TabIndex = 40;
+            this.comboJefe.TabIndex = 9;
+            // 
+            // FechaVencimiento
+            // 
+            this.FechaVencimiento.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaVencimiento.Location = new System.Drawing.Point(145, 201);
+            this.FechaVencimiento.Name = "FechaVencimiento";
+            this.FechaVencimiento.Size = new System.Drawing.Size(380, 25);
+            this.FechaVencimiento.TabIndex = 8;
+            this.FechaVencimiento.Value = new System.DateTime(2018, 4, 2, 0, 0, 0, 0);
             // 
             // NumLicencia
             // 
             this.NumLicencia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumLicencia.Location = new System.Drawing.Point(146, 96);
+            this.NumLicencia.Location = new System.Drawing.Point(145, 170);
             this.NumLicencia.MaxLength = 10;
             this.NumLicencia.Name = "NumLicencia";
             this.NumLicencia.Size = new System.Drawing.Size(380, 25);
-            this.NumLicencia.TabIndex = 38;
+            this.NumLicencia.TabIndex = 7;
             // 
             // comboDepto
             // 
@@ -115,34 +123,72 @@
             this.comboDepto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboDepto.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboDepto.FormattingEnabled = true;
-            this.comboDepto.Location = new System.Drawing.Point(146, 67);
+            this.comboDepto.Location = new System.Drawing.Point(145, 139);
             this.comboDepto.Name = "comboDepto";
             this.comboDepto.Size = new System.Drawing.Size(380, 25);
-            this.comboDepto.TabIndex = 37;
+            this.comboDepto.TabIndex = 6;
             // 
             // NombreM
             // 
             this.NombreM.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreM.Location = new System.Drawing.Point(146, 38);
+            this.NombreM.Location = new System.Drawing.Point(146, 108);
             this.NombreM.MaxLength = 70;
             this.NombreM.Name = "NombreM";
             this.NombreM.Size = new System.Drawing.Size(380, 25);
-            this.NombreM.TabIndex = 36;
+            this.NombreM.TabIndex = 5;
+            // 
+            // Materno
+            // 
+            this.Materno.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Materno.Location = new System.Drawing.Point(146, 77);
+            this.Materno.MaxLength = 150;
+            this.Materno.Name = "Materno";
+            this.Materno.Size = new System.Drawing.Size(380, 25);
+            this.Materno.TabIndex = 4;
+            // 
+            // Paterno
+            // 
+            this.Paterno.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Paterno.Location = new System.Drawing.Point(146, 46);
+            this.Paterno.MaxLength = 150;
+            this.Paterno.Name = "Paterno";
+            this.Paterno.Size = new System.Drawing.Size(380, 25);
+            this.Paterno.TabIndex = 3;
             // 
             // Nombre
             // 
             this.Nombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.Location = new System.Drawing.Point(146, 9);
+            this.Nombre.Location = new System.Drawing.Point(146, 13);
             this.Nombre.MaxLength = 150;
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(380, 25);
-            this.Nombre.TabIndex = 35;
+            this.Nombre.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(18, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(124, 17);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Apellido Materno";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 17);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Apellido Paterno";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(64, 156);
+            this.label7.Location = new System.Drawing.Point(66, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 17);
             this.label7.TabIndex = 34;
@@ -152,7 +198,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 127);
+            this.label6.Location = new System.Drawing.Point(8, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 17);
             this.label6.TabIndex = 33;
@@ -162,7 +208,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 98);
+            this.label5.Location = new System.Drawing.Point(38, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 17);
             this.label5.TabIndex = 32;
@@ -172,7 +218,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 69);
+            this.label4.Location = new System.Drawing.Point(38, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 31;
@@ -182,7 +228,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 40);
+            this.label3.Location = new System.Drawing.Point(13, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 17);
             this.label3.TabIndex = 30;
@@ -192,11 +238,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(79, 11);
+            this.label2.Location = new System.Drawing.Point(62, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Nombre(s)";
             // 
             // panel1
             // 
@@ -209,16 +255,16 @@
             this.panel1.Location = new System.Drawing.Point(569, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(171, 137);
-            this.panel1.TabIndex = 51;
+            this.panel1.TabIndex = 13;
             // 
             // checkSinPliegos
             // 
             this.checkSinPliegos.AutoSize = true;
             this.checkSinPliegos.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkSinPliegos.Location = new System.Drawing.Point(10, 100);
+            this.checkSinPliegos.Location = new System.Drawing.Point(13, 99);
             this.checkSinPliegos.Name = "checkSinPliegos";
             this.checkSinPliegos.Size = new System.Drawing.Size(130, 21);
-            this.checkSinPliegos.TabIndex = 44;
+            this.checkSinPliegos.TabIndex = 17;
             this.checkSinPliegos.Text = "Sin Validar Pliego";
             this.checkSinPliegos.UseVisualStyleBackColor = true;
             // 
@@ -226,10 +272,10 @@
             // 
             this.checkBaja.AutoSize = true;
             this.checkBaja.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBaja.Location = new System.Drawing.Point(10, 71);
+            this.checkBaja.Location = new System.Drawing.Point(13, 70);
             this.checkBaja.Name = "checkBaja";
             this.checkBaja.Size = new System.Drawing.Size(54, 21);
-            this.checkBaja.TabIndex = 43;
+            this.checkBaja.TabIndex = 16;
             this.checkBaja.Text = "Baja";
             this.checkBaja.UseVisualStyleBackColor = true;
             // 
@@ -237,10 +283,10 @@
             // 
             this.checkJefe.AutoSize = true;
             this.checkJefe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkJefe.Location = new System.Drawing.Point(10, 42);
+            this.checkJefe.Location = new System.Drawing.Point(13, 41);
             this.checkJefe.Name = "checkJefe";
             this.checkJefe.Size = new System.Drawing.Size(71, 21);
-            this.checkJefe.TabIndex = 42;
+            this.checkJefe.TabIndex = 15;
             this.checkJefe.Text = "Es Jefe";
             this.checkJefe.UseVisualStyleBackColor = true;
             // 
@@ -248,10 +294,10 @@
             // 
             this.checkPliegos.AutoSize = true;
             this.checkPliegos.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkPliegos.Location = new System.Drawing.Point(10, 13);
+            this.checkPliegos.Location = new System.Drawing.Point(13, 12);
             this.checkPliegos.Name = "checkPliegos";
             this.checkPliegos.Size = new System.Drawing.Size(140, 21);
-            this.checkPliegos.TabIndex = 41;
+            this.checkPliegos.TabIndex = 14;
             this.checkPliegos.Text = "Activo para pliegos";
             this.checkPliegos.UseVisualStyleBackColor = true;
             // 
@@ -259,25 +305,36 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.Motivo);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.checkBloqueado);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(15, 220);
+            this.groupBox1.Location = new System.Drawing.Point(15, 300);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(547, 92);
-            this.groupBox1.TabIndex = 50;
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bloqueo";
             // 
             // Motivo
             // 
             this.Motivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Motivo.Location = new System.Drawing.Point(67, 52);
+            this.Motivo.Location = new System.Drawing.Point(60, 51);
             this.Motivo.MaxLength = 100;
             this.Motivo.Name = "Motivo";
             this.Motivo.Size = new System.Drawing.Size(461, 25);
-            this.Motivo.TabIndex = 26;
+            this.Motivo.TabIndex = 12;
+            // 
+            // checkBloqueado
+            // 
+            this.checkBloqueado.AutoSize = true;
+            this.checkBloqueado.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBloqueado.Location = new System.Drawing.Point(8, 24);
+            this.checkBloqueado.Name = "checkBloqueado";
+            this.checkBloqueado.Size = new System.Drawing.Size(151, 21);
+            this.checkBloqueado.TabIndex = 11;
+            this.checkBloqueado.Text = "Empleado Bloqueado";
+            this.checkBloqueado.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -289,56 +346,44 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Motivo";
             // 
-            // checkBloqueado
+            // button1
             // 
-            this.checkBloqueado.AutoSize = true;
-            this.checkBloqueado.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBloqueado.Location = new System.Drawing.Point(8, 24);
-            this.checkBloqueado.Name = "checkBloqueado";
-            this.checkBloqueado.Size = new System.Drawing.Size(151, 21);
-            this.checkBloqueado.TabIndex = 25;
-            this.checkBloqueado.Text = "Empleado Bloqueado";
-            this.checkBloqueado.UseVisualStyleBackColor = true;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(604, 207);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 39);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(614, 253);
+            this.button2.Location = new System.Drawing.Point(604, 274);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 35);
-            this.button2.TabIndex = 49;
+            this.button2.Size = new System.Drawing.Size(107, 39);
+            this.button2.TabIndex = 19;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(614, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 35);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Nuevo
             // 
-            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(756, 326);
+            this.ClientSize = new System.Drawing.Size(759, 424);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";
@@ -356,11 +401,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboJefe;
-        private System.Windows.Forms.TextBox NumLicencia;
-        private System.Windows.Forms.ComboBox comboDepto;
-        private System.Windows.Forms.TextBox NombreM;
-        private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -368,16 +408,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox Paterno;
+        private System.Windows.Forms.TextBox Nombre;
+        private System.Windows.Forms.ComboBox comboJefe;
+        private System.Windows.Forms.DateTimePicker FechaVencimiento;
+        private System.Windows.Forms.TextBox NumLicencia;
+        private System.Windows.Forms.ComboBox comboDepto;
+        private System.Windows.Forms.TextBox NombreM;
+        private System.Windows.Forms.TextBox Materno;
         private System.Windows.Forms.CheckBox checkSinPliegos;
         private System.Windows.Forms.CheckBox checkBaja;
         private System.Windows.Forms.CheckBox checkJefe;
         private System.Windows.Forms.CheckBox checkPliegos;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox Motivo;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBloqueado;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker FechaVencimiento;
     }
 }
