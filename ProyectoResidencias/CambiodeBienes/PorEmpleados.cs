@@ -12,6 +12,84 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
 {
     public partial class PorEmpleados : Form
     {
+        public void ComprobarIzquierda()
+        {
+            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0 && CBIzquierdo.SelectedIndex != CBDerecho.SelectedIndex)
+            {
+                PasarIzquierda.Enabled = true;
+                TodoIzquierda.Enabled = true;
+                PasarDerecha.Enabled = true;
+                TodoDerecha.Enabled = true;
+                if (GridIzquierdo.Rows.Count > 0 && GridDerecho.Rows.Count == 0)
+                {
+                    PasarIzquierda.Enabled = true;
+                    TodoIzquierda.Enabled = true;
+                    PasarDerecha.Enabled = false;
+                    TodoDerecha.Enabled = false;
+                }
+                else if (GridDerecho.Rows.Count > 0 && GridIzquierdo.Rows.Count == 0)
+                {
+                    PasarDerecha.Enabled = true;
+                    TodoDerecha.Enabled = true;
+                    PasarIzquierda.Enabled = false;
+                    TodoIzquierda.Enabled = false;
+                }
+                else if (GridDerecho.Rows.Count == 0 && GridIzquierdo.Rows.Count == 0)
+                {
+                    PasarIzquierda.Enabled = false;
+                    TodoIzquierda.Enabled = false;
+                    PasarDerecha.Enabled = false;
+                    TodoDerecha.Enabled = false;
+                }
+            }
+            else
+            {
+                PasarIzquierda.Enabled = false;
+                TodoIzquierda.Enabled = false;
+                PasarDerecha.Enabled = false;
+                TodoDerecha.Enabled = false;
+            }
+        }
+
+        public void ComprobarDerecha()
+        {
+            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0 && CBIzquierdo.SelectedIndex != CBDerecho.SelectedIndex)
+            {
+                PasarIzquierda.Enabled = true;
+                TodoIzquierda.Enabled = true;
+                PasarDerecha.Enabled = true;
+                TodoDerecha.Enabled = true;
+                if (GridIzquierdo.Rows.Count > 0 && GridDerecho.Rows.Count == 0)
+                {
+                    PasarIzquierda.Enabled = true;
+                    TodoIzquierda.Enabled = true;
+                    PasarDerecha.Enabled = false;
+                    TodoDerecha.Enabled = false;
+                }
+                else if (GridDerecho.Rows.Count > 0 && GridIzquierdo.Rows.Count == 0)
+                {
+                    PasarDerecha.Enabled = true;
+                    TodoDerecha.Enabled = true;
+                    PasarIzquierda.Enabled = false;
+                    TodoIzquierda.Enabled = false;
+                }
+                else if (GridDerecho.Rows.Count == 0 && GridIzquierdo.Rows.Count == 0)
+                {
+                    PasarIzquierda.Enabled = false;
+                    TodoIzquierda.Enabled = false;
+                    PasarDerecha.Enabled = false;
+                    TodoDerecha.Enabled = false;
+                }
+            }
+            else
+            {
+                PasarIzquierda.Enabled = false;
+                TodoIzquierda.Enabled = false;
+                PasarDerecha.Enabled = false;
+                TodoDerecha.Enabled = false;
+            }
+        }
+
         public PorEmpleados()
         {
             InitializeComponent();
@@ -29,10 +107,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBIzquierdo.SelectedItem.ToString() + "')", "bienes");
 
-            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0 && CBIzquierdo.SelectedIndex != CBDerecho.SelectedIndex)
-                toolStrip1.Enabled=true;
-            else
-                toolStrip1.Enabled = false;
+            ComprobarIzquierda();
         }
 
         private void CBNombreNuevo_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,10 +116,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBDerecho.SelectedItem.ToString() + "')", "bienes");
 
-            if (CBIzquierdo.SelectedIndex >= 0 && CBDerecho.SelectedIndex >= 0 && CBIzquierdo.SelectedIndex != CBDerecho.SelectedIndex)
-                toolStrip1.Enabled = true;
-            else
-                toolStrip1.Enabled = false;
+            ComprobarDerecha();
         }
 
         private void Cancelar_Click(object sender, EventArgs e)
@@ -80,7 +152,6 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                         conn.Close();
                     }
                 }
-                MessageBox.Show("Cambio realizado correctamente.");
                 Clases.LLenadoGrids.llenarGrid(GridIzquierdo, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBIzquierdo.SelectedItem.ToString() + "')", "bienes");
@@ -88,7 +159,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 Clases.LLenadoGrids.llenarGrid(GridDerecho, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBDerecho.SelectedItem.ToString() + "')", "bienes");
-
+                ComprobarIzquierda();
             }
             catch (Exception ex)
             {
@@ -125,7 +196,6 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                         conn.Close();
                     }
                 }
-                MessageBox.Show("Cambio realizado correctamente.");
                 Clases.LLenadoGrids.llenarGrid(GridIzquierdo, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBIzquierdo.SelectedItem.ToString() + "')", "bienes");
@@ -133,7 +203,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 Clases.LLenadoGrids.llenarGrid(GridDerecho, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBDerecho.SelectedItem.ToString() + "')", "bienes");
-
+                ComprobarDerecha();
             }
             catch (Exception ex)
             {
@@ -173,7 +243,6 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                         }
                     }
                 }
-                MessageBox.Show("Cambio realizado correctamente.");
                 Clases.LLenadoGrids.llenarGrid(GridIzquierdo, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBIzquierdo.SelectedItem.ToString() + "')", "bienes");
@@ -181,6 +250,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 Clases.LLenadoGrids.llenarGrid(GridDerecho, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBDerecho.SelectedItem.ToString() + "')", "bienes");
+                ComprobarIzquierda();
             }
             catch (Exception ex)
             {
@@ -220,7 +290,6 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                         }
                     }
                 }
-                MessageBox.Show("Cambio realizado correctamente.");
                 Clases.LLenadoGrids.llenarGrid(GridIzquierdo, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBIzquierdo.SelectedItem.ToString() + "')", "bienes");
@@ -228,6 +297,7 @@ namespace ProyectoResidencias.CBienes.CambiodeBienes
                 Clases.LLenadoGrids.llenarGrid(GridDerecho, "Select bienes.Etiqueta, CatArticulos.Descripcion, Bienes.total as Precio," +
                 "bienes.Observacion from bienes inner join CatArticulos ON bienes.IdArticulo=CatArticulos.Id" +
                 " where bienes.NoEmpleado=(Select NoEmp from empleados where Nombre='" + CBDerecho.SelectedItem.ToString() + "')", "bienes");
+                ComprobarDerecha();
             }
             catch (Exception ex)
             {
