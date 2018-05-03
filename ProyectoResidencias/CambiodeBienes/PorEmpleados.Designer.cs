@@ -55,7 +55,6 @@
             this.toolStrip1.BackColor = System.Drawing.Color.DodgerBlue;
             this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Enabled = false;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(50, 50);
@@ -76,6 +75,7 @@
             // PasarIzquierda
             // 
             this.PasarIzquierda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PasarIzquierda.Enabled = false;
             this.PasarIzquierda.Image = global::ProyectoResidencias.Properties.Resources.pasar;
             this.PasarIzquierda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PasarIzquierda.Name = "PasarIzquierda";
@@ -88,6 +88,7 @@
             // TodoIzquierda
             // 
             this.TodoIzquierda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TodoIzquierda.Enabled = false;
             this.TodoIzquierda.Image = global::ProyectoResidencias.Properties.Resources.pasartodo;
             this.TodoIzquierda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TodoIzquierda.Name = "TodoIzquierda";
@@ -98,6 +99,7 @@
             // PasarDerecha
             // 
             this.PasarDerecha.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PasarDerecha.Enabled = false;
             this.PasarDerecha.Image = global::ProyectoResidencias.Properties.Resources.pasar2;
             this.PasarDerecha.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PasarDerecha.Name = "PasarDerecha";
@@ -109,6 +111,7 @@
             // TodoDerecha
             // 
             this.TodoDerecha.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TodoDerecha.Enabled = false;
             this.TodoDerecha.Image = global::ProyectoResidencias.Properties.Resources.pasartodo2;
             this.TodoDerecha.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TodoDerecha.Name = "TodoDerecha";
@@ -162,6 +165,8 @@
             this.GridDerecho.AllowUserToOrderColumns = true;
             this.GridDerecho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridDerecho.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GridDerecho.BackgroundColor = System.Drawing.Color.White;
+            this.GridDerecho.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridDerecho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridDerecho.Location = new System.Drawing.Point(6, 50);
             this.GridDerecho.Name = "GridDerecho";
@@ -201,6 +206,8 @@
             this.GridIzquierdo.AllowUserToOrderColumns = true;
             this.GridIzquierdo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridIzquierdo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.GridIzquierdo.BackgroundColor = System.Drawing.Color.White;
+            this.GridIzquierdo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridIzquierdo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridIzquierdo.Location = new System.Drawing.Point(6, 50);
             this.GridIzquierdo.Name = "GridIzquierdo";
