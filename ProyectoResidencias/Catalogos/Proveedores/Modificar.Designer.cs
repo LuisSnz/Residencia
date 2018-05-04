@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modificar));
             this.panel2 = new System.Windows.Forms.Panel();
             this.Ciudad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,6 +94,7 @@
             // 
             this.Ciudad.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ciudad.Location = new System.Drawing.Point(128, 144);
+            this.Ciudad.MaxLength = 30;
             this.Ciudad.Name = "Ciudad";
             this.Ciudad.Size = new System.Drawing.Size(330, 25);
             this.Ciudad.TabIndex = 30;
@@ -111,6 +113,7 @@
             // 
             this.CURP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CURP.Location = new System.Drawing.Point(156, 171);
+            this.CURP.MaxLength = 18;
             this.CURP.Name = "CURP";
             this.CURP.Size = new System.Drawing.Size(302, 25);
             this.CURP.TabIndex = 31;
@@ -179,6 +182,7 @@
             // 
             this.Nombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(129, 36);
+            this.Nombre.MaxLength = 100;
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(330, 25);
             this.Nombre.TabIndex = 27;
@@ -187,6 +191,7 @@
             // 
             this.Direccion.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Direccion.Location = new System.Drawing.Point(129, 63);
+            this.Direccion.MaxLength = 200;
             this.Direccion.Name = "Direccion";
             this.Direccion.Size = new System.Drawing.Size(330, 25);
             this.Direccion.TabIndex = 27;
@@ -195,6 +200,7 @@
             // 
             this.RFC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RFC.Location = new System.Drawing.Point(129, 90);
+            this.RFC.MaxLength = 15;
             this.RFC.Name = "RFC";
             this.RFC.Size = new System.Drawing.Size(330, 25);
             this.RFC.TabIndex = 28;
@@ -203,6 +209,7 @@
             // 
             this.Fax.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fax.Location = new System.Drawing.Point(128, 117);
+            this.Fax.MaxLength = 15;
             this.Fax.Name = "Fax";
             this.Fax.Size = new System.Drawing.Size(330, 25);
             this.Fax.TabIndex = 29;
@@ -223,6 +230,7 @@
             // 
             this.Observaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Observaciones.Location = new System.Drawing.Point(130, 452);
+            this.Observaciones.MaxLength = 200;
             this.Observaciones.Name = "Observaciones";
             this.Observaciones.Size = new System.Drawing.Size(363, 25);
             this.Observaciones.TabIndex = 51;
@@ -276,6 +284,7 @@
             // 
             this.Accionistas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Accionistas.Location = new System.Drawing.Point(129, 170);
+            this.Accionistas.MaxLength = 200;
             this.Accionistas.Name = "Accionistas";
             this.Accionistas.Size = new System.Drawing.Size(330, 25);
             this.Accionistas.TabIndex = 44;
@@ -294,6 +303,7 @@
             // 
             this.eMail.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eMail.Location = new System.Drawing.Point(128, 143);
+            this.eMail.MaxLength = 50;
             this.eMail.Name = "eMail";
             this.eMail.Size = new System.Drawing.Size(330, 25);
             this.eMail.TabIndex = 43;
@@ -322,6 +332,7 @@
             // 
             this.Certificaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Certificaciones.Location = new System.Drawing.Point(128, 116);
+            this.Certificaciones.MaxLength = 50;
             this.Certificaciones.Name = "Certificaciones";
             this.Certificaciones.Size = new System.Drawing.Size(330, 25);
             this.Certificaciones.TabIndex = 42;
@@ -340,6 +351,7 @@
             // 
             this.Padron.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Padron.Location = new System.Drawing.Point(128, 89);
+            this.Padron.MaxLength = 20;
             this.Padron.Name = "Padron";
             this.Padron.Size = new System.Drawing.Size(119, 25);
             this.Padron.TabIndex = 34;
@@ -348,6 +360,7 @@
             // 
             this.Telefono.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Telefono.Location = new System.Drawing.Point(321, 89);
+            this.Telefono.MaxLength = 20;
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(137, 25);
             this.Telefono.TabIndex = 35;
@@ -366,6 +379,7 @@
             // 
             this.Giro.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Giro.Location = new System.Drawing.Point(128, 62);
+            this.Giro.MaxLength = 20;
             this.Giro.Name = "Giro";
             this.Giro.Size = new System.Drawing.Size(330, 25);
             this.Giro.TabIndex = 33;
@@ -384,6 +398,7 @@
             // 
             this.Contacto.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contacto.Location = new System.Drawing.Point(128, 35);
+            this.Contacto.MaxLength = 100;
             this.Contacto.Name = "Contacto";
             this.Contacto.Size = new System.Drawing.Size(330, 25);
             this.Contacto.TabIndex = 32;
@@ -427,9 +442,10 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Modificar Proveedor";
             this.Load += new System.EventHandler(this.Modificar_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

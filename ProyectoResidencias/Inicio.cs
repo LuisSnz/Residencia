@@ -91,19 +91,6 @@ namespace ProyectoResidencias
             formularios(new Catalogos.Cat.Articulos.CatArticulos());
             this.Text = "Sistema de activo Fijo - Articulos";
         }
-
-        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            formularios(new Catalogos.Activo.Marcas.Marcas());
-            this.Text = "Sistema de activo Fijo - Marcas";
-        }
-
-        private void familiaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            formularios(new Catalogos.Activo.Familias.Familia());
-            this.Text = "Sistema de activo Fijo - Familias";
-        }
-
         private void imprimirEtiquetasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Activo.ImprimirEtiquetas imprimir = new Activo.ImprimirEtiquetas();
@@ -137,6 +124,18 @@ namespace ProyectoResidencias
         {
             formularios(new Activo.BienesSinFactura.BienesSF());
             this.Text = "Sistema de activo Fijo - Bienes sin Factura";
+        }
+
+        private void marcasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            formularios(new Catalogos.Activo.Marcas.Marcas());
+            this.Text = "Sistema de activo Fijo - Marcas";
+        }
+
+        private void familiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formularios(new Catalogos.Activo.Familias.Familia());
+            this.Text = "Sistema de activo Fijo - Familias";
         }
     }
 }

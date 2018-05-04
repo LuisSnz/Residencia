@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PorEmpleados));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.PasarIzquierda = new System.Windows.Forms.ToolStripButton();
             this.TodoIzquierda = new System.Windows.Forms.ToolStripButton();
@@ -237,6 +238,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PorEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambio de Bienes por Empleados";

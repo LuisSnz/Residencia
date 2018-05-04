@@ -38,9 +38,8 @@
             this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.familiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.familiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienesSinFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +76,8 @@
             this.vehiculosToolStripMenuItem,
             this.proveedoresToolStripMenuItem,
             this.catArticulosToolStripMenuItem,
-            this.activoToolStripMenuItem1});
+            this.marcasToolStripMenuItem1,
+            this.familiasToolStripMenuItem});
             this.catalogosToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.catalogo;
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
             resources.ApplyResources(this.catalogosToolStripMenuItem, "catalogosToolStripMenuItem");
@@ -131,26 +131,19 @@
             resources.ApplyResources(this.catArticulosToolStripMenuItem, "catArticulosToolStripMenuItem");
             this.catArticulosToolStripMenuItem.Click += new System.EventHandler(this.catArticulosToolStripMenuItem_Click);
             // 
-            // activoToolStripMenuItem1
+            // marcasToolStripMenuItem1
             // 
-            this.activoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.marcasToolStripMenuItem,
-            this.familiaToolStripMenuItem});
-            this.activoToolStripMenuItem1.Image = global::ProyectoResidencias.Properties.Resources.bienes;
-            this.activoToolStripMenuItem1.Name = "activoToolStripMenuItem1";
-            resources.ApplyResources(this.activoToolStripMenuItem1, "activoToolStripMenuItem1");
+            this.marcasToolStripMenuItem1.Image = global::ProyectoResidencias.Properties.Resources._123;
+            this.marcasToolStripMenuItem1.Name = "marcasToolStripMenuItem1";
+            resources.ApplyResources(this.marcasToolStripMenuItem1, "marcasToolStripMenuItem1");
+            this.marcasToolStripMenuItem1.Click += new System.EventHandler(this.marcasToolStripMenuItem1_Click);
             // 
-            // marcasToolStripMenuItem
+            // familiasToolStripMenuItem
             // 
-            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            resources.ApplyResources(this.marcasToolStripMenuItem, "marcasToolStripMenuItem");
-            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
-            // 
-            // familiaToolStripMenuItem
-            // 
-            this.familiaToolStripMenuItem.Name = "familiaToolStripMenuItem";
-            resources.ApplyResources(this.familiaToolStripMenuItem, "familiaToolStripMenuItem");
-            this.familiaToolStripMenuItem.Click += new System.EventHandler(this.familiaToolStripMenuItem_Click);
+            this.familiasToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources._1234;
+            this.familiasToolStripMenuItem.Name = "familiasToolStripMenuItem";
+            resources.ApplyResources(this.familiasToolStripMenuItem, "familiasToolStripMenuItem");
+            this.familiasToolStripMenuItem.Click += new System.EventHandler(this.familiasToolStripMenuItem_Click);
             // 
             // activoToolStripMenuItem
             // 
@@ -272,9 +265,6 @@
         private System.Windows.Forms.ToolStripMenuItem bienesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirEtiquetasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bienesDadosDeBajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem familiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoDelBienToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem costoBienesActualToolStripMenuItem;
@@ -282,6 +272,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Base;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem familiasToolStripMenuItem;
     }
 }
 

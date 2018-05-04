@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RVProveedores));
             this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.datos = new ProyectoResidencias.Datos();
@@ -42,9 +43,6 @@
             // 
             this.proveedoresBindingSource.DataMember = "Proveedores";
             // 
-            // activoJcasDataSet1
-            // 
-            // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -54,9 +52,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // proveedoresTableAdapter
-            // 
             // 
             // datos
             // 
@@ -74,6 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RVProveedores";
             this.Text = "RVProveedores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
