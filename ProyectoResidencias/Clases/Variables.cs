@@ -85,6 +85,9 @@ namespace ProyectoResidencias.Clases
         public static string IArticulo;
         //Login
         public static string Usuario="x";
+        //Escala de grids
+        public static int GridWidth;
+        public static int GridHeight;
         
     }
 }
