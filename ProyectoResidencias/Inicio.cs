@@ -32,7 +32,16 @@ namespace ProyectoResidencias
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Base.Width = this.Width;
+            Base.Height = this.Height-70;
+            Clases.Variables.GridHeight = this.Height - 130;
+            Clases.Variables.GridWidth = this.Width - (this.Width / 3);
+            pictureBox2.Location=new Point( this.Width -(this.Width/5),80);
+            pictureBox2.Height = this.Height / 3;
+            pictureBox2.Width = this.Width /6;
+            pictureBox1.Location = new Point(this.Width - (this.Width / 4), this.Height-(this.Height/2));
+            pictureBox1.Height = this.Height / 3;
+            pictureBox1.Width = this.Width / 4;
         }
 
         private void bienesToolStripMenuItem_Click(object sender, EventArgs e)
