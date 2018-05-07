@@ -8,6 +8,7 @@ using System.Text;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProyectoResidencias
 {
@@ -129,11 +130,14 @@ namespace ProyectoResidencias
             Activo.CBienes.ReporteBienes reporteBienes = new Activo.CBienes.ReporteBienes();
             reporteBienes.ShowDialog();
         }
-
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             Clases.Variables.IEtiqueta = GVBienes.CurrentRow.Cells[1].Value.ToString();
-            Clases.Etiquetas.ImprimirEtiquetas(/*printDialog1, */Clases.Variables.IEtiqueta, Clases.Variables.IEtiqueta);
+            Clases.Etiquetas.llamarVariableEtiqueta();
+            if (Clases.Variables.ConfImpresora == null)
+                MessageBox.Show("Impresora no asignada, porfavor dirijase a (Configuracion/Impresora de etiqueta) y especifique el nombre de la impresora");
+            else
+                Clases.Etiquetas.ImprimirEtiquetas(/*printDialog1, */Clases.Variables.IEtiqueta, Clases.Variables.IEtiqueta);
         }
     }
 }

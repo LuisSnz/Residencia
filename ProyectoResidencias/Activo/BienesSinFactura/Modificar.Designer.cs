@@ -115,6 +115,7 @@
             // 
             // Color
             // 
+            this.Color.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Color.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Color.Location = new System.Drawing.Point(421, 105);
             this.Color.MaxLength = 20;
@@ -156,7 +157,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 107);
+            this.label7.Location = new System.Drawing.Point(27, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 17);
             this.label7.TabIndex = 5;
@@ -174,6 +175,7 @@
             // 
             // Modelo
             // 
+            this.Modelo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Modelo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modelo.Location = new System.Drawing.Point(421, 74);
             this.Modelo.MaxLength = 30;
@@ -218,9 +220,9 @@
             this.Marca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Marca.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca.FormattingEnabled = true;
-            this.Marca.Location = new System.Drawing.Point(82, 74);
+            this.Marca.Location = new System.Drawing.Point(84, 74);
             this.Marca.Name = "Marca";
-            this.Marca.Size = new System.Drawing.Size(262, 25);
+            this.Marca.Size = new System.Drawing.Size(260, 25);
             this.Marca.TabIndex = 16;
             // 
             // Conservacion
@@ -240,11 +242,12 @@
             // 
             // Serie
             // 
+            this.Serie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Serie.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Serie.Location = new System.Drawing.Point(73, 105);
+            this.Serie.Location = new System.Drawing.Point(84, 105);
             this.Serie.MaxLength = 30;
             this.Serie.Name = "Serie";
-            this.Serie.Size = new System.Drawing.Size(271, 25);
+            this.Serie.Size = new System.Drawing.Size(260, 25);
             this.Serie.TabIndex = 17;
             // 
             // Aceptar
@@ -273,6 +276,7 @@
             // 
             // Observaciones
             // 
+            this.Observaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Observaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Observaciones.Location = new System.Drawing.Point(6, 24);
             this.Observaciones.MaxLength = 250;
@@ -395,6 +399,7 @@
             // 
             // Orden
             // 
+            this.Orden.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Orden.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Orden.Location = new System.Drawing.Point(144, 6);
             this.Orden.Name = "Orden";
@@ -434,8 +439,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";

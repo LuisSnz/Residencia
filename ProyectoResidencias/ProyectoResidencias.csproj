@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Luis Saenz\Documents\Visual Studio 2017\Instaladores\1\</PublishUrl>
+    <PublishUrl>C:\Users\Eduardo\Desktop\</PublishUrl>
     <Install>false</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,8 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -251,6 +250,12 @@
     <Compile Include="Clases\LlenadoCombos.cs" />
     <Compile Include="Clases\LLenadoGrids.cs" />
     <Compile Include="Clases\Variables.cs" />
+    <Compile Include="Conf-Impresora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conf-Impresora.Designer.cs">
+      <DependentUpon>Conf-Impresora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos.cs">
       <DependentUpon>Datos.xsd</DependentUpon>
     </Compile>
@@ -539,6 +544,9 @@
     <EmbeddedResource Include="Catalogos\Proveedores\RVProveedores.resx">
       <DependentUpon>RVProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Conf-Impresora.resx">
+      <DependentUpon>Conf-Impresora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FConfirmacion.resx">
       <DependentUpon>FConfirmacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -714,6 +722,9 @@
     <None Include="bin\Debug\iconos\modificar}.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ImpresoraEtiquetas.txt" />
+    <Content Include="Resources\ImpresoraEtiquetas.txt" />
+    <None Include="Resources\configuracion.png" />
     <None Include="Resources\1234.png" />
     <None Include="Resources\123.png" />
     <None Include="Resources\h.png" />

@@ -92,6 +92,7 @@
             // 
             // Ciudad
             // 
+            this.Ciudad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Ciudad.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ciudad.Location = new System.Drawing.Point(128, 144);
             this.Ciudad.MaxLength = 30;
@@ -111,6 +112,7 @@
             // 
             // CURP
             // 
+            this.CURP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CURP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CURP.Location = new System.Drawing.Point(156, 171);
             this.CURP.MaxLength = 18;
@@ -180,6 +182,7 @@
             // 
             // Nombre
             // 
+            this.Nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Nombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(129, 36);
             this.Nombre.MaxLength = 100;
@@ -189,6 +192,7 @@
             // 
             // Direccion
             // 
+            this.Direccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Direccion.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Direccion.Location = new System.Drawing.Point(129, 63);
             this.Direccion.MaxLength = 200;
@@ -198,6 +202,7 @@
             // 
             // RFC
             // 
+            this.RFC.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.RFC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RFC.Location = new System.Drawing.Point(129, 90);
             this.RFC.MaxLength = 15;
@@ -228,6 +233,7 @@
             // 
             // Observaciones
             // 
+            this.Observaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Observaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Observaciones.Location = new System.Drawing.Point(130, 452);
             this.Observaciones.MaxLength = 200;
@@ -282,6 +288,7 @@
             // 
             // Accionistas
             // 
+            this.Accionistas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Accionistas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Accionistas.Location = new System.Drawing.Point(129, 170);
             this.Accionistas.MaxLength = 200;
@@ -301,6 +308,7 @@
             // 
             // eMail
             // 
+            this.eMail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.eMail.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eMail.Location = new System.Drawing.Point(128, 143);
             this.eMail.MaxLength = 50;
@@ -330,6 +338,7 @@
             // 
             // Certificaciones
             // 
+            this.Certificaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Certificaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Certificaciones.Location = new System.Drawing.Point(128, 116);
             this.Certificaciones.MaxLength = 50;
@@ -349,6 +358,7 @@
             // 
             // Padron
             // 
+            this.Padron.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Padron.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Padron.Location = new System.Drawing.Point(128, 89);
             this.Padron.MaxLength = 20;
@@ -377,6 +387,7 @@
             // 
             // Giro
             // 
+            this.Giro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Giro.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Giro.Location = new System.Drawing.Point(128, 62);
             this.Giro.MaxLength = 20;
@@ -396,6 +407,7 @@
             // 
             // Contacto
             // 
+            this.Contacto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Contacto.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contacto.Location = new System.Drawing.Point(128, 35);
             this.Contacto.MaxLength = 100;
@@ -441,8 +453,8 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Modificar Proveedor";

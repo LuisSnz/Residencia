@@ -100,7 +100,6 @@
             this.CBFamilia.Name = "CBFamilia";
             this.CBFamilia.Size = new System.Drawing.Size(282, 25);
             this.CBFamilia.TabIndex = 4;
-            this.CBFamilia.Text = "Seleccione un Valor";
             // 
             // CHArticuloContrato
             // 
@@ -144,7 +143,6 @@
             this.CBMedida.Name = "CBMedida";
             this.CBMedida.Size = new System.Drawing.Size(282, 25);
             this.CBMedida.TabIndex = 6;
-            this.CBMedida.Text = "Seleccione un Valor";
             // 
             // label4
             // 
@@ -164,7 +162,6 @@
             this.CBArticulo.Name = "CBArticulo";
             this.CBArticulo.Size = new System.Drawing.Size(282, 25);
             this.CBArticulo.TabIndex = 4;
-            this.CBArticulo.Text = "Seleccione un Valor";
             // 
             // label3
             // 
@@ -178,6 +175,7 @@
             // 
             // TBArticulo
             // 
+            this.TBArticulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBArticulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBArticulo.Location = new System.Drawing.Point(26, 57);
             this.TBArticulo.MaxLength = 250;
@@ -216,8 +214,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";

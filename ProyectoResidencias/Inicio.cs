@@ -137,5 +137,11 @@ namespace ProyectoResidencias
             formularios(new Catalogos.Activo.Familias.Familia());
             this.Text = "Sistema de activo Fijo - Familias";
         }
+
+        private void impresoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CONF_IMPRESORA impresora = new CONF_IMPRESORA();
+            impresora.ShowDialog();
+        }
     }
 }

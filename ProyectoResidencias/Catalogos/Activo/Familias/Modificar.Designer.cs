@@ -64,6 +64,7 @@
             // 
             // Descripcion
             // 
+            this.Descripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Descripcion.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion.Location = new System.Drawing.Point(112, 12);
             this.Descripcion.MaxLength = 50;
@@ -104,8 +105,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";

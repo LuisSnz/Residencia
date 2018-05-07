@@ -48,6 +48,8 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoDelBienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.costoBienesActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.impresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Base = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,7 +65,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.catalogosToolStripMenuItem,
             this.activoToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.configuracionToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // catalogosToolStripMenuItem
@@ -207,6 +210,20 @@
             resources.ApplyResources(this.costoBienesActualToolStripMenuItem, "costoBienesActualToolStripMenuItem");
             this.costoBienesActualToolStripMenuItem.Click += new System.EventHandler(this.costoBienesActualToolStripMenuItem_Click);
             // 
+            // configuracionToolStripMenuItem
+            // 
+            this.configuracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.impresoraToolStripMenuItem});
+            this.configuracionToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.configuracion;
+            this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
+            resources.ApplyResources(this.configuracionToolStripMenuItem, "configuracionToolStripMenuItem");
+            // 
+            // impresoraToolStripMenuItem
+            // 
+            this.impresoraToolStripMenuItem.Image = global::ProyectoResidencias.Properties.Resources.impresora;
+            this.impresoraToolStripMenuItem.Name = "impresoraToolStripMenuItem";
+            resources.ApplyResources(this.impresoraToolStripMenuItem, "impresoraToolStripMenuItem");
+            this.impresoraToolStripMenuItem.Click += new System.EventHandler(this.impresoraToolStripMenuItem_Click);
             // Base
             // 
             this.Base.BackColor = System.Drawing.Color.Transparent;
@@ -274,6 +291,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem familiasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem impresoraToolStripMenuItem;
     }
 }
 

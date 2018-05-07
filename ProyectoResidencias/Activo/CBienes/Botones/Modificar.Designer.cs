@@ -109,6 +109,7 @@
             // 
             // Factura
             // 
+            this.Factura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Factura.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Factura.Location = new System.Drawing.Point(144, 67);
             this.Factura.MaxLength = 30;
@@ -127,6 +128,7 @@
             // 
             // Orden
             // 
+            this.Orden.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Orden.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Orden.Location = new System.Drawing.Point(144, 6);
             this.Orden.MaxLength = 250;
@@ -190,6 +192,7 @@
             // 
             // Color
             // 
+            this.Color.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Color.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Color.Location = new System.Drawing.Point(421, 105);
             this.Color.MaxLength = 20;
@@ -249,6 +252,7 @@
             // 
             // Modelo
             // 
+            this.Modelo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Modelo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modelo.Location = new System.Drawing.Point(421, 74);
             this.Modelo.MaxLength = 30;
@@ -315,6 +319,7 @@
             // 
             // Serie
             // 
+            this.Serie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Serie.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Serie.Location = new System.Drawing.Point(73, 105);
             this.Serie.MaxLength = 30;
@@ -414,6 +419,7 @@
             // 
             // Observaciones
             // 
+            this.Observaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Observaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Observaciones.Location = new System.Drawing.Point(6, 24);
             this.Observaciones.MaxLength = 250;
@@ -461,8 +467,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";
