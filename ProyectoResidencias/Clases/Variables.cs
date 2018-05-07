@@ -87,6 +87,9 @@ namespace ProyectoResidencias.Clases
         public static string Usuario="x";
         //Configurar impresora
         public static string ConfImpresora;
+        //Escala de grids
+        public static int GridWidth;
+        public static int GridHeight;
         
     }
 }

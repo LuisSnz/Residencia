@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.DGBaja = new System.Windows.Forms.DataGridView();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.DGBaja = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGBaja)).BeginInit();
             this.SuspendLayout();
@@ -54,22 +54,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(710, 45);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // DGBaja
-            // 
-            this.DGBaja.AllowUserToAddRows = false;
-            this.DGBaja.AllowUserToDeleteRows = false;
-            this.DGBaja.AllowUserToOrderColumns = true;
-            this.DGBaja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.DGBaja.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.DGBaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGBaja.Location = new System.Drawing.Point(12, 48);
-            this.DGBaja.Name = "DGBaja";
-            this.DGBaja.ReadOnly = true;
-            this.DGBaja.Size = new System.Drawing.Size(875, 600);
-            this.DGBaja.TabIndex = 1;
-            this.DGBaja.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGBaja_CellDoubleClick);
-            this.DGBaja.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGBaja_CellEnter);
             // 
             // toolStripButton2
             // 
@@ -110,6 +94,23 @@
             this.toolStripButton1.Size = new System.Drawing.Size(44, 42);
             this.toolStripButton1.ToolTipText = "Imprimir";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // DGBaja
+            // 
+            this.DGBaja.AllowUserToAddRows = false;
+            this.DGBaja.AllowUserToDeleteRows = false;
+            this.DGBaja.AllowUserToOrderColumns = true;
+            this.DGBaja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.DGBaja.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.DGBaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGBaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGBaja.Location = new System.Drawing.Point(12, 48);
+            this.DGBaja.Name = "DGBaja";
+            this.DGBaja.ReadOnly = true;
+            this.DGBaja.Size = new System.Drawing.Size(875, 600);
+            this.DGBaja.TabIndex = 1;
+            this.DGBaja.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGBaja_CellDoubleClick);
+            this.DGBaja.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGBaja_CellEnter);
             // 
             // InicioBajaBienes
             // 

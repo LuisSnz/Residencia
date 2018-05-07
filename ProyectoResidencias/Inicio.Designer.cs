@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Base = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.areasODireccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subDireccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +50,9 @@
             this.costoBienesActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.impresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Base = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,26 +68,6 @@
             this.reportesToolStripMenuItem,
             this.configuracionToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
-            // 
-            // Base
-            // 
-            this.Base.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.Base, "Base");
-            this.Base.Name = "Base";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoResidencias.Properties.Resources.logo_pirata;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoResidencias.Properties.Resources._7da9c795_1ecb_4dd7_ba41_298ad0ca7a56;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // catalogosToolStripMenuItem
             // 
@@ -244,6 +224,25 @@
             this.impresoraToolStripMenuItem.Name = "impresoraToolStripMenuItem";
             resources.ApplyResources(this.impresoraToolStripMenuItem, "impresoraToolStripMenuItem");
             this.impresoraToolStripMenuItem.Click += new System.EventHandler(this.impresoraToolStripMenuItem_Click);
+            // Base
+            // 
+            this.Base.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.Base, "Base");
+            this.Base.Name = "Base";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoResidencias.Properties.Resources.logo_pirata;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoResidencias.Properties.Resources._7da9c795_1ecb_4dd7_ba41_298ad0ca7a56;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // Inicio
             // 

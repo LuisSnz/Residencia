@@ -33,8 +33,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Buscar = new System.Windows.Forms.ToolStripButton();
             this.Excel = new System.Windows.Forms.ToolStripButton();
-            this.Total = new System.Windows.Forms.Label();
             this.Imprimir = new System.Windows.Forms.ToolStripButton();
+            this.Total = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridCosto)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,7 @@
             this.GridCosto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridCosto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.GridCosto.BackgroundColor = System.Drawing.Color.White;
+            this.GridCosto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridCosto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridCosto.Location = new System.Drawing.Point(12, 48);
             this.GridCosto.Name = "GridCosto";
@@ -103,15 +104,6 @@
             this.Excel.Text = "toolStripButton2";
             this.Excel.Click += new System.EventHandler(this.Excel_Click);
             // 
-            // Total
-            // 
-            this.Total.AutoSize = true;
-            this.Total.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(137, 660);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(0, 17);
-            this.Total.TabIndex = 5;
-            // 
             // Imprimir
             // 
             this.Imprimir.AutoSize = false;
@@ -121,6 +113,15 @@
             this.Imprimir.Name = "Imprimir";
             this.Imprimir.Size = new System.Drawing.Size(50, 50);
             this.Imprimir.Text = "toolStripButton3";
+            // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total.Location = new System.Drawing.Point(137, 660);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(0, 17);
+            this.Total.TabIndex = 5;
             // 
             // CostoBienesResguardados
             // 

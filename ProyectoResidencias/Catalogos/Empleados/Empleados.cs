@@ -43,6 +43,8 @@ namespace ProyectoResidencias.Catalogos.Empleados
 
         private void Empleados_Load(object sender, EventArgs e)
         {
+            GridEmp.Width = Clases.Variables.GridWidth;
+            GridEmp.Height = Clases.Variables.GridHeight;
             Clases.Variables.ConsultaBuscar ="select NoEmp,Nombre,Departamento, JefeDepto, NoLicencia, FechaVencimiento, " +
                             "NoEmpleadoJefe,Baja,NombrePliegos,Bloqueado,ActivoPliegos,NoVerifica as 'NoValidoPliego' from empleados";
             Clases.LLenadoGrids.llenarGrid(GridEmp, Clases.Variables.ConsultaBuscar, "empleados");
