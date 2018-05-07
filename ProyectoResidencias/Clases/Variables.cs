@@ -85,6 +85,8 @@ namespace ProyectoResidencias.Clases
         public static string IArticulo;
         //Login
         public static string Usuario="x";
+        //Configurar impresora
+        public static string ConfImpresora;
         
     }
 }

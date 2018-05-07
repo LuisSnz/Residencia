@@ -124,6 +124,7 @@
             // 
             // TBFactura
             // 
+            this.TBFactura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBFactura.Location = new System.Drawing.Point(365, 38);
             this.TBFactura.MaxLength = 30;
@@ -142,6 +143,7 @@
             // 
             // TBNoOrden
             // 
+            this.TBNoOrden.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBNoOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBNoOrden.Location = new System.Drawing.Point(113, 36);
             this.TBNoOrden.MaxLength = 50;
@@ -290,6 +292,7 @@
             // 
             // TBColor
             // 
+            this.TBColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBColor.Location = new System.Drawing.Point(407, 99);
             this.TBColor.MaxLength = 20;
@@ -299,6 +302,7 @@
             // 
             // TBModelo
             // 
+            this.TBModelo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBModelo.Location = new System.Drawing.Point(407, 62);
             this.TBModelo.MaxLength = 30;
@@ -323,6 +327,7 @@
             // 
             // TBSerie
             // 
+            this.TBSerie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBSerie.Location = new System.Drawing.Point(120, 102);
             this.TBSerie.MaxLength = 30;
@@ -529,6 +534,7 @@
             // 
             // TBObservaciones
             // 
+            this.TBObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBObservaciones.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBObservaciones.Location = new System.Drawing.Point(18, 27);
             this.TBObservaciones.MaxLength = 250;
@@ -575,8 +581,8 @@
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";

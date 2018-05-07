@@ -75,6 +75,7 @@
             // 
             // Motivo
             // 
+            this.Motivo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Motivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Motivo.Location = new System.Drawing.Point(67, 52);
             this.Motivo.MaxLength = 100;
@@ -149,7 +150,8 @@
             // 
             // comboJefe
             // 
-            this.comboJefe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboJefe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboJefe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboJefe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJefe.FormattingEnabled = true;
             this.comboJefe.Location = new System.Drawing.Point(146, 155);
@@ -179,6 +181,7 @@
             // 
             // NombreM
             // 
+            this.NombreM.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NombreM.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreM.Location = new System.Drawing.Point(146, 39);
             this.NombreM.MaxLength = 70;
@@ -188,6 +191,7 @@
             // 
             // Nombre
             // 
+            this.Nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Nombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(146, 10);
             this.Nombre.MaxLength = 100;
@@ -335,8 +339,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Modificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar";

@@ -72,7 +72,8 @@
             // 
             // CBFamilia
             // 
-            this.CBFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBFamilia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CBFamilia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CBFamilia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBFamilia.ForeColor = System.Drawing.Color.Black;
             this.CBFamilia.FormattingEnabled = true;
@@ -80,6 +81,7 @@
             this.CBFamilia.Name = "CBFamilia";
             this.CBFamilia.Size = new System.Drawing.Size(282, 25);
             this.CBFamilia.TabIndex = 4;
+            this.CBFamilia.Text = "Seleccione un valor";
             // 
             // label8
             // 
@@ -137,13 +139,15 @@
             // 
             // CBMedida
             // 
-            this.CBMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBMedida.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CBMedida.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CBMedida.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBMedida.FormattingEnabled = true;
             this.CBMedida.Location = new System.Drawing.Point(143, 138);
             this.CBMedida.Name = "CBMedida";
             this.CBMedida.Size = new System.Drawing.Size(282, 25);
             this.CBMedida.TabIndex = 6;
+            this.CBMedida.Text = "Seleccione un valor";
             // 
             // label4
             // 
@@ -157,13 +161,15 @@
             // 
             // CBArticulo
             // 
-            this.CBArticulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBArticulo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CBArticulo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CBArticulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBArticulo.FormattingEnabled = true;
             this.CBArticulo.Location = new System.Drawing.Point(143, 95);
             this.CBArticulo.Name = "CBArticulo";
             this.CBArticulo.Size = new System.Drawing.Size(282, 25);
             this.CBArticulo.TabIndex = 4;
+            this.CBArticulo.Text = "Seleccione un valor";
             // 
             // label3
             // 
@@ -177,6 +183,7 @@
             // 
             // TBArticulo
             // 
+            this.TBArticulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TBArticulo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBArticulo.Location = new System.Drawing.Point(26, 57);
             this.TBArticulo.MaxLength = 250;
@@ -215,8 +222,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Articulo";

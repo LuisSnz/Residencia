@@ -130,6 +130,7 @@
             // 
             // NombreM
             // 
+            this.NombreM.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NombreM.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreM.Location = new System.Drawing.Point(146, 108);
             this.NombreM.MaxLength = 70;
@@ -139,6 +140,7 @@
             // 
             // Materno
             // 
+            this.Materno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Materno.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Materno.Location = new System.Drawing.Point(146, 77);
             this.Materno.MaxLength = 150;
@@ -148,6 +150,7 @@
             // 
             // Paterno
             // 
+            this.Paterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Paterno.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Paterno.Location = new System.Drawing.Point(146, 46);
             this.Paterno.MaxLength = 150;
@@ -157,6 +160,7 @@
             // 
             // Nombre
             // 
+            this.Nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Nombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.Location = new System.Drawing.Point(146, 13);
             this.Nombre.MaxLength = 150;
@@ -318,6 +322,7 @@
             // 
             // Motivo
             // 
+            this.Motivo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Motivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Motivo.Location = new System.Drawing.Point(60, 51);
             this.Motivo.MaxLength = 100;

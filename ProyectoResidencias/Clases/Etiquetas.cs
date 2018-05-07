@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using BarcodeLib;
 using System.Data;
+using System.IO;
 
 namespace ProyectoResidencias.Clases
 {
@@ -17,7 +18,7 @@ namespace ProyectoResidencias.Clases
             try
             {
                 PrintDocument pd = new PrintDocument();
-                pd.PrinterSettings.PrinterName = ("ZDesigner GC420t (EPL)");
+                pd.PrinterSettings.PrinterName = (Clases.Variables.ConfImpresora);
                 //VImpresion.Document = pd;
                 //DialogResult resultado = VImpresion.ShowDialog();
                 //if (resultado == DialogResult.OK)
@@ -66,6 +67,26 @@ namespace ProyectoResidencias.Clases
             {
                 MessageBox.Show("Printpage" + ex.Message);
             }
+        }
+        public static void llamarVariableEtiqueta()
+        {
+            String line;
+            try
+            {
+                string ruta = Path.Combine(Application.StartupPath, "ImpresoraEtiquetas.txt");
+                StreamReader sr = new StreamReader(ruta);
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Clases.Variables.ConfImpresora = line;
+                    sr.ReadLine();
+                }
+                sr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.ToString());
+            }
+
         }
     }
 }
