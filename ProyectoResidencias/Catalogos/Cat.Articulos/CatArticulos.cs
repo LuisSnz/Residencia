@@ -44,6 +44,7 @@ namespace ProyectoResidencias.Catalogos.Cat.Articulos
 
         private void CatArticulos_Load(object sender, EventArgs e)
         {
+            GVCatArticulos.Height = Clases.Variables.GridHeight;
             Clases.Variables.ConsultaBuscar = "select ID,Descripcion,Familia,Inventariable,Medida,TipoArticulo as 'Tipo Articulo',ActivoContratos as 'Activos por Contrato' from vArticulosCompras order by id";
             Clases.LLenadoGrids.llenarGrid(GVCatArticulos,Clases.Variables.ConsultaBuscar , "vArticulosCompras");
         }

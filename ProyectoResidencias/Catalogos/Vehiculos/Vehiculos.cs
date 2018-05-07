@@ -24,6 +24,8 @@ namespace ProyectoResidencias.Catalogos.Vehiculos
 
         private void Vehiculos_Load(object sender, EventArgs e)
         {
+            GVVehiculos.Width = Clases.Variables.GridWidth;
+            GVVehiculos.Height = Clases.Variables.GridHeight;
             Clases.Variables.ConsultaBuscar = "select Numero,Placas,Modelo,Tipo,Subtipo,Marca,NoSerie,Familia,Resguardo," +
                 "Departamento,Observacion from vVehiculos order by id";
             Clases.LLenadoGrids.llenarGrid(GVVehiculos,Clases.Variables.ConsultaBuscar, "vVehiculos");

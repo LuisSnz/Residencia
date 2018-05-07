@@ -43,6 +43,8 @@ namespace ProyectoResidencias.Catalogos.Proveedores
 
         private void Proveedores_Load(object sender, EventArgs e)
         {
+            GridProveedor.Width = Clases.Variables.GridWidth;
+            GridProveedor.Height = Clases.Variables.GridHeight;
             Clases.Variables.ConsultaBuscar = "SELECT Id, RTRIM(Nombre) AS 'Nombre', RTRIM(Direccion) AS 'Direccion'," +
                 " Fax, RTRIM(Ciudad) AS 'Ciudad', Contacto, Giro, PadronGobierno, Certificaciones, Email, Observaciones," +
                 " Telefono, Accionistas, Curp FROM Proveedores";

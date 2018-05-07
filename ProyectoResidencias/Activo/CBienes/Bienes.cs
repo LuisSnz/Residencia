@@ -58,6 +58,8 @@ namespace ProyectoResidencias
 
         private void Bienes_Load(object sender, EventArgs e)
         {
+            GVBienes.Height = Clases.Variables.GridHeight;
+            GVBienes.Width = Clases.Variables.GridWidth;
             Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, bienes.NoFactura, " +
                 "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
                 "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +

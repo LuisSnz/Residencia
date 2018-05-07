@@ -24,6 +24,9 @@ namespace ProyectoResidencias.CBienes.Reportes
 
         private void CostoBienesResguardados_Load(object sender, EventArgs e)
         {
+            GridCosto.Height = Clases.Variables.GridHeight - 40;
+            label1.Location = new Point(20, Clases.Variables.GridHeight + 30);
+            Total.Location = new Point(140, Clases.Variables.GridHeight + 30);
             Clases.Variables.ConsultaBuscar = "SELECT bienes.Etiqueta, dbo.CatArticulos.Descripcion AS Articulo," +
                "Familia.Descripcion as Familia, empleados.Nombre AS Empleado,bienes.Total " +
                "FROM bienes INNER JOIN empleados ON bienes.NoEmpleado = empleados.NoEmp " +
