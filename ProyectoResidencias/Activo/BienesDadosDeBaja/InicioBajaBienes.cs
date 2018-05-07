@@ -35,6 +35,8 @@ namespace ProyectoResidencias.Activo.BienesDadosDeBaja
 
         private void InicioBajaBienes_Load(object sender, EventArgs e)
         {
+            DGBaja.Width = Clases.Variables.GridWidth;
+            DGBaja.Height = Clases.Variables.GridHeight;
             Clases.Variables.ConsultaBuscar = "SELECT id, Etiqueta, NoOrden, RTRIM(NoFactura) AS NoFactura, Total, " +
                 "RTRIM(Articulo) as Articulo, RTRIM(Observacion) as Observacion, Departamento, RTRIM(Empleado) as Empleado," +
                 " FechaCompra, Marca, Serie, Modelo, RTRIM(MotivoBaja) as MotivoBaja, EstatusBaja," +

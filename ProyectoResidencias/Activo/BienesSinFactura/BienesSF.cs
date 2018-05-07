@@ -74,6 +74,8 @@ namespace ProyectoResidencias.Activo.BienesSinFactura
 
         private void BienesSF_Load(object sender, EventArgs e)
         {
+            dataGridView1.Width = Clases.Variables.GridWidth;
+            dataGridView1.Height = Clases.Variables.GridHeight;
             Clases.Variables.ConsultaBuscar = "SELECT bienes.Id, bienes.Etiqueta, bienes.NoOrden, " +
                 "bienes.Total, Familia.Descripcion, dbo.CatArticulos.Descripcion AS Articulo, empleados.Nombre AS Empleado," +
                 "empleados.Departamento, bienes.Consumible, RTRIM(Proveedores.Nombre) AS Proveedor,bienes." +

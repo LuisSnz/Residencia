@@ -35,6 +35,7 @@ namespace ProyectoResidencias.Catalogos.Activo.Marcas
 
         private void Marcas_Load(object sender, EventArgs e)
         {
+            GridMarcas.Height = Clases.Variables.GridHeight;
             Clases.Variables.ConsultaBuscar = "select * from marca order by Descripcion";
             Clases.LLenadoGrids.llenarGrid(GridMarcas, Clases.Variables.ConsultaBuscar, "marca");
         }
